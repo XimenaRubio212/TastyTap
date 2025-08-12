@@ -110,3 +110,66 @@ body {
 .card button:hover {
     background: #e5533a;
 }
+
+/* 5. Formulario de contacto */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-width: 700px;
+    margin: 1.5rem auto;
+    background-color: #fff;
+    padding: 1.2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.contact-form__row {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.contact-form__row .contact-form__input { 
+    flex: 1; 
+}
+
+.contact-form__input,
+.contact-form__textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 100%;
+    resize: vertical;
+}
+
+.contact-form__input:focus,
+.contact-form__textarea:focus {
+    outline: none;
+    border-color: #F08B51;
+    box-shadow: 0 0 0 2px rgba(240,139,81,0.2);
+}
+
+.contact-form__button {
+    align-self: flex-start;
+    background-color: #F08B51;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-form__button:hover { 
+    background-color: #d77442;
+}
+
+/* 6. Encabezado con icono */
+.encabezado-seccion {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    margin: 2rem 0 1rem;
+    font-size: 1.4rem;
+}
