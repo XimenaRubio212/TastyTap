@@ -173,3 +173,48 @@ body {
     margin: 2rem 0 1rem;
     font-size: 1.4rem;
 }
+
+/* 7. Lista de tareas */
+.todo-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    gap: 0.75rem;
+    margin: 1rem 0;
+    padding: 0;
+}
+
+.todo-list__item {
+    background-color: #f5f5f5;
+    padding: 0.75rem 1.25rem;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 480px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    text-align: center;
+}
+
+/* 8. Testimonial */
+.testimonial {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1.5rem auto;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    max-width: 600px;
+}
+
+.testimonial__avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.testimonial__text {
+    font-style: italic;
+}
