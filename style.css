@@ -218,3 +218,92 @@ body {
 .testimonial__text {
     font-style: italic;
 }
+
+/* 9. Footer */
+.footer {
+    display: flex;
+    justify-content: space-around;
+    background: #333;
+    color: white;
+    padding: 1.2rem;
+}
+
+/* 10. Sección de precios */
+.precios {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.precio-card {
+    padding: 1rem 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #fff;
+    font-weight: bold;
+}
+
+/* 11. Sidebar */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 150px;
+    background: #222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.2);
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    margin: 1rem 0;
+    transition: color 0.3s ease;
+}
+
+.sidebar a:hover {
+    color: #F08B51;
+}
+
+/*RESPONSIVIDAD*/
+
+/* Tablet */
+@media (max-width: 900px) {
+    .navbar { padding: 1rem 2rem; }
+    .sidebar { width: 100px; }
+    .footer { 
+        flex-direction: column; 
+        align-items: center; 
+        gap: 0.5rem;
+        text-align: center;
+    }
+}
+
+/* Celular */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .navbar__menu { 
+        flex-direction: column; 
+        gap: 0.5rem;
+        align-items: center;
+    }
+    .contact-form__row { flex-direction: column; }
+    .galeria-cards { 
+        flex-direction: column; 
+        align-items: center; 
+    }
+    .testimonial {
+        flex-direction: column;
+        text-align: center;
+    }
+}
