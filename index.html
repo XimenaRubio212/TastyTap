@@ -1,111 +1,111 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TastyTap</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TastyTap</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
 
-    <!-- 1. Barra de navegación -->
-    <header class="navbar">
-        <div class="navbar__logo">TastyTap</div>
-        <nav class="navbar__menu" aria-label="Menú principal">
-            <a href="#">Inicio</a>
-            <a href="#">Menú</a>
-            <a href="#">Contacto</a>
-        </nav>
-    </header>
-
-    <!-- 2. Tarjeta de producto -->
-    <section class="producto">
-        <img src="img/pasta.jpg" alt="Pasta gourmet">
-    </section>
-    <section class="producto-text">
-        <p>Delicioso platillo gourmet para el dia a dia de la semana</p>
-    </section>
-
-    <!-- 3. Galería de imágenes -->
-    <section class="galeria-cards" aria-label="Galería de platillos">
-        <div class="card">
-            <img src="img/1.jpg" alt="Hamburguesa doble queso">
-            <p>Hamburguesa doble queso</p>
-            <button>Comprar ahora</button>
-        </div>
-        <div class="card">
-            <img src="img/2.jpg" alt="Filete con papas">
-            <p>Filete con papas</p>
-            <button>Comprar ahora</button>
-        </div>
-        <div class="card">
-            <img src="img/3.jpg" alt="Tacos mexicanos">
-            <p>Tacos mexicanos</p>
-            <button>Comprar ahora</button>
-        </div>
-        <div class="card">
-            <img src="img/4.jpg" alt="Pizza artesanal">
-            <p>Pizza artesanal</p>
-            <button>Comprar ahora</button>
-        </div>
-    </section>
-
-    <!-- 4. Formulario de contacto -->
-    <section>
-        <form class="contact-form" aria-label="Formulario de contacto">
-            <div class="contact-form__row">
-                <input type="text" class="contact-form__input" placeholder="Nombre" required>
-                <input type="email" class="contact-form__input" placeholder="Correo" required>
-            </div>
-            <div class="contact-form__row">
-                <input type="text" class="contact-form__input" placeholder="Asunto">
-            </div>
-            <textarea class="contact-form__textarea" rows="5" placeholder="Mensaje..."></textarea>
-            <button type="submit" class="contact-form__button">Enviar</button>
-        </form>
-    </section>
-
-    <!-- 5. Encabezado de sección con icono -->
-    <section class="encabezado-seccion">
-        <span class="encabezado-seccion__icono">🍕</span>
-        <h2 class="encabezado-seccion__titulo">Nuestro Menú</h2>
-    </section>
-
-    <!-- 6. Lista de tareas -->
-    <section>
-        <ul class="todo-list" aria-label="Lista de tareas">
-            <li class="todo-list__item">Comprar ingredientes</li>
-            <li class="todo-list__item">Preparar menú</li>
-            <li class="todo-list__item">Publicar en redes</li>
-        </ul>
-    </section>
-
-    <!-- 9. Sección de precios -->
-    <section class="precios">
-        <div class="precio-card">Básico - $10</div>
-        <div class="precio-card">Premium - $20</div>
-        <div class="precio-card">VIP - $30</div>
-    </section>
-
-    <!-- 7. Testimonial -->
-    <article class="testimonial">
-        <img src="img/avatar.jpg" alt="Foto del cliente" class="testimonial__avatar">
-        <p class="testimonial__text">¡Excelente atención y sabor!</p>
-    </article>
-
-    <!-- 8. Footer -->
-    <footer class="footer">
-        <div>Facebook</div>
-        <div>Instagram</div>
-        <div>Twitter</div>
-    </footer>
-
-    <!-- 10. Sidebar -->
-    <aside class="sidebar" aria-label="Menú lateral">
+  <!-- Barra de navegación -->
+  <header class="navbar">
+    <div class="navbar__container">
+      <div class="navbar__logo">
+          <img src="img/TastyTap.png" alt="TastyTap">
+      </div>
+      <nav class="navbar__menu" aria-label="Menú principal">
         <a href="#">Inicio</a>
         <a href="#">Menú</a>
         <a href="#">Contacto</a>
-    </aside>
+        <a href="#">Tienda</a>
+      </nav>
+      <div class="navbar__search">
+        <input type="text" placeholder="Buscar...">
+      </div>
+    </div>
+  </header>
+
+  <!-- Franja de frase -->
+  <div class="franja-frase">
+    <p>“Explora un mundo de sabores. Donde cada bocado es una historia.”</p>
+  </div>
+
+  <!-- Hero principal -->
+  <section class="hero">
+    <div class="hero__container">
+      <div class="hero__texto">
+        <h1>Tasty <span>Tap</span></h1>
+        <p>Ofrecemos una experiencia culinaria excepcional, fusionando tradición e innovación en platos que nutren cuerpo y alma.</p>
+        <button>Ver más</button>
+      </div>
+      <div class="hero__imagen">
+        <img src="img/comida2.png" alt="Platillo gourmet">
+      </div>
+    </div>
+  </section>
+
+  <!-- Galería de imágenes -->
+  <section class="galeria" aria-label="Galería de platillos">
+    <div class="galeria__card">
+      <img src="img/1.jpg" alt="Hamburguesa doble queso">
+      <p>Hamburguesa doble queso</p>
+      <button>Comprar ahora</button>
+    </div>
+    <div class="galeria__card">
+      <img src="img/2.jpg" alt="Filete con papas">
+      <p>Filete con papas</p>
+      <button>Comprar ahora</button>
+    </div>
+    <div class="galeria__card">
+      <img src="img/3.jpg" alt="Tacos mexicanos">
+      <p>Tacos mexicanos</p>
+      <button>Comprar ahora</button>
+    </div>
+    <div class="galeria__card">
+      <img src="img/4.jpg" alt="Pizza artesanal">
+      <p>Pizza artesanal</p>
+      <button>Comprar ahora</button>
+    </div>
+  </section>
+
+  <!-- Formulario de contacto -->
+  <section>
+    <form class="contact-form" aria-label="Formulario de contacto">
+        <h2 class="contact-form__title">Contáctanos</h2>
+
+        <div class="contact-form__group">
+          <label for="nombre">Nombre*</label>
+          <input type="text" id="nombre" name="nombre" class="contact-form__input" placeholder="Tu nombre" required>
+        </div>
+
+        <div class="contact-form__group">
+          <label for="correo">Correo electrónico*</label>
+          <input type="email" id="correo" name="correo" class="contact-form__input" placeholder="Tu correo" required>
+        </div>
+
+        <div class="contact-form__group">
+          <label for="mensaje">Mensaje*</label>
+          <textarea id="mensaje" name="mensaje" class="contact-form__textarea" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+        </div>
+
+        <button type="submit" class="contact-form__button">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Testimonial -->
+  <article class="testimonial">
+    <img src="img/avatar.jpg" alt="Foto del cliente" class="testimonial__avatar">
+    <p class="testimonial__text">¡Excelente atención y sabor!</p>
+  </article>
+
+  <!-- Footer -->
+  <footer class="footer">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+  </footer>
 
 </body>
 </html>
