@@ -3,44 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TastyTap | Inicio</title>
+  <title>TastyTap | Tienda</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-  <!-- NAVBAR -->
   <header class="navbar">
     <div class="navbar__logo">
-      <img src="img/TastyTap.png" alt="Logo TastyTap">
+      <img src="img/TastyTap.png" alt="Logo">
       <h1>TastyTap</h1>
     </div>
     <nav class="navbar__menu">
-      <a href="index.html" class="active">Inicio</a>
+      <a href="index.html">Inicio</a>
       <a href="menu.html">Menú</a>
-      <a href="tienda.html">Tienda</a>
+      <a href="tienda.html" class="active">Tienda</a>
       <a href="contacto.html">Contacto</a>
       <a href="login.html">Login</a>
     </nav>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <h2>Bienvenido a TastyTap 🍔</h2>
-    <p>Tu app web para descubrir, ordenar y disfrutar la mejor comida de tu ciudad. Con solo un toque, ¡haz que tu antojo se cumpla!</p>
-  </section>
-
-  <!-- RECOMENDACIÓN -->
-  <section class="recomendacion">
-    <h3>Recomendación del día</h3>
-    <div class="card">
-      <img src="img/1.jpg" alt="Plato recomendado">
-      <h4>Burger Deluxe</h4>
-      <p>Una jugosa hamburguesa artesanal con ingredientes frescos, acompañada de papas doradas y bebida.</p>
+  <section class="tienda">
+    <h2>Restaurantes disponibles</h2>
+    <div class="tienda__grid">
+      <div class="tienda__item">
+        <img src="img/rest1.jpg" alt="Restaurante 1">
+        <h3>Burger House</h3>
+        <p>Especialistas en hamburguesas artesanales. <br><strong>Desde $25.000</strong></p>
+        <button>Ver más</button>
+      </div>
+      <div class="tienda__item">
+        <img src="img/rest2.jpg" alt="Restaurante 2">
+        <h3>Pizza Napoli</h3>
+        <p>Auténtica pizza italiana con masa madre. <br><strong>Desde $30.000</strong></p>
+        <button>Ver más</button>
+      </div>
+      <div class="tienda__item">
+        <img src="img/rest3.jpg" alt="Restaurante 3">
+        <h3>Sushi Garden</h3>
+        <p>Frescura japonesa con toque moderno. <br><strong>Desde $35.000</strong></p>
+        <button>Ver más</button>
+      </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
+    <!-- Reutilizamos el footer -->
   <footer class="footer">
     <div>
       <h3>Navegación</h3>
@@ -65,6 +72,14 @@
       <p>📍 Calle 123 #45-67, Bogotá, Colombia</p>
       <p>📞 +57 320 555 1234</p>
       <p>✉️ contacto@tastytap.com</p>
+    </div>
+
+    <div>
+      <h3>Buscar</h3>
+      <form action="buscar.html" method="get">
+        <input type="text" placeholder="Busca restaurantes o platos...">
+        <button type="submit">Buscar</button>
+      </form>
     </div>
 
     <div class="footer__bottom">
