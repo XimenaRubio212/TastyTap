@@ -1,0 +1,435 @@
+
+/* === NAVBAR === */
+.navbar {
+  background: var(--color-principal);
+  color: var(--color-blanco);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar__logo img {
+  width: 50px;
+  height: auto;
+}
+
+/* === NAVBAR LINK ANIMADO === */
+.navbar__menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.navbar__menu a {
+  position: relative;
+  color: var(--color-blanco);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transicion);
+  padding-bottom: 4px;
+}
+
+/* Línea animada debajo del texto */
+.navbar__menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: #ffe4d6;
+  transition: width 0.3s ease;
+}
+
+/* Hover animado */
+.navbar__menu a:hover::after {
+  width: 100%;
+}
+
+/* Enlace activo */
+.navbar__menu a.active::after {
+  width: 100%;
+  background: var(--color-blanco);
+}
+
+/* Hover con desplazamiento sutil */
+.navbar__menu a:hover {
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* === HERO === */
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(180deg, #fff, #fef3eb);
+}
+
+.hero h2 {
+  color: var(--color-principal);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* === SECCIÓN RECOMENDACIÓN - inicio - index === */
+.recomendacion {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.recomendacion h3 {
+  color: var(--color-principal);
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.recomendacion .card {
+  background: var(--color-blanco);
+  box-shadow: var(--sombra);
+  border-radius: var(--radio);
+  max-width: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-bottom: 1rem;
+}
+
+.recomendacion img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: var(--radio) var(--radio) 0 0;
+}
+
+.recomendacion h4 {
+  margin: 0.8rem 0 0.3rem;
+}
+
+.recomendacion p {
+  padding: 0 1rem;
+}
+
+/* === MENÚ === */
+.menu {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.menu h2 {
+  color: var(--color-principal);
+  margin-bottom: 2rem;
+}
+
+.menu__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.menu__item {
+  background: var(--color-blanco);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  padding: 1rem;
+  transition: var(--transicion);
+}
+
+.menu__item:hover {
+  transform: translateY(-5px);
+}
+
+.menu__item img {
+  width: 100%;
+  border-radius: var(--radio) var(--radio) 0 0;
+  height: 180px;
+  object-fit: cover;
+}
+
+.menu__item h3 {
+  margin-top: 0.8rem;
+  color: var(--color-secundario);
+}
+
+.menu__item p {
+  color: var(--color-principal);
+  font-weight: 600;
+}
+
+.menu__item button {
+  margin-top: 0.6rem;
+  background: var(--color-principal);
+  border: none;
+  color: var(--color-blanco);
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--transicion);
+}
+
+.menu__item button:hover {
+  background: #d06f39;
+  transform: translateY(-2px);
+  box-shadow: var(--sombra);
+}
+
+/* === TIENDA === */
+.tienda {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.tienda h2 {
+  color: var(--color-principal);
+  margin-bottom: 2rem;
+}
+
+.tienda__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.tienda__item {
+  background: var(--color-blanco);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  overflow: hidden;
+  padding-bottom: 1rem;
+  transition: var(--transicion);
+}
+
+.tienda__item:hover {
+  transform: translateY(-5px);
+}
+
+.tienda__item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--radio) var(--radio) 0 0;
+}
+
+.tienda__item h3 {
+  margin-top: 0.8rem;
+}
+
+.tienda__item p {
+  color: var(--color-secundario);
+  padding: 0 1rem;
+}
+
+.tienda__item button {
+  background: var(--color-principal);
+  border: none;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--transicion);
+}
+
+.tienda__item button:hover {
+  background: #d06f39;
+  transform: translateY(-2px);
+  box-shadow: var(--sombra);
+}
+
+/* === CONTACTO === */
+.contact-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: var(--color-blanco);
+  padding: 2rem;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid var(--color-gris);
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-form button {
+  background: var(--color-principal);
+  color: var(--color-blanco);
+  border: none;
+  padding: 0.8rem 0.7rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--transicion);
+}
+
+.contact-form button:hover {
+  background: #d06f39;
+  transform: translateY(-2px);
+  box-shadow: var(--sombra);
+}
+
+/* === LOGIN === */
+.login {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.login h2 {
+  color: var(--color-principal);
+  margin-bottom: 1.5rem;
+}
+
+.login-form {
+  background: var(--color-blanco);
+  box-shadow: var(--sombra);
+  border-radius: var(--radio);
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.login-form input {
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: 1px solid var(--color-gris);
+}
+
+.login-form button {
+  background: var(--color-principal);
+  color: var(--color-blanco);
+  border: none;
+  padding: 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--transicion);
+}
+
+.login-form button:hover {
+  background: #d06f39;
+  transform: translateY(-2px);
+  box-shadow: var(--sombra);
+}
+
+/* === FOOTER ESTILO === */
+.footer {
+  background: var(--color-principal);
+  color: rgba(255, 255, 255, 0.95);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 4rem;
+  text-align: left;
+  align-items: start;
+}
+
+.footer h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.footer a {
+  color: var(--color-blanco);
+  text-decoration: none;
+  display: block;
+  margin: 0.4rem 0;
+  transition: var(--transicion);
+  position: relative;
+  padding-bottom: 3px;
+}
+
+.footer 
+
+/* Subrayado animado también en footer */
+.footer a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 1.5px;
+  background: #ffe4d6;
+  transition: width 0.3s ease;
+}
+
+.footer a:hover::after {
+  width: 100%;
+}
+
+.footer a:hover {
+  color: #ffe4d6;
+}
+
+/* Redes sociales */
+.footer .social {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.footer .social i {
+  font-size: 1.4rem;
+  background: var(--color-blanco);
+  color: var(--color-principal);
+  padding: 0.4rem;
+  border-radius: 50%;
+  transition: var(--transicion);
+}
+
+.footer .social i:hover {
+  transform: scale(1.1);
+  background: var(--color-blanco);
+  color: var(--color-principal);
+}
+
+/* Pie inferior */
+.footer__bottom {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar__menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer {
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .footer .social {
+    justify-content: center;
+  }
+}
