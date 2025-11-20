@@ -3,34 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TastyTap | Contacto</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>TastyTap | Tienda</title>
+  <link rel="stylesheet" href="/TastyTap/css/utils/estilo.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
   <header class="navbar">
     <div class="navbar__logo">
-      <img src="img/TastyTap.png" alt="Logo">
+      <img src="/TastyTap/img/TastyTap.png" alt="Logo">
       <h1>TastyTap</h1>
     </div>
     <nav class="navbar__menu">
-      <a href="index.html">Inicio</a>
-      <a href="menu.html">Menú</a>
-      <a href="tienda.html">Tienda</a>
-      <a href="contacto.html" class="active">Contacto</a>
-      <a href="login.html">Login</a>
+      <a href="/TastyTap/index.html">Inicio</a>
+      <a href="/TastyTap/Vista/menu.html">Menú</a>
+      <a href="tienda.html" class="active">Tienda</a>
+      <a href="/TastyTap/Vista/contacto.html">Contacto</a>
+      <a href="/TastyTap/Vista/login.html">Login</a>
     </nav>
   </header>
 
-  <section class="contact-form">
-    <h2>Contáctanos</h2>
-    <form>
-      <input type="text" placeholder="Tu nombre" required>
-      <input type="email" placeholder="Tu correo" required>
-      <textarea rows="4" placeholder="Tu mensaje ..."></textarea>
-      <button type="submit">Enviar mensaje</button>
-    </form>
+  <section class="tienda">
+    <h2>Restaurantes disponibles</h2>
+    <div class="tienda__grid">
+      <div class="tienda__item">
+        <img src="/TastyTap/img/burger.jpg" alt="Restaurante 1">
+        <h3>Burger House</h3>
+        <p>Especialistas en hamburguesas artesanales. <br><strong>Desde $25.000</strong></p>
+        <button>Ver más</button>
+      </div>
+      <div class="tienda__item">
+        <img src="/TastyTap/img/pizza.jpg" alt="Restaurante 2">
+        <h3>Pizza Napoli</h3>
+        <p>Auténtica pizza italiana con masa madre. <br><strong>Desde $30.000</strong></p>
+        <button>Ver más</button>
+      </div>
+      <div class="tienda__item">
+        <img src="/TastyTap/img/Sushi.png" alt="Restaurante 3">
+        <h3>Sushi Garden</h3>
+        <p>Frescura japonesa con toque moderno. <br><strong>Desde $35.000</strong></p>
+        <button>Ver más</button>
+      </div>
+      <div class="tienda__item">
+        <img src="/TastyTap/img/pasta.jpg" alt="Restaurante 4">
+        <h3>Pastas Carbonara</h3>
+        <p>Auténtica Pastas Carbonara con un queso exquisito. <br><strong>Desde $35.000</strong></p>
+        <button>Ver más</button>
+      </div>
+    </div>
   </section>
 
     <!-- Reutilizamos el footer -->
