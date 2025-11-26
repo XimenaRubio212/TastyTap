@@ -1,5 +1,5 @@
 /* === VARIABLES GLOBALES === */
-:root {
+/* :root {
   --color-principal: #F08B51;
   --color-secundario: #333;
   --color-fondo: #f9f9f9;
@@ -8,9 +8,41 @@
   --radio: 10px;
   --sombra: 0 4px 10px rgba(0, 0, 0, 0.1);
   --transicion: all 0.3s ease;
-}
+} */
 
 /* === RESETEO GENERAL === */
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background: var(--color-fondo);
+  color: var(--color-secundario);
+  line-height: 1.6;
+} */
+
+
+/*
+  === UTILS/BASE.CSS ===
+  Propósito: Variables globales y reseteo básico.
+  ¿Por qué? Punto de partida consistente para todo el proyecto.
+*/
+
+:root {
+  --color-principal: #F08B51;
+  --color-secundario: #333;
+  --color-fondo: #f9f9f9;
+  --color-blanco: #fff;
+  --color-gris: #ccc;
+  --color-admin-sidebar: #3c6288;
+  --radio: 10px;
+  --sombra: 0 4px 10px rgba(0, 0, 0, 0.1);
+  --transicion: all 0.3s ease;
+}
+
 * {
   margin: 0;
   padding: 0;

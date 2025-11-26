@@ -1,0 +1,50 @@
+/*
+  === COMPONENTS/CARD.CSS ===
+  Propósito: Estilizar tarjetas para usuario (recomendación, menú, tienda).
+  Clases: .card, .card--recomendacion, .card--menu, .card--tienda.
+  ¿Por qué? Reutilización y consistencia.
+*/
+
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Variantes según sección */
+.card--recomendacion img {
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.card--menu img,
+.card--tienda img {
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.card--recomendacion {
+  max-width: 400px;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+}
+
+.card--menu,
+.card--tienda {
+  padding: 1rem;
+}

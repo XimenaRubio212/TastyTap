@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +6,7 @@
     <title>TastyTap Administrador</title>
 </head>
 <body>
-    <!--Navbar del administrador menu-->
+    Navbar del administrador menu
     <aside class="sidebar">
         <nav class="sidebar__nav">
             <h2>TastyTap Admin</h2>
@@ -31,7 +31,7 @@
 </html>     
 
 
-<!-- <nav class="sidebar__nav">
+<nav class="sidebar__nav">
     <a href="panelControl.html" class="active">Panel de Control | Administrador</a>
     <a href="/TastyTap/views/Admininstrador/GestionUsuarios.html">Usuarios</a>
     <a href="/TastyTap/views/Admininstrador/GestionCatalogo.html">Productos / Catalogo</a>
@@ -43,3 +43,152 @@
     <a href="/TastyTap/views/Admininstrador/ReportesNotifi.html">Notificaciones</a>
     <a href="/TastyTap/views/Admininstrador/ReportesExportar.html">Exportar Datos</a>
 </nav> -->
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TastyTap | Panel de Control</title>
+  <link rel="stylesheet" href="../../css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="admin-layout">
+
+    <aside class="sidebar">
+      <div class="sidebar__header">
+        <div style="width: 40px; height: 40px; background: white; border-radius: 8px; margin: 0 auto;"></div>
+        <h2>TastyTap Admin</h2>
+      </div>
+      <nav class="sidebar__nav">
+        <ul class="sidebar__list">
+          <li class="sidebar__item">
+            <a href="panelControl.html" class="sidebar__link sidebar__link--active">
+              <span class="sidebar__icon">📊</span>
+              <span class="sidebar__text">Panel de Control</span>
+            </a>
+          </li>
+          <li class="sidebar__section">
+            <div class="sidebar__section-title">GESTIÓN PRINCIPAL</div>
+            <ul class="sidebar__list">
+              <li class="sidebar__item">
+                <a href="GestionUsuarios.html" class="sidebar__link">
+                  <span class="sidebar__icon">👥</span>
+                  <span class="sidebar__text">Usuarios</span>
+                </a>
+              </li>
+              <li class="sidebar__item">
+                <a href="GestionCatalogo.html" class="sidebar__link">
+                  <span class="sidebar__icon">🍔</span>
+                  <span class="sidebar__text">Catálogo</span>
+                </a>
+              </li>
+              <li class="sidebar__item">
+                <a href="GestionInventario.html" class="sidebar__link">
+                  <span class="sidebar__icon">📦</span>
+                  <span class="sidebar__text">Inventario</span>
+                </a>
+              </li>
+              <li class="sidebar__item">
+                <a href="GestionVentas.html" class="sidebar__link">
+                  <span class="sidebar__icon">💰</span>
+                  <span class="sidebar__text">Ventas</span>
+                </a>
+              </li>
+              <li class="sidebar__item">
+                <a href="GestionGastos.html" class="sidebar__link">
+                  <span class="sidebar__icon">💸</span>
+                  <span class="sidebar__text">Gastos</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="sidebar__section">
+            <div class="sidebar__section-title">REPORTES</div>
+            <ul class="sidebar__list">
+              <li class="sidebar__item">
+                <a href="ReportesBalance.html" class="sidebar__link">
+                  <span class="sidebar__icon">📈</span>
+                  <span class="sidebar__text">Balance</span>
+                </a>
+              </li>
+              <li class="sidebar__item">
+                <a href="ReportesConfigu.html" class="sidebar__link">
+                  <span class="sidebar__icon">⚙️</span>
+                  <span class="sidebar__text">Configuración</span>
+                </a>
+              </li>
+              <li class="sidebar__item">
+                <a href="ReportesNotifi.html" class="sidebar__link">
+                  <span class="sidebar__icon">🔔</span>
+                  <span class="sidebar__text">Notificaciones</span>
+                </a>
+              </li>
+              <li class="sidebar__item">
+                <a href="ReportesExportar.html" class="sidebar__link">
+                  <span class="sidebar__icon">📤</span>
+                  <span class="sidebar__text">Exportar Datos</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="admin-content">
+      <div class="admin-header">
+        <h1>Panel de Control</h1>
+        <p>Resumen de actividad del sistema</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+        <div class="card" style="text-align: center; padding: 1.5rem;">
+          <h3 style="color: #3c6288; margin-bottom: 0.5rem;">Usuarios</h3>
+          <p style="font-size: 2rem; font-weight: bold; color: #2c3e50;">142</p>
+          <p style="color: #7f8c8d; font-size: 0.9rem;">+5 hoy</p>
+        </div>
+        <div class="card" style="text-align: center; padding: 1.5rem;">
+          <h3 style="color: #3c6288; margin-bottom: 0.5rem;">Ventas</h3>
+          <p style="font-size: 2rem; font-weight: bold; color: #2c3e50;">$1.2M</p>
+          <p style="color: #7f8c8d; font-size: 0.9rem;">+12% vs mes</p>
+        </div>
+        <div class="card" style="text-align: center; padding: 1.5rem;">
+          <h3 style="color: #3c6288; margin-bottom: 0.5rem;">Pedidos</h3>
+          <p style="font-size: 2rem; font-weight: bold; color: #2c3e50;">87</p>
+          <p style="color: #7f8c8d; font-size: 0.9rem;">23 pendientes</p>
+        </div>
+      </div>
+      <h2 style="margin-bottom: 1rem; color: #2c3e50;">Últimos pedidos</h2>
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Usuario</th>
+            <th>Producto</th>
+            <th>Total</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>#1089</td>
+            <td>Carlos M.</td>
+            <td>Burger Deluxe ×2</td>
+            <td>$50.000</td>
+            <td><span style="color: #27ae60;">Entregado</span></td>
+            <td>
+              <button class="btn-edit btn--small">Editar</button>
+              <button class="btn-delete btn--small">Eliminar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+  </div>
+
+</body>
+</html>
