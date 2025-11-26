@@ -15,15 +15,15 @@
       <h1>TastyTap</h1>
     </div>
     <nav class="navbar__menu">
-      <a href="/TastyTap/index.html">Inicio</a>
-      <a href="/TastyTap/Vista/menu.html">Menú</a>
-      <a href="/TastyTap/Vista/tienda.html">Tienda</a>
-      <a href="/TastyTap/Vista/contacto.html">Contacto</a>
-      <a href="login.html" class="active">Login</a>
+      <a href="/index.html">Inicio</a>
+      <a href="/views/user/menu.html">Menú</a>
+      <a href="/views/user/tienda.html">Tienda</a>
+      <a href="/views/user/contacto.html">Contacto</a>
+      <a href="/views/user/login.html" class="active">Login</a>
     </nav>
   </header>
 
-  <section class="login">
+  <!-- <section class="login">
     <h2>Inicia sesión o regístrate</h2>
     <form class="login-form">
       <input type="email" placeholder="Correo electrónico" required>
@@ -31,7 +31,32 @@
       <button type="submit">Entrar</button>
       <p>¿No tienes cuenta? <a href="#">Regístrate aquí</a></p>
     </form>
-  </section>
+  </section> -->
+
+  <main>
+    <h2 class="contenedor__subtitulo">Inicia sesión para disfrutar de la mejor comida</h2>
+      <!-- ====================================================== -->
+      <!-- FORMULARIO DE LOGIN -->
+      <!-- ====================================================== -->
+      <form class="formulario_login" method="post" action="/login.php">
+        <!-- Campo: Nombre (solo para ejemplo, no se usa en login real) -->
+        <label for="nombre" class="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required />
+
+        <!-- Campo: Correo electrónico -->
+        <label for="email" class="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" placeholder="Ingresa tu correo" required />
+
+        <!-- Campo: Contraseña -->
+        <label for="password" class="password">Contraseña</label>
+        <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required />
+
+          <!-- Botón de envío -->
+        <div class="boton_login">
+          <button class="button" type="submit">Continuar</button>
+        </div>
+      </form>
+  </main>
 
     <!-- Reutilizamos el footer -->
 <footer class="footer">
