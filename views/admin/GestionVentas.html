@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TastyTap | Gestión de Ventas</title>
+  <link rel="stylesheet" href="../../css/main.css">
+</head>
+<body>
+  <div class="admin-layout">
+    <aside class="sidebar">…</aside>
+
+    <main class="admin-content">
+      <div class="admin-header">
+        <h1>Gestión de Ventas</h1>
+        <p>Historial de pedidos y transacciones</p>
+      </div>
+
+      <div class="gestion-controles">
+        <div class="gestion-buscar">
+          <label for="filtro-fecha">Filtrar por fecha:</label>
+          <input type="date" id="filtro-fecha">
+        </div>
+        <button class="btn">Exportar ventas</button>
+      </div>
+
+      <table class="gestion-table">
+        <thead>
+          <tr>
+            <th>ID Pedido</th>
+            <th>Fecha</th>
+            <th>Cliente</th>
+            <th>Productos</th>
+            <th>Total</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>#1089</td>
+            <td>2025-04-25 19:30</td>
+            <td>Carlos M.</td>
+            <td>Burger Deluxe ×2</td>
+            <td>$50.000</td>
+            <td><span class="estado estado--activo">Entregado</span></td>
+            <td><button class="btn-edit btn--small">Ver</button></td>
+          </tr>
+          <tr>
+            <td>#1088</td>
+            <td>2025-04-25 18:45</td>
+            <td>Ana R.</td>
+            <td>Pizza Margarita</td>
+            <td>$28.000</td>
+            <td><span class="estado estado--pendiente">En preparación</span></td>
+            <td><button class="btn-edit btn--small">Ver</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+  </div>
+</body>
+</html>

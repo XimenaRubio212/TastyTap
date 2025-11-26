@@ -98,6 +98,14 @@
   font-weight: 500;
 }
 
+.sidebar__logo-placeholder {
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
 /* Responsive: modo compacto (iconos solo) en móviles */
 @media (max-width: 768px) {
   .sidebar {

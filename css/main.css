@@ -19,19 +19,30 @@ realizado anteriormente*/
   */
   
   /* Paso 1: Variables y reset */
-  @import url('utils/Base.css');
+  /* @import url('utils/Base.css'); */
   
   /* Paso 2: Componentes reutilizables */
-  @import url('components/button.css');
+  /* @import url('components/button.css');
   @import url('components/card.css');
-  @import url('components/input.css');
+  @import url('components/input.css'); */
   
   /* Paso 3: Estilos de secciones comunes */
-  @import url('utils/estilo.css');
+  /* @import url('utils/estilo.css'); */
   
   /* Paso 4: Estilos de administración (solo usado en /views/admin/) */
-  @import url('admin/style.css');
-  @import url('admin/panelControl.css');
+  /* @import url('admin/style.css'); */
+  /* @import url('admin/panelControl.css'); */
 
   /*se debe llamar a todos los HTML de esta manera
   <link rel="stylesheet" href="css/main.css">*/
+
+
+  /*ACTUALIZADO*/
+@import url('utils/Base.css');
+@import url('components/button.css');
+@import url('components/card.css');
+@import url('components/input.css');
+@import url('utils/estilo.css');
+@import url('admin/style.css');
+@import url('admin/panelControl.css');
+@import url('admin/gestion.css'); /*Nuevo*/

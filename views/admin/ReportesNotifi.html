@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TastyTap | Notificaciones</title>
+  <link rel="stylesheet" href="../../css/main.css">
+</head>
+<body>
+  <div class="admin-layout">
+    <aside class="sidebar">
+      <div class="sidebar__header">
+        <div style="width: 40px; height: 40px; background: white; border-radius: 8px; margin: 0 auto;"></div>
+        <h2>TastyTap Admin</h2>
+      </div>
+      <nav class="sidebar__nav">
+        <ul class="sidebar__list">
+          <li class="sidebar__item">
+            <a href="panelControl.html" class="sidebar__link">
+              <span class="sidebar__icon">📊</span>
+              <span class="sidebar__text">Panel de Control</span>
+            </a>
+          </li>
+          <li class="sidebar__section">
+            <div class="sidebar__section-title">GESTIÓN PRINCIPAL</div>
+            <ul class="sidebar__list">
+              <li class="sidebar__item">
+                <a href="GestionUsuarios.html" class="sidebar__link">
+                  <span class="sidebar__icon">👥</span>
+                  <span class="sidebar__text">Usuarios</span>
+                </a>
+              </li>
+              <li class="sidebar__item">
+                <a href="GestionCatalogo.html" class="sidebar__link">
+                  <span class="sidebar__icon">🍔</span>
+                  <span class="sidebar__text">Catálogo</span>
+                </a>
+              </li>
+              <li class="sidebar__item">
+                <a href="GestionInventario.html" class="sidebar__link">
+                  <span class="sidebar__icon">📦</span>
+                  <span class="sidebar__text">Inventario</span>
+                </a>
+              </li>
+              <li class="sidebar__item">
+                <a href="GestionVentas.html" class="sidebar__link">
+                  <span class="sidebar__icon">💰</span>
+                  <span class="sidebar__text">Ventas</span>
+                </a>
+              </li>
+              <li class="sidebar__item">
+                <a href="GestionGastos.html" class="sidebar__link">
+                  <span class="sidebar__icon">💸</span>
+                  <span class="sidebar__text">Gastos</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="sidebar__section">
+            <div class="sidebar__section-title">REPORTES</div>
+            <ul class="sidebar__list">
+              <li class="sidebar__item">
+                <a href="ReportesBalance.html" class="sidebar__link">
+                  <span class="sidebar__icon">📈</span>
+                  <span class="sidebar__text">Balance</span>
+                </a>
+              </li>
+              <li class="sidebar__item">
+                <a href="ReportesConfigu.html" class="sidebar__link">
+                  <span class="sidebar__icon">⚙️</span>
+                  <span class="sidebar__text">Configuración</span>
+                </a>
+              </li>
+              <li class="sidebar__item">
+                <a href="ReportesNotifi.html" class="sidebar__link sidebar__link--active">
+                  <span class="sidebar__icon">🔔</span>
+                  <span class="sidebar__text">Notificaciones</span>
+                </a>
+              </li>
+              <li class="sidebar__item">
+                <a href="ReportesExportar.html" class="sidebar__link">
+                  <span class="sidebar__icon">📤</span>
+                  <span class="sidebar__text">Exportar Datos</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="admin-content">
+      <div class="admin-header">
+        <h1>Centro de Notificaciones</h1>
+        <p>Mensajes importantes y alertas del sistema</p>
+      </div>
+
+      <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
+        <button class="btn">Ver todas</button>
+        <button class="btn btn--small">No leídas (3)</button>
+        <button class="btn btn--small">Sistema</button>
+        <button class="btn btn--small">Restaurantes</button>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 1rem;">
+        <div class="notificacion">
+          <div class="notificacion-icono" style="background: #ffeaa7; color: #e17055;">⚠️</div>
+          <div class="notificacion-info">
+            <h4 class="notificacion-titulo">Stock bajo: Pan brioche</h4>
+            <p class="notificacion-mensaje">Burger House tiene solo 12 unidades (mínimo: 30)</p>
+            <span class="notificacion-tiempo">Hace 2 horas</span>
+          </div>
+          <button class="btn-edit btn--small">Resolver</button>
+        </div>
+
+        <div class="notificacion">
+          <div class="notificacion-icono" style="background: #74b9ff; color: #0984e3;">📨</div>
+          <div class="notificacion-info">
+            <h4 class="notificacion-titulo">Nuevo registro: Restaurante "Sushi Garden"</h4>
+            <p class="notificacion-mensaje">Esperando aprobación para publicar su menú</p>
+            <span class="notificacion-tiempo">Hace 1 día</span>
+          </div>
+          <button class="btn-edit btn--small">Revisar</button>
+        </div>
+
+        <div class="notificacion">
+          <div class="notificacion-icono" style="background: #55efc4; color: #00b894;">✅</div>
+          <div class="notificacion-info">
+            <h4 class="notificacion-titulo">Actualización completada</h4>
+            <p class="notificacion-mensaje">Versión 2.1.0 instalada con éxito</p>
+            <span class="notificacion-tiempo">Hace 3 días</span>
+          </div>
+          <button class="btn-edit btn--small">Detalles</button>
+        </div>
+
+        <div class="notificacion">
+          <div class="notificacion-icono" style="background: #fd79a8; color: #c2185b;">❗</div>
+          <div class="notificacion-info">
+            <h4 class="notificacion-titulo">Error en transacción #1085</h4>
+            <p class="notificacion-mensaje">Pago no procesado. Cliente notificado.</p>
+            <span class="notificacion-tiempo">Hace 5 horas</span>
+          </div>
+          <button class="btn-edit btn--small">Investigar</button>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

@@ -55,12 +55,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-
   <div class="admin-layout">
-
     <aside class="sidebar">
       <div class="sidebar__header">
-        <div style="width: 40px; height: 40px; background: white; border-radius: 8px; margin: 0 auto;"></div>
+        <div class="sidebar__logo-placeholder"></div>
         <h2>TastyTap Admin</h2>
       </div>
       <nav class="sidebar__nav">
@@ -144,51 +142,79 @@
         <h1>Panel de Control</h1>
         <p>Resumen de actividad del sistema</p>
       </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
-        <div class="card" style="text-align: center; padding: 1.5rem;">
-          <h3 style="color: #3c6288; margin-bottom: 0.5rem;">Usuarios</h3>
-          <p style="font-size: 2rem; font-weight: bold; color: #2c3e50;">142</p>
-          <p style="color: #7f8c8d; font-size: 0.9rem;">+5 hoy</p>
+
+      <div class="resumen-grid">
+        <div class="resumen-card">
+          <h3>Usuarios</h3>
+          <div class="valor">142</div>
+          <div class="subvalor">+5 hoy</div>
         </div>
-        <div class="card" style="text-align: center; padding: 1.5rem;">
-          <h3 style="color: #3c6288; margin-bottom: 0.5rem;">Ventas</h3>
-          <p style="font-size: 2rem; font-weight: bold; color: #2c3e50;">$1.2M</p>
-          <p style="color: #7f8c8d; font-size: 0.9rem;">+12% vs mes</p>
+        <div class="resumen-card">
+          <h3>Ventas</h3>
+          <div class="valor">$1.45M</div>
+          <div class="subvalor">+12% mes</div>
         </div>
-        <div class="card" style="text-align: center; padding: 1.5rem;">
-          <h3 style="color: #3c6288; margin-bottom: 0.5rem;">Pedidos</h3>
-          <p style="font-size: 2rem; font-weight: bold; color: #2c3e50;">87</p>
-          <p style="color: #7f8c8d; font-size: 0.9rem;">23 pendientes</p>
+        <div class="resumen-card">
+          <h3>Pedidos</h3>
+          <div class="valor">87</div>
+          <div class="subvalor">23 pendientes</div>
+        </div>
+        <div class="resumen-card">
+          <h3>Restaurantes</h3>
+          <div class="valor">12</div>
+          <div class="subvalor">+1 nuevo</div>
         </div>
       </div>
-      <h2 style="margin-bottom: 1rem; color: #2c3e50;">Últimos pedidos</h2>
-      <table class="admin-table">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Usuario</th>
-            <th>Producto</th>
-            <th>Total</th>
-            <th>Estado</th>
-            <th>Acciones</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>#1089</td>
-            <td>Carlos M.</td>
-            <td>Burger Deluxe ×2</td>
-            <td>$50.000</td>
-            <td><span style="color: #27ae60;">Entregado</span></td>
-            <td>
-              <button class="btn-edit btn--small">Editar</button>
-              <button class="btn-delete btn--small">Eliminar</button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+
+      <div class="config-seccion">
+        <h3>Últimos pedidos</h3>
+        <table class="gestion-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Usuario</th>
+              <th>Producto</th>
+              <th>Total</th>
+              <th>Estado</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#1089</td>
+              <td>Carlos M.</td>
+              <td>Burger Deluxe ×2</td>
+              <td>$50.000</td>
+              <td><span class="estado estado--activo">Entregado</span></td>
+              <td>
+                <button class="btn-edit btn--small">Editar</button>
+                <button class="btn-delete btn--small">Eliminar</button>
+              </td>
+            </tr>
+            <tr>
+              <td>#1088</td>
+              <td>Ana R.</td>
+              <td>Pizza Margarita</td>
+              <td>$28.000</td>
+              <td><span class="estado estado--pendiente">En preparación</span></td>
+              <td>
+                <button class="btn-edit btn--small">Editar</button>
+              </td>
+            </tr>
+            <tr>
+              <td>#1087</td>
+              <td>Luis T.</td>
+              <td>Sushi Rolls</td>
+              <td>$32.000</td>
+              <td><span class="estado estado--pendiente">Pendiente</span></td>
+              <td>
+                <button class="btn-edit btn--small">Editar</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </main>
   </div>
-
 </body>
 </html>

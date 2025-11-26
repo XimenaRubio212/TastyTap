@@ -1,0 +1,216 @@
+/* 
+  === ADMIN/GESTION.CSS ===
+  Propósito: Estilos específicos para páginas de gestión (Usuarios, Ventas, Inventario, etc.).
+  ¿Por qué? Para no sobrecargar style.css ni panelControl.css.
+  Contiene:
+  - Tablas mejoradas (con estados, hover)
+  - Formularios de búsqueda/filtro
+  - Botones de estado (activo, pendiente, etc.)
+  - Tarjetas resumen para reportes
+*/
+
+/* Tabla mejorada para gestión */
+.gestion-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  margin-bottom: 1.5rem;
+}
+
+.gestion-table th,
+.gestion-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.gestion-table th {
+  background-color: #3c6288;
+  color: white;
+  font-weight: 600;
+}
+
+.gestion-table tr:last-child td {
+  border-bottom: none;
+}
+
+.gestion-table tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* Estados comunes */
+.estado {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.estado--activo { background-color: #d4edda; color: #155724; }
+.estado--pendiente { background-color: #fff3cd; color: #856404; }
+.estado--cancelado { background-color: #f8d7da; color: #721c24; }
+.estado--bajo { background-color: #fff3cd; color: #856404; }
+
+/* Filtros y controles superiores */
+.gestion-controles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.gestion-buscar {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.gestion-buscar input {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  min-width: 200px;
+}
+
+/* Tarjetas de resumen (para reportes) */
+.resumen-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.resumen-card h3 {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  margin-bottom: 0.5rem;
+}
+
+.resumen-card .valor {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.resumen-card .subvalor {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+}
+
+/* Ya definido anteriormente, pero asegúrate de tener: */
+
+.resumen-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.total-gastos {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.monto-negativo {
+  margin-left: 0.5rem;
+  color: #e74c3c;
+}
+
+/* Formularios de configuración */
+.config-form {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.config-seccion {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.config-seccion h3 {
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+/* Notificaciones */
+.notificacion {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 1.25rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.notificacion-icono {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.notificacion-info {
+  flex: 1;
+}
+
+.notificacion-titulo {
+  margin: 0 0 0.25rem;
+  color: #2c3e50;
+}
+
+.notificacion-mensaje {
+  margin: 0 0 0.5rem;
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+.notificacion-tiempo {
+  font-size: 0.8rem;
+  color: #95a5a6;
+}
+
+/* Exportar */
+.export-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 2rem;
+  text-align: center;
+}
+
+.export-icono {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.export-titulo {
+  margin: 0 0 0.5rem;
+  color: #2c3e50;
+}
+
+.export-descripcion {
+  margin: 0 0 1.5rem;
+  color: #7f8c8d;
+  font-size: 0.95rem;
+}
+
+.export-acciones {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
