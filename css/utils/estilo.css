@@ -1,301 +1,350 @@
 /* === NAVBAR === */
+
+/*este es para la barra de navegacion*/
 .navbar {
-  background: var(--color-principal);
-  color: var(--color-blanco);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  flex-wrap: wrap;
+    /*este es el colo principal que tiene la barra de navegacion*/
+    background: var(--color-principal);
+    /*este es para cambiar el color del titulo de la aplicacion web*/
+    color: var(--color-blanco);
+    /*esto es para que la barra de navegacion 
+    se posiciones al lado del titulo*/
+    display: flex;
+    /*esto es para posicionar la barra de navegacion al lado derecho*/
+    justify-content: space-between;
+    /*esto es para entrar la barra de navegacion*/
+    align-items: center;
+    /*esto es para darle espacio a la barra de navegacion*/
+    padding: 1rem 2rem;
+    /*no veo lo que hace*/
+    flex-wrap: wrap;
 }
 
+/*esto es para que el logo de navegacion*/
 .navbar__logo {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
+    /*esto es para que el logo se ajuste al tamaño del navegador*/
+    display: flex;
+    /*esto es para centrarlo*/
+    align-items: center;
+    /*esto es para darle un espaciado*/
+    gap: 0.75rem;
 }
 
+/*esto es para la imagen del logo*/
 .navbar__logo img {
-  width: 50px;
-  height: auto;
+    /*esto es para manejar el tamaño de la imagen del logo*/
+    width: 50px;
+    /*esto es para que se mantenga la imagen como predeterminado con el tamaño y espaciado*/
+    height: 0 auto;
 }
 
+/*esto es para la barra de navegacion*/
 .navbar__menu {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.25rem;
+    /*esto es para que el mmenu de navegacion tena un tamaño*/
+    display: flex;
+    /*no se lo que hace*/
+    flex-wrap: wrap;
+    /*esto es para darles un espacio a cada menu de navegacion*/
+    gap: 1.25rem;
 }
 
+/*esto es para las opciones del menu*/
 .navbar__menu a {
-  position: relative;
-  color: var(--color-blanco);
-  text-decoration: none;
-  font-weight: 500;
-  transition: var(--transicion);
-  padding-bottom: 4px;
+    /*esto es para aparezca la linea en la cual esta posicionada la vista*/
+    position: relative;
+    /*esto es para cambiarle el color a las opciones del menu de navegacion*/
+    color: var(--color-blanco);
+    /*esto es para quitarle la linea que tiene por predeterminado las opciones del menu de navegacion*/
+    text-decoration: none;
+    /*no se lo que hace*/
+    font-weight: 500;
+    /*no se lo que hace*/
+    transition: var(--transicion);
+    /*esto es para el espaciado de las opciones a la linea que identifica en que posicion esta la vista*/
+    padding-bottom: 4px;
 }
 
+/*esto es para manejar la linea en la que muestra la posicion de la vista*/
 .navbar__menu a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0%;
-  height: 2px;
-  background: #ffe4d6;
-  transition: width 0.3s ease;
+    content: "";
+    
+    /* position: absolute; */
+    /* left: 0; */
+    /* bottom: 0; */
+    /* width: 0%; */
+    /* height: 2px; */
+    /* background: #ffe4d6; */
+    /* transition: width 0.3s ease; */
 }
 
 .navbar__menu a:hover::after,
 .navbar__menu a.active::after {
-  width: 100%;
+    width: 100%;
 }
 
 .navbar__menu a.active::after {
-  background: var(--color-blanco);
+    background: var(--color-blanco);
 }
 
 /* === HERO === */
 .hero {
-  text-align: center;
-  padding: 3rem 1rem;
-  background: linear-gradient(180deg, #fff, #fef3eb);
+    text-align: center;
+    padding: 3rem 1rem;
+    background: linear-gradient(180deg, #fff, #fef3eb);
 }
 
 .hero h2 {
-  color: var(--color-principal);
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
+    color: var(--color-principal);
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
 }
 
 .hero p {
-  font-size: 1.15rem;
-  max-width: 700px;
-  margin: 0 auto;
+    font-size: 1.15rem;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 /* === RECOMENDACIÓN === */
 .recomendacion {
-  text-align: center;
-  padding: 2rem 1rem;
+    text-align: center;
+    /*esto es para que las card no esten pegadas al borde del footer*/
+    padding: 2rem 1rem;
 }
 
 .recomendacion h3 {
-  color: var(--color-principal);
-  font-size: 1.8rem;
-  margin-bottom: 2rem;
+    color: var(--color-principal);
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
 }
 
-/* CORREGIDO: uso de grid para tarjetas */
+/* CORREGIDO: uso de grid para tarjetas (card)*/
 .recomendacion__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    /*acomodamos las card hacia los lados*/
+    max-width: 1300px;
+    margin: 0 auto;
 }
 
 /*CORRECCION DEL MENU*/
+/*esto es del subtitulo "Explora nuestro menu"*/
+.menu {
+    text-align: center;
+    padding: 2rem 1rem;
+}
 
+/*esto para cambiar el color de "Explora nuestro menu"*/
 .menu h2 {
-  color: var(--color-principal);
-  margin-bottom: 2rem;
+    color: var(--color-principal);
+    /*esto es para que las card no toquen el borde del footer*/
+    margin-bottom: 2rem;
 }
 
+/*esto es para que las imagenes se mantengan se mantengan
+dentro del contenedor y no se desborde o se dañe la imagen*/
 .menu__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  max-width: 800px; /*Corregido*/
-  margin: 0 auto;
+    /*esto es para que no se alarge el contenedor donde
+    se encuentra la imagen*/
+    display: grid;
+    /*esto es para el tamaño del contendor*/
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /*esto es para que mantenga cada sub_contenedor un espacio entre ellos*/
+    gap: 1.5rem;
+    /*acomodamos hacia los lados las card*/
+    max-width: 1200px;
+    /*esto es para centrarlo*/
+    margin: 0 auto;
 }
 
+/*esto es el contendor de cada imagen*/
 .menu__card {
-  background: var(--color-blanco);
-  border-radius: var(--radio);
-  box-shadow: var(--sombra);
-  padding: 1rem; /*Reducido para mejor espacio interior*/
-  transition: var(--transicion);
-  /*Evita desbordamiento*/
-  overflow: hidden; 
+    /*esto es el contendro donde esta la imagen y la descripcion*/
+    background: var(--color-blanco);
+    /*esto es para darle un borde redondeado al contendor de la imagen*/
+    border-radius: var(--radio);
+    /*esto es para darle una sombra al rededor del contenedor de la imagen*/
+    box-shadow: var(--sombra);
+    /*Reducido para la imagen y tener mejor espacio interior*/
+    padding: 1rem;
+    /*"no veo lo que hace"*/
+    transition: var(--transicion);
+    /*Evita desbordamiento - "no veo lo que hace"*/
+    overflow: hidden;
 }
 
-.menu__card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  display: block;
-  border-radius: var(--radio) var(--radio) 0 0;
-}
-
+/*esto dentro del contendor de cada imagen*/
 .menu__card h3 {
-  font-size: 1.25rem;
-  color: var(--color-principal);
-  margin: 0.5rem 0 0.25rem;
+    /*esto es para el tamaño de la letra "Pizza Margarita"*/
+    font-size: 1.25rem;
+    /*esto es para el color de la letra "Pizza Margarita"*/
+    color: var(--color-principal);
+    /*no veo lo que hace*/
+    margin: 0.5rem 0 0.25rem;
 }
 
+/*esto es para la letra que hay dentro del contendor*/
 .menu__card p {
-  font-size: 0.95rem;
-  color: #666;
-  margin: 0 0 0.5rem;
+    /*le cambia el tamaño "$26.000"*/
+    font-size: 0.95rem;
+    /*le cambia el color de "$26.000"*/
+    color: #666;
+    /*ayuda a que la p y el btn tenga un espacio y no esten tan pegados*/
+    margin: 0 0 0.5rem;
 }
-
-.menu__card .btn {
-  display: inline-block;
-  background: var(--color-principal);
-  color: var(--color-blanco);
-  padding: 0.5rem 1rem;
-  border-radius: var(--radio);
-  text-decoration: none;
-  font-weight: 500;
-  transition: var(--transicion);
-}
-
-.menu__card .btn:hover {
-  background: #e07a40; /* tono más oscuro */
-}
-
 
 /* === TIENDA === */
 .tienda {
-  text-align: center;
-  padding: 2rem 1rem;
+    text-align: center;
+    padding: 2rem 1rem;
 }
 
 .tienda__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  max-width: 1000px;
-  margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    /*es para posicionar y acomodarlo a los lados*/
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card__tienda {
+    background: var(--color-blanco);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    /*Reducido para mejor espacio interior*/
+    padding: 1rem;
+    transition: var(--transicion);
+    /*Evita desbordamiento*/
+    overflow: hidden;
 }
 
 /* === CONTACTO === */
 .contact-form {
-  max-width: 600px;
-  margin: 2rem auto;
-  background: var(--color-blanco);
-  padding: 2rem;
-  border-radius: var(--radio);
-  box-shadow: var(--sombra);
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+    max-width: 600px;
+    margin: 2rem auto;
+    background: var(--color-blanco);
+    padding: 2rem;
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 /* === LOGIN === */
 .login {
-  text-align: center;
-  padding: 2rem 1rem;
+    text-align: center;
+    padding: 2rem 1rem;
 }
 
 .login-form {
-  background: var(--color-blanco);
-  box-shadow: var(--sombra);
-  border-radius: var(--radio);
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+    background: var(--color-blanco);
+    box-shadow: var(--sombra);
+    border-radius: var(--radio);
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 /* === FOOTER === */
 .footer {
-  background: var(--color-principal);
-  color: rgba(255,255,255,0.95);
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-  padding: 4rem 2rem;
-  text-align: left;
-  align-items: start;
+    background: var(--color-principal);
+    color: rgba(255, 255, 255, 0.95);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    padding: 4rem 2rem;
+    text-align: left;
+    align-items: start;
 }
 
 .footer h3 {
-  font-size: 1.15rem;
-  margin-bottom: 1rem;
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
 }
 
 .footer a {
-  color: var(--color-blanco);
-  text-decoration: none;
-  display: block;
-  margin: 0.4rem 0;
-  position: relative;
-  padding-bottom: 3px;
+    color: var(--color-blanco);
+    text-decoration: none;
+    display: block;
+    margin: 0.4rem 0;
+    position: relative;
+    padding-bottom: 3px;
 }
 
 .footer a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0%;
-  height: 1.5px;
-  background: #ffe4d6;
-  transition: width 0.3s ease;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 1.5px;
+    background: #ffe4d6;
+    transition: width 0.3s ease;
 }
 
 .footer a:hover::after {
-  width: 100%;
+    width: 100%;
 }
 
 .footer a:hover {
-  color: #ffe4d6;
+    color: #ffe4d6;
 }
 
 .footer .social {
-  display: flex;
-  gap: 1rem;
+    display: flex;
+    gap: 1rem;
 }
 
 .footer .social i {
-  font-size: 1.4rem;
-  background: var(--color-blanco);
-  color: var(--color-principal);
-  padding: 0.5rem;
-  border-radius: 50%;
-  transition: transform 0.3s;
+    font-size: 1.4rem;
+    background: var(--color-blanco);
+    color: var(--color-principal);
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: transform 0.3s;
 }
 
 .footer .social i:hover {
-  transform: scale(1.15);
+    transform: scale(1.15);
 }
 
 .footer__bottom {
-  grid-column: 1 / -1;
-  text-align: center;
-  margin-top: 2rem;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(255,255,255,0.1);
-  font-size: 0.95rem;
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.95rem;
 }
 
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    gap: 1rem;
-  }
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
 
-  .navbar__menu {
-    justify-content: center;
-  }
+    .navbar__menu {
+        justify-content: center;
+    }
 
-  .menu__grid,
-  .tienda__grid,
-  .recomendacion__grid {
-    grid-template-columns: 1fr;
-  }
+    .menu__grid,
+    .tienda__grid,
+    .recomendacion__grid {
+        grid-template-columns: 1fr;
+    }
 
-  .footer {
-    text-align: center;
-    padding: 2rem 1rem;
-  }
+    .footer {
+        text-align: center;
+        padding: 2rem 1rem;
+    }
 
-  .footer .social {
-    justify-content: center;
-  }
+    .footer .social {
+        justify-content: center;
+    }
 }

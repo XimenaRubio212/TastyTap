@@ -1,46 +1,47 @@
-/*
-  === COMPONENTS/BUTTON.CSS ===
-  Propósito: Estilizar botones reutilizables en todo el sitio (usuario y admin).
-  Clases: .btn, .btn--small, .btn-edit, .btn-delete.
-  ¿Por qué? Consistencia visual y mantenimiento fácil.
-*/
-
 /* Estilo base para todos los botones */
 .btn {
-  display: inline-block;
-  background: #F08B51;
-  color: white;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 6px;
-  font-weight: 500;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-decoration: none; /* Para enlaces <a> */
+    display: inline-block;
+    background: #f08b51;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    /*se reutiliza esta transition para que los botones
+    al pasar por encima no se vean rigidos*/
+    transition: var(--transicion);
+    /* Para enlaces <a> */
+    text-decoration: none;
 }
 
 .btn:hover {
-  background: #d06f39;
-  transform:    translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    background: #d06f39;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Variante pequeña */
 .btn--small {
-  padding: 0.5rem 1rem;
-  font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
 }
 
 /* Botones de admin (definidos en admin/style.css) */
-.btn-edit, .btn-delete {
-  color: white;
-  border: none;
-  padding: 0.4rem 0.8rem;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 0.9rem;
+.btn-edit,
+.btn-delete {
+    color: white;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
 }
 
-.btn-edit:hover { background-color: #2980b9; }
-.btn-delete:hover { background-color: #c0392b; }
+.btn-edit:hover {
+    background-color: #2980b9;
+}
+.btn-delete:hover {
+    background-color: #c0392b;
+}
