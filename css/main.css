@@ -1,48 +1,11 @@
 
-/*Estilos base*/
-/* @import url(utils/Base.css); */ /*mio clase
-realizado anteriormente*/
-
-/*Componenetes*/
-/* @import url(utils/estilo.css); */ /*mio clase
-realizado anteriormente*/
-
-/* 
-   === MAIN.CSS ===
-   Propósito: Punto de entrada único para todos los estilos.
-   ¿Por qué? Evita enlazar múltiples CSS en HTML y mejora organización.
-   Orden de importación:
-   1. Base (variables + reset)
-   2. Componentes (reutilizables)
-   3. Estilos de secciones (navbar, footer, etc.)
-   4. Estilos de admin (solo si se entra al panel)
-  */
-  
-  /* Paso 1: Variables y reset */
-  /* @import url('utils/Base.css'); */
-  
-  /* Paso 2: Componentes reutilizables */
-  /* @import url('components/button.css');
-  @import url('components/card.css');
-  @import url('components/input.css'); */
-  
-  /* Paso 3: Estilos de secciones comunes */
-  /* @import url('utils/estilo.css'); */
-  
-  /* Paso 4: Estilos de administración (solo usado en /views/admin/) */
-  /* @import url('admin/style.css'); */
-  /* @import url('admin/panelControl.css'); */
-
-  /*se debe llamar a todos los HTML de esta manera
-  <link rel="stylesheet" href="css/main.css">*/
-
-
   /*ACTUALIZADO*/
-@import url('utils/Base.css');
+@import url('utils/base.css');
 @import url('components/button.css');
 @import url('components/card.css');
 @import url('components/input.css');
 @import url('utils/estilo.css');
-@import url('admin/style.css');
+/*tener cuidado con la carpeta admin del archivo style.css*/
+/* @import url('admin/style.css'); */
 @import url('admin/panelControl.css');
-@import url('admin/gestion.css'); /*Nuevo*/
+@import url('admin/gestion.css'); /*se agrego esto para el admin*/

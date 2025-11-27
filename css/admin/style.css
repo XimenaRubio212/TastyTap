@@ -1,12 +1,12 @@
-* {
+/* * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-}
+} */
 
 /* BLOQUE: sidebar */
-.sidebar {
+/* .sidebar {
     width: 200px;
     height: 100vh;
     background-color: #3c6288;
@@ -52,26 +52,26 @@ h1 {
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
-/* ELEMENTO: contenedor de navegación */
+ELEMENTO: contenedor de navegación
 .sidebar__nav {
     flex: 1;
     padding: 20px 0;
 }
 
-/* ELEMENTO: lista de ítems */
+ELEMENTO: lista de ítems
 .sidebar__list {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-/* ELEMENTO: ítem individual */
+ELEMENTO: ítem individual
 .sidebar__item {
     margin-bottom: 8px;
-}
+} */
 
 /* ELEMENTO: enlace de navegación */
-.sidebar__link {
+/* .sidebar__link {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -89,21 +89,21 @@ h1 {
     border-left-color: #007bff;
 }
 
-/* ELEMENTO: ícono */
+ELEMENTO: ícono
 .sidebar__icon {
     font-size: 1.2rem;
     width: 24px;
     text-align: center;
 }
 
-/* ELEMENTO: texto */
+ELEMENTO: texto
 .sidebar__text {
     font-size: 0.95rem;
     font-weight: 500;
-}
+} */
 
 /* Responsive: modo compacto (iconos solo) en móviles */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .sidebar {
         width: 80px;
     }
@@ -114,7 +114,7 @@ h1 {
 
     .sidebar__logo {
         max-height: 40px;
-        /* Limita la altura en modo compacto */
+        Limita la altura en modo compacto
         max-width: 40px;
         margin: 0 auto;
     }
@@ -132,7 +132,9 @@ h1 {
     .sidebar__link {
         justify-content: center;
     }
-}
+} */
+
+/*DESDE AQUI ARRIBA SE DESPAPAYA EL PROYECTO*/
 
 /*REVISAR QUE UTILIZAR SI EL DE ARRIBA O EL DE ABAJO
 Y SI LOS DOS SIRVEN UTILIZAR COMPONENTES DE LOS DOS*/
@@ -144,35 +146,37 @@ Y SI LOS DOS SIRVEN UTILIZAR COMPONENTES DE LOS DOS*/
   - Define layout base para admin (sidebar + main).
 */
 
-/* * {
-  box-sizing: border-box;
+* {
+  /* box-sizing: border-box; */
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', Arial, sans-serif; Consistencia con usuario
-} */
+  /* Consistencia con usuario */
+  font-family: 'Poppins', Arial, sans-serif; 
+}
 
-/* body {
+.body {
   font-family: 'Poppins', Arial, sans-serif;
   margin: 0;
-  padding: 0; Admin no necesita padding global
+  /*Admin no necesita padding global*/
+  padding: 0;
   color: #333;
-} */
+}
 
 /* Contenedor principal para admin: sidebar + contenido */
-/* .admin-layout {
+.admin-layout {
   display: flex;
   min-height: 100vh;
-} */
+}
 
 /* Contenido principal (a la derecha del sidebar) */
-/* .admin-content {
+.admin-content {
   flex: 1;
   padding: 2rem;
   background-color: #f5f7fa;
-} */
+}
 
 /* Encabezado de página */
-/* .admin-header {
+.admin-header {
   margin-bottom: 2rem;
 }
 
@@ -183,10 +187,10 @@ Y SI LOS DOS SIRVEN UTILIZAR COMPONENTES DE LOS DOS*/
 
 .admin-header p {
   color: #7f8c8d;
-} */
+}
 
 /* Tabla básica para listados */
-/* .admin-table {
+.admin-table {
   width: 100%;
   border-collapse: collapse;
   background: white;
@@ -209,8 +213,8 @@ Y SI LOS DOS SIRVEN UTILIZAR COMPONENTES DE LOS DOS*/
 
 .admin-table tr:last-child td {
   border-bottom: none;
-} */
+}
 
 /* Botones de acción */
-/* .btn-edit { background-color: #3498db; }
-.btn-delete { background-color: #e74c3c; } */
+.btn-edit { background-color: #3498db; }
+.btn-delete { background-color: #e74c3c; }
