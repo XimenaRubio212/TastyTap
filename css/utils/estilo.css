@@ -65,17 +65,25 @@
 
 /*esto es para manejar la linea en la que muestra la posicion de la vista*/
 .navbar__menu a::after {
+    /*no se lo que hace*/
     content: "";
-    
-    /* position: absolute; */
-    /* left: 0; */
-    /* bottom: 0; */
-    /* width: 0%; */
-    /* height: 2px; */
-    /* background: #ffe4d6; */
-    /* transition: width 0.3s ease; */
+    /*no se lo que hace*/
+    position: absolute;
+    /*no se lo que hace*/
+    left: 0;
+    /*no se lo que hace*/
+    bottom: 0;
+    /*no se lo que hace*/
+    width: 0%;
+    /*agrega un grosor a la linea*/
+    height: 2px;
+    /*le agrega un color al pasar el cursor*/
+    background: #ffe4d6;
+    /*le agrega una animacion al pasar el cursor*/
+    transition: width 0.3s ease;
 }
 
+/*esto es lo que indica la linea en la que muestra la posicion de la vista*/
 .navbar__menu a:hover::after,
 .navbar__menu a.active::after {
     width: 100%;
