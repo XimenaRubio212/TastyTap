@@ -2,84 +2,84 @@
 
 /*este es para la barra de navegacion*/
 .navbar {
-    /*este es el colo principal que tiene la barra de navegacion*/
+    /* este es el colo principal que tiene la barra de navegacion */
     background: var(--color-principal);
-    /*este es para cambiar el color del titulo de la aplicacion web*/
+    /* este es para cambiar el color del titulo de la aplicacion web */
     color: var(--color-blanco);
-    /*esto es para que la barra de navegacion 
-    se posiciones al lado del titulo*/
+    /* esto es para que la barra de navegacion 
+    se posiciones al lado del titulo */
     display: flex;
-    /*esto es para posicionar la barra de navegacion al lado derecho*/
+    /* esto es para posicionar la barra de navegacion al lado derecho */
     justify-content: space-between;
-    /*esto es para entrar la barra de navegacion*/
+    /* esto es para entrar la barra de navegacion */
     align-items: center;
-    /*esto es para darle espacio a la barra de navegacion*/
+    /* esto es para darle espacio a la barra de navegacion */
     padding: 1rem 2rem;
-    /*no veo lo que hace*/
+    /* no veo lo que hace */
     flex-wrap: wrap;
 }
 
 /*esto es para que el logo de navegacion*/
 .navbar__logo {
-    /*esto es para que el logo se ajuste al tamaño del navegador*/
+    /* esto es para que el logo se ajuste al tamaño del navegador */
     display: flex;
-    /*esto es para centrarlo*/
+    /* esto es para centrarlo */
     align-items: center;
-    /*esto es para darle un espaciado*/
+    /* esto es para darle un espaciado */
     gap: 0.75rem;
 }
 
 /*esto es para la imagen del logo*/
 .navbar__logo img {
-    /*esto es para manejar el tamaño de la imagen del logo*/
+    /* esto es para manejar el tamaño de la imagen del logo */
     width: 50px;
-    /*esto es para que se mantenga la imagen como predeterminado con el tamaño y espaciado*/
+    /* esto es para que se mantenga la imagen como predeterminado con el tamaño y espaciado */
     height: 0 auto;
 }
 
 /*esto es para la barra de navegacion*/
 .navbar__menu {
-    /*esto es para que el mmenu de navegacion tena un tamaño*/
+    /* esto es para que el mmenu de navegacion tena un tamaño */
     display: flex;
-    /*no se lo que hace*/
+    /* no se lo que hace */
     flex-wrap: wrap;
-    /*esto es para darles un espacio a cada menu de navegacion*/
+    /* esto es para darles un espacio a cada menu de navegacion */
     gap: 1.25rem;
 }
 
 /*esto es para las opciones del menu*/
 .navbar__menu a {
-    /*esto es para aparezca la linea en la cual esta posicionada la vista*/
+    /* esto es para aparezca la linea en la cual esta posicionada la vista */
     position: relative;
-    /*esto es para cambiarle el color a las opciones del menu de navegacion*/
+    /* esto es para cambiarle el color a las opciones del menu de navegacion */
     color: var(--color-blanco);
-    /*esto es para quitarle la linea que tiene por predeterminado las opciones del menu de navegacion*/
+    /* esto es para quitarle la linea que tiene por predeterminado las opciones del menu de navegacion */
     text-decoration: none;
-    /*no se lo que hace*/
+    /* no se lo que hace */
     font-weight: 500;
-    /*no se lo que hace*/
+    /* no se lo que hace */
     transition: var(--transicion);
-    /*esto es para el espaciado de las opciones a la linea que identifica en que posicion esta la vista*/
+    /* esto es para el espaciado de las opciones a la linea que identifica en que posicion esta la vista */
     padding-bottom: 4px;
 }
 
 /*esto es para manejar la linea en la que muestra la posicion de la vista*/
 .navbar__menu a::after {
-    /*no se lo que hace*/
+    /* no se lo que hace */
     content: "";
-    /*no se lo que hace*/
+    /* no se lo que hace */
     position: absolute;
-    /*no se lo que hace*/
+    /* no se lo que hace */
     left: 0;
-    /*no se lo que hace*/
+    /* no se lo que hace */
     bottom: 0;
-    /*no se lo que hace*/
+    /* no se lo que hace */
     width: 0%;
-    /*agrega un grosor a la linea*/
+    /* agrega un grosor a la linea */
     height: 2px;
-    /*le agrega un color al pasar el cursor*/
+    /* le agrega un color al pasar el cursor */
     background: #ffe4d6;
-    /*le agrega una animacion al pasar el cursor*/
+    /* le agrega una animacion al pasar el cursor */
     transition: width 0.3s ease;
 }
 
@@ -115,7 +115,7 @@
 /* === RECOMENDACIÓN === */
 .recomendacion {
     text-align: center;
-    /*esto es para que las card no esten pegadas al borde del footer*/
+    /* esto es para que las card no esten pegadas al borde del footer */
     padding: 2rem 1rem;
 }
 
@@ -125,79 +125,79 @@
     margin-bottom: 2rem;
 }
 
-/* CORREGIDO: uso de grid para tarjetas (card)*/
+/* CORREGIDO: uso de grid para tarjetas (card) */
 .recomendacion__grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-    /*acomodamos las card hacia los lados*/
+    /* acomodamos las card hacia los lados */
     max-width: 1300px;
     margin: 0 auto;
 }
 
-/*CORRECCION DEL MENU*/
-/*esto es del subtitulo "Explora nuestro menu"*/
+/* CORRECCION DEL MENU
+esto es del subtitulo "Explora nuestro menu" */
 .menu {
     text-align: center;
     padding: 2rem 1rem;
 }
 
-/*esto para cambiar el color de "Explora nuestro menu"*/
+/* esto para cambiar el color de "Explora nuestro menu" */
 .menu h2 {
     color: var(--color-principal);
-    /*esto es para que las card no toquen el borde del footer*/
+    /* esto es para que las card no toquen el borde del footer */
     margin-bottom: 2rem;
 }
 
-/*esto es para que las imagenes se mantengan se mantengan
-dentro del contenedor y no se desborde o se dañe la imagen*/
+/* esto es para que las imagenes se mantengan se mantengan
+dentro del contenedor y no se desborde o se dañe la imagen */
 .menu__grid {
-    /*esto es para que no se alarge el contenedor donde
-    se encuentra la imagen*/
+    /* esto es para que no se alarge el contenedor donde
+    se encuentra la imagen */
     display: grid;
-    /*esto es para el tamaño del contendor*/
+    /* esto es para el tamaño del contendor */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    /*esto es para que mantenga cada sub_contenedor un espacio entre ellos*/
+    /* esto es para que mantenga cada sub_contenedor un espacio entre ellos */
     gap: 1.5rem;
-    /*acomodamos hacia los lados las card*/
+    /* acomodamos hacia los lados las card */
     max-width: 1200px;
-    /*esto es para centrarlo*/
+    /* esto es para centrarlo */
     margin: 0 auto;
 }
 
-/*esto es el contendor de cada imagen*/
+/* esto es el contendor de cada imagen */
 .menu__card {
-    /*esto es el contendro donde esta la imagen y la descripcion*/
+    /* esto es el contendro donde esta la imagen y la descripcion */
     background: var(--color-blanco);
-    /*esto es para darle un borde redondeado al contendor de la imagen*/
+    /* esto es para darle un borde redondeado al contendor de la imagen */
     border-radius: var(--radio);
-    /*esto es para darle una sombra al rededor del contenedor de la imagen*/
+    /* esto es para darle una sombra al rededor del contenedor de la imagen */
     box-shadow: var(--sombra);
-    /*Reducido para la imagen y tener mejor espacio interior*/
+    /* Reducido para la imagen y tener mejor espacio interior */
     padding: 1rem;
-    /*"no veo lo que hace"*/
+    /* "no veo lo que hace" */
     transition: var(--transicion);
-    /*Evita desbordamiento - "no veo lo que hace"*/
+    /* Evita desbordamiento - "no veo lo que hace" */
     overflow: hidden;
 }
 
-/*esto dentro del contendor de cada imagen*/
+/* esto dentro del contendor de cada imagen */
 .menu__card h3 {
-    /*esto es para el tamaño de la letra "Pizza Margarita"*/
+    /* esto es para el tamaño de la letra "Pizza Margarita" */
     font-size: 1.25rem;
-    /*esto es para el color de la letra "Pizza Margarita"*/
+    /* esto es para el color de la letra "Pizza Margarita" */
     color: var(--color-principal);
-    /*no veo lo que hace*/
+    /* no veo lo que hace */
     margin: 0.5rem 0 0.25rem;
 }
 
-/*esto es para la letra que hay dentro del contendor*/
+/* esto es para la letra que hay dentro del contendor */
 .menu__card p {
-    /*le cambia el tamaño "$26.000"*/
+    /* le cambia el tamaño "$26.000" */
     font-size: 0.95rem;
-    /*le cambia el color de "$26.000"*/
+    /* le cambia el color de "$26.000" */
     color: #666;
-    /*ayuda a que la p y el btn tenga un espacio y no esten tan pegados*/
+    /* ayuda a que la p y el btn tenga un espacio y no esten tan pegados */
     margin: 0 0 0.5rem;
 }
 
@@ -211,7 +211,7 @@ dentro del contenedor y no se desborde o se dañe la imagen*/
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
-    /*es para posicionar y acomodarlo a los lados*/
+    /* es para posicionar y acomodarlo a los lados */
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -220,10 +220,10 @@ dentro del contenedor y no se desborde o se dañe la imagen*/
     background: var(--color-blanco);
     border-radius: var(--radio);
     box-shadow: var(--sombra);
-    /*Reducido para mejor espacio interior*/
+    /* Reducido para mejor espacio interior */
     padding: 1rem;
     transition: var(--transicion);
-    /*Evita desbordamiento*/
+    /* Evita desbordamiento */
     overflow: hidden;
 }
 

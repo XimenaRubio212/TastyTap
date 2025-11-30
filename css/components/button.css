@@ -9,8 +9,8 @@
     font-weight: 500;
     font-size: 1rem;
     cursor: pointer;
-    /*se reutiliza esta transition para que los botones
-    al pasar por encima no se vean rigidos*/
+    /* se reutiliza esta transition para que los botones
+    al pasar por encima no se vean rigidos */
     transition: var(--transicion);
     /* Para enlaces <a> */
     text-decoration: none;
