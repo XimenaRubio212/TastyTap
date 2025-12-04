@@ -6,7 +6,7 @@
 @import url('components/input.css');
 @import url('utils/estilo.css');
 /* tener cuidado con la carpeta admin del archivo style.css */
-@import url('admin/style.css');
-@import url('admin/panelControl.css');
+/* @import url('admin/style.css');
+@import url('admin/panelControl.css'); */
 /* se agrego esto para el admin */
-@import url('admin/gestion.css'); 
+/* @import url('admin/gestion.css');  */

@@ -19,6 +19,11 @@
     display: block;
 }
 
+/*este es para separar el subtitulo y el texto de la imagen de la card*/
+.card__recomendacion h4 {
+    padding: 0.5rem;
+}
+
 /* Variantes según sección */
 .card__recomendacion img {
     height: 250px;
@@ -44,10 +49,12 @@
     max-width: 400px;
     margin: 0 auto;
     padding-bottom: 1rem;
+    /*se agrego un padding para separar la informacion de las card*/
+    padding: 1rem;
 }
 
 /*este revisar si va aqui o en card.css*/
-.card__menu,
+/* .card__menu,
 .card__tienda {
     padding: 1rem;
-}
+} */

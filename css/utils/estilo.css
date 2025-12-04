@@ -135,6 +135,8 @@
     margin: 0 auto;
 }
 
+/* === Menu ===*/
+
 /* CORRECCION DEL MENU
 esto es del subtitulo "Explora nuestro menu" */
 .menu {
@@ -252,7 +254,7 @@ dentro del contenedor y no se desborde o se dañe la imagen */
     border-radius: var(--radio);
     max-width: 400px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 2rem;  
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -260,12 +262,18 @@ dentro del contenedor y no se desborde o se dañe la imagen */
 
 /* === FOOTER === */
 .footer {
+    /*le da color al footer donde se encuentra la informacion*/
     background: var(--color-principal);
+    /**/
     color: rgba(255, 255, 255, 0.95);
+    /*lo acomoda hacia los lados como columnas de la informacion del footer*/
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
-    padding: 4rem 2rem;
+    /*el gap me ayuda a centrar la informacion del footer*/
+    gap: 10rem;
+    /*acomoda el footer separandolo, el 3rem separa del borde superior y 
+    9rem acomoda las columnas del footer y me lo separa mas*/
+    padding: 3rem  9rem;
     text-align: left;
     align-items: start;
 }
@@ -321,12 +329,20 @@ dentro del contenedor y no se desborde o se dañe la imagen */
     transform: scale(1.15);
 }
 
+/*todo lo que tiene que ver con la informacion del contenido deñ footer,
+los restaurantes, redes sociales y derechos de autor*/
 .footer__bottom {
+    /*acomoda el texto para que vaya hacia los lados los derechos de autor*/
     grid-column: 1 / -1;
+    /*centra los derechos de autor*/
     text-align: center;
-    margin-top: 2rem;
+    /*separa el contenido del footer con el borde agregado*/
+    margin-top: -8rem;
+    /*separa los derechos de autor del borde agregado*/
     padding-top: 2rem;
+    /*agrega un borde para separar los derechos de autor del contenido de la pagina*/
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    /*le acomoda el tamaño a los derecho de autor*/
     font-size: 0.95rem;
 }
 

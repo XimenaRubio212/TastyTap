@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito - TastyTap</title>
+  <!-- se debe colocar la carpeta css, utils llamando a base.css para que defina las variables -->
+  <link rel="stylesheet" href="css/utils/base.css">
+  <!-- y se llama a la carpeta css llamando a main.css para que las use -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Estos son fondos de las redes sociales -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="main__container">
+    <header class="navbar">
+      <div class="navbar__logo">
+        <img src="/img/TastyTap.png" alt="Logo TastyTap">
+        <span class="navbar__brand">TastyTap</span>
+      </div>
+      <nav class="navbar__menu">
+        <a href="/index.html">Inicio</a>
+        <a href="/views/user/menu.html">Menú</a>
+        <a href="/views/user/tienda.html">Tienda</a>
+        <a href="/views/user/contacto.html">Contacto</a>
+        <a href="/views/user/login.html">Login</a>
+        <a href="/views/user/carrito.html" class="active">Carrito</a>
+        <a href="/views/user/registro.html">Registro</a>
+        <a href="/views/user/perfil.html">Perfil</a>
+      </nav>
+    </header>
+
+    <main class="main">
+      <div class="container">
+        <h2 class="section__title">Tu Carrito</h2>
+
+        <div class="carta__grid">
+          <div class="carta__card">
+            <img src="/img/burger.jpg" alt="Hamburguesa" class="carta__imagen">
+            <div class="carta__detalles">
+              <h4 class="carta__titulo">Hamburguesa Santandereano</h4>
+              <p class="carta__precio">$12.000 COP</p>
+            </div>
+            <div class="carta__cantidad">
+              <button class="btn__cantidad">-</button>
+              <input type="number" value="2" class="cantidad__input">
+              <button class="btn__cantidad">+</button>
+            </div>
+          </div>
+
+          <div class="carta__card">
+            <img src="/img/pizza.jpg" alt="Pizza" class="carta__imagen">
+            <div class="carta__detalles">
+              <h4 class="carta__titulo">Pizza Mexicana</h4>
+              <p class="carta__precio">$8.000 COP</p>
+            </div>
+            <div class="carta__cantidad">
+              <button class="btn__cantidad">-</button>
+              <input type="number" value="1" class="quantity-input">
+              <button class="btn__cantidad">+</button>
+            </div>
+          </div>
+
+          <div class="carta__total">
+            <strong>Total: $20.000 COP</strong>
+          </div>
+
+          <button class="btn btn__pago">Pagar por Transferencia</button>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__section">
+            <h3>Restaurantes Mejor Valorados</h3>
+            <a href="#">Camachos</a>
+            <a href="#">Domino's</a>
+            <a href="#">KFC</a>
+            <a href="#">Mc Donald's</a>
+            <a href="#">El corral</a>
+            <a href="#">Dunkin' Donuts</a>
+          </div>
+          <div class="footer__section">
+            <h3>Únete a Tasty Tap</h3>
+            <a href="#">Registra tu restaurante</a>
+            <a href="#">Registra tu local</a>
+            <a href="#">Haz crecer tu marca</a>
+            <a href="#">Promociona tu negocio</a>
+          </div>
+          <div class="footer__section">
+            <h3>Síguenos en Redes Sociales</h3>
+            <div class="footer__social">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            </div>
+          </div>
+          <div class="footer__section">
+            <h3>Contacto</h3>
+            <p>📍 Calle 123 #45-67, Bogotá, Colombia</p>
+            <p>📞 +57 320 555 1234</p>
+            <p>✉️ contacto@tastytap.com</p>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p>© 2025 TastyTap — Todos los derechos reservados 🍴</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
