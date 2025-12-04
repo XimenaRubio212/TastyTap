@@ -203,6 +203,16 @@ dentro del contenedor y no se desborde o se dañe la imagen */
     margin: 0 0 0.5rem;
 }
 
+/*carrito*/
+.carta__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    /* es para posicionar y acomodarlo a los lados */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 /* === TIENDA === */
 .tienda {
     text-align: center;

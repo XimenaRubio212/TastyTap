@@ -58,3 +58,79 @@
 .card__tienda {
     padding: 1rem;
 } */
+
+.carta__grid {
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: #fff;
+}
+
+.carta__card {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.carta__imagen {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-right: 1rem;
+}
+
+.carta.detalles {
+    flex-grow: 1;
+}
+
+.carta__titulo {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.carta__precio {
+    color: #888;
+    margin: 0.25rem 0 0 0;
+}
+
+.carta__cantidad {
+    display: flex;
+    align-items: center;
+}
+
+.btn__cantidad {
+    background-color: #f08b51;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn__cantidad:hover {
+    background-color: #d06f39;
+}
+
+.cantidad__input {
+    width: 50px;
+    text-align: center;
+    margin: 0 0.5rem;
+    padding: 0.25rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+}
+
+.carta__total {
+    text-align: right;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+.btn__pago:hover {
+    background-color: #d06f39;
+}
