@@ -26,6 +26,127 @@
   </header>
 
   <section class="login">
+    <form class="login__form" id="login-form">
+      <h2>Inicia sesión o regístrate</h2>
+      <label for="email" class="form-label">Correo electrónico</label>
+      <input type="email" id="email" name="email" class="input" placeholder="Tu correo" required>
+      <label for="password" class="form-label">Contraseña</label>
+      <input type="password" id="password" name="password" class="input" placeholder="Tu contraseña" required minlength="6">
+      <button type="submit" class="btn">Entrar</button>
+      <p>
+        ¿No tienes cuenta?
+        <a href="/views/user/registro.html">Regístrate aquí</a>
+      </p>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <div class="restaurantes">
+      <h3>Restaurantes Mejor Valorados</h3>
+      <a href="#">Camachos</a>
+      <a href="#">Domino's</a>
+      <a href="#">KFC</a>
+      <a href="#">Mc Donald's</a>
+      <a href="#">El corral</a>
+      <a href="#">Dunkin' Donuts</a>
+    </div>
+    <div class="unete">
+      <h3>Únete a Tasty Tap</h3>
+      <a href="#">Registra tu restaurante</a>
+      <a href="#">Registra tu local</a>
+      <a href="#">Haz crecer tu marca</a>
+      <a href="#">Promociona tu negocio</a>
+    </div>
+    <div class="redes">
+      <h3>Síguenos en Redes Sociales</h3>
+      <div class="social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+    <div class="contacto">
+      <h3>Contacto</h3>
+      <p>📍 Calle 123 #45-67, Bogotá, Colombia</p>
+      <p>📞 +57 320 555 1234</p>
+      <p>✉️ contacto@tastytap.com</p>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2025 TastyTap — Todos los derechos reservados 🍴</p>
+    </div>
+  </footer>
+
+  <!-- ✅ Script para manejar login + redirect -->
+  <script>
+    // ✅ 1. Si ya está logueado, redirigir automáticamente
+    if (localStorage.getItem('logueado') === 'true') {
+      const urlParams = new URLSearchParams(window.location.search);
+      const redirectUrl = urlParams.get('redirect') || '/views/user/perfil.html';
+      window.location.href = redirectUrl;
+    }
+
+    // ✅ 2. Manejar el formulario de login
+    document.getElementById('login-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value;
+
+      // ✅ Validación mínima (puedes extenderla)
+      if (!email || !password) {
+        alert('Por favor ingresa correo y contraseña.');
+        return;
+      }
+
+      // ✅ Simular login exitoso
+      localStorage.setItem('logueado', 'true');
+      localStorage.setItem('usuario', JSON.stringify({
+        email: email,
+        nombre: email.split('@')[0]
+      }));
+
+      // ✅ Obtener URL de redirección
+      const urlParams = new URLSearchParams(window.location.search);
+      const redirectUrl = urlParams.get('redirect') || '/views/user/tienda.html';
+
+      // ✅ Mostrar mensaje y redirigir
+      alert('¡Inicio de sesión exitoso!');
+      window.location.href = redirectUrl;
+    });
+  </script>
+
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TastyTap | Login</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="page-login">
+
+  <header class="navbar">
+    <div class="navbar__logo">
+      <img src="/img/TastyTap.png" alt="Logo TastyTap">
+      <h1>TastyTap</h1>
+    </div>
+    <nav class="navbar__menu">
+        <a href="/index.html">Inicio</a>
+        <a href="/views/user/menu.html">Menú</a>
+        <a href="/views/user/tienda.html">Tienda</a>
+        <a href="/views/user/contacto.html">Contacto</a>
+        <a href="/views/user/login.html" class="active">Login</a>
+    </nav>
+  </header>
+
+  <section class="login">
     <form class="login__form">
       <h2>Inicia sesión o regístrate</h2>
       <label for="email" class="form-label">Correo electrónico</label>
@@ -79,4 +200,4 @@
 
 </body>
 
-</html>
+</html> -->

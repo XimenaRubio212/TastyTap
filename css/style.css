@@ -198,3 +198,113 @@ body.page-perfil .perfil__message a {
 body.page-perfil .perfil__message a:hover {
   color: #e67000;
 }
+
+/* === ESTILOS PARA CONTROL DE ACCESO === */
+body.page-hamburguesas .no-logueado {
+  display: block;
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+body.page-hamburguesas .logueado {
+  display: none;
+}
+
+body.page-hamburguesas .access-denied {
+  max-width: 500px;
+  margin: 2rem auto;
+  text-align: center;
+  background-color: #fff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+body.page-hamburguesas .access-denied .icon-xl {
+  font-size: 3rem;
+  color: #f57c00;
+  margin-bottom: 1rem;
+}
+
+body.page-hamburguesas .access-denied h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+body.page-hamburguesas .access-denied p {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+/* Mantén tus estilos actuales de .menu, .menu__card, etc. — no los toques */
+/* Solo asegúrate de que .logueado herede el estilo de .menu */
+body.page-hamburguesas .logueado {
+  padding: 2rem;
+}
+
+body.page-hamburguesas .menu__card .price {
+  font-weight: bold;
+  color: #f57c00;
+  font-size: 1.1rem;
+}
+
+/* === ESTILOS PARA LOGIN (mejor centrado) === */
+body.page-login .login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 80px - 300px); /* altura viewport - header - footer */
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+body.page-login .login__form {
+  max-width: 400px;
+  width: 100%;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+body.page-login .login__form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+body.page-login .form-label {
+  display: block;
+  margin: 1rem 0 0.5rem;
+  font-weight: 600;
+  color: #444;
+}
+
+body.page-login .input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+body.page-login .btn {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 1.5rem 0;
+  font-size: 1rem;
+}
+
+body.page-login .login__form p {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+body.page-login .login__form a {
+  color: #f57c00;
+  text-decoration: underline;
+}
