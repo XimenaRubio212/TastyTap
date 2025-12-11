@@ -95,3 +95,41 @@
 .checkbox-carrito:checked ~ .confirmacion {
   display: block;
 }
+
+/* === BOTÓN SIMULADO Y CONFIRMACIÓN SIN JS === */
+.checkbox-carrito {
+  display: none;
+}
+
+.btn-simulado {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #f57c00;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  transition: background-color 0.2s ease;
+}
+
+.btn-simulado:hover {
+  background-color: #e67000;
+}
+
+.confirmacion {
+  display: none;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  border-left: 4px solid #4caf50;
+}
+
+.checkbox-carrito:checked ~ .confirmacion {
+  display: block;
+}
