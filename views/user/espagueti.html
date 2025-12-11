@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TastyTap | Espagueti</title>
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/utils/Base.css">
+  <link rel="stylesheet" href="/css/view/style.css">
+  <link rel="stylesheet" href="/css/components/button.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-
-<body>
+<body class="page-espagueti">
 
   <header class="navbar">
     <div class="navbar__logo">
@@ -19,57 +19,73 @@
     <nav class="navbar__menu">
       <a href="/index.html">Inicio</a>
       <a href="/views/user/menu.html">Menú</a>
-      <a href="/views/user/tienda.html" class="active">Tienda</a>
+      <a href="/views/user/tienda.html">Tienda</a>
       <a href="/views/user/contacto.html">Contacto</a>
       <a href="/views/user/login.html">Login</a>
     </nav>
   </header>
 
-  <section class="tienda">
+  <section class="menu">
     <h2>Espaguetis disponibles</h2>
-    <p class="tienda__subtitle">Pastas al dente, salsas caseras y porciones generosas.</p>
+    <div class="menu__grid">
 
-    <div class="tienda__grid">
-      <div class="card__tienda">
+      <div class="menu__card">
         <img src="/img/pasta.jpg" alt="Espagueti a la Boloñesa">
         <h3>Espagueti a la Boloñesa</h3>
-        <p class="card__price">$15.000</p>
-        <p class="card__location">📍 Carbonara Express - Teusaquillo</p>
-        <p>📞 +57 320 555 1234</p>
-        <button class="btn">Añadir al carrito</button>
+        <p>📍 Carbonara Express – Teusaquillo</p>
+        <p>📞 +57 320 555 4001</p>
+        <p class="price">$15.000</p>
+        <input type="checkbox" id="pasta-1" class="checkbox-carrito">
+        <label for="pasta-1" class="btn-simulado">Agregar al carrito</label>
+        <div class="confirmacion">
+          ✅ <strong>Espagueti a la Boloñesa</strong> agregado al carrito.
+        </div>
       </div>
 
-      <div class="card__tienda">
+      <div class="menu__card">
         <img src="/img/pasta.jpg" alt="Espagueti Alfredo">
         <h3>Alfredo con Pollo</h3>
-        <p class="card__price">$17.000</p>
-        <p class="card__location">📍 Carbonara Express - Teusaquillo</p>
-        <p>📞 +57 320 555 1234</p>
-        <button class="btn">Añadir al carrito</button>
+        <p>📍 Carbonara Express – Teusaquillo</p>
+        <p>📞 +57 320 555 4001</p>
+        <p class="price">$17.000</p>
+        <input type="checkbox" id="pasta-2" class="checkbox-carrito">
+        <label for="pasta-2" class="btn-simulado">Agregar al carrito</label>
+        <div class="confirmacion">
+          ✅ <strong>Alfredo con Pollo</strong> agregado al carrito.
+        </div>
       </div>
 
-      <div class="card__tienda">
+      <div class="menu__card">
         <img src="/img/pasta.jpg" alt="Espagueti con Albóndigas">
         <h3>Con Albóndigas</h3>
-        <p class="card__price">$16.500</p>
-        <p class="card__location">📍 Trattoria Mia - Chapinero</p>
-        <p>📞 +57 320 555 1234</p>
-        <button class="btn">Añadir al carrito</button>
+        <p>📍 Trattoria Mia – Chapinero</p>
+        <p>📞 +57 320 555 4002</p>
+        <p class="price">$16.500</p>
+        <input type="checkbox" id="pasta-3" class="checkbox-carrito">
+        <label for="pasta-3" class="btn-simulado">Agregar al carrito</label>
+        <div class="confirmacion">
+          ✅ <strong>Con Albóndigas</strong> agregado al carrito.
+        </div>
       </div>
 
-      <div class="card__tienda">
+      <div class="menu__card">
         <img src="/img/pasta.jpg" alt="Espagueti Aglio e Olio">
         <h3>Aglio e Olio</h3>
-        <p class="card__price">$14.000</p>
-        <p class="card__location">📍 Trattoria Mia - Chapinero</p>
-        <p>📞 +57 320 555 1234</p>
-        <button class="btn">Añadir al carrito</button>
+        <p>📍 Trattoria Mia – Chapinero</p>
+        <p>📞 +57 320 555 4002</p>
+        <p class="price">$14.000</p>
+        <input type="checkbox" id="pasta-4" class="checkbox-carrito">
+        <label for="pasta-4" class="btn-simulado">Agregar al carrito</label>
+        <div class="confirmacion">
+          ✅ <strong>Aglio e Olio</strong> agregado al carrito.
+        </div>
       </div>
+
     </div>
   </section>
 
   <footer class="footer">
-    <div class="restaurantes">
+    <div class="footer__section">
       <h3>Restaurantes Mejor Valorados</h3>
       <a href="#">Camachos</a>
       <a href="#">Domino's</a>
@@ -78,22 +94,22 @@
       <a href="#">El corral</a>
       <a href="#">Dunkin' Donuts</a>
     </div>
-    <div class="unete">
+    <div class="footer__section">
       <h3>Únete a Tasty Tap</h3>
       <a href="#">Registra tu restaurante</a>
       <a href="#">Registra tu local</a>
       <a href="#">Haz crecer tu marca</a>
       <a href="#">Promociona tu negocio</a>
     </div>
-    <div class="redes">
+    <div class="footer__section">
       <h3>Síguenos en Redes Sociales</h3>
-      <div class="social">
+      <div class="footer__social">
         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
         <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
       </div>
     </div>
-    <div class="contacto">
+    <div class="footer__section">
       <h3>Contacto</h3>
       <p>📍 Calle 123 #45-67, Bogotá, Colombia</p>
       <p>📞 +57 320 555 1234</p>
@@ -105,5 +121,4 @@
   </footer>
 
 </body>
-
 </html>
