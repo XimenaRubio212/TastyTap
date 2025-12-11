@@ -270,6 +270,39 @@ dentro del contenedor y no se desborde o se dañe la imagen */
     gap: 1rem;
 }
 
+/* Centrar el mensaje de "No tienes pedidos aún" */
+.message-no-orders {
+    /*esto es para centrarlo*/
+    text-align: center;
+    /*esto es para darle un espacio dentro del contenedor*/
+    padding: 20px;
+    /*fondo suave */
+    /* background-color: #f9f9f9;  */
+    /*esto es un separador agrega un alinea en la parte inferiror*/
+    /* border-bottom: 1px solid #ddd; */
+    /*esto es para darle mas espacio al contenedor*/
+    margin: 20px 0;
+}
+
+/*esto es para el subtitulo no tienes pedidos aún*/
+.message-no-orders h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+    color: var(--color-secundario);
+}
+
+/*esto es para el parrafo de realiza tu primer pedido*/
+.message-no-orders p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--color-secundario);
+}
+
+.message-no-orders a {
+    color: var(--color-principal);
+    text-decoration: underline;
+}
+
 /* === FOOTER === */
 .footer {
     /*le da color al footer donde se encuentra la informacion*/
@@ -283,13 +316,15 @@ dentro del contenedor y no se desborde o se dañe la imagen */
     gap: 10rem;
     /*acomoda el footer separandolo, el 3rem separa del borde superior y 
     9rem acomoda las columnas del footer y me lo separa mas*/
-    padding: 3rem  9rem;
+    padding: 9rem 10rem;
     text-align: left;
     align-items: start;
 }
 
 .footer h3 {
+    /*esto es para el tamaño de los subtitulos del footer*/
     font-size: 1.15rem;
+    /*esto es para darles espacio del subtitulo a los parrafos del footer*/
     margin-bottom: 1rem;
 }
 
@@ -297,6 +332,7 @@ dentro del contenedor y no se desborde o se dañe la imagen */
     color: var(--color-blanco);
     text-decoration: none;
     display: block;
+    /*esto es para darle espaciado netre parrafos*/
     margin: 0.4rem 0;
     position: relative;
     padding-bottom: 3px;
