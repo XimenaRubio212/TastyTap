@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TastyTap | Hamburguesas</title>
+  <!-- CSS externos -->
+  <link rel="stylesheet" href="/css/utils/Base.css">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/components/button.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body class="page-hamburguesas">
@@ -23,57 +26,66 @@
     </nav>
   </header>
 
-  <!-- ✅ Bloque: Usuario NO logueado -->
-  <section class="no-logueado">
-    <div class="container">
-      <div class="access-denied">
-        <i class="fas fa-lock icon-xl"></i>
-        <h3>Acceso restringido</h3>
-        <p>Debes iniciar sesión para ver los productos y agregarlos al carrito.</p>
-        <a href="/views/user/login.html?redirect=/views/user/hamburguesas.html" class="btn">Iniciar sesión</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ✅ Bloque: Usuario LOGUEADO (contenido real) -->
-  <section class="menu logueado">
+  <section class="menu">
     <h2>Hamburguesas disponibles</h2>
     <div class="menu__grid">
+
+      <!-- Producto 1 -->
       <div class="menu__card">
         <img src="/img/burger.jpg" alt="Burger Deluxe">
         <h3>Burger Deluxe</h3>
         <p>📍 Calle 123 #45-67, Bogotá, Colombia</p>
         <p>📞 +57 320 555 1234</p>
         <p class="price">$25.000</p>
-        <button class="btn">Agregar al carrito</button>
+        <input type="checkbox" id="carrito-1" class="checkbox-carrito">
+        <label for="carrito-1" class="btn-simulado">Agregar al carrito</label>
+        <div class="confirmacion">
+          ✅ <strong>Burger Deluxe</strong> agregado al carrito.
+        </div>
       </div>
 
+      <!-- Producto 2 -->
       <div class="menu__card">
         <img src="/img/burger.jpg" alt="Burger Vegano">
         <h3>Burger Vegano</h3>
         <p>📍 Calle 123 #45-67, Bogotá, Colombia</p>
         <p>📞 +57 320 555 1234</p>
         <p class="price">$22.000</p>
-        <button class="btn">Agregar al carrito</button>
+        <input type="checkbox" id="carrito-2" class="checkbox-carrito">
+        <label for="carrito-2" class="btn-simulado">Agregar al carrito</label>
+        <div class="confirmacion">
+          ✅ <strong>Burger Vegano</strong> agregado al carrito.
+        </div>
       </div>
 
+      <!-- Producto 3 -->
       <div class="menu__card">
         <img src="/img/burger.jpg" alt="Burger BBQ">
         <h3>Burger BBQ</h3>
         <p>📍 Calle 123 #45-67, Bogotá, Colombia</p>
         <p>📞 +57 320 555 1234</p>
         <p class="price">$28.000</p>
-        <button class="btn">Agregar al carrito</button>
+        <input type="checkbox" id="carrito-3" class="checkbox-carrito">
+        <label for="carrito-3" class="btn-simulado">Agregar al carrito</label>
+        <div class="confirmacion">
+          ✅ <strong>Burger BBQ</strong> agregado al carrito.
+        </div>
       </div>
 
+      <!-- Producto 4 -->
       <div class="menu__card">
         <img src="/img/burger.jpg" alt="Burger con Queso">
         <h3>Burger con Queso</h3>
         <p>📍 Calle 123 #45-67, Bogotá, Colombia</p>
         <p>📞 +57 320 555 1234</p>
         <p class="price">$24.000</p>
-        <button class="btn">Agregar al carrito</button>
+        <input type="checkbox" id="carrito-4" class="checkbox-carrito">
+        <label for="carrito-4" class="btn-simulado">Agregar al carrito</label>
+        <div class="confirmacion">
+          ✅ <strong>Burger con Queso</strong> agregado al carrito.
+        </div>
       </div>
+
     </div>
   </section>
 
