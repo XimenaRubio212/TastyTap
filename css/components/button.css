@@ -57,3 +57,43 @@
   cursor: pointer;
   transition: background-color 0.3s;
 }
+
+/* === BOTÓN SIMULADO Y CONFIRMACIÓN SIN JS === */
+
+/* Ocultar el checkbox */
+.checkbox-carrito {
+  display: none;
+}
+
+/* Estilo para el "botón" (label) */
+.btn-simulado {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #f57c00;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.btn-simulado:hover {
+  background-color: #e67000;
+}
+
+/* Mensaje de confirmación (se muestra solo si checkbox está marcado) */
+.confirmacion {
+  display: none;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  border-left: 4px solid #4caf50;
+}
+
+.checkbox-carrito:checked ~ .confirmacion {
+  display: block;
+}
