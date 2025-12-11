@@ -4,29 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TastyTap | Registro</title>
-  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body>
+<body class="page-registro">
+  
   <header class="navbar">
     <div class="navbar__logo">
-      <img src="../../img/TastyTap.png" alt="Logo TastyTap">
+      <img src="/img/TastyTap.png" alt="Logo TastyTap">
       <h1>TastyTap</h1>
     </div>
     <nav class="navbar__menu">
-      <!-- <a href="../../index.html">Inicio</a> -->
-      <!-- <a href="menu.html">Menú</a> -->
-      <!-- <a href="tienda.html">Tienda</a> -->
-      <!-- <a href="contacto.html">Contacto</a> -->
-      <a href="login.html">Login</a>
-      <a href="registro.html" class="active">Registro</a>
+      <a href="/views/user/login.html">Login</a>
+      <a href="/views/user/registro.html" class="active">Registro</a>
     </nav>
   </header>
 
   <main class="main">
-    <div class="form-container">
-      <h2 class="form-title">Crea tu cuenta</h2>
       <form>
+        <h2 class="form-title">Crea tu cuenta</h2>
         <label for="nombre" class="form-label">Nombre completo</label>
         <input type="text" id="nombre" class="input" required>
 
@@ -39,13 +35,13 @@
         <label for="confirm" class="form-label">Confirmar contraseña</label>
         <input type="password" id="confirm" class="input" required minlength="6">
 
-        <a href="login.html#registrado" class="btn">Registrar cuenta</a>
+        <a href="/views/user/login.html#registrado" class="btn">Registrar cuenta</a>
 
         <p class="form-link">
-          ¿Ya tienes cuenta? <a href="/views/user/login.html">Inicia sesión</a>
+          ¿Ya tienes cuenta?
+          <a href="/views/user/login.html">Inicia sesión</a>
         </p>
       </form>
-    </div>
   </main>
 
   <footer class="footer">

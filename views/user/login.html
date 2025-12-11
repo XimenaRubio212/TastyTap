@@ -5,32 +5,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TastyTap | Login</title>
-  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
-<body>
+<body class="page-login">
 
   <header class="navbar">
     <div class="navbar__logo">
-      <img src="../../img/TastyTap.png" alt="Logo TastyTap">
+      <img src="/img/TastyTap.png" alt="Logo TastyTap">
       <h1>TastyTap</h1>
     </div>
     <nav class="navbar__menu">
         <a href="/index.html">Inicio</a>
         <a href="/views/user/menu.html">Menú</a>
         <a href="/views/user/tienda.html">Tienda</a>
-        <!-- <a href="/views/user/carrito.html">Carrito</a> -->
         <a href="/views/user/contacto.html">Contacto</a>
         <a href="/views/user/login.html" class="active">Login</a>
-        <!-- <a href="/views/user/registro.html">Registro</a> -->
-        <!-- <a href="/views/user/perfil.html">Perfil</a> -->
     </nav>
   </header>
 
-  <main class="login">
-    <h2>Inicia sesión o regístrate</h2>
+  <section class="login">
     <form class="login__form">
+      <h2>Inicia sesión o regístrate</h2>
       <label for="email" class="form-label">Correo electrónico</label>
       <input type="email" id="email" name="email" class="input" placeholder="Tu correo" required>
       <label for="password" class="form-label">Contraseña</label>
@@ -42,7 +39,7 @@
         <a href="/views/user/registro.html">Regístrate aquí</a>
       </p>
     </form>
-  </main>
+  </section>
 
   <footer class="footer">
     <div class="restaurantes">

@@ -1,0 +1,23 @@
+.no-logueado {
+  text-align: center;
+  padding: 3rem 1rem;
+  max-width: 500px;
+  margin: 2rem auto;
+}
+
+.no-logueado i {
+  font-size: 3rem;
+  color: #999;
+  margin-bottom: 1rem;
+}
+
+.no-logueado h3 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.no-logueado p {
+  color: #666;
+  margin-bottom: 1.5rem;
+}

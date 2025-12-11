@@ -1,0 +1,73 @@
+/* .hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(180deg, #fff, #fef3eb);
+}
+
+.hero h2 {
+  color: var(--color-principal);
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.15rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.recomendacion {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.recomendacion h3 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: var(--color-principal);
+}
+
+.recomendacion__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.menu {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.menu h2 {
+  color: var(--color-principal);
+  margin-bottom: 2rem;
+}
+
+.menu__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tienda {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.tienda__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact__form h2 {
+  font-size: 1.8rem;
+  color: var(--color-principal);
+  margin-bottom: 1.5rem;
+} */

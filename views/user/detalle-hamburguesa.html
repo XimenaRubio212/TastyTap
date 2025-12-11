@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TastyTap | Historial</title>
+  <title>Burger Deluxe - TastyTap</title>
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+
   <header class="navbar">
     <div class="navbar__logo">
       <img src="/img/TastyTap.png" alt="Logo TastyTap">
@@ -17,53 +18,23 @@
       <a href="/index.html">Inicio</a>
       <a href="/views/user/menu.html">Menú</a>
       <a href="/views/user/tienda.html">Tienda</a>
-      <a href="/views/user/carrito.html">Carrito</a>
-      <a href="/views/user/perfil.html">Perfil</a>
-      <a href="/views/user/historial.html#logueado" class="active">Historial</a>
+      <a href="/views/user/contacto.html">Contacto</a>
+      <a href="/views/user/login.html">Login</a>
     </nav>
   </header>
 
   <main class="main">
     <div class="container">
-      <h2 class="section__title">Historial de Pedidos</h2>
-
-      <div class="order-item">
-        <div class="order-header">
-          <span><strong>Pedido #12345</strong> • 05 Dic 2025</span>
-          <span class="order-status status-delivered">Entregado</span>
-        </div>
-        <div class="order-details">
-          <p>• Burger Deluxe x2</p>
-          <p>• Bebida (gaseosa) x2</p>
-          <p><strong>Total: $54.000 COP</strong></p>
-        </div>
-      </div>
-
-      <div class="order-item">
-        <div class="order-header">
-          <span><strong>Pedido #12340</strong> • 01 Dic 2025</span>
-          <span class="order-status status-cancelled">Cancelado</span>
-        </div>
-        <div class="order-details">
-          <p>• Pizza Margarita x1</p>
-          <p><strong>Total: $28.000 COP</strong></p>
-        </div>
-      </div>
-
-      <!-- Mensaje si no hay pedidos -->
-      <div class="no-logeado">
-        <i class="fas fa-history"></i>
-        <h3>No tienes pedidos aún</h3>
-        <p>
-          Realiza tu primer pedido en el
-          <a href="/views/user/menu.html">menú</a>
-          o en la <a href="/views/user/tienda.html">tienda</a>.</p>
+      <div class="no-logueado">
+        <i class="fas fa-lock icon-xl"></i>
+        <h3>Acceso restringido</h3>
+        <p>Debes iniciar sesión para ver este producto.</p>
+        <a href="/views/user/login.html" class="btn">Ir a login</a>
       </div>
     </div>
   </main>
 
-  <footer class="footer"> 
-    <!-- footer igual -->
+  <footer class="footer">
     <div class="footer__section">
       <h3>Restaurantes Mejor Valorados</h3>
       <a href="#">Camachos</a>
@@ -98,5 +69,6 @@
       <p>© 2025 TastyTap — Todos los derechos reservados 🍴</p>
     </div>
   </footer>
+
 </body>
 </html>

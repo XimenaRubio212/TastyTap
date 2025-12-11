@@ -5,8 +5,86 @@
 @import url('components/card.css');
 @import url('components/input.css');
 @import url('utils/estilo.css');
+@import url('view/profile.css');
 /* tener cuidado con la carpeta admin del archivo style.css */
 /* @import url('admin/style.css');
 @import url('admin/panelControl.css'); */
 /* se agrego esto para el admin */
 /* @import url('admin/gestion.css');  */
+
+/* === CONTENEDOR ÚNICO PARA FORMULARIOS (CONTACTO, LOGIN, REGISTRO) === */
+body.page-contacto .form-container,
+body.page-login .form-container,
+body.page-registro .form-container,
+body.page-contacto form,
+body.page-login form,
+body.page-registro form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff; /* Solo un fondo blanco */
+  border-radius: 8px;
+}
+
+/* === TEXTAREA CONTROLADO === */
+body.page-contacto textarea,
+body.page-login textarea,
+body.page-registro textarea {
+  resize: vertical;
+  min-height: 100px;
+  max-height: 200px;
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  /* font-size: 1rem; */
+  line-height: 1.5;
+  background-color: #fff;
+}
+
+/* === INPUTS (LOGIN Y REGISTRO) === */
+body.page-login input[type="text"],
+body.page-login input[type="email"],
+body.page-login input[type="password"],
+body.page-registro input[type="text"],
+body.page-registro input[type="email"],
+body.page-registro input[type="password"],
+body.page-registro input[type="tel"] {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #fff;
+}
+
+/* === BOTONES === */
+body.page-contacto button[type="submit"],
+body.page-login button[type="submit"],
+body.page-registro button[type="submit"],
+body.page-contacto .btn,
+body.page-login .btn,
+body.page-registro .btn {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  margin: 1.5rem auto 0;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #f57c00;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+}
+
+body.page-contacto button[type="submit"]:hover,
+body.page-login button[type="submit"]:hover,
+body.page-registro button[type="submit"]:hover,
+body.page-contacto .btn:hover,
+body.page-login .btn:hover,
+body.page-registro .btn:hover {
+  background-color: #e67000;
+}

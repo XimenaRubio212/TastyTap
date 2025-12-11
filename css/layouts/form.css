@@ -1,0 +1,38 @@
+.form-container textarea {
+  resize: vertical; /* Permite redimensionar solo en vertical */
+  min-height: 100px;
+  max-height: 200px; /* Límite máximo de altura */
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.form-container .btn,
+.form-container button[type="submit"] {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  margin: 1.5rem auto 0;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* Estilo específico para botones naranjas (si aplica) */
+.form-container .btn,
+.form-container button[type="submit"] {
+  background-color: #f57c00; /* Color naranja de TastyTap */
+  color: white;
+  transition: background-color 0.2s ease;
+}
+
+.form-container .btn:hover,
+.form-container button[type="submit"]:hover {
+  background-color: #e67000;
+}

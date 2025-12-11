@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TastyTap | Perfil</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <span id="logueado"></span>
+
+  <header class="navbar">
+    <div class="navbar__logo">
+      <img src="/img/TastyTap.png" alt="Logo TastyTap">
+      <h1>TastyTap</h1>
+    </div>
+    <nav class="navbar__menu">
+      <a href="/index.html">Inicio</a>
+      <a href="/views/user/menu.html">Menú</a>
+      <a href="/views/user/tienda.html">Tienda</a>
+      <a href="/views/user/contacto.html">Contacto</a>
+      <!-- <span class="no-logueado">
+        <a href="login.html">Login</a>
+        <a href="registro.html">Registro</a>
+      </span> -->
+      <a href="/views/user/historial.html">Historial</a>
+      <span class="logueado-only">
+        <!-- <a href="carrito.html">Carrito</a> -->
+        <a href="/views/user/perfil.html#logueado" class="active">Perfil</a>
+      </span>
+    </nav>
+  </header>
+
+  <main class="main">
+    <!-- <div class="container">
+      <div class="no-logueado">
+        <i class="fas fa-user-times icon-xl"></i>
+        <h3>Acceso restringido</h3>
+        <p>Debes iniciar sesión para ver tu perfil.</p>
+        <a href="login.html" class="btn">Ir a login</a>
+      </div> -->
+
+      <div class="logueado-only">
+        <h2 class="section__title">Mi Perfil</h2>
+        <div class="profile-card">
+          <div class="profile-header">
+            <img src="/img/perfil.jpg" alt="Foto de perfil" class="profile-avatar">
+            <div class="profile-info">
+              <h3>Darcy Rubio</h3>
+              <p>Darcy.Rubio@gmail.com</p>
+            </div>
+          </div>
+          <div class="profile-field">
+            <span class="field-label">Nombre:</span>
+            <span class="field-value">Darcy Rubio</span>
+          </div>
+          <div class="profile-field">
+            <span class="field-label">Teléfono:</span>
+            <span class="field-value">+57 320 555 1234</span>
+          </div>
+          <div class="profile-field">
+            <span class="field-label">Dirección:</span>
+            <span class="field-value">Calle 123 #45-67, Bogotá</span>
+          </div>
+          <div class="profile-actions">
+            <button class="btn">Editar perfil</button>
+          </div>
+        </div>
+        <div class="success-msg">
+          <i class="fas fa-check-circle"></i>
+          <h3>¡Inicio de sesión exitoso!</h3>
+          <p>Ahora puedes <a href="/views/user/tienda.html">ordenar comida</a>.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__section">
+      <h3>Restaurantes Mejor Valorados</h3>
+      <a href="#">Camachos</a>
+      <a href="#">Domino's</a>
+      <a href="#">KFC</a>
+      <a href="#">Mc Donald's</a>
+      <a href="#">El corral</a>
+      <a href="#">Dunkin' Donuts</a>
+    </div>
+    <div class="footer__section">
+      <h3>Únete a Tasty Tap</h3>
+      <a href="#">Registra tu restaurante</a>
+      <a href="#">Registra tu local</a>
+      <a href="#">Haz crecer tu marca</a>
+      <a href="#">Promociona tu negocio</a>
+    </div>
+    <div class="footer__section">
+      <h3>Síguenos en Redes Sociales</h3>
+      <div class="footer__social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+    <div class="footer__section">
+      <h3>Contacto</h3>
+      <p>📍 Calle 123 #45-67, Bogotá, Colombia</p>
+      <p>📞 +57 320 555 1234</p>
+      <p>✉️ contacto@tastytap.com</p>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2025 TastyTap — Todos los derechos reservados 🍴</p>
+    </div>
+  </footer>
+</body>
+</html>
