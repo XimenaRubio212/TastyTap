@@ -275,13 +275,13 @@ dentro del contenedor y no se desborde o se dañe la imagen */
     /*esto es para centrarlo*/
     text-align: center;
     /*esto es para darle un espacio dentro del contenedor*/
-    padding: 20px;
+    /* padding: 20px; */
     /*fondo suave */
     /* background-color: #f9f9f9;  */
     /*esto es un separador agrega un alinea en la parte inferiror*/
     /* border-bottom: 1px solid #ddd; */
     /*esto es para darle mas espacio al contenedor*/
-    margin: 20px 0;
+    margin: 30px 0;
 }
 
 /*esto es para el subtitulo no tienes pedidos aún*/
@@ -293,14 +293,36 @@ dentro del contenedor y no se desborde o se dañe la imagen */
 
 /*esto es para el parrafo de realiza tu primer pedido*/
 .message-no-orders p {
+    /*esto es para mantener un espacio inicial entre el contenedor*/
     margin: 0;
+    /*esto es par aajustar el tamaño del parrafo
+    realiza tu primer pedido*/
     font-size: 0.95rem;
+    /*esto es para agregarle color al parrafo*/
     color: var(--color-secundario);
 }
 
+/*esto es para los dos enlaces*/
 .message-no-orders a {
+    /*esto es para agregarle un color a los enlaces*/
     color: var(--color-principal);
-    text-decoration: underline;
+    /*esto es para agregarle una linea abajo para separar informacion
+    si mas adelante lo llego a utilizar*/
+    /* text-decoration: underline; */
+}
+
+/*esto es para el titulo*/
+.section__title {
+    /*esto es para darle un tamaño al titulo historial de pedido*/
+    font-size: 1.8rem;
+    /*esto es para darle el color al titulo que es naraja*/
+    color: var(--color-principal);
+    margin-bottom: 1.5rem;
+    /*esto es para centrar el titulo historial de pedido*/
+    text-align: center;
+    padding: 2px;
+    /*esto es para darle espacio superior del titulo Historial de pedido*/
+    margin-top: 1.5rem;
 }
 
 /* === FOOTER === */
@@ -321,6 +343,7 @@ dentro del contenedor y no se desborde o se dañe la imagen */
     align-items: start;
 }
 
+/*esto es para el subtitulo del footer*/
 .footer h3 {
     /*esto es para el tamaño de los subtitulos del footer*/
     font-size: 1.15rem;
@@ -328,13 +351,21 @@ dentro del contenedor y no se desborde o se dañe la imagen */
     margin-bottom: 1rem;
 }
 
+/*esto es para los parrafos*/
 .footer a {
+    /*esto es para darles un color predetermnidado
+    a los parrafos para que no aparezcan en azul*/
     color: var(--color-blanco);
+    /*esto es para quitarle la linea de abajo del texto o del parrafo*/
     text-decoration: none;
+    /*esto es para que se alinie cada texto uno debajo de otros*/
     display: block;
-    /*esto es para darle espaciado netre parrafos*/
+    /* esto es para darle espaciado entre parrafos */
     margin: 0.4rem 0;
+    /*esto es para colocar igual la posicion,
+    que sea estatica, permanece en la misma posicion*/
     position: relative;
+    /*esto es para darle un espacio entre parrafos o textos*/
     padding-bottom: 3px;
 }
 
