@@ -88,3 +88,113 @@ body.page-login .btn:hover,
 body.page-registro .btn:hover {
   background-color: #e67000;
 }
+
+/* === ESTILOS PARA PÁGINA DE PERFIL === */
+body.page-perfil .perfil {
+  /* padding: 2rem; */
+  background-color: #f9f9f9;
+}
+
+body.page-perfil .perfil__container {
+  max-width: 600px;
+  /*esto es para que me quede centrado el contenedor*/
+  margin: 0 auto;
+  /*esto es para que me quede centrado el contenedor y al lado de la imagen
+  lo que es el perfil y los datos del cliente*/
+  display: flex;
+  /*esto es para daler espacio entre los contenedores o datos del perfil*/
+  gap: 2rem;
+  align-items: flex-start;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  /*esto es para darle espacio al contenedor del boton editar perfil
+  en la parte de abajo*/
+  padding: 2rem;
+}
+
+/*esto es para darle espacio al contenedor de la imagen*/
+body.page-perfil .perfil__avatar img {
+  /*esto es para darle un tamaño a la imagen*/
+  width: 150px;
+  /*esto es para darle un tamaño a la imagen*/
+  height: 150px;
+  /*esto es para darle redondeo a la imagen*/
+  border-radius: 50%;
+  object-fit: cover;
+  /*para darle un borde a la imagen*/
+  border: 4px solid #f57c00;
+}
+
+body.page-perfil .perfil__info {
+  flex: 1;
+}
+
+body.page-perfil .perfil__info h2 {
+  margin-top: 0;
+  color: #333;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #f57c00;
+  padding-bottom: 0.5rem;
+}
+
+/*esto es para darle espacio a los parrafos*/
+body.page-perfil .perfil__info p {
+  /*para darle espacio entre los parrafos*/
+  margin: 0.5rem 0;
+  /*para darle tamaño a los parrafos*/
+  font-size: 1rem;
+  /*para darle color a los parrafos*/
+  color: #555;
+}
+
+body.page-perfil .perfil__info p strong {
+  color: #333;
+  font-weight: 600;
+}
+
+body.page-perfil .btn:hover {
+  background-color: #e67000;
+}
+
+/*=== MENSAJE DE QUE INICIO SESION EL CLIENTE ===*/
+/*esto es el contenedor del mensaje*/
+body.page-perfil .perfil__message {
+  /*esto es para darle un tamaño al contenedor*/
+  max-width: 600px;
+  /*esto es para darle espacio al contenedor y centrarlo*/
+  margin: 2rem auto;
+  /*esto es para centrar el texto del contenedor*/
+  text-align: center;
+  /*est es para darle espacio al contenedor*/
+  padding: 1.5rem;
+  /*esto es para darle color(o sombra) al contenedor*/
+  background-color: #fff;
+  /*esto es para darle redondeo al contenedor*/
+  border-radius: 8px;
+  /*esto es para darle una sombra al contenedor*/
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+body.page-perfil .perfil__message p:first-child {
+  /*este es para darle un tamaño al parrafo principal del contenedor*/
+  font-size: 1.2rem;
+  /*esto es para darle un grosor al parrafo*/
+  font-weight: 600;
+  /*esto es para darle color al parrafo*/
+  color: #333;
+  /*esto es para darle espacio al parrafo*/
+  margin-bottom: 0.5rem;
+}
+
+body.page-perfil .perfil__message a {
+  /*esto es para darle color al link ordenar comida para que indique que es un enlace*/
+  color: #f57c00;
+  text-decoration: underline;
+  /*esto es para darle un groso al parrafo del link*/
+  font-weight: 600;
+}
+
+body.page-perfil .perfil__message a:hover {
+  color: #e67000;
+}
