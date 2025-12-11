@@ -253,8 +253,12 @@ dentro del contenedor y no se desborde o se dañe la imagen */
 }
 
 /* === LOGIN === */
+/*esto es dentro del contenedor login 
+de iniciar sesion o registrarse*/
 .login {
-    text-align: center;
+    /*por si me piden que lo centre lo voy a dejar,
+    es para centrar los subtitulos correo y contraseña*/
+    /* text-align: center; */
     padding: 2rem 1rem;
 }
 
