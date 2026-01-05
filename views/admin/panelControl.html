@@ -1,59 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TastyTap | Panel de Control</title>
-    <link rel="stylesheet" href="../../css/utils/Base.css">
-    <link rel="stylesheet" href="../../css/admin/panelControl.css">
-    <link rel="stylesheet" href="../../css/admin/gestion.css">
-    <link rel="stylesheet" href="../../css/components/button.css">
+  <meta charset="UTF-8">
+  <title>TastyTap | Panel de Control</title>
+  <link rel="stylesheet" href="../../css/utils/Base.css">
+  <link rel="stylesheet" href="../../css/admin/panelControl.css">
+  <link rel="stylesheet" href="../../css/admin/gestion.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <div class="admin-layout">
-        <aside class="sidebar">
-            <div class="sidebar__header">
-                <div class="sidebar__logo-placeholder"></div>
-                <h2>TastyTap Admin</h2>
-            </div>
-            <nav class="sidebar__nav">
-                <ul class="sidebar__list">
-                    <li><a href="panelControl.html" class="sidebar__link sidebar__link--active"><span class="sidebar__icon">📊</span><span class="sidebar__text">Panel de Control</span></a></li>
-                    <li class="sidebar__section-title">GESTIÓN PRINCIPAL</li>
-                    <li><a href="GestionUsuarios.html" class="sidebar__link"><span class="sidebar__icon">👥</span><span class="sidebar__text">Usuarios</span></a></li>
-                    <li><a href="GestionCatalogo.html" class="sidebar__link"><span class="sidebar__icon">🍔</span><span class="sidebar__text">Catálogo</span></a></li>
-                    <li><a href="GestionInventario.html" class="sidebar__link"><span class="sidebar__icon">📦</span><span class="sidebar__text">Inventario</span></a></li>
-                    <li><a href="GestionVentas.html" class="sidebar__link"><span class="sidebar__icon">💰</span><span class="sidebar__text">Ventas</span></a></li>
-                    <li><a href="GestionGastos.html" class="sidebar__link"><span class="sidebar__icon">💸</span><span class="sidebar__text">Gastos</span></a></li>
-                    <li class="sidebar__section-title">REPORTES</li>
-                    <li><a href="ReportesBalance.html" class="sidebar__link"><span class="sidebar__icon">📈</span><span class="sidebar__text">Balance</span></a></li>
-                    <li><a href="ReportesConfigu.html" class="sidebar__link"><span class="sidebar__icon">⚙️</span><span class="sidebar__text">Configuración</span></a></li>
-                    <li><a href="ReportesNotifi.html" class="sidebar__link"><span class="sidebar__icon">🔔</span><span class="sidebar__text">Notificaciones</span></a></li>
-                    <li><a href="ReportesExportar.html" class="sidebar__link"><span class="sidebar__icon">📤</span><span class="sidebar__text">Exportar Datos</span></a></li>
-                </ul>
-            </nav>
-        </aside>
-        <main class="admin-content">
-            <header class="admin-header">
-                <h1>Panel de Control</h1>
-                <p>Resumen general de las operaciones de hoy</p>
-            </header>
-            <div class="resumen-grid">
-                <div class="resumen-card"><h3>Ventas Hoy</h3><span class="valor">$1.200.000</span><p class="subvalor">+5% vs ayer</p></div>
-                <div class="resumen-card"><h3>Pedidos</h3><span class="valor">45</span><p class="subvalor">12 en camino</p></div>
-                <div class="resumen-card"><h3>Nuevos Clientes</h3><span class="valor">8</span><p class="subvalor">Últimas 24h</p></div>
-            </div>
-            <section>
-                <h3>Actividad Reciente</h3>
-                <table class="gestion-table">
-                    <thead><tr><th>ID</th><th>Cliente</th><th>Estado</th><th>Total</th></tr></thead>
-                    <tbody>
-                        <tr><td>#2045</td><td>Ana García</td><td><span class="estado estado--activo">Completado</span></td><td>$35.000</td></tr>
-                        <tr><td>#2046</td><td>Luis Mora</td><td><span class="estado estado--pendiente">Procesando</span></td><td>$52.000</td></tr>
-                    </tbody>
-                </table>
-            </section>
-        </main>
-    </div>
+  <div class="top-breadcrumb">Panel de control - ADMIN</div>
+  <div class="admin-layout">
+    <!-- Sidebar Navegación -->
+    <aside class="sidebar">
+      <div class="sidebar__header"><h2>TastyTap Admin</h2></div>
+      <nav class="sidebar__nav">
+        <a href="panelControl.html" class="sidebar__link sidebar__link--active"><span>📊</span> Panel de Control</a>
+        <div class="sidebar__section-title">GESTIÓN PRINCIPAL</div>
+        <a href="GestionUsuarios.html" class="sidebar__link"><span>👥</span> Usuarios</a>
+        <a href="GestionCatalogo.html" class="sidebar__link"><span>🍔</span> Catálogo</a>
+        <a href="GestionInventario.html" class="sidebar__link"><span>📦</span> Inventario</a>
+        <a href="GestionVentas.html" class="sidebar__link">💰</span> Ventas</a>
+        <a href="GestionGastos.html" class="sidebar__link"><span>💸</span> Gastos</a>
+        <div class="sidebar__section-title">REPORTES Y SISTEMA</div>
+        <a href="ReportesBalance.html" class="sidebar__link">📈</span> Balance</a>
+        <a href="ReportesConfigu.html" class="sidebar__link"><span>⚙️</span> Configuración</a>
+        <a href="ReportesNotifi.html" class="sidebar__link"><span>🔔</span> Notificaciones</a>
+        <a href="ReportesExportar.html" class="sidebar__link"><span>📤</span> Exportar Datos</a>
+      </nav>
+    </aside>
+
+    <main class="admin-content">
+      <div class="content-header">
+        <h1>Panel de Control Resumen</h1>
+        <div class="role-badge">Rol: <span>ADMINISTRADOR</span></div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;">
+        <div class="stat-card"><i class="fas fa-users"></i><div><h3>254</h3><p>Usuarios Registrados</p></div></div>
+        <div class="stat-card"><i class="fas fa-burger"></i><div><h3>47</h3><p>Productos en Catálogo</p></div></div>
+        <div class="stat-card"><i class="fas fa-shopping-cart"></i><div><h3>125</h3><p>Ventas del Mes</p></div></div>
+        <div class="stat-card"><i class="fas fa-dollar-sign"></i><div><h3>$2.950.000</h3><p>Ganancias Totales</p></div></div>
+      </div>
+
+      <div class="chart-container">
+        <h3>Rendimiento de Ventas Semanal</h3>
+        <div class="bar-chart">
+          <div class="bar-item" style="height: 40%;" data-day="Lunes"></div>
+          <div class="bar-item" style="height: 60%;" data-day="Martes"></div>
+          <div class="bar-item" style="height: 35%;" data-day="Miércoles"></div>
+          <div class="bar-item" style="height: 85%;" data-day="Jueves"></div>
+          <div class="bar-item" style="height: 55%;" data-day="Viernes"></div>
+          <div class="bar-item" style="height: 100%;" data-day="Sábado"></div>
+          <div class="bar-item" style="height: 90%;" data-day="Domingo"></div>
+        </div>
+      </div>
+    </main>
+  </div>
 </body>
 </html>

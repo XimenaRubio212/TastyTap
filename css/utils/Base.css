@@ -24,19 +24,25 @@ body {
   line-height: 1.6;
 }
 
-/*esto es para el ADMINISTRADOR*/
+/*ESSTO ES PARA EL ADMINISTRADOR*/
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --color-principal: #F08B51;
-  --color-secundario: #3c6288;
-  --color-fondo: #f4f7f6;
-  --color-blanco: #ffffff;
-  --color-texto: #333333;
-  --color-gris-suave: #7f8c8d;
-  --sombra: 0 4px 12px rgba(0,0,0,0.08);
-  --transicion: all 0.3s ease;
+  /* Colores exactos del diseño */
+  --sidebar-blue: #0e5f8b;
+  --active-orange: #ef8e4b;
+  --section-title-blue: #7eb6d4;
+  --table-header-blue: #b1d1e4;
+  --bg-main: #f4f4f4;
+  --white: #ffffff;
+  --text-dark: #333333;
+  --text-muted: #666666;
+  
+  /* Efectos */
+  --shadow-card: 0 4px 15px rgba(0, 0, 0, 0.1);
+  --radius-lg: 15px;
+  --radius-md: 8px;
 }
 
 * {
@@ -46,7 +52,7 @@ body {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: var(--color-fondo);
-  color: var(--color-texto);
+  font-family: 'Inter', 'Poppins', sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-dark);
 }
