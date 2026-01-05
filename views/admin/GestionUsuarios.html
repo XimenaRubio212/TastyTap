@@ -1,154 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TastyTap | Gestión de Usuarios</title>
-  <link rel="stylesheet" href="../../css/main.css">
+    <meta charset="UTF-8">
+    <title>TastyTap | Usuarios</title>
+    <link rel="stylesheet" href="../../css/utils/Base.css">
+    <link rel="stylesheet" href="../../css/admin/panelControl.css">
+    <link rel="stylesheet" href="../../css/admin/gestion.css">
+    <link rel="stylesheet" href="../../css/components/button.css">
 </head>
 <body>
-  <div class="admin-layout">
-    <aside class="sidebar">
-      <div class="sidebar__header">
-        <div style="width: 40px; height: 40px; background: white; border-radius: 8px; margin: 0 auto;"></div>
-        <h2>TastyTap Admin</h2>
-      </div>
-      <nav class="sidebar__nav">
-        <ul class="sidebar__list">
-          <li class="sidebar__item">
-            <a href="panelControl.html" class="sidebar__link">
-              <span class="sidebar__icon">📊</span>
-              <span class="sidebar__text">Panel de Control</span>
-            </a>
-          </li>
-          <li class="sidebar__section">
-            <div class="sidebar__section-title">GESTIÓN PRINCIPAL</div>
-            <ul class="sidebar__list">
-              <li class="sidebar__item">
-                <a href="GestionUsuarios.html" class="sidebar__link sidebar__link--active">
-                  <span class="sidebar__icon">👥</span>
-                  <span class="sidebar__text">Usuarios</span>
-                </a>
-              </li>
-              <li class="sidebar__item">
-                <a href="GestionCatalogo.html" class="sidebar__link">
-                  <span class="sidebar__icon">🍔</span>
-                  <span class="sidebar__text">Catálogo</span>
-                </a>
-              </li>
-              <li class="sidebar__item">
-                <a href="GestionInventario.html" class="sidebar__link">
-                  <span class="sidebar__icon">📦</span>
-                  <span class="sidebar__text">Inventario</span>
-                </a>
-              </li>
-              <li class="sidebar__item">
-                <a href="GestionVentas.html" class="sidebar__link">
-                  <span class="sidebar__icon">💰</span>
-                  <span class="sidebar__text">Ventas</span>
-                </a>
-              </li>
-              <li class="sidebar__item">
-                <a href="GestionGastos.html" class="sidebar__link">
-                  <span class="sidebar__icon">💸</span>
-                  <span class="sidebar__text">Gastos</span>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="sidebar__section">
-            <div class="sidebar__section-title">REPORTES</div>
-            <ul class="sidebar__list">
-              <li class="sidebar__item">
-                <a href="ReportesBalance.html" class="sidebar__link">
-                  <span class="sidebar__icon">📈</span>
-                  <span class="sidebar__text">Balance</span>
-                </a>
-              </li>
-              <li class="sidebar__item">
-                <a href="ReportesConfigu.html" class="sidebar__link">
-                  <span class="sidebar__icon">⚙️</span>
-                  <span class="sidebar__text">Configuración</span>
-                </a>
-              </li>
-              <li class="sidebar__item">
-                <a href="ReportesNotifi.html" class="sidebar__link">
-                  <span class="sidebar__icon">🔔</span>
-                  <span class="sidebar__text">Notificaciones</span>
-                </a>
-              </li>
-              <li class="sidebar__item">
-                <a href="ReportesExportar.html" class="sidebar__link">
-                  <span class="sidebar__icon">📤</span>
-                  <span class="sidebar__text">Exportar Datos</span>
-                </a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </aside>
-
-    <main class="admin-content">
-      <div class="admin-header">
-        <h1>Gestión de Usuarios</h1>
-        <p>Administra clientes, restaurantes y administradores</p>
-      </div>
-
-      <div style="margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center;">
-        <button class="btn">
-          <i class="fas fa-plus"></i> Nuevo usuario
-        </button>
-      </div>
-
-      <table class="admin-table">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Email</th>
-            <th>Rol</th>
-            <th>Fecha registro</th>
-            <th>Acciones</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>Carlos Méndez</td>
-            <td>cliente@tastytap.com</td>
-            <td>cliente</td>
-            <td>2025-04-20</td>
-            <td>
-              <button class="btn-edit btn--small">Editar</button>
-              <button class="btn-delete btn--small">Borrar</button>
-            </td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Burger House</td>
-            <td>restaurante@tastytap.com</td>
-            <td>restaurante</td>
-            <td>2025-04-20</td>
-            <td>
-              <button class="btn-edit btn--small">Editar</button>
-              <button class="btn-delete btn--small">Borrar</button>
-            </td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Admin TastyTap</td>
-            <td>admin@tastytap.com</td>
-            <td>admin</td>
-            <td>2025-04-20</td>
-            <td>
-              <button class="btn-edit btn--small">Editar</button>
-              <button class="btn-delete btn--small">Borrar</button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </main>
-  </div>
+    <div class="admin-layout">
+        <aside class="sidebar">
+            <div class="sidebar__header">
+                <div class="sidebar__logo-placeholder"></div>
+                <h2>TastyTap Admin</h2>
+            </div>
+            <nav class="sidebar__nav">
+                <ul class="sidebar__list">
+                    <li><a href="panelControl.html" class="sidebar__link sidebar__link--active"><span class="sidebar__icon">📊</span><span class="sidebar__text">Panel de Control</span></a></li>
+                    <li class="sidebar__section-title">GESTIÓN PRINCIPAL</li>
+                    <li><a href="GestionUsuarios.html" class="sidebar__link"><span class="sidebar__icon">👥</span><span class="sidebar__text">Usuarios</span></a></li>
+                    <li><a href="GestionCatalogo.html" class="sidebar__link"><span class="sidebar__icon">🍔</span><span class="sidebar__text">Catálogo</span></a></li>
+                    <li><a href="GestionInventario.html" class="sidebar__link"><span class="sidebar__icon">📦</span><span class="sidebar__text">Inventario</span></a></li>
+                    <li><a href="GestionVentas.html" class="sidebar__link"><span class="sidebar__icon">💰</span><span class="sidebar__text">Ventas</span></a></li>
+                    <li><a href="GestionGastos.html" class="sidebar__link"><span class="sidebar__icon">💸</span><span class="sidebar__text">Gastos</span></a></li>
+                    <li class="sidebar__section-title">REPORTES</li>
+                    <li><a href="ReportesBalance.html" class="sidebar__link"><span class="sidebar__icon">📈</span><span class="sidebar__text">Balance</span></a></li>
+                    <li><a href="ReportesConfigu.html" class="sidebar__link"><span class="sidebar__icon">⚙️</span><span class="sidebar__text">Configuración</span></a></li>
+                    <li><a href="ReportesNotifi.html" class="sidebar__link"><span class="sidebar__icon">🔔</span><span class="sidebar__text">Notificaciones</span></a></li>
+                    <li><a href="ReportesExportar.html" class="sidebar__link"><span class="sidebar__icon">📤</span><span class="sidebar__text">Exportar Datos</span></a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="admin-content">
+            <header class="admin-header">
+                <h1>Gestión de Usuarios</h1>
+                <div class="acciones-header"><button class="btn">+ Nuevo Usuario</button></div>
+            </header>
+            <table class="gestion-table">
+                <thead><tr><th>ID</th><th>Nombre</th><th>Email</th><th>Rol</th><th>Estado</th><th>Acciones</th></tr></thead>
+                <tbody>
+                    <tr><td>1</td><td>Admin Tasty</td><td>admin@tastytap.com</td><td>Admin</td><td><span class="estado estado--activo">Activo</span></td><td><button class="btn-edit btn--small">Editar</button></td></tr>
+                    <tr><td>2</td><td>Juan Pérez</td><td>juan@gmail.com</td><td>Cliente</td><td><span class="estado estado--activo">Activo</span></td><td><button class="btn-edit btn--small">Editar</button></td></tr>
+                </tbody>
+            </table>
+        </main>
+    </div>
 </body>
 </html>

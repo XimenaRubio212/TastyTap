@@ -1,158 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TastyTap | Gestión de Inventario</title>
-  <link rel="stylesheet" href="../../css/main.css">
+    <meta charset="UTF-8">
+    <title>TastyTap | Inventario</title>
+    <link rel="stylesheet" href="../../css/utils/Base.css">
+    <link rel="stylesheet" href="../../css/admin/panelControl.css">
+    <link rel="stylesheet" href="../../css/admin/gestion.css">
+    <link rel="stylesheet" href="../../css/components/button.css">
 </head>
 <body>
-  <div class="admin-layout">
-    <aside class="sidebar">
-      <div class="sidebar__header">
-        <div style="width: 40px; height: 40px; background: white; border-radius: 8px; margin: 0 auto;"></div>
-        <h2>TastyTap Admin</h2>
-      </div>
-      <nav class="sidebar__nav">
-        <ul class="sidebar__list">
-          <li class="sidebar__item">
-            <a href="panelControl.html" class="sidebar__link">
-              <span class="sidebar__icon">📊</span>
-              <span class="sidebar__text">Panel de Control</span>
-            </a>
-          </li>
-          <li class="sidebar__section">
-            <div class="sidebar__section-title">GESTIÓN PRINCIPAL</div>
-            <ul class="sidebar__list">
-              <li class="sidebar__item">
-                <a href="GestionUsuarios.html" class="sidebar__link">
-                  <span class="sidebar__icon">👥</span>
-                  <span class="sidebar__text">Usuarios</span>
-                </a>
-              </li>
-              <li class="sidebar__item">
-                <a href="GestionCatalogo.html" class="sidebar__link">
-                  <span class="sidebar__icon">🍔</span>
-                  <span class="sidebar__text">Catálogo</span>
-                </a>
-              </li>
-              <li class="sidebar__item">
-                <a href="GestionInventario.html" class="sidebar__link sidebar__link--active">
-                  <span class="sidebar__icon">📦</span>
-                  <span class="sidebar__text">Inventario</span>
-                </a>
-              </li>
-              <li class="sidebar__item">
-                <a href="GestionVentas.html" class="sidebar__link">
-                  <span class="sidebar__icon">💰</span>
-                  <span class="sidebar__text">Ventas</span>
-                </a>
-              </li>
-              <li class="sidebar__item">
-                <a href="GestionGastos.html" class="sidebar__link">
-                  <span class="sidebar__icon">💸</span>
-                  <span class="sidebar__text">Gastos</span>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="sidebar__section">
-            <div class="sidebar__section-title">REPORTES</div>
-            <ul class="sidebar__list">
-              <li class="sidebar__item">
-                <a href="ReportesBalance.html" class="sidebar__link">
-                  <span class="sidebar__icon">📈</span>
-                  <span class="sidebar__text">Balance</span>
-                </a>
-              </li>
-              <li class="sidebar__item">
-                <a href="ReportesConfigu.html" class="sidebar__link">
-                  <span class="sidebar__icon">⚙️</span>
-                  <span class="sidebar__text">Configuración</span>
-                </a>
-              </li>
-              <li class="sidebar__item">
-                <a href="ReportesNotifi.html" class="sidebar__link">
-                  <span class="sidebar__icon">🔔</span>
-                  <span class="sidebar__text">Notificaciones</span>
-                </a>
-              </li>
-              <li class="sidebar__item">
-                <a href="ReportesExportar.html" class="sidebar__link">
-                  <span class="sidebar__icon">📤</span>
-                  <span class="sidebar__text">Exportar Datos</span>
-                </a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </aside>
-
-    <main class="admin-content">
-      <div class="admin-header">
-        <h1>Gestión de Inventario</h1>
-        <p>Control de stock, proveedores y alertas</p>
-      </div>
-
-      <div class="gestion-controles">
-        <button class="btn">
-          <i class="fas fa-plus"></i> Nuevo ítem
-        </button>
-      </div>
-
-      <table class="gestion-table">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Categoría</th>
-            <th>Stock</th>
-            <th>Umbral</th>
-            <th>Estado</th>
-            <th>Acciones</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>INV-001</td>
-            <td>Carne molida</td>
-            <td>Carnes</td>
-            <td>45 kg</td>
-            <td>20 kg</td>
-            <td><span class="estado estado--activo">Disponible</span></td>
-            <td><button class="btn-edit btn--small">Editar</button></td>
-          </tr>
-          <tr>
-            <td>INV-002</td>
-            <td>Pan brioche</td>
-            <td>Panes</td>
-            <td>12 unidades</td>
-            <td>30 unidades</td>
-            <td><span class="estado estado--bajo">Bajo stock</span></td>
-            <td><button class="btn-edit btn--small">Editar</button></td>
-          </tr>
-          <tr>
-            <td>INV-003</td>
-            <td>Queso mozzarella</td>
-            <td>Lácteos</td>
-            <td>8 kg</td>
-            <td>5 kg</td>
-            <td><span class="estado estado--activo">Disponible</span></td>
-            <td><button class="btn-edit btn--small">Editar</button></td>
-          </tr>
-          <tr>
-            <td>INV-004</td>
-            <td>Salsa secreta</td>
-            <td>Condimentos</td>
-            <td>2 frascos</td>
-            <td>5 frascos</td>
-            <td><span class="estado estado--bajo">Bajo stock</span></td>
-            <td><button class="btn-edit btn--small">Editar</button></td>
-          </tr>
-        </tbody>
-      </table>
-    </main>
-  </div>
+    <div class="admin-layout">
+        <aside class="sidebar">
+            <div class="sidebar__header">
+                <div class="sidebar__logo-placeholder"></div>
+                <h2>TastyTap Admin</h2>
+            </div>
+            <nav class="sidebar__nav">
+                <ul class="sidebar__list">
+                    <li><a href="panelControl.html" class="sidebar__link sidebar__link--active"><span class="sidebar__icon">📊</span><span class="sidebar__text">Panel de Control</span></a></li>
+                    <li class="sidebar__section-title">GESTIÓN PRINCIPAL</li>
+                    <li><a href="GestionUsuarios.html" class="sidebar__link"><span class="sidebar__icon">👥</span><span class="sidebar__text">Usuarios</span></a></li>
+                    <li><a href="GestionCatalogo.html" class="sidebar__link"><span class="sidebar__icon">🍔</span><span class="sidebar__text">Catálogo</span></a></li>
+                    <li><a href="GestionInventario.html" class="sidebar__link"><span class="sidebar__icon">📦</span><span class="sidebar__text">Inventario</span></a></li>
+                    <li><a href="GestionVentas.html" class="sidebar__link"><span class="sidebar__icon">💰</span><span class="sidebar__text">Ventas</span></a></li>
+                    <li><a href="GestionGastos.html" class="sidebar__link"><span class="sidebar__icon">💸</span><span class="sidebar__text">Gastos</span></a></li>
+                    <li class="sidebar__section-title">REPORTES</li>
+                    <li><a href="ReportesBalance.html" class="sidebar__link"><span class="sidebar__icon">📈</span><span class="sidebar__text">Balance</span></a></li>
+                    <li><a href="ReportesConfigu.html" class="sidebar__link"><span class="sidebar__icon">⚙️</span><span class="sidebar__text">Configuración</span></a></li>
+                    <li><a href="ReportesNotifi.html" class="sidebar__link"><span class="sidebar__icon">🔔</span><span class="sidebar__text">Notificaciones</span></a></li>
+                    <li><a href="ReportesExportar.html" class="sidebar__link"><span class="sidebar__icon">📤</span><span class="sidebar__text">Exportar Datos</span></a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="admin-content">
+            <header class="admin-header"><h1>Inventario de Insumos</h1></header>
+            <table class="gestion-table">
+                <thead><tr><th>Insumo</th><th>Cantidad</th><th>Mínimo</th><th>Estado</th><th>Acción</th></tr></thead>
+                <tbody>
+                    <tr><td>Pan Brioche</td><td>12 und</td><td>30 und</td><td><span class="estado estado--bajo">Crítico</span></td><td><button class="btn">Pedir</button></td></tr>
+                    <tr><td>Carne Angus</td><td>45 kg</td><td>20 kg</td><td><span class="estado estado--activo">Óptimo</span></td><td><button class="btn">Stock</button></td></tr>
+                </tbody>
+            </table>
+        </main>
+    </div>
 </body>
 </html>

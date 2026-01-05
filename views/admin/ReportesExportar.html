@@ -1,181 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TastyTap | Exportar Datos</title>
-  <link rel="stylesheet" href="../../css/main.css">
+    <meta charset="UTF-8">
+    <title>TastyTap | Exportar</title>
+    <link rel="stylesheet" href="../../css/utils/Base.css">
+    <link rel="stylesheet" href="../../css/admin/panelControl.css">
+    <link rel="stylesheet" href="../../css/admin/gestion.css">
+    <link rel="stylesheet" href="../../css/components/button.css">
 </head>
 <body>
-  <div class="admin-layout">
-    <aside class="sidebar">
-      <div class="sidebar__header">
-        <div style="width: 40px; height: 40px; background: white; border-radius: 8px; margin: 0 auto;"></div>
-        <h2>TastyTap Admin</h2>
-      </div>
-      <nav class="sidebar__nav">
-        <ul class="sidebar__list">
-          <li class="sidebar__item">
-            <a href="panelControl.html" class="sidebar__link">
-              <span class="sidebar__icon">📊</span>
-              <span class="sidebar__text">Panel de Control</span>
-            </a>
-          </li>
-          <li class="sidebar__section">
-            <div class="sidebar__section-title">GESTIÓN PRINCIPAL</div>
-            <ul class="sidebar__list">
-              <li class="sidebar__item">
-                <a href="GestionUsuarios.html" class="sidebar__link">
-                  <span class="sidebar__icon">👥</span>
-                  <span class="sidebar__text">Usuarios</span>
-                </a>
-              </li>
-              <li class="sidebar__item">
-                <a href="GestionCatalogo.html" class="sidebar__link">
-                  <span class="sidebar__icon">🍔</span>
-                  <span class="sidebar__text">Catálogo</span>
-                </a>
-              </li>
-              <li class="sidebar__item">
-                <a href="GestionInventario.html" class="sidebar__link">
-                  <span class="sidebar__icon">📦</span>
-                  <span class="sidebar__text">Inventario</span>
-                </a>
-              </li>
-              <li class="sidebar__item">
-                <a href="GestionVentas.html" class="sidebar__link">
-                  <span class="sidebar__icon">💰</span>
-                  <span class="sidebar__text">Ventas</span>
-                </a>
-              </li>
-              <li class="sidebar__item">
-                <a href="GestionGastos.html" class="sidebar__link">
-                  <span class="sidebar__icon">💸</span>
-                  <span class="sidebar__text">Gastos</span>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="sidebar__section">
-            <div class="sidebar__section-title">REPORTES</div>
-            <ul class="sidebar__list">
-              <li class="sidebar__item">
-                <a href="ReportesBalance.html" class="sidebar__link">
-                  <span class="sidebar__icon">📈</span>
-                  <span class="sidebar__text">Balance</span>
-                </a>
-              </li>
-              <li class="sidebar__item">
-                <a href="ReportesConfigu.html" class="sidebar__link">
-                  <span class="sidebar__icon">⚙️</span>
-                  <span class="sidebar__text">Configuración</span>
-                </a>
-              </li>
-              <li class="sidebar__item">
-                <a href="ReportesNotifi.html" class="sidebar__link">
-                  <span class="sidebar__icon">🔔</span>
-                  <span class="sidebar__text">Notificaciones</span>
-                </a>
-              </li>
-              <li class="sidebar__item">
-                <a href="ReportesExportar.html" class="sidebar__link sidebar__link--active">
-                  <span class="sidebar__icon">📤</span>
-                  <span class="sidebar__text">Exportar Datos</span>
-                </a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </aside>
-
-    <main class="admin-content">
-      <div class="admin-header">
-        <h1>Exportar Datos</h1>
-        <p>Genera reportes en diferentes formatos</p>
-      </div>
-
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
-        <div class="export-card">
-          <div class="export-icono">📊</div>
-          <h3 class="export-titulo">Reporte de Ventas</h3>
-          <p class="export-descripcion">Últimos 30 días</p>
-          <div class="export-acciones">
-            <button class="btn btn--small" style="background: #27ae60;">CSV</button>
-            <button class="btn btn--small" style="background: #3498db;">PDF</button>
-            <button class="btn btn--small" style="background: #e74c3c;">Excel</button>
-          </div>
-        </div>
-
-        <div class="export-card">
-          <div class="export-icono">👥</div>
-          <h3 class="export-titulo">Base de Usuarios</h3>
-          <p class="export-descripcion">Clientes y restaurantes</p>
-          <div class="export-acciones">
-            <button class="btn btn--small" style="background: #27ae60;">CSV</button>
-            <button class="btn btn--small" style="background: #3498db;">PDF</button>
-          </div>
-        </div>
-
-        <div class="export-card">
-          <div class="export-icono">📦</div>
-          <h3 class="export-titulo">Inventario Actual</h3>
-          <p class="export-descripcion">Stock por restaurante</p>
-          <div class="export-acciones">
-            <button class="btn btn--small" style="background: #27ae60;">CSV</button>
-            <button class="btn btn--small" style="background: #e74c3c;">Excel</button>
-          </div>
-        </div>
-
-        <div class="export-card">
-          <div class="export-icono">💰</div>
-          <h3 class="export-titulo">Balance Financiero</h3>
-          <p class="export-descripcion">Enero - Abril 2025</p>
-          <div class="export-acciones">
-            <button class="btn btn--small" style="background: #3498db;">PDF</button>
-            <button class="btn btn--small" style="background: #e74c3c;">Excel</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="config-seccion">
-        <h3>Historial de exportaciones</h3>
-        <table class="gestion-table">
-          <thead>
-            <tr>
-              <th>Fecha</th>
-              <th>Tipo</th>
-              <th>Formato</th>
-              <th>Usuario</th>
-              <th>Acción</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>2025-04-25 14:30</td>
-              <td>Ventas mensuales</td>
-              <td>PDF</td>
-              <td>Admin TastyTap</td>
-              <td><a href="#" style="color: #3498db; text-decoration: none;">Descargar</a></td>
-            </tr>
-            <tr>
-              <td>2025-04-20 10:15</td>
-              <td>Usuarios</td>
-              <td>CSV</td>
-              <td>Admin TastyTap</td>
-              <td><a href="#" style="color: #3498db; text-decoration: none;">Descargar</a></td>
-            </tr>
-            <tr>
-              <td>2025-04-15 09:45</td>
-              <td>Inventario</td>
-              <td>Excel</td>
-              <td>Admin TastyTap</td>
-              <td><a href="#" style="color: #3498db; text-decoration: none;">Descargar</a></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </main>
-  </div>
+    <div class="admin-layout">
+        <aside class="sidebar">
+            <div class="sidebar__header">
+                <div class="sidebar__logo-placeholder"></div>
+                <h2>TastyTap Admin</h2>
+            </div>
+            <nav class="sidebar__nav">
+                <ul class="sidebar__list">
+                    <li><a href="panelControl.html" class="sidebar__link sidebar__link--active"><span class="sidebar__icon">📊</span><span class="sidebar__text">Panel de Control</span></a></li>
+                    <li class="sidebar__section-title">GESTIÓN PRINCIPAL</li>
+                    <li><a href="GestionUsuarios.html" class="sidebar__link"><span class="sidebar__icon">👥</span><span class="sidebar__text">Usuarios</span></a></li>
+                    <li><a href="GestionCatalogo.html" class="sidebar__link"><span class="sidebar__icon">🍔</span><span class="sidebar__text">Catálogo</span></a></li>
+                    <li><a href="GestionInventario.html" class="sidebar__link"><span class="sidebar__icon">📦</span><span class="sidebar__text">Inventario</span></a></li>
+                    <li><a href="GestionVentas.html" class="sidebar__link"><span class="sidebar__icon">💰</span><span class="sidebar__text">Ventas</span></a></li>
+                    <li><a href="GestionGastos.html" class="sidebar__link"><span class="sidebar__icon">💸</span><span class="sidebar__text">Gastos</span></a></li>
+                    <li class="sidebar__section-title">REPORTES</li>
+                    <li><a href="ReportesBalance.html" class="sidebar__link"><span class="sidebar__icon">📈</span><span class="sidebar__text">Balance</span></a></li>
+                    <li><a href="ReportesConfigu.html" class="sidebar__link"><span class="sidebar__icon">⚙️</span><span class="sidebar__text">Configuración</span></a></li>
+                    <li><a href="ReportesNotifi.html" class="sidebar__link"><span class="sidebar__icon">🔔</span><span class="sidebar__text">Notificaciones</span></a></li>
+                    <li><a href="ReportesExportar.html" class="sidebar__link"><span class="sidebar__icon">📤</span><span class="sidebar__text">Exportar Datos</span></a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="admin-content">
+            <header class="admin-header"><h1>Exportar Datos</h1></header>
+            <div class="export-grid">
+                <div class="export-card">
+                    <div class="export-icono">📊</div>
+                    <h3>Ventas Mensuales</h3>
+                    <div class="export-acciones">
+                        <button class="btn btn--small btn--pdf">PDF</button>
+                        <button class="btn btn--small btn--excel">Excel</button>
+                    </div>
+                </div>
+                <div class="export-card">
+                    <div class="export-icono">👥</div>
+                    <h3>Lista Clientes</h3>
+                    <div class="export-acciones">
+                        <button class="btn btn--small btn--csv">CSV</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
 </body>
 </html>

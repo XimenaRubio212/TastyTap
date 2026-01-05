@@ -23,3 +23,30 @@ body {
   color: var(--color-secundario);
   line-height: 1.6;
 }
+
+/*esto es para el ADMINISTRADOR*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --color-principal: #F08B51;
+  --color-secundario: #3c6288;
+  --color-fondo: #f4f7f6;
+  --color-blanco: #ffffff;
+  --color-texto: #333333;
+  --color-gris-suave: #7f8c8d;
+  --sombra: 0 4px 12px rgba(0,0,0,0.08);
+  --transicion: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+}
