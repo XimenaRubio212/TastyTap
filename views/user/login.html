@@ -1,5 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>TastyTap | Login</title>
+    <link rel="stylesheet" href="../../css/utils/Base.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/components/button.css">
+</head>
+<body class="page-login">
+
+    <header class="navbar">
+        <div class="navbar__logo">
+            <img src="../../img/TastyTap.png" alt="Logo TastyTap">
+            <h1>TastyTap</h1>
+        </div>
+    </header>
+
+    <main class="login">
+        <div class="login__form"> <!-- Cambiamos 'form' por 'div' para usar enlaces -->
+            <h2>Inicia sesión</h2>
+            
+            <label class="form-label">Correo electrónico</label>
+            <input type="email" class="input" placeholder="ejemplo@correo.com">
+            
+            <label class="form-label">Contraseña</label>
+            <input type="password" class="input" placeholder="••••••••">
+
+            <!-- BOTONES COMO ENLACES PARA SIMULAR ENTRADA -->
+            <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 20px;">
+                
+                <!-- Este botón simula la entrada del Usuario -->
+                <a href="perfil.html" class="btn" style="text-align: center; background-color: var(--color-secundario);">
+                    Entrar como Usuario
+                </a>
+
+                <!-- Este botón simula la entrada del Administrador -->
+                <a href="../admin/panelControl.html" class="btn" style="text-align: center; background-color: var(--color-secundario);">
+                    Entrar como Administrador
+                </a>
+                
+            </div>
+
+            <p style="margin-top: 20px; text-align: center;">
+                ¿No tienes cuenta? <a href="registro.html" style="color: var(--color-principal);">Regístrate aquí</a>
+            </p>
+        </div>
+    </main>
+</body>
+</html>
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
@@ -77,4 +131,4 @@
   </footer>
 </body>
 
-</html>
+</html> -->
