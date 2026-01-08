@@ -1,129 +1,206 @@
+<!-- Se declara este documento es HTML5, asegurando que el navegador lo reconozca -->
 <!DOCTYPE html>
+<!-- Etiqueta del documento que indica el idioma de la página -->
 <html lang="es">
+  <!-- Etiqueta de cabecera del documento -->
 <head>
+  <!-- Sección de metadatos e importaciones que no se ven directamente en la página -->
   <meta charset="UTF-8">
+  <!-- Etiqueta para configurar la vista del dispositivo, esto permite que la página se adapte a diferentes dispositivos -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Etiqueta para establecer el título de la página -->
   <title>TastyTap | Hamburguesas</title>
-  <!-- CSS externos -->
+  <!-- CSS externos en los cuales se llaman cada uno de los estilos-->
   <link rel="stylesheet" href="/css/utils/Base.css">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/components/button.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- Se cierra la etiqueta de cabecera del documento -->
 </head>
+<!-- este es el cuerpo del documento que contiene todo el contenido que el usuario ve -->
 <body class="page-hamburguesas">
-
+<!-- Etiqueta que define el encabezado de la página -->
   <header class="navbar">
+    <!-- Etiqueta que define el logo de la página -->
     <div class="navbar__logo">
+      <!-- Etiqueta que define la imagen del logo -->
       <img src="/img/TastyTap.png" alt="Logo TastyTap">
+      <!-- Etiqueta que define el nombre de la marca -->
       <h1>TastyTap</h1>
+      <!-- Etiqueta que cierra el contenedor del logo -->
     </div>
+    <!-- Etiqueta que define el menu de navegación -->
     <nav class="navbar__menu">
+      <!-- Etiqueta que define los enlaces de navegación -->
       <a href="/index.html">Inicio</a>
+      <!-- Etiqueta que define los enlaces de navegación -->
       <a href="/views/user/menu.html">Menú</a>
+      <!-- Etiqueta que define los enlaces de navegación -->
       <a href="/views/user/tienda.html">Tienda</a>
+      <!-- Etiqueta que define los enlaces de navegación -->
       <a href="/views/user/contacto.html">Contacto</a>
+      <!-- Etiqueta que define los enlaces de navegación -->
       <a href="/views/user/login.html">Login</a>
+      <!-- Etiqueta que cierra el menu de navegación -->
     </nav>
+    <!-- Etiqueta que cierra el encabezado de la página -->
   </header>
-
+<!-- Etiqueta que define la sección principal de la página -->
   <section class="menu">
+    <!-- Etiqueta que define el título de la sección -->
     <h2>Hamburguesas disponibles</h2>
+    <!-- Contenedor en formato cuadricula para organizar las tarjetas de productos -->
     <div class="menu__grid">
-
-      <!-- Producto 1 -->
+      <!-- primera tarjeta que es una hamburguesa -->
       <div class="menu__card">
+        <!-- Imagen del producto con texto alternativo descritivo -->
         <img src="/img/burger.jpg" alt="Burger Deluxe">
+        <!-- Nombre del primer producto -->
         <h3>Burger Deluxe</h3>
+        <!-- Descripción detallada del primer producto -->
         <p>📍 Calle 123 #45-67, Bogotá, Colombia</p>
         <p>📞 +57 320 555 1234</p>
         <p class="price">$25.000</p>
+        <!-- Botón para agregar al carrito -->
         <input type="checkbox" id="carrito-1" class="checkbox-carrito">
+        <!-- Texto alternativo para el botón de agregar al carrito -->
         <label for="carrito-1" class="btn-simulado">Agregar al carrito</label>
+        <!-- Confirmación de agregado al carrito -->
         <div class="confirmacion">
+          <!-- Nombre del producto agregado al carrito -->
           <strong>Burger Deluxe</strong> agregado al carrito.
+          <!-- Se cierra la etiqueta de la tarjeta de producto -->
         </div>
+        <!-- Se cierra la etiqueta de la tarjeta de producto -->
       </div>
-
-      <!-- Producto 2 -->
+      <!-- Segunda tarjeta que es una hamburguesa, pero con ingredientes veganos -->
       <div class="menu__card">
+        <!-- Imagen del producto con texto alternativo descritivo -->
         <img src="/img/burger.jpg" alt="Burger Vegano">
+        <!-- Nombre del segundo producto -->
         <h3>Burger Vegano</h3>
+        <!-- Descripción detallada del segundo producto -->
         <p>📍 Calle 123 #45-67, Bogotá, Colombia</p>
         <p>📞 +57 320 555 1234</p>
         <p class="price">$22.000</p>
+        <!-- Botón para agregar al carrito -->
         <input type="checkbox" id="carrito-2" class="checkbox-carrito">
+        <!-- Texto alternativo para el botón de agregar al carrito -->
         <label for="carrito-2" class="btn-simulado">Agregar al carrito</label>
+        <!-- Confirmación de agregado al carrito -->
         <div class="confirmacion">
+          <!-- Nombre del producto agregado al carrito -->
           <strong>Burger Vegano</strong> agregado al carrito.
+          <!-- Se cierra la etiqueta de la tarjeta de producto -->
         </div>
+        <!-- Se cierra la etiqueta de la tarjeta de producto -->
       </div>
-
-      <!-- Producto 3 -->
+      <!-- Tercera tarjeta que es una hamburguesa -->
       <div class="menu__card">
+        <!-- Imagen del producto con texto alternativo descritivo -->
         <img src="/img/burger.jpg" alt="Burger BBQ">
+        <!-- Nombre del tercer producto -->
         <h3>Burger BBQ</h3>
+        <!-- Descripción detallada del tercer producto -->
         <p>📍 Calle 123 #45-67, Bogotá, Colombia</p>
         <p>📞 +57 320 555 1234</p>
         <p class="price">$28.000</p>
+        <!-- Botón para agregar al carrito -->
         <input type="checkbox" id="carrito-3" class="checkbox-carrito">
+        <!-- Texto alternativo para el botón de agregar al carrito -->
         <label for="carrito-3" class="btn-simulado">Agregar al carrito</label>
+        <!-- Confirmación de agregado al carrito -->
         <div class="confirmacion">
+          <!-- Nombre del producto agregado al carrito -->
           <strong>Burger BBQ</strong> agregado al carrito.
+          <!-- Se cierra la etiqueta de la tarjeta de producto -->
         </div>
+        <!-- Se cierra la etiqueta de la tarjeta de producto -->
       </div>
-
-      <!-- Producto 4 -->
+      <!-- Cuarta tarjeta que es una hamburguesa -->
       <div class="menu__card">
+        <!-- Imagen del producto con texto alternativo descritivo -->
         <img src="/img/burger.jpg" alt="Burger con Queso">
+        <!-- Nombre del cuarto producto -->
         <h3>Burger con Queso</h3>
+        <!-- Descripción detallada del cuarto producto -->
         <p>📍 Calle 123 #45-67, Bogotá, Colombia</p>
         <p>📞 +57 320 555 1234</p>
         <p class="price">$24.000</p>
+        <!-- Botón para agregar al carrito -->
         <input type="checkbox" id="carrito-4" class="checkbox-carrito">
+        <!-- Texto alternativo para el botón de agregar al carrito -->
         <label for="carrito-4" class="btn-simulado">Agregar al carrito</label>
+        <!-- Confirmación de agregado al carrito -->
         <div class="confirmacion">
+          <!-- Nombre del producto agregado al carrito -->
           <strong>Burger con Queso</strong> agregado al carrito.
+          <!-- Se cierra la etiqueta de la tarjeta de producto -->
         </div>
+        <!-- Se cierra la etiqueta de la tarjeta de producto -->
       </div>
-
+      <!-- Se cierra la etiqueta de la sección de productos -->
     </div>
+    <!-- Se cierra la etiqueta de la sección de menu-->
   </section>
-
+  <!-- Etiqueta que define el pie de la página -->
   <footer class="footer">
+    <!-- Se abre la etiqueta de la sección de footer__section -->
     <div class="footer__section">
+      <!-- Etiqueta que define el título de la sección -->
       <h3>Restaurantes Mejor Valorados</h3>
+      <!-- Enlaces a los restaurantes mejor valorados -->
       <a href="#">Camachos</a>
       <a href="#">Domino's</a>
       <a href="#">KFC</a>
       <a href="#">Mc Donald's</a>
       <a href="#">El corral</a>
       <a href="#">Dunkin' Donuts</a>
+      <!-- Se cierra la etiqueta de la sección -->
     </div>
+    <!-- Se abre la etiqueta de la sección de footer__section -->
     <div class="footer__section">
+      <!-- Etiqueta que define el título de la sección -->
       <h3>Únete a Tasty Tap</h3>
+      <!-- Enlaces para unirse a Tasty Tap -->
       <a href="#">Registra tu restaurante</a>
       <a href="#">Registra tu local</a>
       <a href="#">Haz crecer tu marca</a>
       <a href="#">Promociona tu negocio</a>
+      <!-- Se cierra la etiqueta de la sección -->
     </div>
+    <!-- Se abre la etiqueta de la sección de footer__section -->
     <div class="footer__section">
+      <!-- Etiqueta que define el título de la sección -->
       <h3>Síguenos en Redes Sociales</h3>
+      <!-- Enlaces a las redes sociales -->
       <div class="footer__social">
+        <!-- Enlaces a redes sociales -->
         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
         <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <!-- Cierre del contenedor de redes sociales -->
       </div>
+      <!-- Se cierra la etiqueta de la sección -->
     </div>
+    <!-- Se abre la etiqueta de la sección de footer__section -->
     <div class="footer__section">
+      <!-- Etiqueta que define el título de la sección -->
       <h3>Contacto</h3>
+      <!-- Información de contacto -->
       <p>📍 Calle 123 #45-67, Bogotá, Colombia</p>
       <p>📞 +57 320 555 1234</p>
       <p>✉️ contacto@tastytap.com</p>
+      <!-- Se cierra la etiqueta de la sección -->
     </div>
+    <!-- Se abre la etiqueta de la sección de footer__bottom -->
     <div class="footer__bottom">
-      <p>© 2025 TastyTap — Todos los derechos reservados 🍔</p>
+      <!-- Información de derechos de autor -->
+      <p>© 2025 TastyTap — Todos los derechos reservados 🍴</p>
+      <!-- Se cierra la etiqueta de la sección -->
     </div>
+    <!-- Se cierra la etiqueta de la sección de footer-->
   </footer>
-
+<!-- Se cierra la etiqueta del cuerpo de la página -->
 </body>
 </html>
