@@ -1,30 +1,58 @@
+<!-- Se declara este documento es HTML5, asegurando que el navegador lo reconozca -->
 <!DOCTYPE html>
+<!-- Etiqueta del documento que indica el idioma de la página -->
 <html lang="es">
+  <!-- Etiqueta de cabecera del documento -->
 <head>
+  <!-- Sección de metadatos e importaciones que no se ven directamente en la página -->
   <meta charset="UTF-8">
+  <!-- Etiqueta para configurar la vista del dispositivo, esto permite que la página se adapte a diferentes dispositivos -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Etiqueta para establecer el título de la página -->
   <title>TastyTap | Historial</title>
+  <!-- se debe colocar la carpeta css, utils llamando a style.css para que defina las variables -->
   <link rel="stylesheet" href="/css/style.css">
+  <!-- Estos son fondos de las redes sociales -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- Se cierra la etiqueta de cabecera del documento -->
 </head>
+<!-- este es el cuerpo del documento que contiene todo el contenido que el usuario ve -->
 <body>
+  <!-- Barra de navagacion superior comun a todas las paginas del sitio -->
   <header class="navbar">
+    <!-- Contenedor de navegación superior comun a todas las paginas del sitio -->
     <div class="navbar__logo">
+      <!-- Imagen del logo y el atributo alt proporciona texto alternativo para la accesibilidad -->
       <img src="/img/TastyTap.png" alt="Logo TastyTap">
+      <!-- Nombre de la marca como encabezado -->
       <h1>TastyTap</h1>
+      <!-- Se cierra la etiqueta del contenedor -->
     </div>
+    <!-- Menu de navegación especifico para flujos de autenticación -->
     <nav class="navbar__menu">
+      <!-- Enlace a la página de inicio de sesión -->
       <a href="/index.html">Inicio</a>
+      <!-- Enlace a la vista general del menu -->
       <a href="/views/user/menu.html">Menú</a>
+      <!-- Enlace a la vista tienda -->
       <a href="/views/user/tienda.html">Tienda</a>
+      <!-- Enlace a la vista de contacto -->
       <a href="/views/user/carrito.html">Carrito</a>
+      <!-- Enlace a la vista de login de sesión para usuarios -->
       <a href="/views/user/historial.html#logueado" class="active">Historial</a>
+      <!-- Enlace a la vista de login de sesión para usuarios -->
       <a href="/views/user/perfil.html">Perfil</a>
+      <!-- Se cierra la etiqueta de la barra de navegación -->
     </nav>
+    <!-- Se cierra la etiqueta de la barra de navegación -->
   </header>
-
+<!-- Seccion principal que muestra los productos destacados del menu principal -->
   <main class="main">
+    <!-- Contenedor de la seccion principal -->
     <div class="container">
+
+<!-- Se comento estas lineas de codigo por el momento, 
+ ya que puede que se utilice mas adelante o se borren -->
 
       <!-- <div class="order-item">
         <div class="order-header">
@@ -49,55 +77,86 @@
         </div>
       </div> -->
 
+      <!-- Titulo de la seccion -->
       <h2 class="section__title">Historial de Pedidos</h2>
       <!-- Mensaje si no hay pedidos -->
       <div class="message-no-orders">
         <!-- esto es un relohito que aparece en la parte de arriba -->
         <i class="fas fa-history"></i>
+        <!-- esto es el texto que aparece en la parte de arriba -->
         <h3>No tienes pedidos aún</h3>
+        <!-- esto es el parrafo que aparece en la parte de abajo -->
         <p>
           Realiza tu primer pedido en el
+          <!-- Enlace a la vista general del menu -->
           <a href="/views/user/menu.html">menú</a>
+          <!-- Enlace a la vista tienda -->
           o en la <a href="/views/user/tienda.html">tienda</a></p>
+          <!-- Se cierra la etiqueta del contenedor -->
       </div>
+      <!-- Se cierra la etiqueta del contenedor -->
     </div>
+    <!-- Se cierra la etiqueta de la seccion principal -->
   </main>
-
+<!-- Seccion de footer comun a todas las paginas del sitio -->
   <footer class="footer"> 
     <!-- footer igual -->
     <div class="footer__section">
+      <!-- titulo del bloque del pie de pagina -->
       <h3>Restaurantes Mejor Valorados</h3>
+      <!-- Estos enlaces podrían redirigir a perfiles de los restaurantes -->
       <a href="#">Camachos</a>
       <a href="#">Domino's</a>
       <a href="#">KFC</a>
       <a href="#">Mc Donald's</a>
       <a href="#">El corral</a>
       <a href="#">Dunkin' Donuts</a>
+      <!--  Cierre del bloque de restaurantes -->
     </div>
+    <!-- Bloque con enlaces a la sección de unete a Tasty Tap -->
     <div class="footer__section">
+      <!-- Titulo del bloque del pie de página -->
       <h3>Únete a Tasty Tap</h3>
+      <!-- Estos enlaces podrían redirigir a perfiles de los restaurantes -->
       <a href="#">Registra tu restaurante</a>
       <a href="#">Registra tu local</a>
       <a href="#">Haz crecer tu marca</a>
       <a href="#">Promociona tu negocio</a>
+      <!-- Cierre del bloque de unete a Tasty Tap -->
     </div>
+    <!-- Bloque con enlaces a redes sociales -->
     <div class="footer__section">
+      <!-- Titulo del bloque del pie de página -->
       <h3>Síguenos en Redes Sociales</h3>
+      <!-- Contenedor con enlaces a redes sociales -->
       <div class="footer__social">
+        <!-- Estos enlaces podrían redirigir a perfiles de redes sociales -->
         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
         <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <!-- Cierre del contenedor de redes sociales -->
       </div>
+      <!-- Cierre del bloque de redes sociales -->
     </div>
+    <!-- Bloque con informacion de contacto -->
     <div class="footer__section">
+      <!-- Titulo del bloque del pie de página -->
       <h3>Contacto</h3>
+      <!-- Información de contacto supuesta de la empresa TastyaTap -->
       <p>📍 Calle 123 #45-67, Bogotá, Colombia</p>
       <p>📞 +57 320 555 1234</p>
       <p>✉️ contacto@tastytap.com</p>
+      <!-- Cierre del bloque de contacto -->
     </div>
+    <!-- Bloque con informacion de derechos de autor -->
     <div class="footer__bottom">
+      <!-- Información de derechos de autor -->
       <p>© 2025 TastyTap — Todos los derechos reservados 🍴</p>
+      <!-- Cierre del bloque de derechos de autor -->
     </div>
+    <!--- Cierre del pie de página -->
   </footer>
+  <!--- Cierre del cuerpo de la página -->
 </body>
+<!--- Cierre del cuerpo de la página -->
 </html>
