@@ -1,91 +1,151 @@
+<!-- Se declara el tipo de documento como HTML5, asegurando que el navegador lo reconozca -->
 <!DOCTYPE html>
+<!-- Etiqueta del documento que indica el idioma de la página -->
 <html lang="es">
-
+<!-- Etiqueta de cabecera del documento -->
 <head>
+  <!-- Sección de metadatos e importaciones que no se ven directamente en la página -->
   <meta charset="UTF-8">
+  <!-- Etiqueta para configurar la vista del dispositivo, esto permite que la página se adapte a diferentes dispositivos -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Etiqueta para establecer el título de la página -->
   <title>TastyTap | Mi Perfil</title>
+  <!-- se debe colocar la carpeta css, utils llamando a style.css para que defina las variables -->
   <link rel="stylesheet" href="/css/style.css">
+  <!-- Estos son fondos de las redes sociales -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- Se cierra la etiqueta de cabecera del documento -->
 </head>
-
+<!-- este es el cuerpo del documento que contiene todo el contenido que el usuario ve -->
 <body class="page-perfil">
-
+<!-- Se declara la barra de navegación superior comun a todos las paginas del sitio -->
   <header class="navbar">
+    <!-- Contenedor del logo visual y el nombre textual de la marca -->
     <div class="navbar__logo">
+      <!-- Imagen del logo y el atributo alt proporciona texto alternativo para la accesibilidad -->
       <img src="/img/TastyTap.png" alt="Logo TastyTap">
+      <!-- Nombre de la marca como encabezado -->
       <h1>TastyTap</h1>
+      <!-- Se cierra la etiqueta del contenedor -->
     </div>
+    <!-- Menu de navegación especifico para flujos de autenticación -->
     <nav class="navbar__menu">
+      <!-- Enlace a la página de inicio de sesión -->
       <a href="/index.html">Inicio</a>
+      <!-- Enlace a la vista general del menu -->
       <a href="/views/user/menu.html">Menú</a>
+      <!-- Enlace a la vista tienda -->
       <a href="/views/user/tienda.html">Tienda</a>
+      <!-- Se documento estos dos enlaces los cuales,
+       estos ya  no seruan visibles al cliente ya que el ingreso y ya no deberia tener
+       vista de estos dos enlaces -->
       <!-- <a href="/views/user/contacto.html">Contacto</a> -->
       <!-- <a href="/views/user/login.html">Login</a> -->
+       <!-- Enlace a la vista de perfil,
+        la clase "active" suele usarse para resaltar visualmente la pagina actual -->
       <a href="/views/user/perfil.html" class="active">Perfil</a>
+      <!-- Enlace a la vista de login de sesión para usuarios -->
       <a href="/views/user/login.html">Cerrar Sesión</a>
+      <!-- Se cierra la etiqueta de la barra de navegación -->
     </nav>
+    <!-- Se cierra la etiqueta de la barra de navegación -->
   </header>
-
+<!-- Se abre la etiqueta de la sección de perfil -->
   <section class="perfil">
+    <!-- Se abre la etiqueta de la sección de perfil__container -->
     <div class="perfil__container">
+      <!-- Se abre la etiqueta de la sección de perfil__avatar -->
       <div class="perfil__avatar">
+        <!-- Se abre la etiqueta de la sección de perfil__avatar -->
         <img src="/img/perfil.jpg" alt="Avatar de usuario">
+        <!-- Se cierra la etiqueta de la sección de perfil__avatar -->
       </div>
+      <!-- Bloque con la información personal del usuario -->
       <div class="perfil__info">
+        <!-- Titulo de la seccion -->
         <h2>Mi Perfil</h2>
+        <!-- Datos personales mostrados de forma clara y legible -->
         <p><strong>Nombre:</strong> Darcy Rubio</p>
         <p><strong>Correo:</strong> Darcy.Rubio@gmail.com</p>
         <p><strong>Teléfono:</strong> +57 320 555 1234</p>
         <p><strong>Dirección:</strong> Calle 123 #45-67, Bogotá</p>
+        <!-- Botón para editar el perfil -->
         <button class="btn">Editar perfil</button>
+        <!-- Se cierra la etiqueta de la sección de perfil__info -->
       </div>
+      <!-- Se cierra la etiqueta de la sección de perfil__container -->
     </div>
-
+<!-- Se abre la etiqueta de la sección de perfil__message -->
     <div class="perfil__message">
+      <!-- Mensaje de inicio de sesión exitoso -->
       <p>🎉 ¡Inicio de sesión exitoso!</p>
+      <!-- Instrucción clara con enlace a la tienda,
+       guiando al usuario a la vista de la tienda -->
       <p>Ahora puedes 
       <a href="/views/user/tienda.html">ordenar comida</a>.</p>
+      <!-- Se cierra la etiqueta de la sección de perfil__message -->
     </div>
+    <!-- Se cierra la etiqueta de la sección de perfil-->
   </section>
-
+<!-- Pie de página comun a todas las vista del sitio-->
   <footer class="footer">
-    <!-- Footer igual que en otras páginas -->
+    <!-- Bloqeu restaurantes populares -->
     <div class="restaurantes">
+      <!-- Titulo del bloque del pie de página -->
       <h3>Restaurantes Mejor Valorados</h3>
+      <!-- Estos enlaces podrían redirigir a perfiles de los restaurantes -->
       <a href="#">Camachos</a>
       <a href="#">Domino's</a>
       <a href="#">KFC</a>
       <a href="#">Mc Donald's</a>
       <a href="#">El corral</a>
       <a href="#">Dunkin' Donuts</a>
+      <!--  Cierre del bloque de restaurantes -->
     </div>
+    <!-- Bloque con enlaces a la sección de unete a Tasty Tap -->
     <div class="unete">
+      <!-- Titulo del bloque del pie de página -->
       <h3>Únete a Tasty Tap</h3>
+      <!-- Estos enlaces podrían redirigir a perfiles de los restaurantes -->
       <a href="#">Registra tu restaurante</a>
       <a href="#">Registra tu local</a>
       <a href="#">Haz crecer tu marca</a>
       <a href="#">Promociona tu negocio</a>
+      <!-- Cierre del bloque de unete a Tasty Tap -->
     </div>
+    <!-- Bloque con enlaces a redes sociales -->
     <div class="redes">
+      <!-- Titulo del bloque del pie de página -->
       <h3>Síguenos en Redes Sociales</h3>
+      <!-- Contenedor con enlaces a redes sociales -->
       <div class="social">
+        <!-- Estos enlaces podrían redirigir a perfiles de redes sociales -->
         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
         <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <!-- Cierre del contenedor de redes sociales -->
       </div>
+      <!-- Cierre del bloque de redes sociales -->
     </div>
+    <!-- Bloque con informacion de contacto -->
     <div class="contacto">
+      <!-- Titulo del bloque del pie de página -->
       <h3>Contacto</h3>
+      <!-- Información de contacto supuesta de la empresa TastyaTap -->
       <p>📍 Calle 123 #45-67, Bogotá, Colombia</p>
       <p>📞 +57 320 555 1234</p>
       <p>✉️ contacto@tastytap.com</p>
+      <!-- Cierre del bloque de contacto -->
     </div>
+    <!-- Bloque con informacion de derechos de autor -->
     <div class="footer__bottom">
+      <!-- Información de derechos de autor -->
       <p>© 2025 TastyTap — Todos los derechos reservados 🍴</p>
+      <!-- Cierre del bloque de derechos de autor -->
     </div>
+    <!-- Cierre del pie de página -->
   </footer>
-
+<!--- Cierre del cuerpo de la página -->
 </body>
-
+<!--- Cierre del cuerpo de la página -->
 </html>
