@@ -1,51 +1,142 @@
 <!DOCTYPE html>
+<!-- Declara el tipo de documento como HTML5, asegurando compatibilidad con estándares modernos. -->
+
 <html lang="es">
+<!-- Define el idioma principal del contenido como español (mejora accesibilidad y SEO). -->
+
 <head>
+  <!-- Sección de metadatos y enlaces a recursos externos (hojas de estilo). -->
+
   <meta charset="UTF-8">
+  <!-- Especifica la codificación de caracteres UTF-8 para soportar correctamente acentos y símbolos del español. -->
+
   <title>TastyTap | Panel de Control</title>
+  <!-- Título que aparece en la pestaña del navegador; identifica claramente esta vista como el panel de control del administrador. -->
+
+  <!-- Enlaza la hoja de estilos base con reglas globales (reset, tipografía, utilidades comunes). -->
   <link rel="stylesheet" href="../../css/utils/Base.css">
+
+  <!-- Enlaza estilos específicos del panel de control administrativo (layout, estadísticas, gráficos). -->
   <link rel="stylesheet" href="../../css/admin/panelControl.css">
+
+  <!-- Enlaza estilos compartidos por vistas de gestión (usuarios, catálogo, etc.), incluyendo posiblemente componentes reutilizables. -->
   <link rel="stylesheet" href="../../css/admin/gestion.css">
+
+  <!-- Enlaza Font Awesome 6.5.0 desde CDN para usar íconos vectoriales modernos (ej. fa-users, fa-burger).
+       Nota: la URL ha sido corregida (sin espacios al final) para garantizar carga correcta. -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
+  <!-- Barra superior informativa simple (tipo breadcrumb) que indica la ubicación actual del usuario. -->
   <div class="top-breadcrumb">Panel de control - ADMIN</div>
+
+  <!-- Contenedor principal que organiza el diseño del panel administrativo en dos columnas: sidebar + contenido. -->
   <div class="admin-layout">
-    <!-- Sidebar Navegación -->
+
+    <!-- Sidebar: barra lateral de navegación semántica para el administrador. -->
     <aside class="sidebar">
-      <div class="sidebar__header"><h2>TastyTap Admin</h2></div>
+
+      <!-- Encabezado visual del sidebar con el nombre del sistema. -->
+      <div class="sidebar__header">
+        <h2>TastyTap Admin</h2>
+      </div>
+
+      <!-- Navegación principal del panel administrativo. -->
       <nav class="sidebar__nav">
+
+        <!-- Enlace activo: indica que el usuario está en el Panel de Control.
+             La clase "sidebar__link--active" suele aplicar un estilo visual diferenciado (ej. color de fondo o texto). -->
         <a href="panelControl.html" class="sidebar__link sidebar__link--active"><span>📊</span> Panel de Control</a>
+
+        <!-- Título visual que agrupa las funcionalidades principales de gestión. -->
         <div class="sidebar__section-title">GESTIÓN PRINCIPAL</div>
+
+        <!-- Enlaces a las distintas secciones de gestión del negocio. -->
         <a href="GestionUsuarios.html" class="sidebar__link"><span>👥</span> Usuarios</a>
         <a href="GestionCatalogo.html" class="sidebar__link"><span>🍔</span> Catálogo</a>
         <a href="GestionInventario.html" class="sidebar__link"><span>📦</span> Inventario</a>
-        <a href="GestionVentas.html" class="sidebar__link">💰</span> Ventas</a>
+        <a href="GestionVentas.html" class="sidebar__link"><span>💰</span> Ventas</a>
         <a href="GestionGastos.html" class="sidebar__link"><span>💸</span> Gastos</a>
+
+        <!-- Título visual que agrupa las funcionalidades de reportes y configuración del sistema. -->
         <div class="sidebar__section-title">REPORTES Y SISTEMA</div>
-        <a href="ReportesBalance.html" class="sidebar__link">📈</span> Balance</a>
+
+        <!-- Enlaces a las vistas de reportes y herramientas administrativas. -->
+        <a href="ReportesBalance.html" class="sidebar__link"><span>📈</span> Balance</a>
         <a href="ReportesConfigu.html" class="sidebar__link"><span>⚙️</span> Configuración</a>
         <a href="ReportesNotifi.html" class="sidebar__link"><span>🔔</span> Notificaciones</a>
         <a href="ReportesExportar.html" class="sidebar__link"><span>📤</span> Exportar Datos</a>
+
+        <!-- Enlace para cerrar sesión y redirigir al login público del cliente. -->
         <a href="/views/user/login.html" class="sidebar__link"><span>🚪</span> Cerrar Sesión</a>
       </nav>
     </aside>
 
+    <!-- Contenido principal de la página, ubicado a la derecha del sidebar. -->
     <main class="admin-content">
+
+      <!-- Encabezado del área de contenido: incluye título y rol del usuario. -->
       <div class="content-header">
         <h1>Panel de Control Resumen</h1>
+        <!-- Indicador visual del rol actual; útil en sistemas con múltiples tipos de usuarios. -->
         <div class="role-badge">Rol: <span>ADMINISTRADOR</span></div>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;">
-        <div class="stat-card"><i class="fas fa-users"></i><div><h3>254</h3><p>Usuarios Registrados</p></div></div>
-        <div class="stat-card"><i class="fas fa-burger"></i><div><h3>47</h3><p>Productos en Catálogo</p></div></div>
-        <div class="stat-card"><i class="fas fa-shopping-cart"></i><div><h3>125</h3><p>Ventas del Mes</p></div></div>
-        <div class="stat-card"><i class="fas fa-dollar-sign"></i><div><h3>$2.950.000</h3><p>Ganancias Totales</p></div></div>
+      <!-- Cuadrícula de estadísticas clave del negocio.
+           El estilo de layout (grid) ha sido movido a 'panelControl.css' bajo la clase '.stats-grid'
+           para mantener una separación clara entre contenido y presentación. -->
+      <div class="stats-grid">
+
+        <!-- Tarjeta 1: total de usuarios registrados. -->
+        <div class="stat-card">
+          <i class="fas fa-users"></i>
+          <!-- Ícono de Font Awesome que representa personas/usuarios. -->
+          <div>
+            <h3>254</h3>
+            <!-- Valor numérico actual. -->
+            <p>Usuarios Registrados</p>
+            <!-- Descripción breve de la métrica. -->
+          </div>
+        </div>
+
+        <!-- Tarjeta 2: productos disponibles en el catálogo. -->
+        <div class="stat-card">
+          <i class="fas fa-burger"></i>
+          <!-- Ícono de hamburguesa (representa el catálogo de comida). -->
+          <div>
+            <h3>47</h3>
+            <p>Productos en Catálogo</p>
+          </div>
+        </div>
+
+        <!-- Tarjeta 3: ventas realizadas en el mes actual. -->
+        <div class="stat-card">
+          <i class="fas fa-shopping-cart"></i>
+          <!-- Ícono de carrito de compras. -->
+          <div>
+            <h3>125</h3>
+            <p>Ventas del Mes</p>
+          </div>
+        </div>
+
+        <!-- Tarjeta 4: ganancias totales acumuladas (en pesos colombianos). -->
+        <div class="stat-card">
+          <i class="fas fa-dollar-sign"></i>
+          <!-- Ícono de moneda (usado genéricamente para ingresos). -->
+          <div>
+            <h3>$2.950.000</h3>
+            <p>Ganancias Totales</p>
+          </div>
+        </div>
       </div>
 
+      <!-- Contenedor para la visualización gráfica del rendimiento semanal de ventas. -->
       <div class="chart-container">
         <h3>Rendimiento de Ventas Semanal</h3>
+        <!-- Gráfico de barras simulado con divs.
+             Los estilos 'height' podrían externalizarse a CSS si los valores son dinámicos,
+             pero aquí se mantienen inline por simplicidad visual en prototipo estático. -->
         <div class="bar-chart">
           <div class="bar-item" style="height: 40%;" data-day="Lunes"></div>
           <div class="bar-item" style="height: 60%;" data-day="Martes"></div>
