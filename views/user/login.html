@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="/css/style.css">
     <!-- Estos son fondos de las redes sociales -->
     <link rel="stylesheet" href="/css/components/button.css">
+    <!-- Estos son fondos de las redes sociales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!-- Se cierra la etiqueta de cabecera del documento -->
 </head>
 <!-- Cuerpo visible de la pagina,
@@ -29,6 +31,20 @@
             <h1>TastyTap</h1>
             <!-- Se cierra la etiqueta del contenedor-->
         </div>
+            <!-- menu de navegacion cobn enlaces a otras secciones del sitio -->
+    <nav class="navbar__menu">
+      <!-- Enlace a la página de inicio la clase active se utiliza para resaltar el enlace actual -->
+        <a href="/index.html">Inicio</a>
+        <!-- Enlace a la vista de menu de productos disponibles -->
+        <a href="/views/user/menu.html">Menú</a>
+        <!-- Enlace a la vista de la tienda, donde se muestran los productos y sus detalles del lugar -->
+        <a href="/views/user/tienda.html">Tienda</a>
+        <!--  Enlace a la vista de contacto -->
+        <a href="/views/user/contacto.html">Contacto</a>
+        <!--  Enlace a la vista de login  de sesión para usuarios -->
+        <a href="/views/user/login.html" class="active">Login</a>
+        <!-- se cierra la etiqueta de la barra de navegación -->
+    </nav>
         <!-- Menu de navegación especifico para flujos de autenticación-->
     </header>
 <!-- Contenido principal, formulario de inicio de sesión simulado-->
@@ -74,6 +90,65 @@
         <!-- Se cierra la etiqueta del contenedor-->
     </main>
     <!-- Se cierra la etiqueta del cuerpo de la página-->
+     <!-- Pie de página con información adicional, enlaces y contacto -->
+  <footer class="footer">
+    <!-- Bloque con enlaces a restaurantes populares -->
+    <div class="restaurantes">
+      <!--  Titulo del bloque del pie de página -->
+      <h3>Restaurantes Mejor Valorados</h3>
+      <!-- Estos enlaces podrían redirigir a perfiles de los restaurantes -->
+      <a href="#">Camachos</a>
+      <a href="#">Domino's</a>
+      <a href="#">KFC</a>
+      <a href="#">Mc Donald's</a>
+      <a href="#">El corral</a>
+      <a href="#">Dunkin' Donuts</a>
+      <!-- Cierre del bloque de restaurantes -->
+    </div>
+    <!-- Bloque con enlaces a la sección de unete a Tasty Tap -->
+    <div class=" unete">
+      <!-- Titulo del bloque del pie de página -->
+      <h3>Únete a Tasty Tap</h3>
+      <!--  Estos enlaces podrían redirigir a perfiles de los restaurantes -->
+      <a href="#">Registra tu restaurante</a>
+      <a href="#">Registra tu local</a>
+      <a href="#">Haz crecer tu marca</a>
+      <a href="#">Promociona tu negocio</a>
+      <!-- Cierre del bloque de unete a Tasty Tap -->
+    </div>
+    <!-- Bloque con enlaces a redes sociales -->
+    <div class="redes">
+      <!-- Titulo del bloque del pie de página -->
+      <h3>Síguenos en Redes Sociales</h3>
+      <!-- Contenedor con enlaces a redes sociales -->
+      <div class="social">
+        <!-- Estos enlaces podrían redirigir a perfiles de redes sociales -->
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <!-- Cierre del contenedor de redes sociales -->
+      </div>
+      <!-- Cierre del bloque de redes sociales -->
+    </div>
+    <!-- Bloque con información de contacto -->
+    <div class="contacto">
+      <!-- Titulo del bloque del pie de página -->
+      <h3>Contacto</h3>
+      <!-- Información de contacto supuesta de la empresa TastyaTap -->
+      <p>📍 Calle 123 #45-67, Bogotá, Colombia</p>
+      <p>📞 +57 320 555 1234</p>
+      <p>✉️ contacto@tastytap.com</p>
+      <!-- Cierre del bloque de contacto -->
+    </div>
+    <!-- Bloque con información de derechos de autor -->
+    <div class="footer__bottom">
+      <!-- Información de derechos de autor -->
+      <p>© 2025 TastyTap — Todos los derechos reservados 🍴</p>
+      <!-- Cierre del bloque de derechos de autor -->
+    </div>
+    <!-- Cierre del pie de página -->
+  </footer>
+<!-- Cierre del cuerpo de la página -->
 </body>
 <!-- Se cierra la etiqueta del documento-->
 </html>
