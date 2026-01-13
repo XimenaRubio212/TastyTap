@@ -21,3 +21,115 @@
   color: #666;
   margin-bottom: 1.5rem;
 }
+
+/*NUEVOOOO*/
+
+/* Estilo base para la sección */
+.perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+/* El interruptor invisible */
+#toggle-edit {
+    display: none;
+}
+
+.perfil__container {
+    background: white;
+    display: flex;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    max-width: 750px;
+    width: 100%;
+    gap: 40px;
+}
+
+.perfil__avatar img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 6px solid #f18a51; /* Color naranja de TastyTap */
+    object-fit: cover;
+}
+
+.perfil__info {
+    flex: 1;
+}
+
+.perfil__info h2 {
+    margin-top: 0;
+    border-bottom: 2px solid #f18a51;
+    padding-bottom: 10px;
+    color: #333;
+}
+
+/* --- ESTILO DE LOS CAMPOS (La Simulación) --- */
+
+.campo {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.campo strong {
+    width: 100px;
+    color: #555;
+}
+
+/* Por defecto, los inputs parecen texto normal */
+.campo input {
+    border: 1px solid transparent;
+    background: transparent;
+    font-size: 1rem;
+    color: #333;
+    padding: 5px;
+    width: 100%;
+    pointer-events: none; /* No se pueden tocar en modo vista */
+    font-family: inherit;
+}
+
+/* Cuando el checkbox está activo (MODO EDICIÓN) */
+#toggle-edit:checked ~ .perfil__container .campo input {
+    border: 1px solid #ccc;
+    background: #fff;
+    border-radius: 4px;
+    pointer-events: auto; /* Ya se puede escribir en ellos */
+}
+
+/* --- BOTONES --- */
+
+.btn-label {
+    display: inline-block;
+    background-color: #f18a51;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+/* Ocultamos el botón 'Guardar' cuando no estamos editando */
+.save-btn { display: none; background-color: #28a745; }
+
+/* Ocultamos el botón 'Editar' cuando estamos editando */
+#toggle-edit:checked ~ .perfil__container .edit-btn { display: none; }
+#toggle-edit:checked ~ .perfil__container .save-btn { display: inline-block; }
+
+/* Mensaje inferior */
+.perfil__message {
+    margin-top: 30px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+.perfil__message a { color: #f18a51; font-weight: bold; text-decoration: none; }
