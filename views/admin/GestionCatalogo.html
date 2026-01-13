@@ -1,48 +1,167 @@
 <!DOCTYPE html>
+<!-- Declara el documento como HTML5 para garantizar compatibilidad con estándares modernos. -->
+
 <html lang="es">
+<!-- Establece el idioma principal del contenido como español (mejora accesibilidad y SEO). -->
+
 <head>
+    <!-- Sección que contiene metadatos y enlaces a recursos externos (hojas de estilo). -->
+
     <meta charset="UTF-8">
+    <!-- Define la codificación de caracteres como UTF-8 para soportar correctamente acentos y símbolos del español. -->
+
     <title>TastyTap | Catálogo</title>
+    <!-- Título que aparece en la pestaña del navegador; identifica claramente esta vista como la gestión del catálogo de productos. -->
+
     <link rel="stylesheet" href="../../css/utils/Base.css">
+    <!-- Enlaza la hoja de estilos base con reglas globales (reset, tipografía, utilidades comunes a todo el proyecto). -->
+
     <link rel="stylesheet" href="../../css/admin/panelControl.css">
+    <!-- Estilos del layout general del panel administrativo (estructura sidebar + contenido principal). -->
+
     <link rel="stylesheet" href="../../css/admin/gestion.css">
+    <!-- Hoja de estilos compartida por las vistas de gestión; incluye clases para tablas, estados, formularios, etc. -->
+
     <link rel="stylesheet" href="../../css/components/button.css">
+    <!-- Estilos reutilizables para botones, garantizando apariencia consistente en toda la interfaz. -->
 </head>
+
 <body>
+    <!-- Cuerpo visible de la página web. -->
+
     <div class="admin-layout">
+        <!-- Contenedor principal que organiza el diseño del panel de administración en dos columnas: barra lateral y contenido. -->
+
         <aside class="sidebar">
+            <!-- Barra lateral de navegación semántica para el administrador. -->
+
             <div class="sidebar__header">
+                <!-- Encabezado visual de la barra lateral. -->
+
                 <div class="sidebar__logo-placeholder"></div>
+                <!-- Espacio reservado para el logo de TastyTap; actualmente vacío pero listo para estilización futura. -->
+
                 <h2>TastyTap Admin</h2>
+                <!-- Título que identifica el sistema como el panel administrativo de TastyTap. -->
             </div>
+
             <nav class="sidebar__nav">
+                <!-- Elemento de navegación semántico que agrupa los enlaces del menú. -->
+
                 <ul class="sidebar__list">
+                    <!-- Lista no ordenada que contiene todos los elementos del menú lateral. -->
+
                     <li><a href="panelControl.html" class="sidebar__link sidebar__link--active"><span class="sidebar__icon">📊</span><span class="sidebar__text">Panel de Control</span></a></li>
+                    <!-- Enlace al Panel de Control; la clase "--active" indica que esta es la página actual. -->
+
                     <li class="sidebar__section-title">GESTIÓN PRINCIPAL</li>
+                    <!-- Título visual que agrupa las funcionalidades principales de gestión. -->
+
                     <li><a href="GestionUsuarios.html" class="sidebar__link"><span class="sidebar__icon">👥</span><span class="sidebar__text">Usuarios</span></a></li>
+                    <!-- Enlace a la gestión de usuarios registrados. -->
+
                     <li><a href="GestionCatalogo.html" class="sidebar__link"><span class="sidebar__icon">🍔</span><span class="sidebar__text">Catálogo</span></a></li>
+                    <!-- Enlace a esta misma página: permite gestionar productos del catálogo. -->
+
                     <li><a href="GestionInventario.html" class="sidebar__link"><span class="sidebar__icon">📦</span><span class="sidebar__text">Inventario</span></a></li>
+                    <!-- Enlace a la gestión de insumos y niveles de stock. -->
+
                     <li><a href="GestionVentas.html" class="sidebar__link"><span class="sidebar__icon">💰</span><span class="sidebar__text">Ventas</span></a></li>
+                    <!-- Enlace al historial de ventas. -->
+
                     <li><a href="GestionGastos.html" class="sidebar__link"><span class="sidebar__icon">💸</span><span class="sidebar__text">Gastos</span></a></li>
+                    <!-- Enlace a la gestión de gastos operativos. -->
+
                     <li class="sidebar__section-title">REPORTES</li>
+                    <!-- Título visual que agrupa las funcionalidades de reportes. -->
+
                     <li><a href="ReportesBalance.html" class="sidebar__link"><span class="sidebar__icon">📈</span><span class="sidebar__text">Balance</span></a></li>
+                    <!-- Enlace al reporte financiero consolidado. -->
+
                     <li><a href="ReportesConfigu.html" class="sidebar__link"><span class="sidebar__icon">⚙️</span><span class="sidebar__text">Configuración</span></a></li>
+                    <!-- Enlace a la configuración del sistema. -->
+
                     <li><a href="ReportesNotifi.html" class="sidebar__link"><span class="sidebar__icon">🔔</span><span class="sidebar__text">Notificaciones</span></a></li>
+                    <!-- Enlace al centro de notificaciones del administrador. -->
+
                     <li><a href="ReportesExportar.html" class="sidebar__link"><span class="sidebar__icon">📤</span><span class="sidebar__text">Exportar Datos</span></a></li>
-                    <li><a href="/views/user/login.html" class="sidebar__link"><span>🚪</span> Cerrar Sesión</a>
+                    <!-- Enlace a la vista de exportación de datos en distintos formatos. -->
+
+                    <li><a href="/views/user/login.html" class="sidebar__link"><span>🚪</span> Cerrar Sesión</a></li>
+                    <!-- Enlace para cerrar la sesión del administrador y redirigir al login público. -->
                 </ul>
             </nav>
         </aside>
+
         <main class="admin-content">
+            <!-- Contenido principal de la página, ubicado a la derecha de la barra lateral. -->
+
             <header class="admin-header">
+                <!-- Encabezado del área de contenido principal. -->
+
                 <h1>Catálogo de Productos</h1>
-                <div class="acciones-header"><button class="btn">+ Agregar Plato</button></div>
+                <!-- Título principal que describe la función de esta vista: administrar los platos disponibles para la venta. -->
+
+                <div class="acciones-header">
+                    <!-- Contenedor para acciones secundarias en el encabezado (ej. botones de creación). -->
+
+                    <button class="btn">+ Agregar Plato</button>
+                    <!-- Botón para registrar un nuevo producto en el catálogo.
+                         En una implementación dinámica, esto abriría un formulario o redirigiría a otra vista. -->
+                </div>
             </header>
+
             <table class="gestion-table">
-                <thead><tr><th>Producto</th><th>Categoría</th><th>Precio</th><th>Stock</th><th>Acciones</th></tr></thead>
+                <!-- Tabla estilizada para mostrar datos estructurados del catálogo.
+                     La clase "gestion-table" debe estar definida en "gestion.css" con bordes, padding, alineación, etc. -->
+
+                <thead>
+                    <!-- Encabezado de la tabla: define las columnas. -->
+                    <tr>
+                        <th>Producto</th>
+                        <!-- Nombre del plato o ítem disponible (ej. "Burger Deluxe"). -->
+                        <th>Categoría</th>
+                        <!-- Clasificación del producto (Hamburguesas, Pizzas, Bebidas, etc.). -->
+                        <th>Precio</th>
+                        <!-- Valor de venta al público en pesos colombianos. -->
+                        <th>Stock</th>
+                        <!-- Cantidad disponible para la venta (puede vincularse con inventario). -->
+                        <th>Acciones</th>
+                        <!-- Columna para operaciones como editar o eliminar el producto. -->
+                    </tr>
+                </thead>
+
                 <tbody>
-                    <tr><td>Burger Deluxe</td><td>Hamburguesas</td><td>$25.000</td><td>50</td><td><button class="btn-edit btn--small">Editar</button> <button class="btn-delete btn--small">Eliminar</button></td></tr>
-                    <tr><td>Pizza Pepperoni</td><td>Pizzas</td><td>$32.000</td><td>30</td><td><button class="btn-edit btn--small">Editar</button> <button class="btn-delete btn--small">Eliminar</button></td></tr>
+                    <!-- Cuerpo de la tabla: contiene las filas de datos reales. -->
+
+                    <tr>
+                        <!-- hamburguesa premium. -->
+                        <td>Burger Deluxe</td>
+                        <!-- Nombre del producto. -->
+                        <td>Hamburguesas</td>
+                        <!-- Categoría a la que pertenece. -->
+                        <td>$25.000</td>
+                        <!-- Precio de venta. -->
+                        <td>50</td>
+                        <!-- Unidades disponibles en stock. -->
+                        <td>
+                            <!-- Botones de acción, edición y eliminación. -->
+                            <button class="btn-edit btn--small">Editar</button>
+                            <button class="btn-delete btn--small">Eliminar</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <!-- Segunda fila: pizza clásica. -->
+                        <td>Pizza Pepperoni</td>
+                        <td>Pizzas</td>
+                        <td>$32.000</td>
+                        <td>30</td>
+                        <td>
+                            <button class="btn-edit btn--small">Editar</button>
+                            <button class="btn-delete btn--small">Eliminar</button>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </main>
