@@ -12,6 +12,18 @@
 /* se agrego esto para el admin */
 /* @import url('admin/gestion.css');  */
 
+/* Reset básico para consistencia */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Fundamental para que los tamaños sean iguales en todo lado */
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* Evita scrolls horizontales inesperados */
+}
+
 /* === CONTENEDOR ÚNICO PARA FORMULARIOS (CONTACTO, LOGIN, REGISTRO) === */
 body.page-contacto .form-container,
 body.page-login .form-container,
