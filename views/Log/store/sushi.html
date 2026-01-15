@@ -1,203 +1,142 @@
-<!-- Se declara el tipo de documento como HTML5, asegurando que el navegador lo reconozca -->
 <!DOCTYPE html>
-<!-- Etiqueta del documento que indica el idioma de la página -->
 <html lang="es">
-  <!-- Etiqueta de cabecera del documento -->
 <head>
-  <!-- Sección de metadatos e importaciones que no se ven directamente en la página -->
-  <meta charset="UTF-8">
-  <!-- Etiqueta para configurar la vista del dispositivo, esto permite que la página se adapte a diferentes dispositivos -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Etiqueta para establecer el título de la página -->
-  <title>TastyTap | Sushi</title>
-  <!-- se debe colocar la carpeta css, utils llamando a base.css para que defina las variables -->
-  <link rel="stylesheet" href="/css/utils/Base.css">
-  <!-- y se llama a la carpeta css llamando a main.css para que las use -->
-  <link rel="stylesheet" href="/css/style.css">
-  <!-- Estos son fondos de las redes sociales -->
-  <link rel="stylesheet" href="/css/components/button.css">
-  <!-- Estos son fondos de las redes sociales -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<!-- Se cierra la etiqueta de cabecera del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TastyTap - Sushi</title>
+    <!-- Enlaces a archivos CSS -->
+    <link rel="stylesheet" href="/css/utils/Base.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/components/button.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<!-- este es el cuerpo del documento que contiene todo el contenido que el usuario ve -->
-<body class="page-sushi">
-<!-- Barra de navegación superior común a todas las páginas del sitio -->
-  <header class="navbar">
-    <!-- Contenedor del logo visual y el nombre textual de la marca -->
-    <div class="navbar__logo">
-      <!-- Imagen del logo, el atributo alt proporciona texto alternativo para la accesibilidad -->
-      <img src="/img/TastyTap.png" alt="Logo TastyTap">
-      <!-- Nombre de la marca como encabezado -->
-      <h1>TastyTap</h1>
-      <!-- Se cierra la etiqueta de la barra de navegación -->
+<body>
+
+    <!-- INPUTS OCULTOS (Controlan el estado del carrito sin JS) -->
+    <input type="checkbox" id="sushi1" class="cart-control">
+    <input type="checkbox" id="sushi2" class="cart-control">
+    <input type="checkbox" id="sushi3" class="cart-control">
+    <input type="checkbox" id="sushi4" class="cart-control">
+
+    <!-- VENTANA EMERGENTE (Toast) -->
+    <div class="notice-container">
+        <div class="notice">✅ ¡Sushi añadido al carrito!</div>
     </div>
-    <!-- Menu de navegación con enlaces a las principales secciones del sitio -->
-    <nav class="navbar__menu">
-      <a href="/views/Log/store/sushi.html" class="active">Pizzas</a>
-      <a href="/views/Log/perfil.html">Perfil</a>
-      <a href="/views/user/login.html">Cerrar Sesión</a>
-      <!-- Se cierra la etiqueta de la barra de navegación -->
-    </nav>
-    <!-- Se cierra la etiqueta de la barra de navegación -->
-  </header>
-<!-- Contenido principal de la página -->
-  <section class="menu">
-    <!-- Título de la sección menu-->
-    <h2>Sushi disponibles</h2>
-    <!-- Contenedor de la sección de productos -->
-    <div class="menu__grid">
-<!-- Contenedor de la tarjeta de cada producto -->
-      <div class="menu__card">
-        <!-- Imagen del producto con texto alternativo descritivo -->
-        <img src="/img/sushi-1.jpg" alt="Nigiri de Salmón">
-        <!-- nombre del primer producto -->
-        <h3>Nigiri de Salmón</h3>
-        <!-- Descripción detallada del primer producto -->
-        <p>📍 Sushi Garden - Chapinero</p>
-        <p>📞 +57 320 555 3001</p>
-        <p class="price">$12.000</p>
-        <!-- Botón para agregar al carrito -->
-        <input type="checkbox" id="sushi-1" class="checkbox-carrito">
-        <!-- Etiqueta del botón -->
-        <label for="sushi-1" class="btn-simulado">Agregar al carrito</label>
-        <!-- Confirmación de agregado al carrito -->
-        <div class="confirmacion">
-          <!-- Nombre del producto agregado al carrito -->
-          <strong>Nigiri de Salmón</strong> agregado al carrito.
-        <!-- Se cierra la etiqueta de la tarjeta de producto -->
+
+    <!-- CABECERA -->
+    <header>
+        <div class="logo">
+            <img src="/img/TastyTap.png" alt="Logo" style="height: 30px; vertical-align: middle; margin-right: 10px;">
+            TastyTap
         </div>
-        <!-- Se cierra la etiqueta de la tarjeta de producto -->
-      </div>
-<!-- Contenedor de la tarjeta de cada producto -->
-      <div class="menu__card">
-        <!-- Imagen del producto con texto alternativo descritivo -->
-        <img src="/img/sushi-2.jpg" alt="Roll California">
-        <!-- nombre del segundo producto -->
-        <h3>Roll California</h3>
-        <!-- Descripción detallada del segundo producto -->
-        <p>📍 Sushi Garden - Chapinero</p>
-        <p>📞 +57 320 555 3001</p>
-        <p class="price">$14.500</p>
-        <!-- Botón para agregar al carrito -->
-        <input type="checkbox" id="sushi-2" class="checkbox-carrito">
-        <!-- Etiqueta del botón -->
-        <label for="sushi-2" class="btn-simulado">Agregar al carrito</label>
-        <!-- Confirmación de agregado al carrito -->
-        <div class="confirmacion">
-          <!-- Nombre del producto agregado al carrito -->
-          <strong>Roll California</strong> agregado al carrito.
-          <!-- Se cierra la etiqueta de la tarjeta de producto -->
+        <nav>
+            <a href="/views/Log/store/sushi.html" class="active">Sushi</a>
+            <a href="/views/Log/perfil.html">Perfil</a>
+            <a href="/views/user/login.html">Cerrar Sesión</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="main-title">Sushi disponible</h2>
+
+        <div class="product-grid">
+            <!-- Card 1 -->
+            <div class="card">
+                <img src="/img/sushi-1.jpg" alt="Nigiri de Salmón">
+                <div class="card-content">
+                    <h3>Nigiri de Salmón</h3>
+                    <p class="info">📍 Sushi Garden - Chapinero</p>
+                    <p class="info">📞 +57 320 555 3001</p>
+                    <span class="price">$12.000</span>
+                    <label for="sushi1" class="btn-add">Agregar al carrito</label>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="/img/sushi-2.jpg" alt="Roll California">
+                <div class="card-content">
+                    <h3>Roll California</h3>
+                    <p class="info">📍 Sushi Garden - Chapinero</p>
+                    <p class="info">📞 +57 320 555 3001</p>
+                    <span class="price">$14.500</span>
+                    <label for="sushi2" class="btn-add">Agregar al carrito</label>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <img src="/img/sushi-3.jpg" alt="Sashimi Mixto">
+                <div class="card-content">
+                    <h3>Sashimi Mixto</h3>
+                    <p class="info">📍 Umami Sushi - Usaquén</p>
+                    <p class="info">📞 +57 320 555 3002</p>
+                    <span class="price">$22.000</span>
+                    <label for="sushi3" class="btn-add">Agregar al carrito</label>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card">
+                <img src="/img/sushi-4.jpg" alt="Dragon Roll">
+                <div class="card-content">
+                    <h3>Dragon Roll</h3>
+                    <p class="info">📍 Umami Sushi - Usaquén</p>
+                    <p class="info">📞 +57 320 555 3002</p>
+                    <span class="price">$18.000</span>
+                    <label for="sushi4" class="btn-add">Agregar al carrito</label>
+                </div>
+            </div>
         </div>
-        <!-- Se cierra la etiqueta de la tarjeta de producto -->
-      </div>
-<!-- Contenedor de la tarjeta de cada producto -->
-      <div class="menu__card">
-        <!-- Imagen del producto con texto alternativo descritivo -->
-        <img src="/img/sushi-3.jpg" alt="Sashimi Mixto">
-        <!-- nombre del tercer producto -->
-        <h3>Sashimi Mixto</h3>
-        <!-- Descripción detallada del tercer producto -->
-        <p>📍 Umami Sushi - Usaquén</p>
-        <p>📞 +57 320 555 3002</p>
-        <p class="price">$22.000</p>
-        <!-- Botón para agregar al carrito -->
-        <input type="checkbox" id="sushi-3" class="checkbox-carrito">
-        <!-- Etiqueta del botón -->
-        <label for="sushi-3" class="btn-simulado">Agregar al carrito</label>
-        <!-- Confirmación de agregado al carrito -->
-        <div class="confirmacion">
-          <!-- Nombre del producto agregado al carrito -->
-          <strong>Sashimi Mixto</strong> agregado al carrito.
-          <!-- Se cierra la etiqueta de la tarjeta de producto -->
+    </main>
+
+    <!-- PANEL LATERAL (RESUMEN CARRITO) -->
+    <aside class="sidebar">
+        <h3>Tu Pedido</h3>
+        <div class="cart-list">
+            <div class="cart-item item-1"><span>Nigiri Salmón</span> <b>$12.000</b></div>
+            <div class="cart-item item-2"><span>Roll California</span> <b>$14.500</b></div>
+            <div class="cart-item item-3"><span>Sashimi Mixto</span> <b>$22.000</b></div>
+            <div class="cart-item item-4"><span>Dragon Roll</span> <b>$18.000</b></div>
         </div>
-        <!-- Se cierra la etiqueta de la tarjeta de producto -->
-      </div>
-<!-- Contenedor de la tarjeta de cada producto -->
-      <div class="menu__card">
-        <!-- Imagen del producto con texto alternativo descritivo -->
-        <img src="/img/sushi-4.jpg" alt="Dragon Roll">
-        <!-- nombre del cuarto producto -->
-        <h3>Dragon Roll</h3>
-        <!-- Descripción detallada del cuarto producto -->
-        <p>📍 Umami Sushi - Usaquén</p>
-        <p>📞 +57 320 555 3002</p>
-        <p class="price">$18.000</p>
-        <!-- Botón para agregar al carrito -->
-        <input type="checkbox" id="sushi-4" class="checkbox-carrito">
-        <!-- Etiqueta del botón -->
-        <label for="sushi-4" class="btn-simulado">Agregar al carrito</label>
-        <!-- Confirmación de agregado al carrito -->
-        <div class="confirmacion">
-          <!-- Nombre del producto agregado al carrito -->
-          <strong>Dragon Roll</strong> agregado al carrito.
-          <!-- Se cierra la etiqueta de la tarjeta de producto -->
+        <a href="carrito.html" class="btn-checkout">Realizar Compra</a>
+        <p class="hint">Toca el producto de nuevo para quitarlo</p>
+    </aside>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <div class="footer-col">
+            <h4>Restaurantes Top</h4>
+            <ul>
+                <li>Sushi Garden</li>
+                <li>Umami Sushi</li>
+                <li>Camachos</li>
+                <li>Domino's</li>
+            </ul>
         </div>
-        <!-- Se cierra la etiqueta de la tarjeta de producto -->
-      </div>
-<!-- Se cierra la etiqueta de la sección de productos -->
-    </div>
-    <!-- Se cierra la etiqueta de la sección de productos -->
-  </section>
-<!-- Pie de página con información adicional, enlaces y contacto -->
-  <footer class="footer">
-    <!-- Sección de información adicional -->
-    <div class="footer__section">
-      <!-- Nombre de la sección -->
-      <h3>Restaurantes Mejor Valorados</h3>
-      <!-- Enlaces a los restaurantes mejor valorados -->
-      <a href="#">Camachos</a>
-      <a href="#">Domino's</a>
-      <a href="#">KFC</a>
-      <a href="#">Mc Donald's</a>
-      <a href="#">El corral</a>
-      <a href="#">Dunkin' Donuts</a>
-      <!-- Se cierra la etiqueta de la sección -->
-    </div>
-    <!-- Sección de oportunidad de negocio y promociones -->
-    <div class="footer__section">
-      <!-- Nombre de Unete a TastyTap-->
-      <h3>Únete a Tasty Tap</h3>
-      <!-- Enlaces de oportunidad de negocio y promociones -->
-      <a href="#">Registra tu restaurante</a>
-      <a href="#">Registra tu local</a>
-      <a href="#">Haz crecer tu marca</a>
-      <a href="#">Promociona tu negocio</a>
-      <!-- Se cierra la etiqueta de la sección -->
-    </div>
-    <!-- Sección de redes sociales y contacto -->
-    <div class="footer__section">
-      <!-- Nombre de la sección de redes sociales -->
-      <h3>Síguenos en Redes Sociales</h3>
-      <!-- Contenedor de enlaces a redes sociales -->
-      <div class="footer__social">
-        <!-- Enlaces a redes sociales -->
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-        <!-- Se cierra el contenedor de enlaces a redes sociales -->
-      </div>
-      <!-- Se cierra la etiqueta de la sección -->
-    </div>
-    <!-- Sección de contacto -->
-    <div class="footer__section">
-      <!-- Nombre de la sección de contacto -->
-      <h3>Contacto</h3>
-      <!-- Información de contacto -->
-      <p>📍 Calle 123 #45-67, Bogotá, Colombia</p>
-      <p>📞 +57 320 555 1234</p>
-      <p>✉️ contacto@tastytap.com</p>
-      <!-- Se cierra la etiqueta de la sección -->
-    </div>
-    <!-- Sección de derechos reservados -->
-    <div class="footer__bottom">
-      <!-- Información de derechos de autor -->
-      <p>© 2025 TastyTap — Todos los derechos reservados 🍴</p>
-    <!-- Se cierra la etiqueta de la sección -->
-    </div>
-    <!---- Se cierra la etiqueta del pie de página -->
-  </footer>
-<!-- Se cierra la etiqueta del cuerpo de la página -->
+        <div class="footer-col">
+            <h4>Únete a Tasty Tap</h4>
+            <ul>
+                <li>Registra tu restaurante</li>
+                <li>Registra tu local</li>
+                <li>Promociona tu negocio</li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Síguenos</h4>
+            <div class="socials">
+                <i class="fab fa-facebook"></i> Facebook<br>
+                <i class="fab fa-instagram"></i> Instagram<br>
+                <i class="fab fa-tiktok"></i> TikTok
+            </div>
+        </div>
+        <div class="footer-col">
+            <h4>Contacto</h4>
+            <p>📍 Calle 123 #45-67, Bogotá</p>
+            <p>📞 +57 320 555 1234</p>
+            <p>✉️ contacto@tastytap.com</p>
+        </div>
+    </footer>
+
 </body>
-<!-- Se cierra la etiqueta del documento -->
 </html>

@@ -1,165 +1,103 @@
-<!-- Se declara el tipo de documento como HTML5, asegurando que el navegador lo reconozca -->
 <!DOCTYPE html>
-<!-- Etiqueta del documento que indica el idioma de la página -->
 <html lang="es">
-  <!-- Etiqueta de cabecera del documento -->
 <head>
-  <!-- Sección de metadatos e importaciones que no se ven directamente en la página -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TastyTap | Mi Perfil</title>
-  <!-- CSS externos en los cuales se llaman cada uno de los estilos-->
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/view/perfil.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <!-- Se cierra la etiqueta de cabecera del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TastyTap | Mi Perfil</title>
+    <!-- Enlaces a los archivos CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<!-- este es el cuerpo del documento que contiene todo el contenido que el usuario ve -->
 <body class="page-perfil">
-  <!-- Barra de navegación superior -->
-    <header class="navbar">
-        <!-- Logo y nombre de la empresa -->
-        <div class="navbar__logo">
-            <!-- Imagen del logo y el atributo alt proporciona texto alternativo para la accesibilidad -->
-            <img src="/img/TastyTap.png" alt="Logo TastyTap">
-            <!-- Nombre de la marca como encabezado -->
-            <h1>TastyTap</h1>
-            <!-- Se cierra la etiqueta del contenedor -->
+
+    <!-- CABECERA -->
+    <header>
+        <div class="logo">
+            <img src="/img/TastyTap.png" alt="Logo TastyTap" style="height: 30px; vertical-align: middle; margin-right: 10px;">
+            TastyTap
         </div>
-        <!-- Menu de navegación especifico para flujos de autenticación -->
-        <nav class="navbar__menu">
-            <!-- <a href="/views/user/menu.html">Menú</a> -->
+        <nav>
             <a href="/views/Log/tienda-log.html">Tienda</a>
-            <a href="/views/user/perfil.html" class="active">Perfil</a>
+            <a href="/views/Log/perfil.html" class="active">Perfil</a>
             <a href="/views/user/login.html">Cerrar Sesión</a>
-            <!-- Se cierra la etiqueta de la barra de navegación -->
         </nav>
-        <!-- Se cierra la etiqueta de la barra de navegación -->
     </header>
-<!-- La sección del perfil -->
-  <section class="perfil">
-    <!-- El checkbox que controla si estamos editando o no -->
-    <input type="checkbox" id="toggle-edit">
-<!-- El contenedor del perfil -->
-    <div class="perfil__container">
-      <!-- La imagen del perfil -->
-      <div class="perfil__avatar">
-        <!-- La imagen de perfil -->
-        <img src="/img/perfil.jpg" alt="Usuario">
-        <!-- La etiqueta de la imagen -->
-      </div>
-      <!-- La información del perfil -->
-      <div class="perfil__info">
-        <!-- El encabezado del perfil -->
-        <h2>Mi Perfil</h2>
-        <!-- Los datos ahora son INPUTS que se disfrazan de texto -->
-        <div class="campo">
-          <!-- El nombre del usuario -->
-            <strong>Nombre:</strong>
-            <!-- El nombre del usuario -->
-            <input type="text" value="Darcy Rubio">
-            <!-- Se cierra la etiqueta del campo -->
+
+    <main>
+        <h2 class="main-title">Mi Cuenta</h2>
+
+        <!-- Checkbox para la lógica de edición sin JS -->
+        <input type="checkbox" id="toggle-edit" class="edit-control">
+
+        <!-- CONTENEDOR PRINCIPAL (AHORA ES FLEX) -->
+        <div class="profile-container card">
+
+            <!-- COLUMNA IZQUIERDA: Identidad -->
+            <aside class="profile-aside">
+                <div class="profile-avatar">
+                    <img src="/img/perfil.png" alt="Avatar">
+                </div>
+                <div class="profile-header">
+                    <h3>Darcy Rubio</h3>
+                    <p class="info">Miembro desde Enero 2025</p>
+                </div>
+            </aside>
+
+            <!-- COLUMNA DERECHA: Datos y Formulario -->
+            <section class="profile-main">
+                <div class="profile-form">
+                    <div class="campo">
+                        <strong><i class="fas fa-user"></i> Nombre completo:</strong>
+                        <input type="text" value="Darcy Rubio">
+                    </div>
+                    <div class="campo">
+                        <strong><i class="fas fa-envelope"></i> Correo electrónico:</strong>
+                        <input type="email" value="Darcy.Rubio@gmail.com">
+                    </div>
+                    <div class="campo">
+                        <strong><i class="fas fa-phone"></i> Teléfono:</strong>
+                        <input type="text" value="+57 320 555 1234">
+                    </div>
+                    <div class="campo">
+                        <strong><i class="fas fa-map-marker-alt"></i> Dirección:</strong>
+                        <input type="text" value="Calle 123 #45-67, Bogotá">
+                    </div>
+                </div>
+
+                <!-- Botones de acción -->
+                <div class="profile-actions">
+                    <label for="toggle-edit" class="btn-add edit-btn">Editar Datos</label>
+                    <label for="toggle-edit" class="btn-save save-btn">Guardar Cambios</label>
+                </div>
+            </section>
+
         </div>
-        <!-- Los datos ahora son INPUTS que se disfrazan de texto -->
-        <div class="campo">
-          <!-- El correo del usuario -->
-            <strong>Correo:</strong>
-            <!-- El correo del usuario -->
-            <input type="email" value="Darcy.Rubio@gmail.com">
-            <!-- Se cierra la etiqueta del campo -->
+
+        <div class="perfil-message">
+            <p>🎉 ¡Sesión activa! ¿Hambre? <a href="/views/Log/tienda-log.html">Ver restaurantes</a>.</p>
         </div>
-        <!-- Los datos ahora son INPUTS que se disfrazan de texto -->
-        <div class="campo">
-          <!-- El telefono del usuario -->
-            <strong>Teléfono:</strong>
-            <!-- El telefono del usuario -->
-            <input type="text" value="+57 320 555 1234">
-            <!-- Se cierra la etiqueta del campo -->
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <div class="footer-col">
+            <h4>TastyTap</h4>
+            <p>Tu comida favorita en un toque.</p>
         </div>
-        <!-- Los datos ahora son INPUTS que se disfrazan de texto -->
-        <div class="campo">
-          <!-- La direccion del usuario -->
-            <strong>Dirección:</strong>
-            <!-- La direccion del usuario -->
-            <input type="text" value="Calle 123 #45-67, Bogotá">
-            <!-- Se cierra la etiqueta del campo -->
+        <div class="footer-col">
+            <h4>Contacto</h4>
+            <p>📍 Bogotá, Colombia</p>
+            <p>📞 +57 320 555 1234</p>
         </div>
-        <!-- Labels que funcionan como botones -->
-        <label for="toggle-edit" class="btn-label edit-btn">Editar perfil</label>
-        <!-- Labels que funcionan como botones -->
-        <label for="toggle-edit" class="btn-label save-btn">Guardar cambios</label>
-        <!-- Se cierra la etiqueta del contenedor del perfil -->
-      </div>
-      <!-- Se cierra la etiqueta del contenedor del perfil -->
-    </div>
-    <!-- Se cierra la etiqueta de la sección del perfil -->
-    <div class="perfil__message">
-      <!-- Mensaje de inicio de sesión exitoso -->
-      <p>🎉 ¡Inicio de sesión exitoso!</p>
-      <!-- Para redirigir a la sección de la tienda -->
-      <p>Ahora puedes <a href="/views/Log/tienda-log.html">ordenar comida</a>.</p>
-      <!-- Se cierra la etiqueta del contenedor del mensaje -->
-    </div>
-    <!-- Se cierra la etiqueta de la sección del perfil -->
-  </section>
-  <!-- Pie de página comun a todas las vista del sitio-->
-  <footer class="footer">
-    <!-- Bloqeu restaurantes populares -->
-    <div class="restaurantes">
-      <!-- Titulo del bloque del pie de página -->
-      <h3>Restaurantes Mejor Valorados</h3>
-      <!-- Estos enlaces podrían redirigir a perfiles de los restaurantes -->
-      <a href="#">Camachos</a>
-      <a href="#">Domino's</a>
-      <a href="#">KFC</a>
-      <a href="#">Mc Donald's</a>
-      <a href="#">El corral</a>
-      <a href="#">Dunkin' Donuts</a>
-      <!--  Cierre del bloque de restaurantes -->
-    </div>
-    <!-- Bloque con enlaces a la sección de unete a Tasty Tap -->
-    <div class="unete">
-      <!-- Titulo del bloque del pie de página -->
-      <h3>Únete a Tasty Tap</h3>
-      <!-- Estos enlaces podrían redirigir a perfiles de los restaurantes -->
-      <a href="#">Registra tu restaurante</a>
-      <a href="#">Registra tu local</a>
-      <a href="#">Haz crecer tu marca</a>
-      <a href="#">Promociona tu negocio</a>
-      <!-- Cierre del bloque de unete a Tasty Tap -->
-    </div>
-    <!-- Bloque con enlaces a redes sociales -->
-    <div class="redes">
-      <!-- Titulo del bloque del pie de página -->
-      <h3>Síguenos en Redes Sociales</h3>
-      <!-- Contenedor con enlaces a redes sociales -->
-      <div class="social">
-        <!-- Estos enlaces podrían redirigir a perfiles de redes sociales -->
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-        <!-- Cierre del contenedor de redes sociales -->
-      </div>
-      <!-- Cierre del bloque de redes sociales -->
-    </div>
-    <!-- Bloque con informacion de contacto -->
-    <div class="contacto">
-      <!-- Titulo del bloque del pie de página -->
-      <h3>Contacto</h3>
-      <!-- Información de contacto supuesta de la empresa TastyaTap -->
-      <p>📍 Calle 123 #45-67, Bogotá, Colombia</p>
-      <p>📞 +57 320 555 1234</p>
-      <p>✉️ contacto@tastytap.com</p>
-      <!-- Cierre del bloque de contacto -->
-    </div>
-    <!-- Bloque con informacion de derechos de autor -->
-    <div class="footer__bottom">
-      <!-- Información de derechos de autor -->
-      <p>© 2025 TastyTap — Todos los derechos reservados 🍴</p>
-      <!-- Cierre del bloque de derechos de autor -->
-    </div>
-    <!-- Cierre del pie de página -->
-  </footer>
-<!--- Cierre del cuerpo de la página -->
+        <div class="footer-col">
+            <h4>Redes</h4>
+            <div class="socials">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-tiktok"></i>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>

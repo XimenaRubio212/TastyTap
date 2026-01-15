@@ -1,204 +1,141 @@
-<!-- Se declara el tipo de documento como HTML5, asegurando que el navegador lo reconozca -->
 <!DOCTYPE html>
-<!-- Etiqueta del documento que indica el idioma de la página -->
 <html lang="es">
-  <!-- Etiqueta de cabecera del documento -->
 <head>
-  <!-- Sección de metadatos e importaciones que no se ven directamente en la página -->
-  <meta charset="UTF-8">
-  <!-- Etiqueta para configurar la vista del dispositivo, esto permite que la página se adapte a diferentes dispositivos -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Etiqueta para establecer el título de la página -->
-  <title>TastyTap | Pizzas</title>
-  <!-- se debe colocar la carpeta css, utils llamando a base.css para que defina las variables -->
-  <link rel="stylesheet" href="/css/utils/Base.css">
-  <!-- y se llama a la carpeta css llamando a style.css para que las use -->
-  <link rel="stylesheet" href="/css/style.css">
-  <!-- Estos son fondos de las redes sociales -->
-  <link rel="stylesheet" href="/css/components/button.css">
-  <!-- Estos son fondos de las redes sociales -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<!-- Se cierra la etiqueta de cabecera del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TastyTap - Pizzas</title>
+    <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="/css/utils/Base.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/components/button.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<!-- Cuerpo visible de la pagina, la clase "page-pizzas",
- permite aplicar estilos especificos solo a esta vista si es necesario -->
-<body class="page-pizzas">
-<!-- Barra de navegación superior comun a todas las paginas del sitio -->
-  <header class="navbar">
-    <!--  Contenedor del logo visual y el nimbre textual de la marca -->
-    <div class="navbar__logo">
-      <!-- Imagen del logo y el atributo alt proporciona texto alternativo para la accesibilidad -->
-      <img src="/img/TastyTap.png" alt="Logo TastyTap">
-      <!-- Nombre de la marca como encabezado -->
-      <h1>TastyTap</h1>
-      <!-- Se cierra la etiqueta del contenedor -->
+<body>
+
+    <!-- INPUTS OCULTOS (Controlan el estado del carrito sin JS) -->
+    <input type="checkbox" id="pizza1" class="cart-control">
+    <input type="checkbox" id="pizza2" class="cart-control">
+    <input type="checkbox" id="pizza3" class="cart-control">
+    <input type="checkbox" id="pizza4" class="cart-control">
+
+    <!-- VENTANA EMERGENTE (Toast Notification) -->
+    <div class="notice-container">
+        <div class="notice">✅ ¡Pizza añadida al carrito!</div>
     </div>
-    <!-- Menu de navegación especifico para flujos de autenticación -->
-    <nav class="navbar__menu">
-      <a href="/views/Log/store/pizzas.html" class="active">Pizzas</a>
-      <a href="/views/Log/perfil.html">Perfil</a>
-      <a href="/views/user/login.html">Cerrar Sesión</a>
-      <!-- Se cierra la etiqueta de la barra de navegación -->
-    </nav>
-    <!-- Se cierra la etiqueta de la barra de navegación -->
-  </header>
-<!-- Contenido principal de la página -->
-  <section class="menu">
-    <!-- Encabezado de la sección -->
-    <h2>Pizzas disponibles</h2>
-    <!-- Contenedor de las tarjetas de productos -->
-    <div class="menu__grid">
-<!--primera tarjeta del menu que es una pizza-->
-      <div class="menu__card">
-        <!-- Imagen del producto con texto alternativo descritivo -->
-        <img src="/img/pizza.jpg" alt="Pizza Margarita">
-        <!-- nombre del primer producto que es la pizza-->
-        <h3>Pizza Margarita</h3>
-        <!-- Descripción detallada del primer producto -->
-        <p>📍 Napoli Express - Suba</p>
-        <p>📞 +57 320 555 1001</p>
-        <p class="price">$16.000</p>
-        <!-- Botón para agregar al carrito -->
-        <input type="checkbox" id="pizza-1" class="checkbox-carrito">
-        <!-- Texto alternativo para el botón de agregar al carrito -->
-        <label for="pizza-1" class="btn-simulado">Agregar al carrito</label>
-        <!-- Confirmación de agregado al carrito -->
-        <div class="confirmacion">
-          <!-- Nombre del producto agregado al carrito -->
-          <strong>Pizza Margarita</strong> agregada al carrito.
-          <!-- Se cierra la etiqueta de la tarjeta de producto -->
+
+    <!-- CABECERA -->
+    <header>
+        <div class="logo">
+            <img src="/img/TastyTap.png" alt="Logo" style="height: 30px; vertical-align: middle; margin-right: 10px;">
+            TastyTap
         </div>
-        <!-- Se cierra la etiqueta de la tarjeta de producto -->
-      </div>
-<!-- segunda tarjeta del menu que tambien es una pizza, pero con diferentes ingredientes-->
-      <div class="menu__card">
-        <!-- Imagen del producto con texto alternativo descritivo -->
-        <img src="/img/pizza.jpg" alt="Pizza Pepperoni">
-        <!-- nombre del segundo producto que es la pizza-->
-        <h3>Pizza Pepperoni</h3>
-        <!-- Descripción detallada del segundo producto -->
-        <p>📍 Napoli Express - Suba</p>
-        <p>📞 +57 320 555 1001</p>
-        <p class="price">$18.500</p>
-        <!-- Botón para agregar al carrito -->
-        <input type="checkbox" id="pizza-2" class="checkbox-carrito">
-        <!-- Texto alternativo para el botón de agregar al carrito -->
-        <label for="pizza-2" class="btn-simulado">Agregar al carrito</label>
-        <!-- Confirmación de agregado al carrito -->
-        <div class="confirmacion">
-          <!-- Nombre del producto agregado al carrito -->
-          <strong>Pizza Pepperoni</strong> agregada al carrito.
-          <!-- Se cierra la etiqueta de la tarjeta de producto -->
+        <nav>
+            <a href="/views/Log/store/pizzas.html" class="active">Pizzas</a>
+            <a href="/views/Log/perfil.html">Perfil</a>
+            <a href="/views/user/login.html">Cerrar Sesión</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="main-title">Pizzas disponibles</h2>
+
+        <div class="product-grid">
+            <!-- Card 1 -->
+            <div class="card">
+                <img src="/img/pizza.jpg" alt="Pizza Margarita">
+                <div class="card-content">
+                    <h3>Pizza Margarita</h3>
+                    <p class="info">📍 Napoli Express - Suba</p>
+                    <p class="info">📞 +57 320 555 1001</p>
+                    <span class="price">$16.000</span>
+                    <label for="pizza1" class="btn-add">Agregar al carrito</label>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="/img/pizza.jpg" alt="Pizza Pepperoni">
+                <div class="card-content">
+                    <h3>Pizza Pepperoni</h3>
+                    <p class="info">📍 Napoli Express - Suba</p>
+                    <p class="info">📞 +57 320 555 1001</p>
+                    <span class="price">$18.500</span>
+                    <label for="pizza2" class="btn-add">Agregar al carrito</label>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <img src="/img/pizza.jpg" alt="Pizza Cuatro Quesos">
+                <div class="card-content">
+                    <h3>Cuatro Quesos</h3>
+                    <p class="info">📍 Domino's - Kennedy</p>
+                    <p class="info">📞 +57 320 555 2001</p>
+                    <span class="price">$19.000</span>
+                    <label for="pizza3" class="btn-add">Agregar al carrito</label>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card">
+                <img src="/img/pizza.jpg" alt="Pizza Hawaiana">
+                <div class="card-content">
+                    <h3>Hawaiana</h3>
+                    <p class="info">📍 Domino's - Kennedy</p>
+                    <p class="info">📞 +57 320 555 2001</p>
+                    <span class="price">$17.500</span>
+                    <label for="pizza4" class="btn-add">Agregar al carrito</label>
+                </div>
+            </div>
         </div>
-        <!-- Se cierra la etiqueta de la tarjeta de producto -->
-      </div>
-<!-- tercera tarjeta del menu que tambien es una pizza, pero con diferentes ingredientes-->
-      <div class="menu__card">
-        <!-- Imagen del producto con texto alternativo descritivo -->
-        <img src="/img/pizza.jpg" alt="Pizza Cuatro Quesos">
-        <!-- nombre del tercer producto que es la pizza-->
-        <h3>Cuatro Quesos</h3>
-        <!---- Descripción detallada del tercer producto -->
-        <p>📍 Domino's - Kennedy</p>
-        <p>📞 +57 320 555 2001</p>
-        <p class="price">$19.000</p>
-        <!-- Botón para agregar al carrito -->
-        <input type="checkbox" id="pizza-3" class="checkbox-carrito">
-        <!-- Texto alternativo para el botón de agregar al carrito -->
-        <label for="pizza-3" class="btn-simulado">Agregar al carrito</label>
-        <!-- Confirmación de agregado al carrito -->
-        <div class="confirmacion">
-          <!-- Nombre del producto agregado al carrito -->
-          <strong>Cuatro Quesos</strong> agregada al carrito.
-          <!-- Se cierra la etiqueta de la tarjeta de producto -->
+    </main>
+
+    <!-- PANEL LATERAL (RESUMEN CARRITO) -->
+    <aside class="sidebar">
+        <h3>Tu Pedido</h3>
+        <div class="cart-list">
+            <div class="cart-item item-1"><span>Pizza Margarita</span> <b>$16.000</b></div>
+            <div class="cart-item item-2"><span>Pizza Pepperoni</span> <b>$18.500</b></div>
+            <div class="cart-item item-3"><span>Cuatro Quesos</span> <b>$19.000</b></div>
+            <div class="cart-item item-4"><span>Hawaiana</span> <b>$17.500</b></div>
         </div>
-        <!-- Se cierra la etiqueta de la tarjeta de producto -->
-      </div>
-<!-- cuarta tarjeta del menu que tambien es una pizza, pero con diferentes ingredientes-->
-      <div class="menu__card">
-        <!-- Imagen del producto con texto alternativo descritivo -->
-        <img src="/img/pizza.jpg" alt="Pizza Hawaiana">
-        <!-- nombre del cuarto producto que es la pizza-->
-        <h3>Hawaiana</h3>
-        <!-- Descripción detallada del cuarto producto -->
-        <p>📍 Domino's - Kennedy</p>
-        <p>📞 +57 320 555 2001</p>
-        <p class="price">$17.500</p>
-        <!-- Botón para agregar al carrito -->
-        <input type="checkbox" id="pizza-4" class="checkbox-carrito">
-        <!-- Texto alternativo para el botón de agregar al carrito -->
-        <label for="pizza-4" class="btn-simulado">Agregar al carrito</label>
-        <!-- Confirmación de agregado al carrito -->
-        <div class="confirmacion">
-          <!-- Nombre del producto agregado al carrito -->
-          <strong>Hawaiana</strong> agregada al carrito.
-          <!-- Se cierra la etiqueta de la tarjeta de producto -->
+        <a href="carrito.html" class="btn-checkout">Realizar Compra</a>
+        <p class="hint">Toca el producto de nuevo para quitarlo</p>
+    </aside>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <div class="footer-col">
+            <h4>Restaurantes Top</h4>
+            <ul>
+                <li>Napoli Express</li>
+                <li>Domino's</li>
+                <li>Camachos</li>
+            </ul>
         </div>
-        <!-- Se cierra la etiqueta de la tarjeta de producto -->
-      </div>
-<!-- Se cierra la etiqueta de la sección de productos -->
-    </div>
-    <!-- Se cierra la etiqueta de la sección de menu -->
-  </section>
-<!-- Se abre la etiqueta de la sección de footer -->
-  <footer class="footer">
-    <!-- Se abre la etiqueta de la sección de footer__section -->
-    <div class="footer__section">
-      <!-- Se abre la etiqueta de la sección de footer__section -->
-      <h3>Restaurantes Mejor Valorados</h3>
-      <!-- Se abre la etiqueta de la sección de footer__section -->
-      <a href="#">Camachos</a>
-      <a href="#">Domino's</a>
-      <a href="#">KFC</a>
-      <a href="#">Mc Donald's</a>
-      <a href="#">El corral</a>
-      <a href="#">Dunkin' Donuts</a>
-      <!-- Se cierra la etiqueta de la sección de footer__section -->
-    </div>
-    <!-- Se abre la etiqueta de la sección de footer__section -->
-    <div class="footer__section">
-      <!-- Se abre la etiqueta de la sección de footer__section -->
-      <h3>Únete a Tasty Tap</h3>
-      <!-- Se abre la etiqueta de la sección de footer__section -->
-      <a href="#">Registra tu restaurante</a>
-      <a href="#">Registra tu local</a>
-      <a href="#">Haz crecer tu marca</a>
-      <a href="#">Promociona tu negocio</a>
-      <!-- Se cierra la etiqueta de la sección de footer__section -->
-    </div>
-    <!-- Se abre la etiqueta de la sección de footer__section -->
-    <div class="footer__section">
-      <!-- Se abre la etiqueta de la sección de footer__section -->
-      <h3>Síguenos en Redes Sociales</h3>
-      <!-- Se abre la etiqueta de la sección de footer__section -->
-      <div class="footer__social">
-        <!-- Se abre la etiqueta de la sección de footer__section -->
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-        <!-- Se cierra la etiqueta de la sección de footer__section -->
-      </div>
-      <!-- Se cierra la etiqueta de la sección de footer__section -->
-    </div>
-    <!-- Se abre la etiqueta de la sección de footer__section -->
-    <div class="footer__section">
-      <!-- Se abre la etiqueta de la sección de footer__section -->
-      <h3>Contacto</h3>
-      <!-- Se abre la etiqueta de la sección de footer__section -->
-      <p>📍 Calle 123 #45-67, Bogotá, Colombia</p>
-      <p>📞 +57 320 555 1234</p>
-      <p>✉️ contacto@tastytap.com</p>
-      <!-- Se cierra la etiqueta de la sección de footer__section -->
-    </div>
-    <!-- Se abre la etiqueta de la sección de footer__section -->
-    <div class="footer__bottom">
-      <!-- Se abre la etiqueta de la sección de footer__section -->
-      <p>© 2025 TastyTap — Todos los derechos reservados 🍴</p>
-      <!-- Se cierra la etiqueta de la sección de footer__section -->
-    </div>
-    <!-- Se cierra la etiqueta de la sección de footer-->
-  </footer>
-<!-- Se cierra la etiqueta del cuerpo de la página -->
+        <div class="footer-col">
+            <h4>Únete a Tasty Tap</h4>
+            <ul>
+                <li>Registra tu restaurante</li>
+                <li>Registra tu local</li>
+                <li>Haz crecer tu marca</li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Síguenos</h4>
+            <div class="socials">
+                <i class="fab fa-facebook"></i> Facebook<br>
+                <i class="fab fa-instagram"></i> Instagram<br>
+                <i class="fab fa-tiktok"></i> TikTok
+            </div>
+        </div>
+        <div class="footer-col">
+            <h4>Contacto</h4>
+            <p>📍 Calle 123 #45-67, Bogotá</p>
+            <p>📞 +57 320 555 1234</p>
+            <p>✉️ contacto@tastytap.com</p>
+        </div>
+    </footer>
+
 </body>
-<!-- Se cierra la etiqueta del documento -->
 </html>

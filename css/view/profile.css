@@ -1,135 +1,137 @@
-.no-logueado {
-  text-align: center;
-  padding: 3rem 1rem;
-  max-width: 500px;
-  margin: 2rem auto;
+/* --- ESTILOS BASE --- */
+:root {
+    --naranja: #ef8d4d;
+    --marron: #8b4513;
+    --verde: #2ecc71;
+    --gris-fondo: #f9f9f9;
 }
 
-.no-logueado i {
-  font-size: 3rem;
-  color: #999;
-  margin-bottom: 1rem;
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fdfdfd;
+    margin: 0;
 }
 
-.no-logueado h3 {
-  font-size: 1.75rem;
-  margin-bottom: 0.5rem;
-  color: #333;
-}
-
-.no-logueado p {
-  color: #666;
-  margin-bottom: 1.5rem;
-}
-
-/*NUEVOOOO*/
-
-/* Estilo base para la sección */
-.perfil {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px 20px;
-    background-color: #f8f9fa;
-    font-family: Arial, sans-serif;
-}
-
-/* El interruptor invisible */
-#toggle-edit {
-    display: none;
-}
-
-.perfil__container {
+/* --- CONTENEDOR PERFIL (DISTRIBUCIÓN HORIZONTAL) --- */
+.profile-container {
+    /* Más ancho para que quepan las columnas */
+    min-width: 800px; 
+    margin: 0 auto 3rem auto;
+    padding: 2.5rem;
     background: white;
-    display: flex;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    max-width: 750px;
-    width: 100%;
-    gap: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+
+    /* ACTIVAMOS FLEXBOX */
+    display: flex; 
+    gap: 40px; /* Espacio entre las dos columnas */
+    align-items: flex-start;
 }
 
-.perfil__avatar img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    border: 6px solid #f18a51; /* Color naranja de TastyTap */
-    object-fit: cover;
+/* Columna Izquierda (30% del espacio) */
+.profile-aside {
+    flex: 1; 
+    text-align: center;
+    /* Línea divisoria vertical */
+    border-right: 1px solid #eee;
+    padding-right: 20px;
 }
 
-.perfil__info {
-    flex: 1;
+.profile-avatar img {
+    width: 50px;
+    height: 50px;
+    /* Foto circular */
+    border-radius: 100%; 
+    /* Ajuste perfecto de imagen */
+    object-fit: cover; 
+    border: 5px solid var(--naranja);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
 }
 
-.perfil__info h2 {
-    margin-top: 0;
-    border-bottom: 2px solid #f18a51;
-    padding-bottom: 10px;
-    color: #333;
+.profile-header h3 {
+    color: var(--marron);
+    margin: 10px 0;
 }
 
-/* --- ESTILO DE LOS CAMPOS (La Simulación) --- */
+/* Columna Derecha (70% del espacio) */
+.profile-main {
+    flex: 2;
+}
+
+/* --- FORMULARIO Y CAMPOS --- */
+.profile-form {
+    text-align: left;
+}
 
 .campo {
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
+    margin-bottom: 1.2rem;
 }
 
 .campo strong {
-    width: 100px;
-    color: #555;
+    display: block;
+    font-size: 0.85rem;
+    color: var(--naranja);
+    margin-bottom: 5px;
 }
 
-/* Por defecto, los inputs parecen texto normal */
 .campo input {
-    border: 1px solid transparent;
-    background: transparent;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: var(--gris-fondo);
+    border-radius: 8px;
     font-size: 1rem;
     color: #333;
-    padding: 5px;
-    width: 100%;
-    pointer-events: none; /* No se pueden tocar en modo vista */
-    font-family: inherit;
+    pointer-events: none; /* Bloqueados por defecto */
+    transition: all 0.3s;
 }
 
-/* Cuando el checkbox está activo (MODO EDICIÓN) */
-#toggle-edit:checked ~ .perfil__container .campo input {
-    border: 1px solid #ccc;
-    background: #fff;
-    border-radius: 4px;
-    pointer-events: auto; /* Ya se puede escribir en ellos */
+/* --- LÓGICA DE EDICIÓN (CHECKBOX HACK) --- */
+.edit-control { display: none; }
+
+#toggle-edit:checked ~ .profile-container .campo input {
+    background-color: white;
+    border-color: var(--naranja);
+    pointer-events: auto; /* Se activan para escribir */
+    box-shadow: 0 0 5px rgba(239, 141, 77, 0.2);
 }
 
-/* --- BOTONES --- */
+.profile-actions {
+    margin-top: 2rem;
+}
 
-.btn-label {
+.edit-btn, .save-btn {
     display: inline-block;
-    background-color: #f18a51;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 6px;
-    cursor: pointer;
+    padding: 12px 25px;
+    border-radius: 8px;
     font-weight: bold;
-    margin-top: 20px;
-    transition: 0.3s;
-}
-
-/* Ocultamos el botón 'Guardar' cuando no estamos editando */
-.save-btn { display: none; background-color: #28a745; }
-
-/* Ocultamos el botón 'Editar' cuando estamos editando */
-#toggle-edit:checked ~ .perfil__container .edit-btn { display: none; }
-#toggle-edit:checked ~ .perfil__container .save-btn { display: inline-block; }
-
-/* Mensaje inferior */
-.perfil__message {
-    margin-top: 30px;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
+    cursor: pointer;
     text-align: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
-.perfil__message a { color: #f18a51; font-weight: bold; text-decoration: none; }
+
+.edit-btn { background-color: var(--naranja); color: white; }
+.save-btn { background-color: var(--verde); color: white; display: none; }
+
+/* Cambiar botones según el estado */
+#toggle-edit:checked ~ .profile-container .edit-btn { display: none; }
+#toggle-edit:checked ~ .profile-container .save-btn { display: inline-block; }
+
+/* --- MENSAJE Y FOOTER --- */
+.perfil-message {
+    text-align: center;
+    background: #e8f5e9;
+    padding: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+footer {
+    background: var(--naranja);
+    color: white;
+    padding: 2rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+}
