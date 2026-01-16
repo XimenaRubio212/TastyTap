@@ -1,3 +1,22 @@
+/*Prueba de main para un error*/
+
+.no-logueado {
+    text-align: center;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin: 20px auto;
+    max-width: 500px;
+    color: #333; /* Fuerza el color de texto oscuro */
+}
+
+.no-logueado i {
+    display: block;
+    margin-bottom: 15px;
+    color: #333; /* Color del candado */
+}
+
 /* .hero {
   text-align: center;
   padding: 3rem 1rem;

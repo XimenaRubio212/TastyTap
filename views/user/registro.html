@@ -1,142 +1,127 @@
-<!-- Se declara el tipo de documento como HTML5, asegurando que el navegador lo reconozca -->
+<!-- Se declara que este documento es HTML5, asegurando que el navegador lo reconozca -->
 <!DOCTYPE html>
-<!-- Etiqueta del documento que indica el idioma de la página -->
+<!-- Etiqueta del documento que indica el idioma de la página -->
 <html lang="es">
-  <!-- Etiqueta de cabecera del documento -->
+<!-- Etiqueta de cabecera del documento -->
 <head>
-  <!-- Sección de metadatos e importaciones que no se ven directamente en la página -->
+  <!-- Sección de metadatos e importaciones que no se ven directamente en la página -->
   <meta charset="UTF-8">
-  <!-- Etiqueta para configurar la vista del dispositivo, esto permite que la página se adapte a diferentes dispositivos -->
+  <!-- Etiqueta para configurar la vista del dispositivo, esto permite que la página se adapte a diferentes dispositivos -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Etiqueta para establecer el título de la página -->
   <title>TastyTap | Registro</title>
-  <!-- se debe colocar la carpeta css, utils llamando a base.css para que defina las variables -->
+  
+  <!-- Importación de la hoja de estilos base para definir las variables globales y temas -->
+  <link rel="stylesheet" href="/css/utils/Base.css">
+  <!-- Importación de normalización para asegurar consistencia visual entre diferentes navegadores -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <!-- Estilos generales de la aplicación que controlan el diseño del formulario y layout -->
   <link rel="stylesheet" href="/css/style.css">
-  <!-- Estos son fondos de las redes sociales -->
+  <!-- Importación de la librería de iconos de Font Awesome para redes sociales -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <!-- Se cierra la etiqueta de cabecera del documento -->
 </head>
-<!-- este es el cuerpo del documento que contiene todo el contenido que el usuario ve -->
+
+<!-- Este es el cuerpo del documento que contiene todo el contenido visual para el usuario -->
 <body class="page-registro">
-  <!-- Barra de navegación superior comun a todas las paginas del sitio -->
+  
+  <!-- Barra de navegación superior estática que contiene el logo y el menú principal -->
   <header class="navbar">
-    <!-- Contenedor del logo visual y el nimbre textual de la marca -->
+    <!-- Contenedor del logo visual y el nombre de la marca -->
     <div class="navbar__logo">
-      <!-- Imagen del logo y el atributo alt proporciona texto alternativo para la accesibilidad -->
+      <!-- Imagen del logo con su respectivo texto alternativo para accesibilidad -->
       <img src="/img/TastyTap.png" alt="Logo TastyTap">
-      <!-- Nombre de la marca como encabezado -->
+      <!-- Nombre de la marca como encabezado principal -->
       <h1>TastyTap</h1>
-      <!-- Se cierra la etiqueta del contenedor -->
     </div>
-    <!-- Menu de navegación especifico para flujos de autenticación -->
+    <!-- Menú de navegación con enlaces específicos para el flujo de acceso -->
     <nav class="navbar__menu">
       <!-- Enlace a la página de inicio de sesión -->
       <a href="/views/user/login.html">Login</a>
-      <!-- Enlace a esta misma página y la clase "active" suele usarse
-       para resaltar visualmente la pagina actual -->
+      <!-- Enlace activo que resalta la página actual de registro -->
       <a href="/views/user/registro.html" class="active">Registro</a>
-    <!--  Se cierra la etiqueta de la barra de navegación -->
     </nav>
-    <!-- Se cierra la etiqueta de la barra de navegación -->
   </header>
-<!-- Contenido principal de la página y el formulario de registro-->
+
+  <!-- Contenido principal de la página que alberga el formulario de creación de cuenta -->
   <main class="main">
-    <!-- Formulario paracrear una nueva cuenta de usuario -->
-      <form>
-        <!-- Titulo del formulario que indica su proposito -->
-        <h2 class="form-title">Crea tu cuenta</h2>
-        <!-- Campo - Nombre completo,
-         Etiqueta asociada al campo de entrada, mejora accesibilidad y usabilidad -->
-        <label for="nombre" class="form-label">Nombre completo</label>
-        <!-- Campo de texto para ingresar el nombre, 
-         el atributo "required" impide que el campo este vacio -->
-        <input type="text" id="nombre" class="input" required>
-<!-- Campo - Correo Electronico-->
-        <label for="email" class="form-label">Correo electrónico</label>
-        <!-- Tipo "email" activa validacion autmomatica del formato en navegadores moderno -->
-        <input type="email" id="email" class="input" required>
-<!-- Campo - Contraseña -->
-        <label for="password" class="form-label">Contraseña</label>
-        <!-- Tipo "password" oculta los caracteres de la contraseña y exige al menis 6 caracteres -->
-        <input type="password" id="password" class="input" required minlength="6">
-<!-- Campo - Confirmar Contraseña -->
-        <label for="confirm" class="form-label">Confirmar contraseña</label>
-        <!-- Este campo permite al usuario verificar qeue la contraseña ingresada es correcta -->
-        <input type="password" id="confirm" class="input" required minlength="6">
-<!-- Boton de accion simulando como enlace,
- aunqeu es un a, visualmente actua coo boton gracias a la clase "btn",
- la url incluye un fragmento #registrado, para mostrar un mensaje de exito -->
-        <a href="/views/user/login.html#registrado" class="btn">Registrar cuenta</a>
-<!-- Enlace alternativo para usuarios que ya tienen una cuenta -->
-        <p class="form-link">
-          ¿Ya tienes cuenta?
-          <!-- Redirige a la pagina de inicio de sesión -->
-          <a href="/views/user/login.html">Inicia sesión</a>
-        <!-- Se cierra la etiqueta -->
-        </p>
-        <!-- Se cierra la etiqueta -->
-      </form>
-      <!-- Se cierra la etiqueta -->
+    <!-- Formulario estructurado para recolectar datos del nuevo usuario -->
+    <form>
+      <!-- Título visual del formulario con un emoji para mayor dinamismo -->
+      <h2 class="form-title">Crea tu cuenta 📝</h2>
+
+      <!-- Grupo de entrada para el Nombre Completo -->
+      <label for="nombre" class="form-label">Nombre completo</label>
+      <!-- El atributo "required" asegura que el usuario no deje el campo vacío -->
+      <input type="text" id="nombre" class="input" placeholder="Ej. Juan Pérez" required>
+
+      <!-- Grupo de entrada para el Correo Electrónico -->
+      <label for="email" class="form-label">Correo electrónico</label>
+      <!-- El tipo "email" valida automáticamente que el formato sea correcto -->
+      <input type="email" id="email" class="input" placeholder="correo@ejemplo.com" required>
+
+      <!-- Grupo de entrada para la Contraseña -->
+      <label for="password" class="form-label">Contraseña</label>
+      <!-- Se define un mínimo de 6 caracteres por seguridad -->
+      <input type="password" id="password" class="input" required minlength="6">
+
+      <!-- Grupo de entrada para Confirmar la Contraseña -->
+      <label for="confirm" class="form-label">Confirmar contraseña</label>
+      <input type="password" id="confirm" class="input" required minlength="6">
+
+      <!-- Botón de acción para procesar el registro, diseñado visualmente como botón -->
+      <a href="/views/user/login.html#registrado" class="btn">Registrar cuenta</a>
+
+      <!-- Enlace de retorno para usuarios que ya poseen una cuenta activa -->
+      <p class="form-link">
+        ¿Ya tienes cuenta?
+        <a href="/views/user/login.html">Inicia sesión</a>
+      </p>
+    </form>
   </main>
-<!-- Pie de página comun a todas las vistas del sitio -->
-  <footer class="footer">
-    <!-- Bloque con enlaces a restaurantes populares -->
-    <div class="restaurantes">
-      <!-- Titulo del bloque del pie de página -->
-      <h3>Restaurantes Mejor Valorados</h3>
-      <!-- Estos enlaces podrían redirigir a perfiles de los restaurantes -->
-      <a href="#">Camachos</a>
-      <a href="#">Domino's</a>
-      <a href="#">KFC</a>
-      <a href="#">Mc Donald's</a>
-      <a href="#">El corral</a>
-      <a href="#">Dunkin' Donuts</a>
-      <!--  Cierre del bloque de restaurantes -->
+
+  <!-- Pie de página con información adicional, enlaces y contacto (Footer unificado) -->
+  <footer >
+      <!-- PIE DE PÁGINA (Footer unificado) -->
+  <footer>
+    <!-- Columna de recomendaciones -->
+    <div class="footer-col">
+        <h4>Restaurantes Top</h4>
+        <ul>
+            <li>Camachos</li>
+            <li>Domino's</li>
+            <li>KFC</li>
+            <li>Mc Donald's</li>
+        </ul>
     </div>
-    <!-- Bloque con enlaces a la sección de unete a Tasty Tap -->
-    <div class=" unete">
-      <!-- Titulo del bloque del pie de página -->
-      <h3>Únete a Tasty Tap</h3>
-      <!-- Estos enlaces podrían redirigir a perfiles de los restaurantes -->
-      <a href="#">Registra tu restaurante</a>
-      <a href="#">Registra tu local</a>
-      <a href="#">Haz crecer tu marca</a>
-      <a href="#">Promociona tu negocio</a>
-      <!-- Cierre del bloque de unete a Tasty Tap -->
+    <!-- Columna para socios -->
+    <div class="footer-col">
+        <h4>Únete a Tasty Tap</h4>
+        <ul>
+            <li>Registra tu restaurante</li>
+            <li>Registra tu local</li>
+            <li>Promociona tu negocio</li>
+        </ul>
     </div>
-    <!-- Bloque con enlaces a redes sociales -->
-    <div class="redes">
-      <!-- Titulo del bloque del pie de página -->
-      <h3>Síguenos en Redes Sociales</h3>
-      <!-- Contenedor con enlaces a redes sociales -->
-      <div class="social">
-        <!-- Estos enlaces podrían redirigir a perfiles de redes sociales -->
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-        <!-- Cierre del contenedor de redes sociales -->
-      </div>
-      <!-- Cierre del bloque de redes sociales -->
+    <!-- Columna de redes sociales -->
+    <div class="footer-col">
+        <h4>Síguenos</h4>
+        <div class="socials">
+            <i class="fab fa-facebook"></i> Facebook<br>
+            <i class="fab fa-instagram"></i> Instagram<br>
+            <i class="fab fa-tiktok"></i> TikTok
+        </div>
     </div>
-    <!-- Bloque con informacion de contacto -->
-    <div class="contacto">
-      <!-- Titulo del bloque del pie de página -->
-      <h3>Contacto</h3>
-      <!-- Información de contacto supuesta de la empresa TastyaTap -->
-      <p>📍 Calle 123 #45-67, Bogotá, Colombia</p>
-      <p>📞 +57 320 555 1234</p>
-      <p>✉️ contacto@tastytap.com</p>
-      <!-- Cierre del bloque de contacto -->
+    <!-- Columna de contacto físico/digital -->
+    <div class="footer-col">
+        <h4>Contacto</h4>
+        <p>📍 Calle 123 #45-67, Bogotá, Colombia</p>
+        <p>📞 +57 320 555 1234</p>
+        <p>✉️ contacto@tastytap.com</p>
     </div>
-    <!-- Bloque con informacion de derechos de autor -->
-    <div class="footer__bottom">
-      <!-- Información de derechos de autor -->
-      <p>© 2025 TastyTap — Todos los derechos reservados 🍴</p>
-      <!-- Cierre del bloque de derechos de autor -->
-    </div>
-    <!--- Cierre del pie de página -->
   </footer>
-  <!--- Cierre del cuerpo de la página -->
+
+<!-- Cierre del cuerpo de la página -->
 </body>
 <!-- Cierre del documento HTML -->
 </html>

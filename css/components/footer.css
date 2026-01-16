@@ -1,3 +1,18 @@
+/*Prueba de footer para un error*/
+
+.footer__section a {
+    display: block;          /* Uno debajo del otro */
+    background: transparent; /* Quita el cuadro */
+    padding: 5px 0;          /* Espacio vertical pequeño */
+    color: white;            /* Color de texto */
+    text-decoration: none;
+    border-radius: 0;        /* Quita bordes redondeados */
+}
+
+.footer__section a:hover {
+    color: #ffd1a9;          /* Cambia de color suavemente al pasar el mouse */
+}
+
 /* .footer {
   background: var(--color-principal);
   color: rgba(255, 255, 255, 0.95);

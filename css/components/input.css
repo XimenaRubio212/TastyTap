@@ -28,3 +28,11 @@
     font-weight: 500;
     color: #2c3e50;
 }
+
+/*Este es para el enlace del formulario,
+si tiene una cuenta y le quita el subrayado
+que tiene debajo el enlace y se le da un color*/
+.form-link a {
+    text-decoration: none;
+    color: #f08b51;
+}

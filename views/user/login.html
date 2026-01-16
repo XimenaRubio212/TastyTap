@@ -1,154 +1,130 @@
-<!-- Se declara el tipo de documento como HTML5, asegurando que el navegador lo reconozca -->
+<!-- Se declara que este documento es HTML5, asegurando que el navegador lo reconozca -->
 <!DOCTYPE html>
-<!-- Etiqueta del documento que indica el idioma de la página -->
+<!-- Etiqueta del documento que indica el idioma de la página -->
 <html lang="es">
-  <!-- Etiqueta de cabecera del documento -->
+<!-- Etiqueta de cabecera del documento -->
 <head>
-  <!-- Sección de metadatos e importaciones que no se ven directamente en la página -->
-    <meta charset="UTF-8">
-    <!-- Etiqueta para configurar la vista del dispositivo, esto permite que la página se adapte a diferentes dispositivos -->
-    <title>TastyTap | Login</title>
-    <!-- se debe colocar la carpeta css, utils llamando a base.css para que defina las variables -->
-    <link rel="stylesheet" href="/css/utils/Base.css">
-    <!-- y se llama a la carpeta css llamando a style.css para que las use -->
-    <link rel="stylesheet" href="/css/style.css">
-    <!-- Estos son fondos de las redes sociales -->
-    <link rel="stylesheet" href="/css/components/button.css">
-    <!-- Estos son fondos de las redes sociales -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <!-- Se cierra la etiqueta de cabecera del documento -->
-</head>
-<!-- Cuerpo visible de la pagina,
- la clase "Page-login" permite aplicar estilos especificos solo a esta vista si es necesario" -->
-<body class="page-login">
-<!-- Se abre la etiqueta del cuerpo de la página -->
-    <header class="navbar">
-      <!-- Contenedor del logo visual y el nombre textual de la marca-->
-        <div class="navbar__logo">
-          <!-- Imagen del logo y el atributo alt proporciona texto alternativo para la accesibilidad-->
-            <img src="/img/TastyTap.png" alt="Logo TastyTap">
-            <!-- Nombre de la marca como encabezado-->
-            <h1>TastyTap</h1>
-            <!-- Se cierra la etiqueta del contenedor-->
-        </div>
-            <!-- menu de navegacion cobn enlaces a otras secciones del sitio -->
-    <nav class="navbar__menu">
-      <!-- Enlace a la página de inicio la clase active se utiliza para resaltar el enlace actual -->
-        <a href="/index.html">Inicio</a>
-        <!-- Enlace a la vista de menu de productos disponibles -->
-        <a href="/views/user/menu.html">Menú</a>
-        <!-- Enlace a la vista de la tienda, donde se muestran los productos y sus detalles del lugar -->
-        <a href="/views/user/tienda.html">Tienda</a>
-        <!--  Enlace a la vista de contacto -->
-        <a href="/views/user/contacto.html">Contacto</a>
-        <!--  Enlace a la vista de login  de sesión para usuarios -->
-        <a href="/views/user/login.html" class="active">Login</a>
-        <!-- se cierra la etiqueta de la barra de navegación -->
-    </nav>
-        <!-- Menu de navegación especifico para flujos de autenticación-->
-    </header>
-<!-- Contenido principal, formulario de inicio de sesión simulado-->
-    <main class="login">
-      <!-- Contenedor del formulario de inicio de sesión-->
-        <div class="login__form">
-          <!-- Encabezado de la sección y titulo que indica la accion a realizar-->
-            <h2>Inicia sesión</h2>
-            <!-- Campo - correo electronico,
-             Etiqieta descriptiva par ael campo de entrada -->
-            <label class="form-label">Correo electrónico</label>
-            <!-- Campode entrada de tipo email para ingresar el correo -->
-            <input type="email" class="input" placeholder="ejemplo@correo.com">
-            <!-- Campo - Contraseña-->
-            <label class="form-label">Contraseña</label>
-            <!-- Campo de tipo password que oculta los caracteres al escribir -->
-            <input type="password" class="input" placeholder="••••••••">
-            <!-- Contenedor de botones simulados como enlaces,
-             Usa estilos en linea para organizar los botones en columna
-             con espacio entre ellos, aunque no es ideal mezclar estilos
-             en linea con css externo, sirve para prototipado rapido. -->
-            <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 20px;">
-                
-              <!-- Enlace que simula el inicio de sesión como cliente normal,
-                al hacer clic, redigirge a la pagina de perfil del usuario -->
-              <a href="/views/Log/perfil.html" class="btn" style="text-align: center; background-color: var(--color-secundario);">
-                  Entrar como Usuario
-              </a>
+  <!-- Sección de metadatos e importaciones que no se ven directamente en la página -->
+  <meta charset="UTF-8">
+  <!-- Etiqueta para configurar la vista del dispositivo, esto permite que la página se adapte a diferentes dispositivos -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Etiqueta para establecer el título de la página en la pestaña del navegador -->
+  <title>TastyTap | Login</title>
 
-              <!-- Enlace que simula el inicio de sesión como administrador -->
-              <a href="../admin/panelControl.html" class="btn" style="text-align: center; background-color: var(--color-secundario);">
-                  Entrar como Administrador
-              </a>
-              <!-- Se cierra la etiqueta del contenedor-->
-            </div>
-            <!--Enlace alternativo para usuarios que aun no tienen cuenta,
-            usa la variable css "--color-principal" para el color del enlace -->
-            <p style="margin-top: 20px; text-align: center;">
-                ¿No tienes cuenta? <a href="registro.html" style="color: var(--color-principal);">Regístrate aquí</a>
-            </p>
-            <!-- Se cierra la etiqueta del contenedor-->
-        </div>
-        <!-- Se cierra la etiqueta del contenedor-->
-    </main>
-    <!-- Se cierra la etiqueta del cuerpo de la página-->
-     <!-- Pie de página con información adicional, enlaces y contacto -->
-  <footer class="footer">
-    <!-- Bloque con enlaces a restaurantes populares -->
-    <div class="restaurantes">
-      <!--  Titulo del bloque del pie de página -->
-      <h3>Restaurantes Mejor Valorados</h3>
-      <!-- Estos enlaces podrían redirigir a perfiles de los restaurantes -->
-      <a href="#">Camachos</a>
-      <a href="#">Domino's</a>
-      <a href="#">KFC</a>
-      <a href="#">Mc Donald's</a>
-      <a href="#">El corral</a>
-      <a href="#">Dunkin' Donuts</a>
-      <!-- Cierre del bloque de restaurantes -->
+  <!-- Importación de la carpeta css/utils llamando a Base.css para definir variables globales -->
+  <link rel="stylesheet" href="/css/utils/Base.css">
+  <!-- Importación de normalización para asegurar que el diseño sea consistente en todos los navegadores -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <!-- Importación de los estilos generales de la aplicación -->
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- Importación de estilos específicos para componentes de botones -->
+  <link rel="stylesheet" href="/css/components/button.css">
+  <!-- Importación de la librería de iconos Font Awesome para elementos visuales y redes sociales -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- Se cierra la etiqueta de cabecera del documento -->
+</head>
+
+<!-- Cuerpo visible de la página, la clase "page-login" permite aplicar estilos específicos a esta vista -->
+<body class="page-login">
+  
+  <!-- Barra de navegación superior estática que contiene el logo y el menú principal -->
+  <header class="navbar">
+    <!-- Contenedor del logo visual y el nombre textual de la marca -->
+    <div class="navbar__logo">
+      <!-- Imagen del logo con texto alternativo para mejorar la accesibilidad -->
+      <img src="/img/TastyTap.png" alt="Logo TastyTap">
+      <!-- Nombre de la marca como encabezado principal -->
+      <h1>TastyTap</h1>
     </div>
-    <!-- Bloque con enlaces a la sección de unete a Tasty Tap -->
-    <div class=" unete">
-      <!-- Titulo del bloque del pie de página -->
-      <h3>Únete a Tasty Tap</h3>
-      <!--  Estos enlaces podrían redirigir a perfiles de los restaurantes -->
-      <a href="#">Registra tu restaurante</a>
-      <a href="#">Registra tu local</a>
-      <a href="#">Haz crecer tu marca</a>
-      <a href="#">Promociona tu negocio</a>
-      <!-- Cierre del bloque de unete a Tasty Tap -->
-    </div>
-    <!-- Bloque con enlaces a redes sociales -->
-    <div class="redes">
-      <!-- Titulo del bloque del pie de página -->
-      <h3>Síguenos en Redes Sociales</h3>
-      <!-- Contenedor con enlaces a redes sociales -->
-      <div class="social">
-        <!-- Estos enlaces podrían redirigir a perfiles de redes sociales -->
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-        <!-- Cierre del contenedor de redes sociales -->
+    <!-- Menú de navegación con enlaces a las secciones principales del sitio -->
+    <nav class="navbar__menu">
+      <!-- Enlaces de navegación; la clase "active" resalta visualmente la página de Login -->
+      <a href="/index.html">Inicio</a>
+      <a href="/views/user/menu.html">Menú</a>
+      <a href="/views/user/tienda.html">Tienda</a>
+      <a href="/views/user/contacto.html">Contacto</a>
+      <a href="/views/user/login.html" class="active">Login</a>
+    </nav>
+  </header>
+
+  <!-- Contenido principal de la página: Sección de inicio de sesión -->
+  <main class="login">
+    <!-- Contenedor central del formulario de acceso -->
+    <div class="login__form">
+      <!-- Título que indica la acción principal al usuario -->
+      <h2>Inicia sesión 🔑</h2>
+      
+      <!-- Campo de entrada para el correo electrónico -->
+      <label class="form-label">Correo electrónico</label>
+      <!-- El atributo "placeholder" ofrece una guía visual del formato esperado -->
+      <input type="email" class="input" placeholder="ejemplo@correo.com" required>
+
+      <!-- Campo de entrada para la contraseña -->
+      <label class="form-label">Contraseña</label>
+      <!-- El tipo "password" garantiza que los caracteres permanezcan ocultos -->
+      <input type="password" class="input" placeholder="••••••••" required>
+
+      <!-- Contenedor de acciones para redirigir según el rol del usuario -->
+      <div class="login__actions" style="display: flex; flex-direction: column; gap: 10px; margin-top: 20px;">
+        <!-- Botón simulado para acceso de usuarios estándar -->
+        <a href="/views/Log/perfil.html" class="btn" style="text-align: center; background-color: var(--color-secundario);">
+          Entrar como Usuario
+        </a>
+        <!-- Botón simulado para acceso de personal administrativo -->
+        <a href="../admin/panelControl.html" class="btn" style="text-align: center; background-color: var(--color-secundario);">
+          Entrar como Administrador
+        </a>
       </div>
-      <!-- Cierre del bloque de redes sociales -->
+
+      <!-- Enlace para usuarios que aún no están registrados en la plataforma -->
+      <p class="form-link" style="margin-top: 20px; text-align: center;">
+        ¿No tienes cuenta? <a href="registro.html" style="color: var(--color-principal);">Regístrate aquí</a>
+      </p>
     </div>
-    <!-- Bloque con información de contacto -->
-    <div class="contacto">
-      <!-- Titulo del bloque del pie de página -->
-      <h3>Contacto</h3>
-      <!-- Información de contacto supuesta de la empresa TastyaTap -->
-      <p>📍 Calle 123 #45-67, Bogotá, Colombia</p>
-      <p>📞 +57 320 555 1234</p>
-      <p>✉️ contacto@tastytap.com</p>
-      <!-- Cierre del bloque de contacto -->
+  </main>
+
+  <!-- Pie de página con información adicional, enlaces y contacto (Footer unificado) -->
+  <footer >
+      <!-- PIE DE PÁGINA (Footer unificado) -->
+  <footer>
+    <!-- Columna de recomendaciones -->
+    <div class="footer-col">
+        <h4>Restaurantes Top</h4>
+        <ul>
+            <li>Camachos</li>
+            <li>Domino's</li>
+            <li>KFC</li>
+            <li>Mc Donald's</li>
+        </ul>
     </div>
-    <!-- Bloque con información de derechos de autor -->
-    <div class="footer__bottom">
-      <!-- Información de derechos de autor -->
-      <p>© 2025 TastyTap — Todos los derechos reservados 🍴</p>
-      <!-- Cierre del bloque de derechos de autor -->
+    <!-- Columna para socios -->
+    <div class="footer-col">
+        <h4>Únete a Tasty Tap</h4>
+        <ul>
+            <li>Registra tu restaurante</li>
+            <li>Registra tu local</li>
+            <li>Promociona tu negocio</li>
+        </ul>
     </div>
-    <!-- Cierre del pie de página -->
+    <!-- Columna de redes sociales -->
+    <div class="footer-col">
+        <h4>Síguenos</h4>
+        <div class="socials">
+            <i class="fab fa-facebook"></i> Facebook<br>
+            <i class="fab fa-instagram"></i> Instagram<br>
+            <i class="fab fa-tiktok"></i> TikTok
+        </div>
+    </div>
+    <!-- Columna de contacto físico/digital -->
+    <div class="footer-col">
+        <h4>Contacto</h4>
+        <p>📍 Calle 123 #45-67, Bogotá, Colombia</p>
+        <p>📞 +57 320 555 1234</p>
+        <p>✉️ contacto@tastytap.com</p>
+    </div>
   </footer>
+
 <!-- Cierre del cuerpo de la página -->
 </body>
-<!-- Se cierra la etiqueta del documento-->
+<!-- Cierre del documento HTML -->
 </html>

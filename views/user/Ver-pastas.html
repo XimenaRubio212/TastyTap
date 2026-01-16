@@ -18,20 +18,14 @@
     <input type="checkbox" id="pasta3" class="cart-control">
     <input type="checkbox" id="pasta4" class="cart-control">
 
-    <!-- VENTANA EMERGENTE (Toast Notification) -->
-    <div class="notice-container">
-        <div class="notice">✅ ¡Pasta añadida al carrito!</div>
-    </div>
-
     <!-- CABECERA -->
-    <header class="navbar">
-        <div class="navbar__logo">
+    <header>
+        <div class="logo">
             <img src="/img/TastyTap.png" alt="Logo" style="height: 30px; vertical-align: middle; margin-right: 10px;">
-            <h1>TastyTap</h1>
+            TastyTap
         </div>
-        <nav class="navbar__menu">
+        <nav>
             <a href="/views/Log/store/espagueti.html" class="active">Espaguetis</a>
-            <a href="/views/Log/tienda-log.html">Tienda</a>
             <a href="/views/Log/perfil.html">Perfil</a>
             <a href="/views/user/login.html">Cerrar Sesión</a>
         </nav>
@@ -46,10 +40,10 @@
                 <img src="/img/pasta.jpg" alt="Espagueti a la Boloñesa">
                 <div class="card-content">
                     <h3>Boloñesa</h3>
+                    <p class="description">Espaguetis al dente con una rica salsa boloñesa casera hecha con carne molida, tomate fresco, cebolla, zanahoria y un toque de vino tinto.</p>
                     <p class="info">📍 Carbonara Express - Teusaquillo</p>
                     <p class="info">📞 +57 320 555 4001</p>
-                    <span class="price">$15.000</span>
-                    <label for="pasta1" class="btn-add">Agregar al carrito</label>
+                    <span class="price">Por tan solo $15.000</span>
                 </div>
             </div>
 
@@ -58,10 +52,10 @@
                 <img src="/img/pasta.jpg" alt="Espagueti Alfredo">
                 <div class="card-content">
                     <h3>Alfredo con Pollo</h3>
+                    <p class="description">Cremosa salsa Alfredo elaborada con mantequilla, crema y queso parmesano, acompañada de trozos de pollo a la plancha y espaguetis suaves.</p>
                     <p class="info">📍 Carbonara Express - Teusaquillo</p>
                     <p class="info">📞 +57 320 555 4001</p>
-                    <span class="price">$17.000</span>
-                    <label for="pasta2" class="btn-add">Agregar al carrito</label>
+                    <span class="price">Por tan solo $17.000</span>
                 </div>
             </div>
 
@@ -70,10 +64,10 @@
                 <img src="/img/pasta.jpg" alt="Espagueti con Albóndigas">
                 <div class="card-content">
                     <h3>Con Albóndigas</h3>
+                    <p class="description">Espaguetis servidos con albóndigas jugosas de carne sazonadas con hierbas italianas, bañadas en una salsa de tomate casera y albahaca fresca.</p>
                     <p class="info">📍 Trattoria Mia - Chapinero</p>
                     <p class="info">📞 +57 320 555 4002</p>
-                    <span class="price">$16.500</span>
-                    <label for="pasta3" class="btn-add">Agregar al carrito</label>
+                    <span class="price">Por tan solo $16.500</span>
                 </div>
             </div>
 
@@ -82,27 +76,14 @@
                 <img src="/img/pasta.jpg" alt="Espagueti Aglio e Olio">
                 <div class="card-content">
                     <h3>Aglio e Olio</h3>
+                    <p class="description">Clásico italiano minimalista: espaguetis salteados con ajo, aceite de oliva virgen extra, chile rojo y perejil fresco. Simple, auténtico y delicioso.</p>
                     <p class="info">📍 Trattoria Mia - Chapinero</p>
                     <p class="info">📞 +57 320 555 4002</p>
-                    <span class="price">$14.000</span>
-                    <label for="pasta4" class="btn-add">Agregar al carrito</label>
+                    <span class="price">Por tan solo $14.000</span>
                 </div>
             </div>
         </div>
     </main>
-
-    <!-- PANEL LATERAL (RESUMEN CARRITO) -->
-    <aside class="sidebar">
-        <h3>Tu Pedido</h3>
-        <div class="cart-list">
-            <div class="cart-item item-1"><span>Boloñesa</span> <b>$15.000</b></div>
-            <div class="cart-item item-2"><span>Alfredo Pollo</span> <b>$17.000</b></div>
-            <div class="cart-item item-3"><span>Con Albóndigas</span> <b>$16.500</b></div>
-            <div class="cart-item item-4"><span>Aglio e Olio</span> <b>$14.000</b></div>
-        </div>
-        <a href="/views/Log/carrito.html" class="btn-checkout">Realizar Compra</a>
-        <p class="hint">Toca el producto de nuevo para quitarlo</p>
-    </aside>
 
     <!-- PIE DE PÁGINA -->
     <footer>

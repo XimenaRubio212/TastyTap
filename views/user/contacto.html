@@ -1,132 +1,122 @@
-<!-- Se declara este documento es HTML5, asegurando que el navegador lo reconozca -->
+<!-- Se declara que este documento es HTML5, asegurando que el navegador lo reconozca -->
 <!DOCTYPE html>
-<!-- Etiqueta del documento que indica el idioma de la página -->
+<!-- Etiqueta del documento que indica el idioma de la página -->
 <html lang="es">
 <!-- Etiqueta de cabecera del documento -->
 <head>
-  <!-- Sección de metadatos e importaciones que no se ven directamente en la página -->
+  <!-- Sección de metadatos e importaciones que no se ven directamente en la página -->
   <meta charset="UTF-8">
-  <!-- Etiqueta para configurar la vista del dispositivo, esto permite que la página se adapte a diferentes dispositivos -->
+  <!-- Etiqueta para configurar la vista del dispositivo, esto permite que la página se adapte a diferentes dispositivos -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Etiqueta para establecer el título de la página -->
+  <!-- Etiqueta para establecer el título de la página en la pestaña del navegador -->
   <title>TastyTap | Contacto</title>
-  <!-- CSS externos en los cuales se llaman cada uno de los estilos-->
+
+  <!-- Importación de la carpeta css/utils llamando a Base.css para definir variables globales -->
+  <link rel="stylesheet" href="/css/utils/Base.css">
+  <!-- Importación de normalización para asegurar que el diseño sea consistente en todos los navegadores -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <!-- Importación de los estilos generales de la aplicación -->
   <link rel="stylesheet" href="/css/style.css">
-  <!-- Estos son fondos de las redes sociales -->
+  <!-- Importación de la librería de iconos Font Awesome para redes sociales y elementos visuales -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <!-- Se cierra la etiqueta de cabecera del documento -->
 </head>
-<!-- este es el cuerpo del documento que contiene todo el contenido que el usuario ve -->
+
+<!-- Cuerpo visible de la página, la clase "page-contacto" permite aplicar estilos específicos a esta vista -->
 <body class="page-contacto">
-<!-- Barra de navegacion superior comun a todas las paginas del sitio -->
+
+  <!-- Barra de navegación superior estática que contiene el logo y el menú principal -->
   <header class="navbar">
     <!-- Contenedor del logo visual y el nombre textual de la marca -->
     <div class="navbar__logo">
-      <!-- Imagen del logo y el atributo alt proporciona texto alternativo para la accesibilidad -->
+      <!-- Imagen del logo con texto alternativo para mejorar la accesibilidad -->
       <img src="/img/TastyTap.png" alt="Logo TastyTap">
-      <!-- Nombre de la marca como encabezado -->
+      <!-- Nombre de la marca como encabezado principal -->
       <h1>TastyTap</h1>
-      <!-- Se cierra la etiqueta del contenedor -->
     </div>
-    <!-- Menu de navegación especifico para flujos de autenticación -->
+    <!-- Menú de navegación con enlaces a las secciones principales del sitio -->
     <nav class="navbar__menu">
-      <!-- Enlace a la página de inicio de sesión -->
+      <!-- Enlaces de navegación; la clase "active" resalta visualmente la página de Contacto -->
         <a href="/index.html">Inicio</a>
-        <!-- Enlace a la vista general del menu -->
         <a href="/views/user/menu.html">Menú</a>
-        <!-- Enlace a la vista tienda -->
         <a href="/views/user/tienda.html">Tienda</a>
-        <!-- Enlace a la vista de contacto -->
         <a href="/views/user/contacto.html" class="active">Contacto</a>
-        <!-- Enlace a la vista de login de sesión para usuarios -->
         <a href="/views/user/login.html">Login</a>
-        <!-- Se cierra la etiqueta de la barra de navegación -->
     </nav>
-    <!-- Se cierra la etiqueta de la barra de navegación -->
   </header>
-<!-- Seccion de contacto -->
-  <section class="contact__form">
-    <!-- Formulario de contacto -->
-    <form>
-      <!-- Etiqueta que define el título de la sección -->
-      <h2>Contáctanos</h2>
-      <!-- Etiqueta que define el título de la sección -->
-      <label for="nombre" class="form-label">Tu nombre</label>
-      <!-- Campo de texto para ingresar el nombre, el atributo "required" impide que el campo este vacio -->
-      <input type="text" id="nombre" name="nombre" class="input" required>
-      <!-- Etiqueta que define el título de la sección -->
-      <label for="email" class="form-label">Tu correo</label>
-      <!-- Campo de texto para ingresar el correo, el atributo "required" impide que el campo este vacio -->
-      <input type="email" id="email" name="email" class="input" required>
-      <!-- Etiqueta que define el título de la sección -->
-      <label for="mensaje" class="form-label">Tu mensaje</label>
-      <!-- Campo de texto para ingresar el mensaje, el atributo "required" impide que el campo este vacio -->
-      <textarea id="mensaje" name="mensaje" class="textarea" rows="4" placeholder="Escribe aquí..."></textarea>
-      <!-- Boton de envio del formulario -->
-      <button type="submit" class="btn">Enviar mensaje</button>
-      <!-- Se cierra la etiqueta del formulario -->
-    </form>
-    <!-- Se cierra la etiqueta de la sección -->
-  </section>
-<!-- Pie de pagina comun a todas las vistas del sitio-->
-  <footer class="footer">
-    <!--bloque de restaurantes-->
-    <div class="restaurantes">
-      <!-- titulo del bloque del pie de pagina -->
-      <h3>Restaurantes Mejor Valorados</h3>
-      <!-- enlaces a restaurantes y esto enlaces podrian redirigir a perfiles de los restaurantes -->
-      <a href="#">Camachos</a>
-      <a href="#">Domino's</a>
-      <a href="#">KFC</a>
-      <a href="#">Mc Donald's</a>
-      <a href="#">El corral</a>
-      <a href="#">Dunkin' Donuts</a>
-      <!-- se cierra la etiqueta del bloque del pie de pagina -->
-    </div>
-    <!-- bloque de unete a tasty tap-->
-    <div class="unete">
-      <!-- titulo del bloque del pie de pagina -->
-      <h3>Únete a Tasty Tap</h3>
-      <!-- enlaces a restaurantes y esto enlaces podrian redirigir a perfiles de los restaurantes -->
-      <a href="#">Registra tu restaurante</a>
-      <a href="#">Registra tu local</a>
-      <a href="#">Haz crecer tu marca</a>
-      <a href="#">Promociona tu negocio</a>
-      <!-- se cierra la etiqueta del bloque del pie de pagina -->
-    </div>
-    <!-- bloque de redes sociales-->
-    <div class="redes">
-      <!-- titulo del bloque del pie de pagina -->
-      <h3>Síguenos en Redes Sociales</h3>
-      <!-- contenedor con enlaces a redes sociales -->
-      <div class="social">
-        <!-- estos enlaces podrían redirigir a perfiles de redes sociales -->
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-        <!-- cierre del contenedor de redes sociales -->
-      </div>
-      <!-- se cierra la etiqueta del bloque del pie de pagina -->
-    </div>
-    <!-- bloque de contacto-->
-    <div class="contacto">
-      <!-- titulo del bloque del pie de pagina -->
-      <h3>Contacto</h3>
-      <!-- informacion de contacto supuesta de la empresa TastyaTap -->
-      <p>📍 Calle 123 #45-67, Bogotá, Colombia</p>
-      <p>📞 +57 320 555 1234</p>
-      <p>✉️ contacto@tastytap.com</p>
-      <!-- se cierra la etiqueta del bloque del pie de pagina -->
-    </div>
-    <!-- bloque de derechos de autor-->
-    <div class="footer__bottom">
-      <!-- informacion de derechos de autor -->
-      <p>© 2025 TastyTap — Todos los derechos reservados 🍴</p>
-      <!-- se cierra la etiqueta del bloque del pie de pagina -->
-    </div>
-    <!-- se cierra la etiqueta del pie de pagina -->
-  </footer>
-<!-- se cierra la etiqueta del cuerpo -->
+
+  <!-- Sección principal destinada a la interacción directa con el usuario mediante un formulario -->
+  <main class="main">
+    <!-- Contenedor del formulario de contacto -->
+    <section class="contact__form">
+      <!-- Formulario estructurado para recolectar mensajes o sugerencias -->
+      <form>
+        <!-- Título descriptivo de la sección con un emoji para mayor cercanía -->
+        <h2 class="form-title">Contáctanos 📩</h2>
+
+        <!-- Campo de entrada para el nombre del usuario -->
+        <label for="nombre" class="form-label">Tu nombre</label>
+        <!-- El atributo "required" garantiza que el campo sea obligatorio antes de enviar -->
+        <input type="text" id="nombre" name="nombre" class="input" placeholder="Escribe tu nombre completo" required>
+
+        <!-- Campo de entrada para el correo electrónico -->
+        <label for="email" class="form-label">Tu correo</label>
+        <!-- El tipo "email" valida automáticamente la estructura de la dirección ingresada -->
+        <input type="email" id="email" name="email" class="input" placeholder="correo@ejemplo.com" required>
+
+        <!-- Campo de texto de área amplia para el cuerpo del mensaje -->
+        <label for="mensaje" class="form-label">Tu mensaje</label>
+        <!-- Se define un área de 4 filas para permitir una escritura cómoda -->
+        <textarea id="mensaje" name="mensaje" class="textarea" rows="4" placeholder="¿En qué podemos ayudarte?" required></textarea>
+
+        <!-- Botón de acción para procesar el envío de la información -->
+        <button type="submit" class="btn">Enviar mensaje</button>
+      </form>
+    </section>
+  </main>
+
+      <!-- Pie de página con información adicional, enlaces y contacto (Footer unificado) -->
+    <footer >
+        <!-- PIE DE PÁGINA (Footer unificado) -->
+    <footer>
+        <!-- Columna de recomendaciones -->
+        <div class="footer-col">
+            <h4>Restaurantes Top</h4>
+            <ul>
+                <li>Camachos</li>
+                <li>Domino's</li>
+                <li>KFC</li>
+                <li>Mc Donald's</li>
+            </ul>
+        </div>
+        <!-- Columna para socios -->
+        <div class="footer-col">
+            <h4>Únete a Tasty Tap</h4>
+            <ul>
+                <li>Registra tu restaurante</li>
+                <li>Registra tu local</li>
+                <li>Promociona tu negocio</li>
+            </ul>
+        </div>
+        <!-- Columna de redes sociales -->
+        <div class="footer-col">
+            <h4>Síguenos</h4>
+            <div class="socials">
+                <i class="fab fa-facebook"></i> Facebook<br>
+                <i class="fab fa-instagram"></i> Instagram<br>
+                <i class="fab fa-tiktok"></i> TikTok
+            </div>
+        </div>
+        <!-- Columna de contacto físico/digital -->
+        <div class="footer-col">
+            <h4>Contacto</h4>
+            <p>📍 Calle 123 #45-67, Bogotá, Colombia</p>
+            <p>📞 +57 320 555 1234</p>
+            <p>✉️ contacto@tastytap.com</p>
+        </div>
+    </footer>
+
+<!-- Cierre del cuerpo de la página -->
 </body>
-<!-- se cierra la etiqueta del documento -->
+<!-- Cierre del documento HTML -->
 </html>

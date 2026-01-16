@@ -1,3 +1,17 @@
+/*Prueba de navbar para un error*/
+
+.navbar__menu a {
+    background: transparent; /* Quita el fondo blanco */
+    border-radius: 0;        /* Quita la forma de cápsula */
+    padding: 10px 15px;      /* Espacio normal entre textos */
+    color: white;            /* Color del texto */
+    text-decoration: none;   /* Quita el subrayado */
+    font-weight: 500;
+}
+
+.navbar__menu a:hover {
+    text-decoration: underline; /* Opcional: que se subraye al pasar el mouse */
+}
 /* .navbar {
   background: var(--color-principal);
   color: var(--color-blanco);

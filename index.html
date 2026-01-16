@@ -1,169 +1,152 @@
 <!-- se declara el tipo de documento como HTML5, asegurando que el navegador lo reconozca -->
 <!DOCTYPE html>
-<!-- Etiqueta del documento que indica el idioma de la página -->
+<!-- Etiqueta del documento que indica el idioma de la página -->
 <html lang="es">
 <!-- Etiqueta de cabecera del documento -->
 <head>
-  <!-- Sección de metadatos e importaciones que no se ven directamente en la página -->
-  <meta charset="UTF-8">
-  <!-- Etiqueta para configurar la vista del dispositivo, esto permite que la página se adapte a diferentes dispositivos -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Etiqueta para establecer el título de la página -->
-  <title>TastyTap | Inicio</title>
-  <!-- se debe colocar la carpeta css, utils llamando a base.css para que defina las variables -->
-  <!-- <link rel="stylesheet" href="css/utils/base.css"> -->
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"><!-- y se llama a la carpeta css llamando a main.css para que las use -->
-  <link rel="stylesheet" href="css/style.css">
-  <!-- Estos son fondos de las redes sociales -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Sección de metadatos e importaciones que no se ven directamente en la página -->
+    <meta charset="UTF-8">
+    <!-- Etiqueta para configurar la vista del dispositivo, esto permite que la página se adapte a diferentes dispositivos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Etiqueta para establecer el título de la página -->
+    <title>TastyTap | Tienda</title>
+
+    <!-- Importación de estilos base y variables -->
+    <link rel="stylesheet" href="/css/utils/Base.css">
+    <!-- Importación de normalización para asegurar consistencia entre navegadores -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <!-- Estilos generales de la aplicación -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- Estilos específicos para botones y componentes -->
+    <link rel="stylesheet" href="/css/components/button.css">
+    <!-- Importación de iconos de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <!-- Se cierra la etiqueta de cabecera del documento -->
 </head>
+
 <!-- este es el cuerpo del documento que contiene todo el contenido que el usuario ve -->
 <body>
-<!-- barra de navegación superior estatica que contiene el logo y el menu principal -->
-  <header class="navbar">
-    <!-- logo de la barra de navegación -->
-    <div class="navbar__logo">
-      <!-- imagen del logo, el alt es para que si el usuario no puede ver la imagen se muestre el texto -->
-      <img src="img/TastyTap.png" alt="Logo TastyTap">
-      <!-- nombre de la marca como encabezado -->
-      <h1>TastyTap</h1>
-      <!-- se cierra la etiqueta de la barra de navegación -->
-    </div>
-    <!-- menu de navegacion cobn enlaces a otras secciones del sitio -->
-    <nav class="navbar__menu">
-      <!-- Enlace a la página de inicio la clase active se utiliza para resaltar el enlace actual -->
-        <a href="/index.html" class="active">Inicio</a>
-        <!-- Enlace a la vista de menu de productos disponibles -->
-        <a href="/views/user/menu.html">Menú</a>
-        <!-- Enlace a la vista de la tienda, donde se muestran los productos y sus detalles del lugar -->
-        <a href="/views/user/tienda.html">Tienda</a>
-        <!--  Enlace a la vista de contacto -->
-        <a href="/views/user/contacto.html">Contacto</a>
-        <!--  Enlace a la vista de login  de sesión para usuarios -->
-        <a href="/views/user/login.html">Login</a>
-        <!-- se cierra la etiqueta de la barra de navegación -->
-    </nav>
-    <!-- se cierra la etiqueta de la barra de navegación -->
-  </header>
-<!-- Sección destacada "hero" que presenta el proposito principal del sitio -->
-  <section class="hero">
-    <!-- Titulo principal de bienvenid emoji hamburguesa para una mejor visualizacion -->
-    <h2>Bienvenido a TastyTap 🍔</h2>
-    <!-- Descripción breve del valor que ofrece TastyTap, un texto persuasivo y orientado al usuario -->
-    <p>Tu app web para descubrir, ordenar y disfrutar la mejor comida de tu ciudad. Con solo un toque, ¡haz que tu
-      antojo se cumpla!</p>
-      <!-- se cierra la etiqueta de la sección destacada -->
-  </section>
-<!-- Sección que muestra productos recomendados del día -->
-  <section class="recomendacion">
-    <!-- Subtitulo que introduce la lista de recomendaciones -->
-    <h3>Recomendación del día</h3>
-    <!-- Contenedor en formato cuadricula para organizar las tarjetas de productos -->
-    <div class="recomendacion__grid">
-      <!-- primera tarjeta que es una hamburguesa -->
-      <div class="card card__recomendacion">
-        <!-- Imagen del producto con texto alternativo descritivo -->
-        <img src="img/burger.jpg" alt="Burger Deluxe">
-        <!-- nombre del primer producto -->
-        <h4>Burger Deluxe</h4>
-        <!-- Decripción detallada del primer producto -->
-        <p>Una jugosa hamburguesa artesanal con ingredientes frescos, acompañada de papas doradas y bebida.</p>
-      <!-- se cierra la etiqueta de la tarjeta -->
-      </div>
-      <!-- segunda tarjeta que es una pasta -->
-      <div class="card card__recomendacion">
-        <!-- Imagen del producto con texto alternativo descritivo -->
-        <img src="img/pasta.jpg" alt="Pasta Deluxe">
-        <!-- nombre del segundo producto -->
-        <h4>Pasta Deluxe</h4>
-        <!-- Descripción detallada del segundo producto -->
-        <p>Una deliciosa pasta con salsa de tomate y queso, acompañada de verduras frescas y bebida.</p>
-      <!-- se cierra la etiqueta de la tarjeta -->
-      </div>
-      <!-- tercera tarjeta que es una pizza -->
-      <div class="card card__recomendacion">
-        <!-- Imagen del producto con texto alternativo descritivo -->
-        <img src="img/pizza.jpg" alt="Pizza Mexicana">
-        <!-- nombre del tercer producto -->
-        <h4>Pizza Mexicana</h4>
-        <!-- Descripción detallada del tercer producto -->
-        <p>Una deliciosa pizza con pepperoni, jalapeños y queso, acompañada de salsa de tomate y bebida.</p>
-      <!-- se cierra la etiqueta de la tarjeta -->
-      </div>
-      <!-- cuarta tarjeta que es un sushi -->
-      <div class="card card__recomendacion">
-        <!-- Imagen del producto con texto alternativo descritivo -->
-        <img src="img/Sushi.png" alt="Sushi Rolls">
-        <!-- nombre del cuarto producto -->
-        <h4>Sushi Rolls</h4>
-        <!-- Descripción detallada del cuarto producto -->
-        <p>Un delicioso conjunto de sushi con mariscos frescos, acompañado de salsa de soja y bebida.</p>
-      <!-- se cierra la etiqueta de la tarjeta -->
-      </div>
-      <!-- se cierra la etiqueta de la sección de recomendacion grid -->
-    </div>
-    <!-- se cierra la etiqueta de la sección de recomendaciones -->
-  </section>
-<!-- Pie de página con información adicional, enlaces y contacto -->
-  <footer class="footer">
-    <!-- Bloque con enlaces a restaurantes populares -->
-    <div class="restaurantes">
-      <!--  Titulo del bloque del pie de página -->
-      <h3>Restaurantes Mejor Valorados</h3>
-      <!-- Estos enlaces podrían redirigir a perfiles de los restaurantes -->
-      <a href="#">Camachos</a>
-      <a href="#">Domino's</a>
-      <a href="#">KFC</a>
-      <a href="#">Mc Donald's</a>
-      <a href="#">El corral</a>
-      <a href="#">Dunkin' Donuts</a>
-      <!-- Cierre del bloque de restaurantes -->
-    </div>
-    <!-- Bloque con enlaces a la sección de unete a Tasty Tap -->
-    <div class=" unete">
-      <!-- Titulo del bloque del pie de página -->
-      <h3>Únete a Tasty Tap</h3>
-      <!--  Estos enlaces podrían redirigir a perfiles de los restaurantes -->
-      <a href="#">Registra tu restaurante</a>
-      <a href="#">Registra tu local</a>
-      <a href="#">Haz crecer tu marca</a>
-      <a href="#">Promociona tu negocio</a>
-      <!-- Cierre del bloque de unete a Tasty Tap -->
-    </div>
-    <!-- Bloque con enlaces a redes sociales -->
-    <div class="redes">
-      <!-- Titulo del bloque del pie de página -->
-      <h3>Síguenos en Redes Sociales</h3>
-      <!-- Contenedor con enlaces a redes sociales -->
-      <div class="social">
-        <!-- Estos enlaces podrían redirigir a perfiles de redes sociales -->
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-        <!-- Cierre del contenedor de redes sociales -->
-      </div>
-      <!-- Cierre del bloque de redes sociales -->
-    </div>
-    <!-- Bloque con información de contacto -->
-    <div class="contacto">
-      <!-- Titulo del bloque del pie de página -->
-      <h3>Contacto</h3>
-      <!-- Información de contacto supuesta de la empresa TastyaTap -->
-      <p>📍 Calle 123 #45-67, Bogotá, Colombia</p>
-      <p>📞 +57 320 555 1234</p>
-      <p>✉️ contacto@tastytap.com</p>
-      <!-- Cierre del bloque de contacto -->
-    </div>
-    <!-- Bloque con información de derechos de autor -->
-    <div class="footer__bottom">
-      <!-- Información de derechos de autor -->
-      <p>© 2025 TastyTap — Todos los derechos reservados 🍴</p>
-      <!-- Cierre del bloque de derechos de autor -->
-    </div>
-    <!-- Cierre del pie de página -->
-  </footer>
+
+    <!-- barra de navegación superior estática que contiene el logo y el menú principal -->
+    <header class="navbar">
+        <!-- logo de la barra de navegación -->
+        <div class="navbar__logo">
+            <!-- imagen del logo con su respectivo texto alternativo -->
+            <img src="/img/TastyTap.png" alt="Logo TastyTap" style="height: 30px; vertical-align: middle; margin-right: 10px;">
+            <!-- nombre de la marca como encabezado -->
+            <h1>TastyTap</h1>
+        </div>
+        <!-- menú de navegación con enlaces a las secciones de usuario logueado -->
+        <nav class="navbar__menu">
+            <!-- Enlace a la página de inicio la clase active se utiliza para resaltar el enlace actual -->
+            <a href="/index.html" class="active">Inicio</a>
+            <!-- Enlace a la vista de menu de productos disponibles -->
+            <a href="/views/user/menu.html">Menú</a>
+            <!-- Enlace a la vista de la tienda, donde se muestran los productos y sus detalles del lugar -->
+            <a href="/views/user/tienda.html">Tienda</a>
+            <!--  Enlace a la vista de contacto -->
+            <a href="/views/user/contacto.html">Contacto</a>
+            <!--  Enlace a la vista de login  de sesión para usuarios -->
+            <a href="/views/user/login.html">Login</a>
+            <!-- se cierra la etiqueta de la barra de navegación -->
+        </nav>
+    </header>
+
+    <!-- Contenido principal de la página de tienda -->
+    <main>
+        <!-- Sección de encabezado de la tienda con título persuasivo -->
+        <section class="hero">
+            <h2 class="main-title">¿Qué se te antoja hoy? 🍕</h2>
+            <p>Explora nuestras categorías y encuentra el sabor perfecto para tu momento.</p>
+        </section>
+
+        <!-- Contenedor en formato cuadrícula para organizar las categorías de comida -->
+        <section class="product-grid">
+            
+            <!-- Tarjeta de Categoría: Hamburguesas -->
+            <div class="card">
+                <!-- Imagen representativa de la categoría -->
+                <img src="/img/burger.jpg" alt="Hamburguesas">
+                <div class="card-content">
+                    <h3>Hamburguesas</h3>
+                    <!-- Breve descripción del tipo de comida -->
+                    <p class="info">Las mejores carnes y pan artesanal</p>
+                </div>
+            </div>
+
+            <!-- Tarjeta de Categoría: Pizzas -->
+            <div class="card">
+                <img src="/img/pizza.jpg" alt="Pizzas">
+                <div class="card-content">
+                    <h3>Pizzas</h3>
+                    <p class="info">Recetas italianas al horno de piedra</p>
+                </div>
+            </div>
+
+            <!-- Tarjeta de Categoría: Sushi -->
+            <div class="card">
+                <img src="/img/Sushi.png" alt="Sushi">
+                <div class="card-content">
+                    <h3>Sushi</h3>
+                    <p class="info">Pescado fresco y rolls de autor</p>
+                </div>
+            </div>
+
+            <!-- Tarjeta de Categoría: Espagueti -->
+            <div class="card">
+                <img src="/img/pasta.jpg" alt="Espagueti">
+                <div class="card-content">
+                    <h3>Espagueti</h3>
+                    <p class="info">Pastas artesanales y salsas clásicas</p>
+
+                </div>
+            </div>
+
+        <!-- Cierre de la sección de cuadrícula de productos -->
+        </section>
+    </main>
+
+    <!-- Pie de página con información adicional, enlaces y contacto (Footer unificado) -->
+    <footer >
+        <!-- PIE DE PÁGINA (Footer unificado) -->
+    <footer>
+        <!-- Columna de recomendaciones -->
+        <div class="footer-col">
+            <h4>Restaurantes Top</h4>
+            <ul>
+                <li>Camachos</li>
+                <li>Domino's</li>
+                <li>KFC</li>
+                <li>Mc Donald's</li>
+            </ul>
+        </div>
+        <!-- Columna para socios -->
+        <div class="footer-col">
+            <h4>Únete a Tasty Tap</h4>
+            <ul>
+                <li>Registra tu restaurante</li>
+                <li>Registra tu local</li>
+                <li>Promociona tu negocio</li>
+            </ul>
+        </div>
+        <!-- Columna de redes sociales -->
+        <div class="footer-col">
+            <h4>Síguenos</h4>
+            <div class="socials">
+                <i class="fab fa-facebook"></i> Facebook<br>
+                <i class="fab fa-instagram"></i> Instagram<br>
+                <i class="fab fa-tiktok"></i> TikTok
+            </div>
+        </div>
+        <!-- Columna de contacto físico/digital -->
+        <div class="footer-col">
+            <h4>Contacto</h4>
+            <p>📍 Calle 123 #45-67, Bogotá, Colombia</p>
+            <p>📞 +57 320 555 1234</p>
+            <p>✉️ contacto@tastytap.com</p>
+        </div>
+    </footer>
+
 <!-- Cierre del cuerpo de la página -->
 </body>
 <!-- Cierre del documento HTML -->

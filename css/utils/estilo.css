@@ -359,7 +359,7 @@ de iniciar sesion o registrarse*/
 .footer a {
     /*esto es para darles un color predetermnidado
     a los parrafos para que no aparezcan en azul*/
-    color: var(--color-blanco);
+    /* color: var(--color-blanco); */
     /*esto es para quitarle la linea de abajo del texto o del parrafo*/
     text-decoration: none;
     /*esto es para que se alinie cada texto uno debajo de otros*/

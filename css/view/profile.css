@@ -21,16 +21,16 @@ body {
     background: white;
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-
     /* ACTIVAMOS FLEXBOX */
-    display: flex; 
-    gap: 40px; /* Espacio entre las dos columnas */
+    display: flex;
+    /* Espacio entre las dos columnas */ 
+    gap: 40px; 
     align-items: flex-start;
 }
 
-/* Columna Izquierda (30% del espacio) */
+/* Columna Izquierda */
 .profile-aside {
-    flex: 1; 
+    flex: 1 1 200; 
     text-align: center;
     /* Línea divisoria vertical */
     border-right: 1px solid #eee;
@@ -83,7 +83,8 @@ body {
     border-radius: 8px;
     font-size: 1rem;
     color: #333;
-    pointer-events: none; /* Bloqueados por defecto */
+    /* Bloqueados por defecto */
+    pointer-events: none; 
     transition: all 0.3s;
 }
 
@@ -93,7 +94,8 @@ body {
 #toggle-edit:checked ~ .profile-container .campo input {
     background-color: white;
     border-color: var(--naranja);
-    pointer-events: auto; /* Se activan para escribir */
+    /* Se activan para escribir */
+    pointer-events: auto; 
     box-shadow: 0 0 5px rgba(239, 141, 77, 0.2);
 }
 
@@ -125,6 +127,12 @@ body {
     max-width: 800px;
     margin: 0 auto;
     border-radius: 10px;
+}
+
+.perfil-message a {
+    /*Esto es para quitar el subrayado*/
+    /* text-decoration: none; */
+    color: var(--naranja);
 }
 
 footer {

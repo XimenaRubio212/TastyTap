@@ -1,163 +1,156 @@
-<!-- Se declara este documento es HTML5, asegurando que el navegador lo reconozca -->
+<!-- Se declara que este documento es HTML5, asegurando que el navegador lo reconozca -->
 <!DOCTYPE html>
-<!-- Etiqueta del documento que indica el idioma de la página -->
+<!-- Etiqueta del documento que indica el idioma de la página -->
 <html lang="es">
-<!--  Etiqueta de cabecera del documento -->
+<!-- Etiqueta de cabecera del documento -->
 <head>
-  <!-- Sección de metadatos e importaciones que no se ven directamente en la página -->
+  <!-- Sección de metadatos e importaciones que no se ven directamente en la página -->
   <meta charset="UTF-8">
-  <!-- Etiqueta para configurar la vista del dispositivo, esto permite que la página se adapte a diferentes dispositivos -->
+  <!-- Etiqueta para configurar la vista del dispositivo, esto permite que la página se adapte a diferentes dispositivos -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Etiqueta para establecer el título de la página -->
   <title>TastyTap | Tienda</title>
-  <!-- se debe colocar la carpeta css, utils llamando a base.css para que defina las variables -->
+
+  <!-- Importación de la hoja de estilos base para definir variables globales -->
+  <link rel="stylesheet" href="/css/utils/Base.css">
+  <!-- Importación de normalización para asegurar consistencia visual -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <!-- Estilos generales de la aplicación y componentes de botones y tarjetas -->
   <link rel="stylesheet" href="/css/style.css">
-  <!-- Estos son fondos de las redes sociales -->
+  <!-- Importación de la librería de iconos de Font Awesome para los pines de ubicación -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <!-- Se cierra la etiqueta de cabecera del documento -->
 </head>
-<!-- este es el cuerpo del documento que contiene todo el contenido que el usuario ve -->
+
+<!-- Este es el cuerpo del documento que contiene todo el contenido visual -->
 <body>
-<!-- barra de navegación superior estatica que contiene el logo y el menu principal -->
+
+  <!-- Barra de navegación superior estática (Naranja con enlaces blancos) -->
   <header class="navbar">
-    <!-- Contenedor del logo visual y el nombre textual de la marca -->
+    <!-- Contenedor del logo visual y el nombre de la marca -->
     <div class="navbar__logo">
-      <!-- Imagen del logo, el atributo alt proporciona texto alternativo para la accesibilidad -->
       <img src="/img/TastyTap.png" alt="Logo TastyTap">
-      <!--  Nombre de la marca como encabezado -->
       <h1>TastyTap</h1>
-      <!-- Se cierra la etiqueta de la barra de navegación -->
     </div>
-    <!-- Menu de navegación con enlaces a las principales secciones del sitio -->
+    <!-- Menú de navegación; la clase "active" resalta que estamos en Tienda -->
     <nav class="navbar__menu">
-      <!-- Enlace a la págna principal del sitio -->
-        <a href="/index.html">Inicio</a>
-        <!-- Enlace a la vista de menu de productos disponibles -->
-        <a href="/views/user/menu.html">Menú</a>
-        <!-- Enlace a la vista de la tienda, donde se muestran los productos y sus detalles del lugar 
-         la clase active suele aplicarse para resaltar visualmente la pagina actual -->
-        <a href="/views/user/tienda.html" class="active">Tienda</a>
-        <!-- Enlace a la vista de contacto -->
-        <a href="/views/user/contacto.html">Contacto</a>
-        <!-- Enlace a la vista de login  de sesión para usuarios -->
-        <a href="/views/user/login.html">Login</a>
-        <!-- Se cierra la etiqueta de la barra de navegación -->
+      <a href="/index.html">Inicio</a>
+      <a href="/views/user/menu.html">Menú</a>
+      <a href="/views/user/tienda.html" class="active">Tienda</a>
+      <a href="/views/user/contacto.html">Contacto</a>
+      <a href="/views/user/login.html">Login</a>
     </nav>
-    <!-- Se cierra la etiqueta de la barra de navegación -->
   </header>
-<!-- Sección principal de la página que muestra los tipos de restaurantes o categorias de las comidas disponibles -->
-  <section class="tienda">
-    <!-- Titulo qeu introduce el contenido de la sección-->
-    <h2>Restaurantes disponibles</h2>
-<!-- Contenedor en formato cuadricula "grid" para organizar las tarjetas de productos -->
-    <div class="tienda__grid">
-      <!-- primera tarjeta que es una hamburguesa -->
-      <div class="card__tienda">
-        <!-- Imagen del producto con texto alternativo descritivo -->
-        <img src="/img/burger.jpg" alt="Burger House">
-        <!-- nombre de la primera tarjeta -->
-        <h3>Hamburguesas</h3>
-        <!-- Boton-enlace que redirige a la vista especifica de hamburguesas,
-         la clase "btn" aplica estilos de boton definidos en style.css -->
-        <a href="/views/user/hamburguesas.html" class="btn">Ver más</a>
-      <!-- se cierra la etiqueta de la tarjeta -->
+
+  <!-- Sección principal que presenta los restaurantes -->
+  <main>
+    <!-- Título principal centrado con emoji de edificio, tal como en el ejemplo del menú -->
+    <h2 class="main-title" style="text-align: center; color: #d35400; margin: 3rem 0; font-size: 1.8rem;">
+        Restaurantes Disponibles 🏢
+    </h2>
+    
+    <!-- Contenedor en formato cuadrícula para organizar las tarjetas de los restaurantes -->
+    <div class="product-grid">
+      
+      <!-- Tarjeta 1: Hamburguesas -->
+      <div class="card">
+        <!-- Imagen representativa con esquinas superiores redondeadas -->
+        <img src="/img/burger.jpg" alt="Hamburguesas">
+        <!-- Bloque de contenido con texto centrado -->
+        <div class="card-content">
+          <h3>Hamburguesas</h3>
+          <!-- Descripción con color de texto suave para un look limpio -->
+          <p class="description">Las mejores carnes artesanales con pan brioche y vegetales frescos de la mejor calidad.</p>
+          <!-- Información de ubicación con el pin de ubicación rosa/naranja -->
+          <p class="info"><i class="fas fa-map-marker-alt" style="color: #ef8d4d;"></i> El Corral - Sucursal Norte</p>
+          <!-- Precio resaltado en naranja y negrita -->
+          <span class="price">$25.000</span>
+          <!-- Botón de acción naranja redondeado -->
+          <a href="/views/user/hamburguesas.html" class="btn-add" style="text-decoration: none;">Ver Menú</a>
+        </div>
       </div>
-<!-- segunda tarjeta que es una pizza -->
-      <div class="card__tienda">
-        <!-- Imagen del producto con texto alternativo descritivo -->
-        <img src="/img/pizza.jpg" alt="Pizza Napoli">
-        <!-- nombre de la segunda tarjeta -->
-        <h3>Pizzas</h3>
-        <!-- Boton-enlace que redirige a la vista especifica de pizzas,
-         la clase "btn" aplica estilos de boton definidos en style.css -->
-        <a href="/views/user/pizzas.html" class="btn">Ver más</a>
-        <!-- se cierra la etiqueta de la tarjeta -->
+
+      <!-- Tarjeta 2: Pizzas -->
+      <div class="card">
+        <img src="/img/pizza.jpg" alt="Pizzas">
+        <div class="card-content">
+          <h3>Pizzas</h3>
+          <p class="description">Auténticas pizzas italianas al horno de piedra con ingredientes importados y masa madre.</p>
+          <p class="info"><i class="fas fa-map-marker-alt" style="color: #ef8d4d;"></i> Domino's - Centro</p>
+          <span class="price">$28.000</span>
+          <a href="/views/user/pizzas.html" class="btn-add" style="text-decoration: none;">Ver Menú</a>
+        </div>
       </div>
-<!-- tercera tarjeta que es un sushi -->
-      <div class="card__tienda">
-        <!-- Imagen del producto con texto alternativo descritivo -->
-        <img src="/img/Sushi.png" alt="Sushi Garden">
-        <!-- nombre de la tercera tarjeta -->
-        <h3>Sushi</h3>
-        <!-- Boton-enlace que redirige a la vista especifica de Sushi,
-         la clase "btn" aplica estilos de boton definidos en style.css -->
-        <a href="/views/user/sushi.html" class="btn">Ver más</a>
-        <!-- se cierra la etiqueta de la tarjeta -->
+
+      <!-- Tarjeta 3: Sushi -->
+      <div class="card">
+        <img src="/img/Sushi.png" alt="Sushi">
+        <div class="card-content">
+          <h3>Sushi</h3>
+          <p class="description">Pescado fresco del día y rolls de autor preparados por expertos en cocina oriental.</p>
+          <p class="info"><i class="fas fa-map-marker-alt" style="color: #ef8d4d;"></i> Sushi Garden - Usaquén</p>
+          <span class="price">$32.000</span>
+          <a href="/views/user/sushi.html" class="btn-add" style="text-decoration: none;">Ver Menú</a>
+        </div>
       </div>
-<!-- cuarta tarjeta que es una pasta -->
-      <div class="card__tienda">
-        <!-- Imagen del producto con texto alternativo descritivo -->
-        <img src="/img/pasta.jpg" alt="Pastas Carbonara">
-        <!-- nombre de la cuarta tarjeta -->
-        <h3>Espagueti</h3>
-        <!-- Boton-enlace que redirige a la vista especifica de espagueti,
-         la clase "btn" aplica estilos de boton definidos en style.css -->
-        <a href="/views/user/espagueti.html" class="btn">Ver más</a>
-        <!-- se cierra la etiqueta de la tarjeta -->
+
+      <!-- Tarjeta 4: Pastas -->
+      <div class="card">
+        <img src="/img/pasta.jpg" alt="Pastas">
+        <div class="card-content">
+          <h3>Pastas</h3>
+          <p class="description">Pastas artesanales hechas a mano diariamente con salsas clásicas y toques modernos.</p>
+          <p class="info"><i class="fas fa-map-marker-alt" style="color: #ef8d4d;"></i> Camachos Pasta Bar</p>
+          <span class="price">$26.000</span>
+          <a href="/views/user/espagueti.html" class="btn-add" style="text-decoration: none;">Ver Menú</a>
+        </div>
       </div>
-<!-- se cierra la etiqueta de la sección de tienda grid -->
+
+    <!-- Se cierra el contenedor de la cuadrícula -->
     </div>
-    <!-- se cierra la etiqueta de la sección de tienda -->
-  </section>
-<!-- pie de pagina con enlaces a redes sociales y informacion de contacto -->
-  <footer class="footer">
-    <!-- seccion con informacion de restaurantes -->
-    <div class="restaurantes">
-      <!-- titulo del bloque del pie de pagina -->
-      <h3>Restaurantes Mejor Valorados</h3>
-      <!-- enlaces a restaurantes y esto enlaces podrian redirigir a perfiles de los restaurantes -->
-      <a href="#">Camachos</a>
-      <a href="#">Domino's</a>
-      <a href="#">KFC</a>
-      <a href="#">Mc Donald's</a>
-      <a href="#">El corral</a>
-      <a href="#">Dunkin' Donuts</a>
-      <!-- se cierra el bloque de restaurantes -->
-    </div>
-    <!-- seccion con informacion de unete -->
-    <div class="unete">
-      <!-- titulo del bloque del pie de pagina -->
-      <h3>Únete a Tasty Tap</h3>
-      <!-- enlaces a restaurantes y esto enlaces podrian redirigir a perfiles de los restaurantes -->
-      <a href="#">Registra tu restaurante</a>
-      <a href="#">Registra tu local</a>
-      <a href="#">Haz crecer tu marca</a>
-      <a href="#">Promociona tu negocio</a>
-      <!-- se cierra el bloque de unete -->
-    </div>
-    <!-- seccion con informacion de redes sociales -->
-    <div class="redes">
-      <!-- titulo del bloque del pie de pagina -->
-      <h3>Síguenos en Redes Sociales</h3>
-      <!-- contenedor con enlaces a redes sociales -->
-      <div class="social">
-        <!-- estos enlaces podrían redirigir a perfiles de redes sociales -->
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-        <!-- cierre del contenedor de redes sociales -->
-      </div>
-      <!-- cierre del bloque de redes sociales -->
-    </div>
-    <!-- seccion con informacion de contacto -->
-    <div class="contacto">
-      <!-- titulo del bloque del pie de pagina -->
-      <h3>Contacto</h3>
-      <!-- informacion de contacto supuesta de la empresa TastyaTap -->
-      <p>📍 Calle 123 #45-67, Bogotá, Colombia</p>
-      <p>📞 +57 320 555 1234</p>
-      <p>✉️ contacto@tastytap.com</p>
-      <!-- cierre del bloque de contacto -->
-    </div>
-    <!-- seccion con informacion de derechos de autor -->
-    <div class="footer__bottom">
-      <!-- informacion de derechos de autor -->
-      <p>© 2025 TastyTap — Todos los derechos reservados 🍴</p>
-      <!-- cierre del bloque de derechos de autor -->
-    </div>
-    <!-- cierre del pie de pagina -->
-  </footer>
-<!-- cierre del contenedor principal -->
+  </main>
+
+<!-- Pie de página con información adicional, enlaces y contacto (Footer unificado) -->
+    <footer >
+        <!-- PIE DE PÁGINA (Footer unificado) -->
+    <footer>
+        <!-- Columna de recomendaciones -->
+        <div class="footer-col">
+            <h4>Restaurantes Top</h4>
+            <ul>
+                <li>Camachos</li>
+                <li>Domino's</li>
+                <li>KFC</li>
+                <li>Mc Donald's</li>
+            </ul>
+        </div>
+        <!-- Columna para socios -->
+        <div class="footer-col">
+            <h4>Únete a Tasty Tap</h4>
+            <ul>
+                <li>Registra tu restaurante</li>
+                <li>Registra tu local</li>
+                <li>Promociona tu negocio</li>
+            </ul>
+        </div>
+        <!-- Columna de redes sociales -->
+        <div class="footer-col">
+            <h4>Síguenos</h4>
+            <div class="socials">
+                <i class="fab fa-facebook"></i> Facebook<br>
+                <i class="fab fa-instagram"></i> Instagram<br>
+                <i class="fab fa-tiktok"></i> TikTok
+            </div>
+        </div>
+        <!-- Columna de contacto físico/digital -->
+        <div class="footer-col">
+            <h4>Contacto</h4>
+            <p>📍 Calle 123 #45-67, Bogotá, Colombia</p>
+            <p>📞 +57 320 555 1234</p>
+            <p>✉️ contacto@tastytap.com</p>
+        </div>
+    </footer>
+
+
 </body>
-<!-- cierre de etiqueta html -->
 </html>

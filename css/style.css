@@ -59,7 +59,11 @@ nav a {
     opacity: 0.9;
 }
 
-nav a.active { border-bottom: 2px solid white; padding-bottom: 3px; opacity: 1; }
+nav a.active { 
+  border-bottom: 2px solid white; 
+  padding-bottom: 3px; 
+  opacity: 1; 
+}
 
 /* --- CONTENIDO PRINCIPAL --- */
 .main-title {
@@ -98,9 +102,24 @@ nav a.active { border-bottom: 2px solid white; padding-bottom: 3px; opacity: 1; 
     text-align: center;
 }
 
-.card h3 { color: #8b4513; margin: 0 0 10px 0; }
-.info { font-size: 0.75rem; color: #777; margin: 4px 0; }
-.price { color: #ef8d4d; font-weight: bold; font-size: 1.2rem; display: block; margin: 15px 0; }
+.card h3 { 
+  color: #8b4513; 
+  margin: 0 0 10px 0; 
+}
+
+.info { 
+  font-size: 0.75rem; 
+  color: #777; 
+  margin: 4px 0; 
+}
+
+.price { 
+  color: #ef8d4d; 
+  font-weight: bold; 
+  font-size: 1.2rem; 
+  display: block; 
+  margin: 15px 0; 
+}
 
 .btn-add {
     background-color: #f39c12;
@@ -113,15 +132,28 @@ nav a.active { border-bottom: 2px solid white; padding-bottom: 3px; opacity: 1; 
     transition: background 0.3s;
 }
 
-.btn-add:hover { background-color: #e67e22; }
+.btn-add:hover { 
+  background-color: #e67e22; 
+}
+
+.promo {
+  /* Rojo intenso para llamar la atención */
+  color: #d32f2f; 
+  font-weight: bold;
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
 
 /* --- LÓGICA DEL CARRITO (CHECKBOX HACK) --- */
-.cart-control { display: none; }
+.cart-control { 
+  display: none; 
+}
 
 /* Sidebar */
 .sidebar {
     position: fixed;
-    right: -320px; /* Escondida */
+    /* Escondida */
+    right: -320px; 
     top: 80px;
     width: 280px;
     background: white;
@@ -133,16 +165,23 @@ nav a.active { border-bottom: 2px solid white; padding-bottom: 3px; opacity: 1; 
     border-left: 6px solid #ef8d4d;
 }
 
-.sidebar h3 { margin-top: 0; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+.sidebar h3 { 
+  margin-top: 0; 
+  border-bottom: 1px solid #eee; 
+  padding-bottom: 10px; 
+}
 
 .cart-item {
-    display: none; /* Oculto por defecto */
+  /* Oculto por defecto */
+    display: none; 
     font-size: 0.9rem;
     margin-bottom: 12px;
     justify-content: space-between;
 }
 
-.cart-item b { color: #ef8d4d; }
+.cart-item b { 
+  color: #ef8d4d; 
+}
 
 /* Ventana Emergente (Toast) */
 .notice-container {
@@ -202,7 +241,12 @@ nav a.active { border-bottom: 2px solid white; padding-bottom: 3px; opacity: 1; 
     font-weight: bold;
 }
 
-.hint { font-size: 0.7rem; color: #999; margin-top: 10px; text-align: center; }
+.hint { 
+  font-size: 0.7rem; 
+  color: #999; 
+  margin-top: 10px; 
+  text-align: center; 
+}
 
 /* --- FOOTER --- */
 footer {
@@ -214,10 +258,25 @@ footer {
     gap: 30px;
 }
 
-.footer-col h4 { margin-bottom: 1.2rem; }
-.footer-col ul { list-style: none; padding: 0; }
-.footer-col li { margin-bottom: 10px; font-size: 0.85rem; }
-.footer-col p { font-size: 0.85rem; margin: 5px 0; }
+.footer-col h4 { 
+  margin-bottom: 1.2rem; 
+}
+
+.footer-col ul { 
+  list-style: none; 
+  padding: 0; 
+}
+
+.footer-col li { 
+  margin-bottom: 10px; 
+  font-size: 0.85rem; 
+}
+
+.footer-col p { 
+  font-size: 0.85rem; 
+  margin: 5px 0; 
+}
+
 /* TERMINA EL NUEVO CODIGO */
 
 /* === CONTENEDOR ÚNICO PARA FORMULARIOS (CONTACTO, LOGIN, REGISTRO) === */
@@ -230,7 +289,8 @@ body.page-registro form {
   max-width: 600px;
   margin: 2rem auto;
   padding: 2rem;
-  background-color: #fff; /* Solo un fondo blanco */
+  /* Solo un fondo blanco */
+  background-color: #fff; 
   border-radius: 8px;
 }
 
@@ -457,6 +517,13 @@ body.page-hamburguesas .menu__card .price {
   font-size: 1.1rem;
 }
 
+.description {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 8px 0 12px;
+    line-height: 1.4;
+}
+
 /* === ESTILOS PARA LOGIN (mejor centrado) === */
 body.page-login .login {
   display: flex;
@@ -515,4 +582,46 @@ body.page-login .login__form p {
 body.page-login .login__form a {
   color: #f57c00;
   text-decoration: underline;
+}
+
+/*NUEVOOOOOO*/
+
+/* ELIMINAR CUADROS DEL NAVBAR */
+.navbar__menu a {
+    background: none !important;    /* Quita el fondo blanco */
+    border-radius: 0 !important;     /* Quita los bordes redondeados */
+    padding: 0 10px !important;      /* Ajusta el espacio solo a los lados */
+    color: white !important;         /* Asegura que el texto sea blanco para que se vea */
+    box-shadow: none !important;     /* Por si tiene sombras */
+}
+
+/* ELIMINAR CUADROS DEL FOOTER */
+.footer__section a {
+    background: none !important;    /* Quita el fondo naranja claro/blanco */
+    border-radius: 0 !important;
+    padding: 5px 0 !important;       /* Espacio pequeño entre lineas */
+    color: white !important;         /* Texto blanco sobre el fondo naranja del footer */
+    display: block;                  /* Para que salgan uno debajo del otro */
+    text-align: left !important;     /* Alineado a la izquierda */
+}
+
+/* EXCEPCIÓN: Los iconos de redes sociales sí pueden tener un cuadro pequeño o círculo */
+.footer__social a {
+    display: inline-flex !important;
+    background: white !important;
+    color: #e67e22 !important;       /* Color naranja para el icono */
+    width: 35px;
+    height: 35px;
+    border-radius: 50% !important;   /* Los hace circulares */
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+/* ARREGLAR ICONO DE CANDADO */
+.no-logueado i {
+    color: #333;                     /* Color oscuro para el candado */
+    font-size: 50px;
+    margin-bottom: 20px;
+    display: block;
 }
