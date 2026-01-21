@@ -202,6 +202,96 @@ nav a.active {
     font-weight: bold;
 }
 
+/* Contenedor de la sección de botones de login */
+.login__group {
+    margin-top: 25px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.login__text-help {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.login__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Estilo base para los botones de acceso */
+.btn--client, .btn--admin {
+    display: block;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+/*LOGIN*/
+
+/* Estilo del contenedor principal */
+.login__form {
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Inputs */
+.input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+/* EL BOTÓN CON MÁXIMA PRIORIDAD POR ID */
+#boton-ingresar-unico {
+    display: block;
+    width: 100%;
+    padding: 16px 0;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    
+    /* FONDO DEL BOTÓN (Naranja) */
+    background-color: #ff9c34; 
+    
+    /* COLOR DEL TEXTO (Marrón/Naranja muy oscuro) */
+    /* Al usar un ID (#), este color ganará a cualquier clase .btn */
+    color: #ffffff; 
+    
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#boton-ingresar-unico:hover {
+    background-color: #ff8c1a;
+    color: #401d00; /* Texto aún más oscuro al pasar el mouse */
+}
+
+/* Enlace inferior */
+.link-highlight {
+    color: #ff9c34;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*FIN LOGIN*/
+
 /* --- INTERACTIVIDAD CSS --- */
 
 /* Mostrar sidebar si alguna hamburguesa está seleccionada */
