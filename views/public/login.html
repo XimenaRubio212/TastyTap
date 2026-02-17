@@ -50,7 +50,7 @@
     <!-- Contenido principal de la página de tienda -->
     <main>
         <section class="hero">
-            <h2 class="main-title">Bienbenido al Login</h2>
+            <h2 class="main-title">Bienvenido al Login</h2>
             <p>Ingresa tus datos para iniciar sesión y disfrutar del mejor sabor.</p>
         </section>
 
@@ -62,15 +62,17 @@
                     <h3>Iniciar Sesión</h3>
                 </div>
 
-                <form action="#" class="login-form">
+                <form action="../../api/login" method="POST" class="login-form">
                     <div class="input-group">
-                        <label for="email"><i class="fas fa-envelope"></i> Correo Electrónico</label>
-                        <input type="email" id="email" placeholder="ejemplo@correo.com" required>
+                        <label for="email"><i class="fas fa-envelope"></i> Nombre de Usuario</label>
+                        <!-- AGREGADO: name="nombre_login" -->
+                        <input type="text" id="email" name="nombre_login" placeholder="Tu nombre registrado" required>
                     </div>
 
                     <div class="input-group">
                         <label for="password"><i class="fas fa-lock"></i> Contraseña</label>
-                        <input type="password" id="password" placeholder="********" required>
+                        <!-- AGREGADO: name="pass_login" -->
+                        <input type="password" id="password" name="pass_login" placeholder="********" required>
                     </div>
 
                     <div class="form-options">
@@ -78,8 +80,8 @@
                         <a href="#">¿Olvidaste tu contraseña?</a>
                     </div>
 
-                    <!-- Al hacer clic, redirigiría a la tienda o inicio (Simulación) -->
-                    <a href="/views/client/Finalizar-compra.html" class="btn-login-submit">Ingresar</a>
+                    <!-- CORREGIDO: De <a> pasamos a <button type="submit"> para que el JS funcione -->
+                    <button type="submit" class="btn-login-submit">Ingresar</button>
                     
                     <div class="login-footer">
                         <p>¿No tienes una cuenta? <a href="/views/public/registro.html">Regístrate aquí</a></p>
@@ -127,6 +129,8 @@
             <p>✉️ contacto@tastytap.com</p>
         </div>
     </footer>
+
+    <script src="../../js/login.js"></script>
 
 <!-- Cierre del cuerpo de la página -->
 </body>
