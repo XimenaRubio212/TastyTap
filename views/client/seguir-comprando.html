@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TastyTap | Tienda</title>
+    <!-- CSS específico para la Tienda -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- INPUTS OCULTOS (Controlan el estado del carrito sin JS) -->
+    <input type="checkbox" id="burger1" class="cart-control">
+    <input type="checkbox" id="burger2" class="cart-control">
+    <input type="checkbox" id="burger3" class="cart-control">
+    <input type="checkbox" id="burger4" class="cart-control">
+
+    <!-- VENTANA EMERGENTE -->
+    <div class="notice-container">
+        <div class="notice">¡Producto añadido al carrito!</div>
+    </div>
+
+    <header class="navbar">
+        <div class="navbar__logo">
+            <img src="/img/TastyTap.png" alt="Logo TastyTap" style="height: 4rem; vertical-align: middle; margin-right: 10px;">
+            <h1>TastyTap</h1>
+        </div>
+        <nav class="navbar__menu">
+            <!-- Enlace a la página de inicio la clase active se utiliza para resaltar el enlace actual -->
+            <a href="/index.html">Inicio</a>
+            <!-- Enlace a la vista de la tienda, donde se muestran los productos y sus detalles del lugar -->
+            <a href="/views/public/tienda.html">Tienda</a>
+            <a href="/views/client/seguir-comprando.html" class="active">Tienda</a>
+            <!-- Enlace a la vista carrito, donde el usuario solo podra agregar pero no podra comprar,
+            porque al intentar comprar los productos lo va a redireccionar al registro y
+            cuando el cliente se registra lo va a redirigir al login para que ingrese y pueda hacer la compra -->
+            <a href="/views/public/carrito.html">Carrito</a>
+            <!--  Enlace a la vista de login  de sesión para usuarios -->
+            <a href="/views/public/login.html">Cerrar Sesión</a>
+            <!-- se cierra la etiqueta de la barra de navegación -->
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section igual al index para mantener coherencia -->
+        <section class="hero">
+            <h2 class="main-title">¿En donde quieres ir a comer?</h2>
+            <p>Explora los mejores restaurantes de la ciudad y escoge el que mejor se adapte a tus necesidades.</p>
+        </section>
+    </main>
+
+    <main class="store-container">
+        <!-- BARRA LATERAL DE FILTROS -->
+        <aside class="filters-sidebar">
+            <h2 class="filter-title"><i class="fas fa-filter"></i> Filtros</h2>
+            
+            <!-- Filtro por Ubicación -->
+            <div class="filter-group">
+                <h3>Ubicación</h3>
+                <label class="container-check">Bucaramanga
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container-check">Floridablanca
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container-check">Piedecuesta
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container-check">Girón
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+
+            <!-- Filtro por Categoría -->
+            <div class="filter-group">
+                <h3>Tipo de Comida</h3>
+                <label class="container-check">Hamburguesas
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container-check">Pizzas
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container-check">Sushi
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container-check">Pastas
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+
+            <button class="btn-apply">Aplicar Filtros</button>
+        </aside>
+
+        <!-- CONTENIDO DE LA TIENDA -->
+        <section class="store-content">
+            <div class="store-header">
+                <h2>Restaurantes Disponibles</h2>
+                <p>Mostrando resultados para el área metropolitana</p>
+            </div>
+
+            <!-- ... (Inputs ocultos y Header se mantienen igual) ... -->
+
+            <div class="products-grid">
+                <!-- Card 1 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/img/burger.jpg" alt="Hamburguesa">
+                        <span class="price-tag">$22.000</span>
+                    </div>
+                    <div class="product-info">
+                        <div class="category-info">
+                            <span class="tag-city">Bucaramanga</span>
+                            <span class="tag-food">Hamburguesa</span>
+                        </div>
+                        <h3>Camacho's Severa</h3>
+                        <p class="description">Carne artesanal, queso cheddar y vegetales frescos.</p>
+                        <div class="card-footer">
+                            <!-- CAMBIO: button por label -->
+                            <label for="burger1" class="btn-add-cart"><i class="fas fa-shopping-cart"></i> Añadir</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/img/pizza.jpg" alt="Pizza">
+                        <span class="price-tag">$35.000</span>
+                    </div>
+                    <div class="product-info">
+                        <div class="category-info">
+                            <span class="tag-city">Floridablanca</span>
+                            <span class="tag-food">Pizzas</span>
+                        </div>
+                        <h3>Pizzas de la Casa</h3>
+                        <p class="description">Pepperoni premium con borde de queso derretido.</p>
+                        <div class="card-footer">
+                            <label for="burger2" class="btn-add-cart"><i class="fas fa-shopping-cart"></i> Añadir</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/img/Sushi.png" alt="Sushi">
+                        <span class="price-tag">$28.000</span>
+                    </div>
+                    <div class="product-info">
+                        <div class="category-info">
+                            <span class="tag-city">Girón</span>
+                            <span class="tag-food">Sushi</span>
+                        </div>
+                        <h3>Sakura Rolls</h3>
+                        <p class="description">Fusión de salmón fresco con aguacate y salsa anguila.</p>
+                        <div class="card-footer">
+                            <label for="burger3" class="btn-add-cart"><i class="fas fa-shopping-cart"></i> Añadir</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/img/pastas.png" alt="Pastas">
+                        <span class="price-tag">$25.000</span>
+                    </div>
+                    <div class="product-info">
+                        <div class="category-info">
+                            <span class="tag-city">Girón</span>
+                            <span class="tag-food">Pastas</span>
+                        </div>
+                        <h3>Pastas de la Casa</h3>
+                        <p class="description">Fusión de pastas italianas con carne madurada.</p>
+                        <div class="card-footer">
+                            <label for="burger4" class="btn-add-cart"><i class="fas fa-shopping-cart"></i> Añadir</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <aside class="filters-sidebar">
+            <h2 class="filter-title"><i class="fas fa-filter"></i> Filtros</h2>
+            
+            <!-- Filtro por Ubicación -->
+            <div class="filter-group">
+                <h3>Ubicación</h3>
+                <label class="container-check">Bucaramanga
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container-check">Floridablanca
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container-check">Piedecuesta
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container-check">Girón
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+
+            <!-- Filtro por Categoría -->
+            <div class="filter-group">
+                <h3>Tipo de Comida</h3>
+                <label class="container-check">Hamburguesas
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container-check">Pizzas
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container-check">Sushi
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container-check">Pastas
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+
+            <button class="btn-apply">Aplicar Filtros</button>
+        </aside>
+    </main>
+
+    <!-- PANEL LATERAL (RESUMEN CARRITO) -->
+    <aside class="sidebar">
+        <h3>Tu Pedido</h3>
+        <div class="cart-list">
+            <div class="cart-item item-1"><span>Burger Deluxe</span> <b>$25.000</b></div>
+            <div class="cart-item item-2"><span>Burger Vegano</span> <b>$22.000</b></div>
+            <div class="cart-item item-3"><span>Burger BBQ</span> <b>$28.000</b></div>
+            <div class="cart-item item-4"><span>Burger con Queso</span> <b>$24.000</b></div>
+        </div>
+        <a href="/views/public/carrito.html" class="btn-checkout">Realizar Compra</a>
+        <p class="hint">Toca el producto de nuevo para quitarlo</p>
+    </aside>
+
+    <!-- PIE DE PÁGINA (Footer unificado) -->
+    <footer>
+        <!-- Columna de recomendaciones -->
+        <div class="footer-col">
+            <h4>Restaurantes Top</h4>
+            <ul>
+                <li>Camachos</li>
+                <li>Domino's</li>
+                <li>KFC</li>
+                <li>Mc Donald's</li>
+            </ul>
+        </div>
+        <!-- Columna para socios -->
+        <div class="footer-col">
+            <h4>Únete a Tasty Tap</h4>
+            <ul>
+                <li>Registra tu restaurante</li>
+                <li>Registra tu local</li>
+                <li>Promociona tu negocio</li>
+            </ul>
+        </div>
+        <!-- Columna de redes sociales -->
+        <div class="footer-col">
+            <h4>Síguenos</h4>
+            <div class="socials">
+                <i class="fab fa-facebook"></i> Facebook<br>
+                <i class="fab fa-instagram"></i> Instagram<br>
+                <i class="fab fa-tiktok"></i> TikTok
+            </div>
+        </div>
+        <!-- Columna de contacto físico/digital -->
+        <div class="footer-col">
+            <h4>Contacto</h4>
+            <p>📍 Calle 123 #45-67, Bogotá, Colombia</p>
+            <p>📞 +57 320 555 1234</p>
+            <p>✉️ contacto@tastytap.com</p>
+        </div>
+    </footer>
+
+</body>
+</html>

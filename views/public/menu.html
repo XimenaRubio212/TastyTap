@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TastyTap | Menú del Área Metropolitana</title>
+    <!-- CSS específico para el Menú -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="navbar__logo">
+            <img src="/img/TastyTap.png" alt="Logo TastyTap" style="height: 4rem; vertical-align: middle; margin-right: 10px;">
+            <h1>TastyTap</h1>
+        </div>
+        <nav class="navbar__menu">
+            <a href="/index.html">Inicio</a>
+            <a href="/views/public/menu.html" class="active">Menú</a>
+            <a href="/views/public/tienda.html">Tienda</a>
+            <a href="/views/public/carrito.html">Carrito</a>
+            <a href="/views/public/login.html">Login</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section igual al index para mantener coherencia -->
+        <section class="hero">
+            <h2 class="main-title">¿Qué se te antoja hoy?</h2>
+            <p>Explora nuestras categorías y encuentra el sabor perfecto para tu momento.</p>
+        </section>
+
+        <!-- Sección Top 4 Área Metropolitana -->
+        <section class="top-area">
+            <h2 class="section-subtitle">Top 4: Las mejores sabores en el Área Metropolitana</h2>
+            
+            <div class="menu-grid">
+                
+                <!-- CARD 1: BUCARAMANGA (Camachos) -->
+                <div class="card-horizontal">
+                    <div class="card-body">
+                        <div class="card-image">
+                            <img src="/img/burger.jpg" alt="Bucaramanga">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3>Camacho's Severa Burger</h3>
+                                <span class="badge bga">Bucaramanga</span>
+                            </div>
+                            <p class="description">Carne de res premium 150g, queso cheddar y pan artesanal. El ícono de la ciudad.</p>
+                            <div class="place-details">
+                                <p><i class="fas fa-map-marker-alt"></i> Cabecera del Llano</p>
+                                <p><i class="fas fa-phone"></i> +57 315 456 7890</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="/views/public/carrito.html" class="btn-link">Agregar al carrito</a>
+                    </div>
+                </div>
+
+                <!-- CARD 2: FLORIDABLANCA -->
+                <div class="card-horizontal">
+                    <div class="card-body">
+                        <div class="card-image">
+                            <img src="/img/pizza.jpg" alt="Floridablanca">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3>Domino's Pizza La Piccolina</h3>
+                                <span class="badge florida">Floridablanca</span>
+                            </div>
+                            <p class="description">Auténtica pizza italiana en horno de leña con ingredientes frescos de la región.</p>
+                            <div class="place-details">
+                                <p><i class="fas fa-map-marker-alt"></i> Cañaveral, Floridablanca</p>
+                                <p><i class="fas fa-phone"></i> +57 320 888 9900</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="/views/public/carrito.html" class="btn-link">Agregar al carrito</a>
+                    </div>
+                </div>
+
+                <!-- CARD 3: PIEDECUESTA -->
+                <div class="card-horizontal">
+                    <div class="card-body">
+                        <div class="card-image">
+                            <img src="/img/pastas.png" alt="Piedecuesta">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3>Parrilla La Mansión</h3>
+                                <span class="badge piede">Piedecuesta</span>
+                            </div>
+                            <p class="description">Especialistas en cortes de carne madurados y platos típicos santandereanos.</p>
+                            <div class="place-details">
+                                <p><i class="fas fa-map-marker-alt"></i> Sector Guatiguará</p>
+                                <p><i class="fas fa-phone"></i> +57 300 222 3344</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="/views/public/carrito.html" class="btn-link">Agregar al carrito</a>
+                    </div>
+                </div>
+
+                <!-- CARD 4: GIRÓN -->
+                <div class="card-horizontal">
+                    <div class="card-body">
+                        <div class="card-image">
+                            <img src="/img/sushi.png" alt="Girón">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3>Portal del Sabor</h3>
+                                <span class="badge giron">Girón</span>
+                            </div>
+                            <p class="description">Fusión de comida internacional en el corazón del Monumento Nacional.</p>
+                            <div class="place-details">
+                                <p><i class="fas fa-map-marker-alt"></i> Casco Antiguo, Girón</p>
+                                <p><i class="fas fa-phone"></i> +57 310 555 6677</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="/views/public/carrito.html" class="btn-link">Agregar al carrito</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+ <!-- PIE DE PÁGINA (Footer unificado) -->
+    <footer>
+        <!-- Columna de recomendaciones -->
+        <div class="footer-col">
+            <h4>Restaurantes Top</h4>
+            <ul>
+                <li>Camachos</li>
+                <li>Domino's</li>
+                <li>KFC</li>
+                <li>Mc Donald's</li>
+            </ul>
+        </div>
+        <!-- Columna para socios -->
+        <div class="footer-col">
+            <h4>Únete a Tasty Tap</h4>
+            <ul>
+                <li>Registra tu restaurante</li>
+                <li>Registra tu local</li>
+                <li>Promociona tu negocio</li>
+            </ul>
+        </div>
+        <!-- Columna de redes sociales -->
+        <div class="footer-col">
+            <h4>Síguenos</h4>
+            <div class="socials">
+                <i class="fab fa-facebook"></i> Facebook<br>
+                <i class="fab fa-instagram"></i> Instagram<br>
+                <i class="fab fa-tiktok"></i> TikTok
+            </div>
+        </div>
+        <!-- Columna de contacto físico/digital -->
+        <div class="footer-col">
+            <h4>Contacto</h4>
+            <p>📍 Calle 123 #45-67, Bogotá, Colombia</p>
+            <p>📞 +57 320 555 1234</p>
+            <p>✉️ contacto@tastytap.com</p>
+        </div>
+    </footer>
+
+</body>
+</html>

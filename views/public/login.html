@@ -9,7 +9,7 @@
     <!-- Etiqueta para configurar la vista del dispositivo, esto permite que la página se adapte a diferentes dispositivos -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Etiqueta para establecer el título de la página -->
-    <title>TastyTap | Inicio</title>
+    <title>TastyTap | Login</title>
     <!-- Importación de estilos base y variables para la primera vista que ve el usuario -->
     <link rel="stylesheet" href="/css/style.css">
     <!-- Importación de iconos de Font Awesome del los iconos del footer -->
@@ -32,7 +32,7 @@
         <!-- menú de navegación con enlaces a las secciones de usuario logueado -->
         <nav class="navbar__menu">
             <!-- Enlace a la página de inicio la clase active se utiliza para resaltar el enlace actual -->
-            <a href="/index.html" class="active">Inicio</a>
+            <a href="/index.html">Inicio</a>
             <!-- Enlace a la vista de menu de productos disponibles -->
             <a href="/views/public/menu.html">Menú</a>
             <!-- Enlace a la vista de la tienda, donde se muestran los productos y sus detalles del lugar -->
@@ -42,52 +42,50 @@
             cuando el cliente se registra lo va a redirigir al login para que ingrese y pueda hacer la compra -->
             <a href="/views/public/carrito.html">Carrito</a>
             <!--  Enlace a la vista de login  de sesión para usuarios -->
-            <a href="/views/public/login.html">Login</a>
+            <a href="/views/public/login.html" class="active">Login</a>
             <!-- se cierra la etiqueta de la barra de navegación -->
         </nav>
     </header>
 
     <!-- Contenido principal de la página de tienda -->
     <main>
-        <!-- Sección de encabezado de la tienda con título persuasivo -->
         <section class="hero">
-            <h2 class="main-title">¡OFERTA DE FIN DE SEMANA!</h2>
-            <h1>Combo Camachero</h1>
-            <p>Disfruta denuestra <strong>Severa Burger</strong> + Papas Caseras + Bebida fría.</p>
+            <h2 class="main-title">Bienbenido al Login</h2>
+            <p>Ingresa tus datos para iniciar sesión y disfrutar del mejor sabor.</p>
         </section>
 
-        <!-- Contenedor en formato cuadrícula para organizar las categorías de comida -->
-        <section class="product-grid">
-            <!-- Tarjeta Horizontal: Camachos -->
-            <div class="card card--horizontal">
-                <!-- Contenedor superior (Imagen + Info) -->
-                <div class="card-body">
-                    <div class="card-image">
-                        <img src="/img/camachos.png" alt="Camachos Logo">
-                    </div>
-                    
-                    <div class="card-content">
-                        <div class="card-header">
-                            <h3>Camachos - Hamburguesa</h3>
-                            <span class="badge">Artesanal</span>
-                        </div>
-                        <p class="description">Carne de res premium 150g, queso cheddar fundido, tocineta ahumada, papas caseras, bebida fría y pan brioche artesanal.</p>
-                        
-                        <div class="place-details">
-                            <p><i class="fas fa-map-marker-alt"></i> Cabecera, Bucaramanga</p>
-                            <p><i class="fas fa-phone"></i> +57 315 456 7890</p>
-                        </div>
-                    </div>
+        <!-- Contenedor del Formulario -->
+        <section class="login-section">
+            <div class="login-card">
+                <div class="login-header">
+                    <i class="fas fa-user-circle"></i>
+                    <h3>Iniciar Sesión</h3>
                 </div>
 
-                <!-- Botón en la parte inferior -->
-                <div class="card-footer">
-                    <a href="https://grupocamachos.com/menu/" target="_blank" class="btn-link">
-                        <i class="fas fa-globe"></i> Visitar sitio web
-                    </a>
-                </div>
+                <form action="#" class="login-form">
+                    <div class="input-group">
+                        <label for="email"><i class="fas fa-envelope"></i> Correo Electrónico</label>
+                        <input type="email" id="email" placeholder="ejemplo@correo.com" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="password"><i class="fas fa-lock"></i> Contraseña</label>
+                        <input type="password" id="password" placeholder="********" required>
+                    </div>
+
+                    <div class="form-options">
+                        <label><input type="checkbox"> Recordarme</label>
+                        <a href="#">¿Olvidaste tu contraseña?</a>
+                    </div>
+
+                    <!-- Al hacer clic, redirigiría a la tienda o inicio (Simulación) -->
+                    <a href="/views/client/Finalizar-compra.html" class="btn-login-submit">Ingresar</a>
+                    
+                    <div class="login-footer">
+                        <p>¿No tienes una cuenta? <a href="/views/public/registro.html">Regístrate aquí</a></p>
+                    </div>
+                </form>
             </div>
-            <!-- Cierre de la sección de cuadrícula de productos -->
         </section>
     </main>
 

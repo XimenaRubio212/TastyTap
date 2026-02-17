@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TastyTap | Tienda</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="navbar__logo">
+            <img src="/img/TastyTap.png" alt="Logo TastyTap" style="height: 4rem; vertical-align: middle; margin-right: 10px;">
+            <h1>TastyTap</h1>
+        </div>
+        <nav class="navbar__menu">
+            <a href="/index.html">Inicio</a>
+            <a href="/views/public/menu.html">Menú</a>
+            <a href="/views/public/tienda.html" class="active">Tienda</a>
+            <a href="/views/public/carrito.html">Carrito</a>
+            <a href="/views/public/login.html">Login</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2 class="main-title">¿En donde quieres ir a comer?</h2>
+            <p>Explora los mejores restaurantes de la ciudad y escoge el que mejor se adapte a tus necesidades.</p>
+        </section>
+    </main>
+
+    <main class="store-container">
+        <!-- BARRA LATERAL DE FILTROS -->
+        <aside class="filters-sidebar">
+            <h2 class="filter-title"><i class="fas fa-filter"></i> Filtros</h2>
+            <div class="filter-group">
+                <h3>Ubicación</h3>
+                <label class="container-check">Bucaramanga
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container-check">Floridablanca
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container-check">Piedecuesta
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container-check">Girón
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+
+            <div class="filter-group">
+                <h3>Tipo de Comida</h3>
+                <label class="container-check">Hamburguesas
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container-check">Pizzas
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container-check">Sushi
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container-check">Pastas
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            <button class="btn-apply">Aplicar Filtros</button>
+        </aside>
+
+        <!-- CONTENIDO DE LA TIENDA -->
+        <section class="store-content">
+            <div class="store-header">
+                <h2>Explora por Ubicación</h2>
+                <p>Selecciona tu ciudad para ver los restaurantes disponibles cerca de ti</p>
+            </div>
+
+            <div class="products-grid">
+                <!-- Card 1: Bucaramanga -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/img/bucaramanga.png" alt="Bucaramanga">
+                        <span class="price-tag">BGA</span>
+                    </div>
+                    <div class="product-info">
+                        <div class="category-info">
+                            <span class="tag-city">Santander</span>
+                            <span class="tag-food">Ciudad Bonita</span>
+                        </div>
+                        <h3>Bucaramanga</h3>
+                        <p class="description">Descubre la mayor variedad gastronómica en el corazón de la ciudad.</p>
+                        <div class="card-footer">
+                            <a href="#" class="btn-explore"><i class="fas fa-search-location"></i> Explorar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Floridablanca -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/img/floridablanca.png" alt="Floridablanca">
+                        <span class="price-tag">FLR</span>
+                    </div>
+                    <div class="product-info">
+                        <div class="category-info">
+                            <span class="tag-city">Santander</span>
+                            <span class="tag-food">Ciudad Dulce</span>
+                        </div>
+                        <h3>Floridablanca</h3>
+                        <p class="description">Los mejores postres y comidas rápidas en la zona metropolitana.</p>
+                        <div class="card-footer">
+                            <a href="#" class="btn-explore"><i class="fas fa-search-location"></i> Explorar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Piedecuesta -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/img/piedecuesta.png" alt="Piedecuesta">
+                        <span class="price-tag">PDC</span>
+                    </div>
+                    <div class="product-info">
+                        <div class="category-info">
+                            <span class="tag-city">Santander</span>
+                            <span class="tag-food">Ciudad Garrotera</span>
+                        </div>
+                        <h3>Piedecuesta</h3>
+                        <p class="description">Explora sabores tradicionales rodeados de naturaleza.</p>
+                        <div class="card-footer">
+                            <a href="#" class="btn-explore"><i class="fas fa-search-location"></i> Explorar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Girón -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/img/giron.png" alt="Girón">
+                        <span class="price-tag">GRN</span>
+                    </div>
+                    <div class="product-info">
+                        <div class="category-info">
+                            <span class="tag-city">Santander</span>
+                            <span class="tag-food">Monumento Nacional</span>
+                        </div>
+                        <h3>Girón</h3>
+                        <p class="description">Sabores coloniales y comida típica en el pueblo histórico.</p>
+                        <div class="card-footer">
+                            <a href="#" class="btn-explore"><i class="fas fa-search-location"></i> Explorar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA (Footer unificado) -->
+    <footer>
+        <!-- Columna de recomendaciones -->
+        <div class="footer-col">
+            <h4>Restaurantes Top</h4>
+            <ul>
+                <li>Camachos</li>
+                <li>Domino's</li>
+                <li>KFC</li>
+                <li>Mc Donald's</li>
+            </ul>
+        </div>
+        <!-- Columna para socios -->
+        <div class="footer-col">
+            <h4>Únete a Tasty Tap</h4>
+            <ul>
+                <li>Registra tu restaurante</li>
+                <li>Registra tu local</li>
+                <li>Promociona tu negocio</li>
+            </ul>
+        </div>
+        <!-- Columna de redes sociales -->
+        <div class="footer-col">
+            <h4>Síguenos</h4>
+            <div class="socials">
+                <i class="fab fa-facebook"></i> Facebook<br>
+                <i class="fab fa-instagram"></i> Instagram<br>
+                <i class="fab fa-tiktok"></i> TikTok
+            </div>
+        </div>
+        <!-- Columna de contacto físico/digital -->
+        <div class="footer-col">
+            <h4>Contacto</h4>
+            <p>📍 Calle 123 #45-67, Bogotá, Colombia</p>
+            <p>📞 +57 320 555 1234</p>
+            <p>✉️ contacto@tastytap.com</p>
+        </div>
+    </footer>
+
+</body>
+</html>

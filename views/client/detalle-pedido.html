@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TastyTap | Detalles del Pedido</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="navbar__logo">
+            <img src="/img/TastyTap.png" alt="Logo TastyTap" style="height: 4rem; vertical-align: middle; margin-right: 10px;">
+            <h1>TastyTap</h1>
+        </div>
+        <nav class="navbar__menu">
+            <a href="/views/client/historial.html">Volver al Historial</a>
+            <a href="/views/client/perfil.html">Perfil</a>
+        </nav>
+    </header>
+
+    <main class="details-container">
+        <!-- Título y Estado rápido -->
+        <div class="details-header">
+            <a href="/views/client/historial.html" class="back-link"><i class="fas fa-arrow-left"></i> Volver</a>
+            <h1>Detalles del Pedido #TT-88291</h1>
+            <span class="badge-status preparing">En preparación</span>
+        </div>
+
+        <div class="details-grid">
+            <!-- COLUMNA IZQUIERDA: Seguimiento y Productos -->
+            <div class="col-main">
+                <!-- Línea de tiempo de seguimiento -->
+                <section class="card timeline-section">
+                    <h3>Seguimiento en tiempo real</h3>
+                    <div class="timeline">
+                        <div class="timeline-item completed">
+                            <i class="fas fa-check-circle"></i>
+                            <div class="text">
+                                <strong>Pedido Recibido</strong>
+                                <span>14:30 PM</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item active">
+                            <i class="fas fa-utensils"></i>
+                            <div class="text">
+                                <strong>En preparación</strong>
+                                <span>El restaurante está cocinando tu pedido</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item upcoming">
+                            <i class="fas fa-bicycle"></i>
+                            <div class="text">
+                                <strong>En camino</strong>
+                                <span>Próximamente</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Desglose de productos -->
+                <section class="card items-section">
+                    <h3>Tu Pedido</h3>
+                    <div class="order-item-detail">
+                        <div class="item-info">
+                            <strong>1x Hamburguesa Doble Carne</strong>
+                            <p>- Sin cebolla, extra queso cheddar</p>
+                        </div>
+                        <span class="price">$18.900</span>
+                    </div>
+                    <div class="order-item-detail">
+                        <div class="item-info">
+                            <strong>1x Papas Medianas</strong>
+                            <p>- Con sal de limón</p>
+                        </div>
+                        <span class="price">$6.000</span>
+                    </div>
+                    <div class="order-item-detail">
+                        <div class="item-info">
+                            <strong>1x Soda de la Casa</strong>
+                            <p>- Sabor Frutos Rojos</p>
+                        </div>
+                        <span class="price">$5.000</span>
+                    </div>
+                </section>
+            </div>
+
+            <!-- COLUMNA DERECHA: Información de entrega y Recibo -->
+            <aside class="col-sidebar">
+                <!-- Información de Domicilio y Contacto -->
+                <section class="card info-card">
+                    <h3>Entrega</h3>
+                    <div class="info-group">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Dirección</strong>
+                            <p>Calle 123 #45-67, Edificio El Roble, Apto 501, Medellín</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="info-group">
+                        <i class="fas fa-user"></i>
+                        <div>
+                            <strong>Repartidor</strong>
+                            <p>Juan Pérez (En camino)</p>
+                            <strong>Tel.: 123-456-789</strong>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Recibo Financiero -->
+                <section class="card summary-card">
+                    <h3>Resumen de Pago</h3>
+                    <div class="fee-row">
+                        <span>Subtotal productos</span>
+                        <span>$24.900</span>
+                    </div>
+                    <div class="fee-row">
+                        <span>Costo de envío</span>
+                        <span>$4.000</span>
+                    </div>
+                    <div class="fee-row">
+                        <span>Tarifa de servicio</span>
+                        <span>$1.000</span>
+                    </div>
+                    <div class="fee-row total-row">
+                        <span>Total Pagado</span>
+                        <span>$29.900</span>
+                    </div>
+                    <p class="method-tag"><i class="fas fa-university"></i> Pagado vía Transferencia</p>
+                    
+                    <div class="action-buttons">
+                        <button class="btn-secondary-outline"><i class="fas fa-file-invoice"></i> Descargar Factura</button>
+                    </div>
+                </section>
+            </aside>
+        </div>
+    </main>
+
+<!-- PIE DE PÁGINA (Footer unificado) -->
+    <footer>
+        <!-- Columna de recomendaciones -->
+        <div class="footer-col">
+            <h4>Restaurantes Top</h4>
+            <ul>
+                <li>Camachos</li>
+                <li>Domino's</li>
+                <li>KFC</li>
+                <li>Mc Donald's</li>
+            </ul>
+        </div>
+        <!-- Columna para socios -->
+        <div class="footer-col">
+            <h4>Únete a Tasty Tap</h4>
+            <ul>
+                <li>Registra tu restaurante</li>
+                <li>Registra tu local</li>
+                <li>Promociona tu negocio</li>
+            </ul>
+        </div>
+        <!-- Columna de redes sociales -->
+        <div class="footer-col">
+            <h4>Síguenos</h4>
+            <div class="socials">
+                <i class="fab fa-facebook"></i> Facebook<br>
+                <i class="fab fa-instagram"></i> Instagram<br>
+                <i class="fab fa-tiktok"></i> TikTok
+            </div>
+        </div>
+        <!-- Columna de contacto físico/digital -->
+        <div class="footer-col">
+            <h4>Contacto</h4>
+            <p>📍 Calle 123 #45-67, Bogotá, Colombia</p>
+            <p>📞 +57 320 555 1234</p>
+            <p>✉️ contacto@tastytap.com</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!-- se declara el tipo de documento como HTML5, asegurando que el navegador lo reconozca -->
+<!DOCTYPE html>
+<!-- Etiqueta del documento que indica el idioma de la página -->
+<html lang="es">
+<!-- Etiqueta de cabecera del documento -->
+<head>
+    <!-- Sección de metadatos e importaciones que no se ven directamente en la página -->
+    <meta charset="UTF-8">
+    <!-- Etiqueta para configurar la vista del dispositivo, esto permite que la página se adapte a diferentes dispositivos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Etiqueta para establecer el título de la página -->
+    <title>TastyTap | Finalizar </title>
+    <!-- Importación de estilos base y variables para la primera vista que ve el usuario -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- Importación de iconos de Font Awesome del los iconos del footer -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- Se cierra la etiqueta de cabecera del documento -->
+</head>
+
+<!-- este es el cuerpo del documento que contiene todo el contenido que el usuario ve -->
+<body>
+
+    <!-- barra de navegación superior estática que contiene el logo y el menú principal -->
+    <header class="navbar">
+        <!-- logo de la barra de navegación -->
+        <div class="navbar__logo">
+            <!-- imagen del logo con su respectivo texto alternativo -->
+            <img src="/img/TastyTap.png" alt="Logo TastyTap" style="height: 4rem; vertical-align: middle; margin-right: 10px;">
+            <!-- nombre de la marca como encabezado -->
+            <h1>TastyTap</h1>
+        </div>
+        <!-- menú de navegación con enlaces a las secciones de usuario logueado -->
+        <nav class="navbar__menu">
+            <!-- Enlace a la página de inicio la clase active se utiliza para resaltar el enlace actual -->
+            <a href="/index.html">Inicio</a>
+            <!-- Enlace a la vista de menu de productos disponibles -->
+            <a href="/views/public/menu.html">Menú</a>
+            <!-- Enlace a la vista de la tienda, donde se muestran los productos y sus detalles del lugar -->
+            <a href="/views/public/tienda.html">Tienda</a>
+            <a href="/views/client/perfil.html">Perfil</a>
+            <a href="/views/client/historial.html">Historial</a>
+            <!-- se cierra la etiqueta de la barra de navegación -->
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="checkout-grid" id="main-checkout">
+            <!-- Columna Izquierda: Resumen -->
+            <section class="order-section">
+                <h2>Tu Pedido</h2>
+                <div class="item-list" id="cart-items">
+                    <!-- Los productos se cargan aquí -->
+                    <div class="item">
+                        <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=100" alt="comida">
+                        <div class="details">
+                            <p class="name">Hamburguesa Doble Carne</p>
+                            <p class="city">Sede: Medellín</p>
+                            <p class="price">$25.900</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="" class="btn-back"> <i class="fas fa-plus"></i> Agregar más productos</a>
+            </section>
+
+            <!-- Columna Derecha: Pago -->
+            <section class="payment-section">
+                <h2>Método de Pago</h2>
+                <div class="payment-option active">
+                    <input type="radio" checked>
+                    <div class="option-info">
+                        <i class="fas fa-university"></i>
+                        <span>Transferencia Bancaria (Nequi / Daviplata / Bancolombia)</span>
+                    </div>
+                </div>
+
+                <div class="bank-details">
+                    <p>Realiza tu transferencia a la cuenta:</p>
+                    <strong>Ahorros Bancolombia: 123-456789-01</strong>
+                    <p>Una vez realizada, el sistema verificará tu pago automáticamente.</p>
+                </div>
+
+                <div class="summary-box">
+                    <div class="row"><span>Subtotal:</span><span>$25.900</span></div>
+                    <div class="row"><span>Domicilio:</span><span>$4.000</span></div>
+                    <hr>
+                    <div class="row total"><span>Total:</span><span>$29.900</span></div>
+                    
+                    <button class="btn-pay" onclick="procesarPago()">
+                        Finalizar Compra y Pagar
+                    </button>
+                </div>
+            </section>
+        </div>
+
+        <!-- Pantalla de Éxito (Oculta por defecto) -->
+        <div id="success-screen" class="success-container" style="display: none;">
+            <div class="success-card">
+                <div class="check-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h1>¡Pago Realizado con Éxito!</h1>
+                <p>Tu transferencia ha sido recibida correctamente.</p>
+                <div class="order-number">Pedido #TT-88291</div>
+                <p>Estamos preparando tu comida. Te enviaremos una notificación cuando el domiciliario esté en camino.</p>
+                <button class="btn-pay" onclick="window.location.href='index.html'">Volver al Inicio</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function procesarPago() {
+            // Simulamos una carga de procesamiento
+            const btn = document.querySelector('.btn-pay');
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Procesando...';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                document.getElementById('main-checkout').style.display = 'none';
+                document.getElementById('success-screen').style.display = 'flex';
+                // Aquí podrías limpiar el localStorage si usas carrito real
+                localStorage.removeItem('cart');
+            }, 2000);
+        }
+    </script>
+
+    <!-- PIE DE PÁGINA (Footer unificado) -->
+    <footer>
+        <!-- Columna de recomendaciones -->
+        <div class="footer-col">
+            <h4>Restaurantes Top</h4>
+            <ul>
+                <li>Camachos</li>
+                <li>Domino's</li>
+                <li>KFC</li>
+                <li>Mc Donald's</li>
+            </ul>
+        </div>
+        <!-- Columna para socios -->
+        <div class="footer-col">
+            <h4>Únete a Tasty Tap</h4>
+            <ul>
+                <li>Registra tu restaurante</li>
+                <li>Registra tu local</li>
+                <li>Promociona tu negocio</li>
+            </ul>
+        </div>
+        <!-- Columna de redes sociales -->
+        <div class="footer-col">
+            <h4>Síguenos</h4>
+            <div class="socials">
+                <i class="fab fa-facebook"></i> Facebook<br>
+                <i class="fab fa-instagram"></i> Instagram<br>
+                <i class="fab fa-tiktok"></i> TikTok
+            </div>
+        </div>
+        <!-- Columna de contacto físico/digital -->
+        <div class="footer-col">
+            <h4>Contacto</h4>
+            <p>📍 Calle 123 #45-67, Bogotá, Colombia</p>
+            <p>📞 +57 320 555 1234</p>
+            <p>✉️ contacto@tastytap.com</p>
+        </div>
+    </footer>
+
+</body>
+</html>

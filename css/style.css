@@ -1,717 +1,313 @@
+@import url('/css/public/menu.css');
+@import url('/css/public/tienda.css');
+@import url('/css/public/carrito.css');
+@import url('/css/public/login.css');
+@import url('/css/public/registro.css');
+@import url('/css/public/detalle-producto.css');
+@import url('/css/client/Finalizar-compra.css');
+@import url('/css/client/historial-cliente.css');
+@import url('/css/client/detalle-pedido.css');
 
-  /*ACTUALIZADO*/
-@import url('utils/base.css');
-@import url('components/button.css');
-@import url('components/card.css');
-@import url('components/input.css');
-@import url('utils/estilo.css');
-@import url('view/profile.css');
-/* tener cuidado con la carpeta admin del archivo style.css */
-/* @import url('admin/style.css');
-@import url('admin/panelControl.css'); */
-/* se agrego esto para el admin */
-/* @import url('admin/gestion.css');  */
 
-/* Reset básico para consistencia */
+/* VARIABLES Y CONFIGURACIÓN BÁSICA */
+:root {
+    --primary-color: #ff6b6b;    /* Rojo suave para comida */
+    --secondary-color: #4ecdc4;  /* Color de acento */
+    --dark-color: #2d3436;       /* Gris muy oscuro para textos */
+    --light-bg: #f9f9f9;         /* Fondo gris claro */
+    --white: #ffffff;
+    --transition: all 0.3s ease;
+}
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Fundamental para que los tamaños sean iguales en todo lado */
-}
-
-html, body {
-    width: 100%;
-    overflow-x: hidden; /* Evita scrolls horizontales inesperados */
-}
-
-/* ==== NUEVO CODIGO PARA LA HAMBURGUESA.HTML ==== */
-
-/* --- RESET Y BASE --- */
-* {
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    margin: 0;
-    background-color: #fdfdfd;
-    color: #333;
-    overflow-x: hidden;
+    background-color: var(--light-bg);
+    color: var(--dark-color);
+    line-height: 1.6;
 }
+ 
+/*INDEX.HTML  Y LO QUE ES LA BARRA DE NAVEGACIÓN, EL FOOTER, 
+MEDIA QUERIES SE  REUTILIZAN DESDE AQUI IMPORTANDOLAS*/
 
-/* --- HEADER --- */
-header {
-    background-color: #ef8d4d;
-    padding: 1rem 4rem;
+/* BARRA DE NAVEGACIÓN (NAVBAR) */
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: white;
-}
-
-.logo { font-size: 1.5rem; font-weight: bold; }
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
-    font-size: 0.9rem;
-    opacity: 0.9;
-}
-
-nav a.active { 
-  border-bottom: 2px solid white; 
-  padding-bottom: 3px; 
-  opacity: 1; 
-}
-
-/* --- CONTENIDO PRINCIPAL --- */
-.main-title {
-    text-align: center;
-    color: #d35400;
-    margin: 3rem 0;
-    font-size: 1.8rem;
-}
-
-.product-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    padding: 0 2rem 5rem 2rem;
-}
-
-/* --- TARJETAS --- */
-.card {
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-    width: 280px;
-    overflow: hidden;
-    transition: transform 0.3s;
-}
-
-.card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-
-.card-content {
-    padding: 1.5rem;
-    text-align: center;
-}
-
-.card h3 { 
-  color: #8b4513; 
-  margin: 0 0 10px 0; 
-}
-
-.info { 
-  font-size: 0.75rem; 
-  color: #777; 
-  margin: 4px 0; 
-}
-
-.price { 
-  color: #ef8d4d; 
-  font-weight: bold; 
-  font-size: 1.2rem; 
-  display: block; 
-  margin: 15px 0; 
-}
-
-.btn-add {
-    background-color: #f39c12;
-    color: white;
-    padding: 10px 25px;
-    border-radius: 8px;
-    cursor: pointer;
-    display: inline-block;
-    font-weight: bold;
-    transition: background 0.3s;
-}
-
-.btn-add:hover { 
-  background-color: #e67e22; 
-}
-
-.promo {
-  /* Rojo intenso para llamar la atención */
-  color: #d32f2f; 
-  font-weight: bold;
-  margin: 10px 0;
-  font-size: 1.1rem;
-}
-
-/* --- LÓGICA DEL CARRITO (CHECKBOX HACK) --- */
-.cart-control { 
-  display: none; 
-}
-
-/* Sidebar */
-.sidebar {
-    position: fixed;
-    /* Escondida */
-    right: -320px; 
-    top: 80px;
-    width: 280px;
-    background: white;
-    box-shadow: -10px 0 30px rgba(0,0,0,0.1);
-    padding: 2rem;
-    border-radius: 20px 0 0 20px;
-    transition: right 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    z-index: 100;
-    border-left: 6px solid #ef8d4d;
-}
-
-.sidebar h3 { 
-  margin-top: 0; 
-  border-bottom: 1px solid #eee; 
-  padding-bottom: 10px; 
-}
-
-.cart-item {
-  /* Oculto por defecto */
-    display: none; 
-    font-size: 0.9rem;
-    margin-bottom: 12px;
-    justify-content: space-between;
-}
-
-.cart-item b { 
-  color: #ef8d4d; 
-}
-
-/* Ventana Emergente (Toast) */
-.notice-container {
-    position: fixed;
-    top: -100px;
-    left: 50%;
-    transform: translateX(-50%);
+    padding: 1rem 5%;
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
     z-index: 1000;
-    transition: top 0.5s;
 }
 
-.notice {
-    background-color: #2ecc71;
-    color: white;
-    padding: 1rem 2rem;
-    border-radius: 50px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+.navbar__logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar__logo h1 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
     font-weight: bold;
 }
 
-/* Contenedor de la sección de botones de login */
-.login__group {
-    margin-top: 25px;
-    border-top: 1px solid #eee;
-    padding-top: 15px;
+.navbar__menu a {
+    text-decoration: none;
+    color: var(--dark-color);
+    margin-left: 20px;
+    font-weight: 500;
+    transition: var(--transition);
 }
 
-.login__text-help {
+.navbar__menu a:hover, .navbar__menu a.active {
+    color: var(--primary-color);
+}
+
+/* =========================================
+   SECCIÓN HERO (BANNER PRINCIPAL)
+   ========================================= */
+.hero {
     text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), 
+                url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+.main-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: var(--dark-color);
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* =========================================
+   CUADRÍCULA DE PRODUCTOS (CARDS)
+   ========================================= */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 40px 5%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* --- Ajustes en las tarjetas (Cards) --- */
+
+/* Contenedor principal de la card */
+.card--horizontal {
+    display: flex;
+    flex-direction: column; /* Alineación vertical para que el footer quede abajo */
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    max-width: 900px; /* Ancho máximo sugerido */
+    margin: 20px auto;
+    overflow: hidden;
+    border: 1px solid #eee;
+}
+
+/* Cuerpo de la card (Imagen al lado de la info) */
+.card-body {
+    display: flex;
+    flex-direction: row; /* Aquí ocurre la magia de ponerlos al lado */
+    padding: 20px;
+    align-items: center; /* Alinea verticalmente al centro */
+}
+
+/* Contenedor de la imagen */
+.card-image {
+    flex: 0 0 200px; /* Ancho fijo para el área de la imagen */
+    margin-right: 25px;
+}
+
+.card-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Para que el logo no se corte */
+}
+
+/* Contenedor de la información */
+.card-content {
+    flex: 1; /* Ocupa el resto del espacio disponible */
+    text-align: left;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.card-header h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.description {
     font-size: 0.9rem;
     color: #666;
     margin-bottom: 15px;
 }
 
-.login__buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+.place-details {
+    border-top: 1px solid #f2f2f2;
+    padding-top: 10px;
 }
 
-/* Estilo base para los botones de acceso */
-.btn--client, .btn--admin {
-    display: block;
-    text-align: center;
-    padding: 12px;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: transform 0.2s, background-color 0.2s;
-}
-
-/*LOGIN*/
-
-/* Estilo del contenedor principal */
-.login__form {
-    max-width: 400px;
-    margin: 60px auto;
-    padding: 30px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-
-/* Inputs */
-.input {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    box-sizing: border-box;
-}
-
-/* EL BOTÓN CON MÁXIMA PRIORIDAD POR ID */
-#boton-ingresar-unico {
-    display: block;
-    width: 100%;
-    padding: 16px 0;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    font-size: 1.1rem;
-    
-    /* FONDO DEL BOTÓN (Naranja) */
-    background-color: #ff9c34; 
-    
-    /* COLOR DEL TEXTO (Marrón/Naranja muy oscuro) */
-    /* Al usar un ID (#), este color ganará a cualquier clase .btn */
-    color: #ffffff; 
-    
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-#boton-ingresar-unico:hover {
-    background-color: #ff8c1a;
-    color: #401d00; /* Texto aún más oscuro al pasar el mouse */
-}
-
-/* Enlace inferior */
-.link-highlight {
-    color: #ff9c34;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/*FIN LOGIN*/
-
-/* --- INTERACTIVIDAD CSS --- */
-
-/* Mostrar sidebar si alguna hamburguesa está seleccionada */
-#burger1:checked ~ .sidebar, #burger2:checked ~ .sidebar, 
-#burger3:checked ~ .sidebar, #burger4:checked ~ .sidebar {
-    right: 0;
-}
-
-/* Mostrar item específico en el carrito */
-#burger1:checked ~ .sidebar .item-1 { display: flex; }
-#burger2:checked ~ .sidebar .item-2 { display: flex; }
-#burger3:checked ~ .sidebar .item-3 { display: flex; }
-#burger4:checked ~ .sidebar .item-4 { display: flex; }
-
-/* Efecto Ventana Emergente al hacer clic */
-.cart-control:checked ~ .notice-container {
-    top: 30px;
-    animation: slideUp 3s forwards;
-}
-
-@keyframes slideUp {
-    0% { top: -100px; opacity: 0; }
-    10% { top: 30px; opacity: 1; }
-    80% { top: 30px; opacity: 1; }
-    100% { top: -100px; opacity: 0; }
-}
-
-.btn-checkout {
-    display: block;
-    background: #ef8d4d;
-    color: white;
-    text-align: center;
-    padding: 12px;
-    text-decoration: none;
-    border-radius: 8px;
-    margin-top: 25px;
-    font-weight: bold;
-}
-
-.hint { 
-  font-size: 0.7rem; 
-  color: #999; 
-  margin-top: 10px; 
-  text-align: center; 
-}
-
-/* --- FOOTER --- */
-footer {
-    background-color: #ef8d4d;
-    color: white;
-    padding: 3rem 4rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
-}
-
-.footer-col h4 { 
-  margin-bottom: 1.2rem; 
-}
-
-.footer-col ul { 
-  list-style: none; 
-  padding: 0; 
-}
-
-.footer-col li { 
-  margin-bottom: 10px; 
-  font-size: 0.85rem; 
-}
-
-.footer-col p { 
-  font-size: 0.85rem; 
-  margin: 5px 0; 
-}
-
-/* TERMINA EL NUEVO CODIGO */
-
-/* === CONTENEDOR ÚNICO PARA FORMULARIOS (CONTACTO, LOGIN, REGISTRO) === */
-body.page-contacto .form-container,
-body.page-login .form-container,
-body.page-registro .form-container,
-body.page-contacto form,
-body.page-login form,
-body.page-registro form {
-  max-width: 600px;
-  margin: 2rem auto;
-  padding: 2rem;
-  /* Solo un fondo blanco */
-  background-color: #fff; 
-  border-radius: 8px;
-}
-
-/* === TEXTAREA CONTROLADO === */
-body.page-contacto textarea,
-body.page-login textarea,
-body.page-registro textarea {
-  resize: vertical;
-  min-height: 100px;
-  max-height: 200px;
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  /* font-size: 1rem; */
-  line-height: 1.5;
-  background-color: #fff;
-}
-
-/* === INPUTS (LOGIN Y REGISTRO) === */
-body.page-login input[type="text"],
-body.page-login input[type="email"],
-body.page-login input[type="password"],
-body.page-registro input[type="text"],
-body.page-registro input[type="email"],
-body.page-registro input[type="password"],
-body.page-registro input[type="tel"] {
-  width: 100%;
-  padding: 0.75rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 1rem;
-  background-color: #fff;
-}
-
-/* === BOTONES === */
-body.page-contacto button[type="submit"],
-body.page-login button[type="submit"],
-body.page-registro button[type="submit"],
-body.page-contacto .btn,
-body.page-login .btn,
-body.page-registro .btn {
-  display: block;
-  width: 100%;
-  max-width: 200px;
-  margin: 1.5rem auto 0;
-  padding: 0.75rem;
-  font-size: 1rem;
-  border: none;
-  border-radius: 4px;
-  background-color: #f57c00;
-  color: white;
-  cursor: pointer;
-  text-align: center;
-}
-
-body.page-contacto button[type="submit"]:hover,
-body.page-login button[type="submit"]:hover,
-body.page-registro button[type="submit"]:hover,
-body.page-contacto .btn:hover,
-body.page-login .btn:hover,
-body.page-registro .btn:hover {
-  background-color: #e67000;
-}
-
-/* === ESTILOS PARA PÁGINA DE PERFIL === */
-body.page-perfil .perfil {
-  /* padding: 2rem; */
-  background-color: #f9f9f9;
-}
-
-body.page-perfil .perfil__container {
-  max-width: 600px;
-  /*esto es para que me quede centrado el contenedor*/
-  margin: 0 auto;
-  /*esto es para que me quede centrado el contenedor y al lado de la imagen
-  lo que es el perfil y los datos del cliente*/
-  display: flex;
-  /*esto es para daler espacio entre los contenedores o datos del perfil*/
-  gap: 2rem;
-  align-items: flex-start;
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  /*esto es para darle espacio al contenedor del boton editar perfil
-  en la parte de abajo*/
-  padding: 2rem;
-}
-
-/*esto es para darle espacio al contenedor de la imagen*/
-body.page-perfil .perfil__avatar img {
-  /*esto es para darle un tamaño a la imagen*/
-  width: 150px;
-  /*esto es para darle un tamaño a la imagen*/
-  height: 150px;
-  /*esto es para darle redondeo a la imagen*/
-  border-radius: 50%;
-  object-fit: cover;
-  /*para darle un borde a la imagen*/
-  border: 4px solid #f57c00;
-}
-
-body.page-perfil .perfil__info {
-  flex: 1;
-}
-
-body.page-perfil .perfil__info h2 {
-  margin-top: 0;
-  color: #333;
-  font-size: 1.5rem;
-  border-bottom: 2px solid #f57c00;
-  padding-bottom: 0.5rem;
-}
-
-/*esto es para darle espacio a los parrafos*/
-body.page-perfil .perfil__info p {
-  /*para darle espacio entre los parrafos*/
-  margin: 0.5rem 0;
-  /*para darle tamaño a los parrafos*/
-  font-size: 1rem;
-  /*para darle color a los parrafos*/
-  color: #555;
-}
-
-body.page-perfil .perfil__info p strong {
-  color: #333;
-  font-weight: 600;
-}
-
-body.page-perfil .btn:hover {
-  background-color: #e67000;
-}
-
-/*=== MENSAJE DE QUE INICIO SESION EL CLIENTE ===*/
-/*esto es el contenedor del mensaje*/
-body.page-perfil .perfil__message {
-  /*esto es para darle un tamaño al contenedor*/
-  max-width: 600px;
-  /*esto es para darle espacio al contenedor y centrarlo*/
-  margin: 2rem auto;
-  /*esto es para centrar el texto del contenedor*/
-  text-align: center;
-  /*est es para darle espacio al contenedor*/
-  padding: 1.5rem;
-  /*esto es para darle color(o sombra) al contenedor*/
-  background-color: #fff;
-  /*esto es para darle redondeo al contenedor*/
-  border-radius: 8px;
-  /*esto es para darle una sombra al contenedor*/
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-}
-
-body.page-perfil .perfil__message p:first-child {
-  /*este es para darle un tamaño al parrafo principal del contenedor*/
-  font-size: 1.2rem;
-  /*esto es para darle un grosor al parrafo*/
-  font-weight: 600;
-  /*esto es para darle color al parrafo*/
-  color: #333;
-  /*esto es para darle espacio al parrafo*/
-  margin-bottom: 0.5rem;
-}
-
-body.page-perfil .perfil__message a {
-  /*esto es para darle color al link ordenar comida para que indique que es un enlace*/
-  color: #f57c00;
-  text-decoration: underline;
-  /*esto es para darle un groso al parrafo del link*/
-  font-weight: 600;
-}
-
-body.page-perfil .perfil__message a:hover {
-  color: #e67000;
-}
-
-/* === ESTILOS PARA CONTROL DE ACCESO === */
-body.page-hamburguesas .no-logueado {
-  display: block;
-  padding: 2rem;
-  background-color: #f9f9f9;
-}
-
-body.page-hamburguesas .logueado {
-  display: none;
-}
-
-body.page-hamburguesas .access-denied {
-  max-width: 500px;
-  margin: 2rem auto;
-  text-align: center;
-  background-color: #fff;
-  padding: 2.5rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
-
-body.page-hamburguesas .access-denied .icon-xl {
-  font-size: 3rem;
-  color: #f57c00;
-  margin-bottom: 1rem;
-}
-
-body.page-hamburguesas .access-denied h3 {
-  font-size: 1.5rem;
-  color: #333;
-  margin-bottom: 0.5rem;
-}
-
-body.page-hamburguesas .access-denied p {
-  color: #666;
-  margin-bottom: 1.5rem;
-}
-
-/* Mantén tus estilos actuales de .menu, .menu__card, etc. — no los toques */
-/* Solo asegúrate de que .logueado herede el estilo de .menu */
-body.page-hamburguesas .logueado {
-  padding: 2rem;
-}
-
-body.page-hamburguesas .menu__card .price {
-  font-weight: bold;
-  color: #f57c00;
-  font-size: 1.1rem;
-}
-
-.description {
-    font-size: 0.95rem;
+.place-details p {
+    font-size: 0.85rem;
+    margin: 5px 0;
     color: #555;
-    margin: 8px 0 12px;
-    line-height: 1.4;
 }
 
-/* === ESTILOS PARA LOGIN (mejor centrado) === */
-body.page-login .login {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: calc(100vh - 80px - 300px); /* altura viewport - header - footer */
-  padding: 2rem;
-  background-color: #f9f9f9;
+.place-details i {
+    color: #ff6b6b;
+    margin-right: 8px;
 }
 
-body.page-login .login__form {
-  max-width: 400px;
-  width: 100%;
-  background-color: #fff;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+/* Footer con el link abajo */
+.card-footer {
+    padding: 0 20px 20px 20px; /* Espaciado interno */
 }
 
-body.page-login .login__form h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  color: #333;
-}
-
-body.page-login .form-label {
-  display: block;
-  margin: 1rem 0 0.5rem;
-  font-weight: 600;
-  color: #444;
-}
-
-body.page-login .input {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 1rem;
-  box-sizing: border-box;
-}
-
-body.page-login .btn {
-  width: 100%;
-  padding: 0.75rem;
-  margin: 1.5rem 0;
-  font-size: 1rem;
-}
-
-body.page-login .login__form p {
-  text-align: center;
-  margin-top: 1rem;
-  font-size: 0.9rem;
-  color: #666;
-}
-
-body.page-login .login__form a {
-  color: #f57c00;
-  text-decoration: underline;
-}
-
-/*NUEVOOOOOO*/
-
-/* ELIMINAR CUADROS DEL NAVBAR */
-.navbar__menu a {
-    background: none !important;    /* Quita el fondo blanco */
-    border-radius: 0 !important;     /* Quita los bordes redondeados */
-    padding: 0 10px !important;      /* Ajusta el espacio solo a los lados */
-    color: white !important;         /* Asegura que el texto sea blanco para que se vea */
-    box-shadow: none !important;     /* Por si tiene sombras */
-}
-
-/* ELIMINAR CUADROS DEL FOOTER */
-.footer__section a {
-    background: none !important;    /* Quita el fondo naranja claro/blanco */
-    border-radius: 0 !important;
-    padding: 5px 0 !important;       /* Espacio pequeño entre lineas */
-    color: white !important;         /* Texto blanco sobre el fondo naranja del footer */
-    display: block;                  /* Para que salgan uno debajo del otro */
-    text-align: left !important;     /* Alineado a la izquierda */
-}
-
-/* EXCEPCIÓN: Los iconos de redes sociales sí pueden tener un cuadro pequeño o círculo */
-.footer__social a {
-    display: inline-flex !important;
-    background: white !important;
-    color: #e67e22 !important;       /* Color naranja para el icono */
-    width: 35px;
-    height: 35px;
-    border-radius: 50% !important;   /* Los hace circulares */
-    align-items: center;
-    justify-content: center;
-    margin-right: 10px;
-}
-
-/* ARREGLAR ICONO DE CANDADO */
-.no-logueado i {
-    color: #333;                     /* Color oscuro para el candado */
-    font-size: 50px;
-    margin-bottom: 20px;
+.btn-link {
     display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: #ff6b6b;
+    border: 1px solid #ff6b6b;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-link:hover {
+    background: #ff6b6b;
+    color: white;
+}
+
+/* --- RESPONSIVO PARA MÓVILES --- */
+@media (max-width: 600px) {
+    .card-body {
+        flex-direction: column; /* Se apilan en celular */
+        text-align: center;
+    }
+    
+    .card-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+        flex: 0 0 120px; /* Imagen más pequeña en móvil */
+    }
+
+    .card-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* =========================================
+   PIE DE PÁGINA (FOOTER)
+   ========================================= */
+footer {
+    background-color: var(--dark-color);
+    color: var(--white);
+    padding: 50px 5% 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 30px;
+}
+
+.footer-col h4 {
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.footer-col ul li:hover {
+    color: var(--primary-color);
+    padding-left: 5px;
+}
+
+.socials i {
+    font-size: 1.2rem;
+    margin-right: 10px;
+    margin-top: 10px;
+    color: var(--white);
+}
+
+.footer-col p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+/* =========================================
+   RESPONSIVIDAD (MÓVILES)
+   ========================================= */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .navbar__menu {
+        margin-top: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar__menu a {
+        margin: 5px 10px;
+        font-size: 0.9rem;
+    }
+
+    .main-title {
+        font-size: 1.8rem;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .socials i {
+        margin: 10px;
+    }
 }
