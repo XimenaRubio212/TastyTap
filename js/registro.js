@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const formData = new URLSearchParams(new FormData(form));
 
         try {
-            // ✅ URL CORRECTA
             const response = await fetch('http://localhost:8080/backend-java-1.0-SNAPSHOT/registro-usuario', {
                 method: 'POST',
                 body: formData,
@@ -27,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 alert("❌ " + data.message);
             }
         } catch (error) {
-            console.error("Detalle del error:", error);
+            console.error("Error completo:", error);
             alert("Error: No se pudo conectar con el servidor Java. ¿Está encendido Tomcat?");
         }
     });
