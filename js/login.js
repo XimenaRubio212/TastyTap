@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (data.status === 'success') {
                 alert("👋 " + data.message);
-                window.location.href = '/views/public/tienda.html'; 
+                window.location.href = '../../views/client/seguir-comprando.html'; 
             } else {
                 alert("❌ " + data.message);
             }
