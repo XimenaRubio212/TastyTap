@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TastyTap | Seguridad Admin</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img src="/img/TastyTap.png" alt="Logo">
+            <span class="brand-name">TastyTap Admin</span>
+        </div>
+        <nav>
+            <a href="/views/Admin/seguridad.html">Roles</a>
+            <a href="/views/Admin/mantenimiento.html">Mantenimiento</a>
+            <a href="/views/public/login.html">Cerrar Sesión</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1 class="main-title">GESTIÓN DE ROLES Y SEGURIDAD</h1>
+        
+        <div class="search-bar">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Buscar usuario por nombre o correo...">
+        </div>
+
+        <div class="admin-card">
+            <table class="user-table">
+                <thead>
+                    <tr>
+                        <th>Usuario</th>
+                        <th>Correo</th>
+                        <th>Rol Actual</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Carlos Rodríguez</strong></td>
+                        <td>carlos@correo.com</td>
+                        <td><span class="badge badge-client">Cliente</span></td>
+                        <td>
+                            <select class="role-select">
+                                <option>Cliente</option>
+                                <option>Proveedor</option>
+                                <option>Admin</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <!-- Más filas aquí -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+</html>

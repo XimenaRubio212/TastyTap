@@ -10,14 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             // URL corregida para Spring Boot
-            const response = await fetch('http://localhost:8080/api/auth/registro', {
+            fetch('http://localhost:8080/api/registro', {
                 method: 'POST',
-                headers: { 
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: JSON.stringify(formData)
-            });
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(datos)
+            })
 
             const data = await response.json();
 

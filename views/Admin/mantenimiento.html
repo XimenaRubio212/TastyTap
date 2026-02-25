@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TastyTap | Admin Mantenimiento</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="navbar" style="background-color: #2c3e50;">
+        <div class="navbar__logo"><h1 style="color: white;">Admin Panel</h1></div>
+        <nav class="navbar__menu">
+            <a href="/views/Admin/seguridad.html" style="color: white;">Roles</a>
+            <a href="/views/Admin/mantenimiento.html" class="active" style="color: white;">Mantenimiento</a>
+            <a href="/views/Admin/logs-servidor.html" style="color: white;">Balances</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h2 class="main-title">Estado de Restaurantes</h2>
+            <p>Control de disponibilidad y bloqueos preventivos del sistema.</p>
+        </section>
+
+        <div class="products-grid">
+            <!-- Restaurante 1 -->
+            <div class="product-card" style="text-align: center; padding: 20px;">
+                <img src="/img/TastyTap.png" width="80">
+                <h3>Camacho's Burger</h3>
+                <div style="margin: 15px 0;">
+                    <span class="status-badge badge-preparing">Activo</span>
+                </div>
+                <!-- RF30: Cambiar estado -->
+                <select style="width: 100%; padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+                    <option value="activo">En Servicio (Activo)</option>
+                    <option value="mantenimiento">Mantenimiento (Pausa)</option>
+                    <option value="inactivo">Cerrado (Inactivo)</option>
+                </select>
+                <button class="btn-login-submit">Actualizar Estado</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

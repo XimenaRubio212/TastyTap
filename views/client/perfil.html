@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TastyTap | Mi Perfil</title>
+    <!-- Importación de tus estilos y Font Awesome -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <header class="navbar">
+        <div class="navbar__logo">
+            <img src="/img/TastyTap.png" alt="Logo TastyTap" style="height: 4rem; vertical-align: middle; margin-right: 10px;">
+            <h1>TastyTap</h1>
+        </div>
+        <nav class="navbar__menu">
+            <a href="/index.html">Inicio</a>
+            <a href="/views/client/seguir-comprando.html">Tienda</a>
+            <a href="/views/client/historial.html">Historial</a>
+            <a href="/views/client/perfil.html" class="active">Perfil</a>
+            <a href="/views/public/login.html">Cerrar Sesión</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1 class="main-title">CONFIGURACIÓN DE PERFIL</h1>
+        
+        <div class="order-card" style="max-width: 600px; margin: 0 auto;">
+            <form class="profile-form">
+                <div class="form-group">
+                    <label>Nombre Completo</label>
+                    <input type="text" value="Juan Pérez" class="profile-input">
+                </div>
+                
+                <div style="display: flex; gap: 20px;">
+                    <div class="form-group" style="flex: 1;">
+                        <label>Edad (RF03 - No editable)</label>
+                        <input type="text" value="25" disabled class="profile-input disabled">
+                    </div>
+                    <div class="form-group" style="flex: 1;">
+                        <label>Correo Principal</label>
+                        <input type="email" value="juan@correo.com" disabled class="profile-input disabled">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Correo de Respaldo (RF20)</label>
+                    <input type="email" placeholder="añadir correo secundario" class="profile-input">
+                </div>
+
+                <div class="form-group">
+                    <label>Teléfonos (RF19)</label>
+                    <input type="tel" value="315 456 7890" class="profile-input">
+                    <input type="tel" placeholder="Añadir otro teléfono" class="profile-input" style="margin-top: 10px;">
+                </div>
+
+                <button type="submit" class="btn-primary" style="width: 100%; margin-top: 20px;">Guardar Cambios</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- PIE DE PÁGINA UNIFICADO -->
+    <footer>
+        <div class="footer-col">
+            <h4>Restaurantes Top</h4>
+            <ul>
+                <li>Camachos</li>
+                <li>Domino's</li>
+                <li>KFC</li>
+                <li>Mc Donald's</li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Únete a Tasty Tap</h4>
+            <ul>
+                <li>Registra tu restaurante</li>
+                <li>Registra tu local</li>
+                <li>Promociona tu negocio</li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Síguenos</h4>
+            <div class="socials">
+                <i class="fab fa-facebook"></i> Facebook<br>
+                <i class="fab fa-instagram"></i> Instagram<br>
+                <i class="fab fa-tiktok"></i> TikTok
+            </div>
+        </div>
+        <div class="footer-col">
+            <h4>Contacto</h4>
+            <p>📍 Calle 123 #45-67, Bogotá, Colombia</p>
+            <p>📞 +57 320 555 1234</p>
+            <p>✉️ contacto@tastytap.com</p>
+        </div>
+    </footer>
+
+</body>
+</html>

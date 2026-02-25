@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TastyTap | Mis Productos</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="navbar__logo">
+            <img src="/img/TastyTap.png" alt="Logo TastyTap" style="height: 4rem; vertical-align: middle;">
+            <h1>ProviderTap</h1>
+        </div>
+        <nav class="navbar__menu">
+            <a href="/views/provider/mis-productos.html" class="active">Mis Productos</a>
+            <a href="/views/provider/agregar-producto.html">Nuevo Producto</a>
+            <a href="/views/public/login.html">Salir</a>
+        </nav>
+    </header>
+
+    <!-- Similar estructura de header -->
+    <main class="container">
+        <h1 class="main-title">GESTIÓN DE MIS PRODUCTOS</h1>
+        
+        <div style="text-align: right; margin-bottom: 20px;">
+            <a href="agregar-producto.html" class="btn-primary">+ Nuevo Producto</a>
+        </div>
+
+        <div class="product-management-grid">
+            <div class="order-card card-preparing">
+                <div class="card-body" style="align-items: center;">
+                    <img src="/img/burger.jpg" style="width: 80px; border-radius: 15px; margin-right: 15px;">
+                    <div style="flex: 1;">
+                        <p class="order-items">Severa Burger Doble</p>
+                        <p class="order-method">Stock Diario: 25 unidades</p>
+                    </div>
+                    <div class="actions">
+                        <button class="btn-outline">Editar</button>
+                        <button class="btn-outline grey">Eliminar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pega aquí el footer que usas en los demás archivos -->
+</body>
+</html>

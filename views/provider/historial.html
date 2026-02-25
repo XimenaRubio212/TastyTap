@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TastyTap | Ventas</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="navbar__logo"><h1>ProviderTap</h1></div>
+        <nav class="navbar__menu">
+            <a href="/views/provider/mis-productos.html">Mis Productos</a>
+            <a href="/views/provider/historial.html" class="active">Ventas</a>
+            <a href="/views/public/login.html">Salir</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h2 class="main-title">Historial de Ventas</h2>
+            <div style="background: white; padding: 10px; border-radius: 8px; display: inline-block;">
+                <label>Filtrar Periodo: </label>
+                <select style="padding: 5px; border: none; font-weight: bold;">
+                    <option>Hoy</option>
+                    <option>Esta Semana</option>
+                    <option selected>Este Mes</option>
+                </select>
+            </div>
+        </section>
+
+        <div class="orders-list">
+            <div class="order-card card-preparing">
+                <div class="card-header">
+                    <span>Pedido #V-9901</span>
+                    <span class="status-badge bga">Pagado</span>
+                </div>
+                <div class="card-body">
+                    <div class="order-details">
+                        <h3>2x Severa Burger + 1x Papas</h3>
+                        <p>Cliente: Maria Lopez | 📍 Cabecera</p>
+                    </div>
+                    <div class="order-total"><p class="amount-total">$56.000</p></div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

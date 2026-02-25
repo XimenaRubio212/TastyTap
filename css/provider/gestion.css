@@ -1,25 +1,54 @@
-/* FORMULARIO DE ONBOARDING EMPRESA (Punto 9) */
-.provider-form-onboarding {
-    max-width: 700px;
-    margin: 3rem auto;
-    background: white;
-    padding: 30px;
-    border: 2px solid var(--naranja);
-    border-radius: 15px;
-}
-
-/* PUNTO 6.3: Captura de ubicación y teléfono de la empresa */
-.input-empresa-data {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-}
-
-/* PUNTO 2: Historial de ventas */
-.sales-history-table {
+/* GESTIÓN DE PRODUCTOS Y TABLAS */
+.card table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 2rem;
+}
+
+.card th {
+    text-align: left;
+    padding: 15px;
+    border-bottom: 2px solid var(--light-bg);
+    color: var(--dark-color);
+}
+
+.card td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Inputs de stock rápidos */
+input[type="number"] {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 70px;
+}
+
+/* Botones de acción rápidos */
+.btn-edit {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-delete {
+    background-color: #ff4757;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Badge de stock */
+.tag-stock {
+    background: #e1f5fe;
+    color: #0288d1;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
 }

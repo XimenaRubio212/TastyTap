@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TastyTap | Agregar Producto</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="navbar__logo">
+            <img src="/img/TastyTap.png" alt="Logo TastyTap" style="height: 4rem; vertical-align: middle;">
+            <h1>ProviderTap</h1>
+        </div>
+        <nav class="navbar__menu">
+            <a href="/views/provider/mis-productos.html">Mis Productos</a>
+            <a href="/views/provider/agregar-producto.html" class="active">Nuevo Producto</a>
+            <a href="/views/public/login.html">Salir</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h2 class="main-title">Añadir Nuevo Plato</h2>
+            <p>Completa la información para que tus clientes puedan empezar a pedir.</p>
+        </section>
+
+        <section class="login-section">
+            <div class="login-card" style="max-width: 600px;">
+                <form class="login-form">
+                    <div class="input-group">
+                        <label><i class="fas fa-hamburger"></i> Nombre del Producto</label>
+                        <input type="text" placeholder="Ej: Pizza Artesanal" required>
+                    </div>
+                    <div class="input-group">
+                        <label><i class="fas fa-align-left"></i> Descripción</label>
+                        <textarea style="width: 100%; border-radius: 8px; border: 1px solid #ddd; padding: 10px; font-family: inherit;" rows="3" placeholder="Ingredientes y detalles..."></textarea>
+                    </div>
+                    <div style="display: flex; gap: 15px;">
+                        <div class="input-group" style="flex: 1;">
+                            <label><i class="fas fa-tag"></i> Precio ($)</label>
+                            <input type="number" placeholder="25000" required>
+                        </div>
+                        <div class="input-group" style="flex: 1;">
+                            <label><i class="fas fa-layer-group"></i> Límite Diario (RF21)</label>
+                            <input type="number" placeholder="50" required>
+                        </div>
+                    </div>
+                    <!-- RF14: Gestión de imágenes -->
+                    <div class="input-group">
+                        <label><i class="fas fa-camera"></i> Imagen del Producto (Obligatoria)</label>
+                        <input type="file" accept="image/png, image/jpeg" required>
+                    </div>
+                    <button type="submit" class="btn-login-submit">Publicar Producto</button>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
