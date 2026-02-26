@@ -1,5 +1,5 @@
 /* =========================================
-   1. VARIABLES Y CONFIGURACIÓN BASE
+1. VARIABLES Y CONFIGURACIÓN BASE
    ========================================= */
 :root {
     --primary: #ff4757;        /* Coral TastyTap */
@@ -28,7 +28,7 @@ body {
 }
 
 /* =========================================
-   2. NAVBAR
+2. NAVBAR
    ========================================= */
 .navbar {
     background-color: var(--white);
@@ -67,7 +67,7 @@ body {
 }
 
 /* =========================================
-   3. HERO SECTION
+3. HERO SECTION
    ========================================= */
 .hero {
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
@@ -92,7 +92,7 @@ body {
 }
 
 /* =========================================
-   3. ESTRUCTURA DE LA TIENDA (LAYOUT)
+3. ESTRUCTURA DE LA TIENDA (LAYOUT)
    ========================================= */
 .store-container {
     display: flex;
@@ -196,7 +196,7 @@ body {
 }
 
 /* =========================================
-   4. GRID DE PRODUCTOS
+4. GRID DE PRODUCTOS
    ========================================= */
 .store-content {
     flex: 1;
@@ -235,13 +235,16 @@ body {
     object-fit: cover;
 }
 
+/*Para la vista tienda*/
 .price-tag {
     position: absolute;
-    bottom: 10px;
+    /* bottom: 10px; */
     right: 1rem;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.5);
     color: white;
-    padding: 8rem 1rem;
+    /*Se ajusta el largo y ancho de la card del nombre abreviado de la ubicacion
+    que se encuentran dentro de las imagenes*/
+    padding: 0.9rem 0.9rem;
     border-radius: 8px;
     font-weight: bold;
 }
@@ -280,7 +283,7 @@ body {
 }
 
 /* =========================================
-   5. LÓGICA DEL CARRITO (CHECKBOX HACK)
+5. LÓGICA DEL CARRITO (CHECKBOX HACK)
    ========================================= */
 .cart-control { display: none; }
 
@@ -355,7 +358,7 @@ body {
 .hint { font-size: 0.75rem; color: var(--grey-text); margin-top: 15px; text-align: center; }
 
 /* =========================================
-   6. NOTIFICACIONES (TOAST)
+6. NOTIFICACIONES (TOAST)
    ========================================= */
 .notice-container {
     position: fixed;
@@ -390,7 +393,7 @@ body {
 }
 
 /* =========================================
-   7. FOOTER
+7. FOOTER
    ========================================= */
 footer {
     background-color: var(--secondary);
@@ -415,7 +418,7 @@ footer {
 .socials i { margin-right: 10px; color: var(--primary); }
 
 /* =========================================
-   8. RESPONSIVO
+8. RESPONSIVO
    ========================================= */
 @media (max-width: 992px) {
     .store-container {

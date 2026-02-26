@@ -1,5 +1,5 @@
 /* =========================================
-   1. VARIABLES Y CONFIGURACIÓN BASE
+1. VARIABLES Y CONFIGURACIÓN BASE
    ========================================= */
 :root {
     --primary: #ff6b6b;
@@ -17,7 +17,7 @@
 body { background-color: var(--bg); color: var(--dark); line-height: 1.6; }
 
 /* =========================================
-   2. NAVBAR
+2. NAVBAR
    ========================================= */
 .navbar {
     display: flex;
@@ -45,7 +45,7 @@ body { background-color: var(--bg); color: var(--dark); line-height: 1.6; }
 .navbar__menu a:hover, .navbar__menu a.active { color: var(--primary); }
 
 /* =========================================
-   3. HERO SECTION
+3. HERO SECTION
    ========================================= */
 .hero {
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
@@ -60,7 +60,7 @@ body { background-color: var(--bg); color: var(--dark); line-height: 1.6; }
 .hero h2 { font-size: 2.5rem; margin-bottom: 10px; }
 
 /* =========================================
-   4. LAYOUT Y FILTROS
+4. LAYOUT Y FILTROS
    ========================================= */
 .store-container {
     display: flex;
@@ -123,7 +123,7 @@ body { background-color: var(--bg); color: var(--dark); line-height: 1.6; }
 }
 
 /* =========================================
-   5. GRID Y CARDS
+5. GRID Y CARDS
    ========================================= */
 .store-content { flex: 1; }
 .store-header { margin-bottom: 30px; }
@@ -146,7 +146,7 @@ body { background-color: var(--bg); color: var(--dark); line-height: 1.6; }
 
 .product-img { 
     position: relative; 
-    height: 200px; 
+    height: 1%; 
     overflow: hidden;
 }
 
@@ -158,13 +158,14 @@ body { background-color: var(--bg); color: var(--dark); line-height: 1.6; }
 }
 
 .product-card:hover .product-img img {
-     transform: scale(1.1); 
+    transform: scale(1.1); 
 }
 
 /* Etiqueta PDC / Precio más pequeña */
 .price-tag {
-    position: absolute; 
-    top: 12px; 
+    position: absolute;
+    /*esto es para acomodar los nombres de la ubicacion que se encuentran dentro de las imagens*/ 
+    top: 130px;
     right: 12px;
     padding: 4px 10px; /* Reducido */
     display: inline-block;
@@ -215,7 +216,7 @@ body { background-color: var(--bg); color: var(--dark); line-height: 1.6; }
 .btn-explore:hover { background: var(--primary); color: white; }
 
 /* =========================================
-   6. FOOTER
+6. FOOTER
    ========================================= */
 footer {
     background-color: var(--dark); color: white;
@@ -231,7 +232,7 @@ footer {
 .footer-col ul li:hover { color: white; }
 
 /* =========================================
-   7. RESPONSIVO
+7. RESPONSIVO
    ========================================= */
 @media (max-width: 1024px) {
     .store-container { flex-direction: column; }
